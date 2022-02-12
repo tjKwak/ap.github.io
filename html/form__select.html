@@ -12,10 +12,10 @@
     </script>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="static/css/main.78c4a366.chunk.css">
-    <link rel="stylesheet" href="static/css/7.ff67f704.chunk.css">
-    <link rel="stylesheet" href="static/css/13.db0b29ae.chunk.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../static/css/main.78c4a366.chunk.css">
+    <link rel="stylesheet" href="../static/css/7.ff67f704.chunk.css">
+    <link rel="stylesheet" href="../static/css/13.db0b29ae.chunk.css">
 
     <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,7 +29,7 @@
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/form.js"></script>
+    <script type="text/javascript" src="../js/form.js"></script>
 
 </head>
 
@@ -50,7 +50,7 @@
                     <div class="app-header-left">
                         <span class="menu-sub">Form</span>
                         <span class="icon-next icon-small"></span>
-                        <span class="menu-main">input</span>
+                        <span class="menu-main">select</span>
                     </div>
                     <div class="app-header-right gap-3">
                         <div class="theme-box header-app">
@@ -111,8 +111,8 @@
                             </div>
                             <ul class="metismenu-container">
                                 <li class="metismenu-item"><a href="form__button.html">button</a></li>
-                                <li class="metismenu-item on"><a href="form__input.html">input</a></li>
-                                <li class="metismenu-item"><a href="form__select.html">select</a></li>
+                                <li class="metismenu-item"><a href="form__input.html">input</a></li>
+                                <li class="metismenu-item on"><a href="form__select.html">select</a></li>
                                 <li class="metismenu-item"><a href="form__ect.html">check, toggle, radio, nameplate</a></li>
                                 <li class="metismenu-item"><a href="form__label.html">label</a></li>
                                 <li class="metismenu-item"><a href="form__table.html">table</a></li>
@@ -175,12 +175,20 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="pnt-input--group">
-                                                <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                <span class="icon-search"></span>
-                                                <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                <p class="input-error-txt">에러문구 입니다</p>
+                                        <div class="card-body overflow-visible">
+                                            <div class="pnt-select--group" tabindex="0">
+                                                <button class="select__btn">
+                                                    <div class="cont-wrap">
+                                                        <span class="icon-person"></span>
+                                                        Selected
+                                                    </div>
+                                                    <span class="icon-down"></span>
+                                                </button>
+                                                <ul class="select__options">
+                                                    <li class="on"><a href="#">리스트1</a></li>
+                                                    <li><a href="#">리스트2</a></li>
+                                                    <li><a href="#">리스트3</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -195,12 +203,20 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="pnt-input--group form-disable">
-                                                <input class="pnt-input" type="text" placeholder="입력하세요" disabled>
-                                                <span class="icon-search"></span>
-                                                <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                <p class="input-error-txt">에러문구 입니다</p>
+                                        <div class="card-body overflow-visible">
+                                            <div class="pnt-select--group form-disable" tabindex="0">
+                                                <button class="select__btn" disabled>
+                                                    <div class="cont-wrap">
+                                                        <span class="icon-person"></span>
+                                                        Selected
+                                                    </div>
+                                                    <span class="icon-down"></span>
+                                                </button>
+                                                <ul class="select__options">
+                                                    <li class="on"><a href="#">리스트1</a></li>
+                                                    <li><a href="#">리스트2</a></li>
+                                                    <li><a href="#">리스트3</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -214,12 +230,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="pnt-input--group">
-                                                <input class="pnt-input" type="text" placeholder="입력하세요" autofocus>
-                                                <span class="icon-search"></span>
-                                                <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                <p class="input-error-txt">에러문구 입니다</p>
+                                        <div class="card-body overflow-visible">
+                                            <div class="pnt-select--group on" tabindex="0">
+                                                <button class="select__btn">
+                                                    <div class="cont-wrap">
+                                                        Selected
+                                                    </div>
+                                                    <span class="icon-down"></span>
+                                                </button>
+                                                <ul class="select__options">
+                                                    <li class="on"><a href="#">리스트1</a></li>
+                                                    <li><a href="#">리스트2</a></li>
+                                                    <li><a href="#">리스트3</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -229,30 +252,40 @@
                                         <div class="card-header">
                                             <div class="card-header__title">
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">아이콘, 버튼 사용</h3>
-                                                    <p class="title__sub">icon-on-left, icon-on-right, btn-on-right</p>
+                                                    <h3 class="title__main">아이콘 사용</h3>
+                                                    <p class="title__sub">icon-on-left</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body overflow-visible">
                                             <div class="flx-row flx-full gap-2">
-                                                <div class="pnt-input--group icon-on-left">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group icon-on-left" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                            <span class="icon-person"></span>
+                                                            Taejeong Kwak
+                                                        </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="pnt-input--group icon-on-right">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
-                                                </div>
-                                                <div class="pnt-input--group btn-on-right">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group icon-on-left" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                            <span class="figure-box bg-danger opacity-10"></span>
+                                                            red
+                                                        </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -268,25 +301,49 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body overflow-visible">
                                             <div class="flx-row flx-full gap-2">
-                                                <div class="pnt-input--group form-h-small">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group form-h-small" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                        <span class="icon-person"></span>
+                                                        Selected
+                                                    </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="pnt-input--group">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                        <span class="icon-person"></span>
+                                                        Selected
+                                                    </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="pnt-input--group form-h-big">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group form-h-big" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                            <span class="icon-person"></span>
+                                                            Selected
+                                                        </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -302,25 +359,49 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body overflow-visible">
                                             <div class="flx-row gap-2">
-                                                <div class="pnt-input--group w-10">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group w-10" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                        <span class="icon-person"></span>
+                                                        Selected
+                                                    </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="pnt-input--group">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                        <span class="icon-person"></span>
+                                                        Selected
+                                                    </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="pnt-input--group w-50">
-                                                    <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                    <span class="icon-search"></span>
-                                                    <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                <div class="pnt-select--group w-50" tabindex="0">
+                                                    <button class="select__btn">
+                                                        <div class="cont-wrap">
+                                                            <span class="icon-person"></span>
+                                                            Selected
+                                                        </div>
+                                                        <span class="icon-down"></span>
+                                                    </button>
+                                                    <ul class="select__options">
+                                                        <li class="on"><a href="#">리스트1</a></li>
+                                                        <li><a href="#">리스트2</a></li>
+                                                        <li><a href="#">리스트3</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -336,94 +417,20 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="pnt-input--group form-must">
-                                                <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                <span class="icon-search"></span>
-                                                <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                <p class="input-error-txt">에러문구 입니다</p>
-                                            </div>
-                                            <div class="m-3"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">에러 표시 ( * 에러표시는 input에만 있음 )</h3>
-                                                    <p class="title__sub">input-error</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="pnt-input--group input-error">
-                                                <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                <span class="icon-search"></span>
-                                                <button class="pnt-btn btn-icon-only"><span class="icon-toggle-type icon-lock"></span></button>
-                                                <p class="input-error-txt">에러문구 입니다</p>
-                                            </div>
-                                            <div class="m-3"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">인풋 [type="file"]</h3>
-                                                    <p class="title__sub">기본 input 이므로 placeholder는 수정 불가</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="flx-row gap-2">
-                                                <div class="pnt-file--group file-only-btn">
-                                                    <input type="file" id="file-1">
-                                                    <label class="pnt-btn btn-brand btn-icon" for="file-1"><span class="icon-upload"></span>업로드 </label>
-                                                </div>
-                                                <div class="m-3">/</div>
-                                                <div class="pnt-file--group file-widthout-js w-100">
-                                                    <input type="file" id="file-3">
-                                                    <label class="pnt-btn btn-secondary" for="file-3">업로드</label>
-                                                </div>
-                                            </div>
-                                            <div class="flx-row flx-full gap-2 mt-3">
-                                                <div class="pnt-file--group file-widthout-js form-h-small">
-                                                    <input type="file" id="file-2">
-                                                    <label class="pnt-btn btn-brand btn-icon" for="file-2"><span class="icon-upload"></span>파일 업로드</label>
-                                                </div>
-                                                <div class="pnt-file--group file-widthout-js form-h-big">
-                                                    <input type="file" id="file-2">
-                                                    <label class="pnt-btn btn-brand btn-icon" for="file-2"><span class="icon-upload"></span>파일 업로드</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">인풋 [type="date"]</h3>
-                                                    <p class="title__sub">버튼만 / </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="flx-row flx-full gap-2">
-                                                <div class="pnt-input--group form-h-small">
-                                                    <input class="pnt-input" type="date">
-                                                </div>
-                                                <div class="pnt-input--group">
-                                                    <input class="pnt-input" type="date">
-                                                </div>
-                                                <div class="pnt-input--group form-h-big">
-                                                    <input class="pnt-input" type="date">
-                                                </div>
+                                        <div class="card-body overflow-visible">
+                                            <div class="pnt-select--group form-must" tabindex="0">
+                                                <button class="select__btn">
+                                                    <div class="cont-wrap">
+                                                        <span class="icon-person"></span>
+                                                        Selected
+                                                    </div>
+                                                    <span class="icon-down"></span>
+                                                </button>
+                                                <ul class="select__options">
+                                                    <li class="on"><a href="#">리스트1</a></li>
+                                                    <li><a href="#">리스트2</a></li>
+                                                    <li><a href="#">리스트3</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
