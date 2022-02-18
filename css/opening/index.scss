@@ -3,7 +3,19 @@
 @import '../font';
 @import '../tools';
 //////////////////////////////
-
+#root .app-container.app-theme-pnt-navy .index_page{
+    & .form-disable{
+        //버튼
+        &.pnt-btn{
+            border: none !important;
+            box-shadow: none !important;
+            background-color: #453E6F !important;
+            color: white !important;
+            &:hover{ filter: none; }
+            & span{ filter: invert(1) !important; opacity: .2; }
+        }
+    }
+}
 .index_page{
     width: 100vw;
     height: 100vh;

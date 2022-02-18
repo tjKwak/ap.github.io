@@ -513,6 +513,25 @@
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18) !important;
 }
 
+#root .app-container.app-theme-pnt-navy .index_page .form-disable.pnt-btn {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-color: #453E6F !important;
+  color: white !important;
+}
+
+#root .app-container.app-theme-pnt-navy .index_page .form-disable.pnt-btn:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+#root .app-container.app-theme-pnt-navy .index_page .form-disable.pnt-btn span {
+  -webkit-filter: invert(1) !important;
+          filter: invert(1) !important;
+  opacity: .2;
+}
+
 .index_page {
   width: 100vw;
   height: 100vh;

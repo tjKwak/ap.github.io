@@ -269,50 +269,57 @@
     justify-content: space-around;	
   }	
 }	
+.app-theme-pnt-dark{
+  .app-page-title{
+    background: rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
 
 //나중에 theme / default / _default.scss 에 추가예정
 //1. 라이센스 리스트, 2. 라이센스 발급, 3. vender 리스트, 4. vender 발급
-.app-theme-pnt-light, .app-theme-pnt-navy{
-  //1
-  .app-page-title{ background: linear-gradient(45deg, #E8F2FC, #FCF5E8) !important;}
-  //2
-  .app-page-title{ background: #E8E8FC !important; }
-  //3
-  .app-page-title{ background: linear-gradient(45deg, #FCEAE8, #FCF5E8) !important;}
-  //4
-  .app-page-title{ background: #E8F0FC !important;}
-}
-.app-theme-pnt-dark{
-  //폰트
-  .app-page-title *{ color: white !important; }
-  //1
-  .app-page-title{ background: linear-gradient(45deg, #2d3236, #7e7b75) !important;}
-  //2
-  .app-page-title{ background: #3f3f4d !important; }
-  //3
-  .app-page-title{ background: linear-gradient(45deg, #3b3231, #746a58) !important;}
-  //4
-  .app-page-title{ background: #4a495a !important;}
-}
-.app-theme-pnt-plant{
-  //폰트
-  .app-page-title *{ color: white !important; }
-  //1
-  .app-page-title{ background: linear-gradient(45deg, #425f5a, #7e7b75) !important;}
-  //2
-  .app-page-title{ background: #40534b !important; }
-  //3
-  .app-page-title{ background: linear-gradient(45deg, #455c48, #9c917a) !important;}
-  //4
-  .app-page-title{ background: #5b6964 !important;}
-}
-.app-theme-pnt-flower{
-  //1
-  .app-page-title{ background: linear-gradient(45deg, #f0e8fc, #e8fcf4) !important;}
-  //2
-  .app-page-title{ background: #e5f5f3 !important;}
-  //3
-  .app-page-title{ background: linear-gradient(45deg, #fceae8, #FCF5E8) !important;}
-  //4
-  .app-page-title{ background: #fcf3e8 !important; }
-}
+
+// .app-theme-pnt-light, .app-theme-pnt-navy{
+//   //1
+//   .app-page-title{ background: linear-gradient(45deg, #E8F2FC, #FCF5E8) !important;}
+//   //2
+//   .app-page-title{ background: #E8E8FC !important; }
+//   //3
+//   .app-page-title{ background: linear-gradient(45deg, #FCEAE8, #FCF5E8) !important;}
+//   //4
+//   .app-page-title{ background: #E8F0FC !important;}
+// }
+// .app-theme-pnt-dark{
+//   //폰트
+//   .app-page-title *{ color: white !important; }
+//   //1
+//   .app-page-title{ background: linear-gradient(45deg, #2d3236, #7e7b75) !important;}
+//   //2
+//   .app-page-title{ background: #3f3f4d !important; }
+//   //3
+//   .app-page-title{ background: linear-gradient(45deg, #3b3231, #746a58) !important;}
+//   //4
+//   .app-page-title{ background: #4a495a !important;}
+// }
+// .app-theme-pnt-plant{
+//   //폰트
+//   .app-page-title *{ color: white !important; }
+//   //1
+//   .app-page-title{ background: linear-gradient(45deg, #425f5a, #7e7b75) !important;}
+//   //2
+//   .app-page-title{ background: #40534b !important; }
+//   //3
+//   .app-page-title{ background: linear-gradient(45deg, #455c48, #9c917a) !important;}
+//   //4
+//   .app-page-title{ background: #5b6964 !important;}
+// }
+// .app-theme-pnt-flower{
+//   //1
+//   .app-page-title{ background: linear-gradient(45deg, #f0e8fc, #e8fcf4) !important;}
+//   //2
+//   .app-page-title{ background: #e5f5f3 !important;}
+//   //3
+//   .app-page-title{ background: linear-gradient(45deg, #fceae8, #FCF5E8) !important;}
+//   //4
+//   .app-page-title{ background: #fcf3e8 !important; }
+// }
