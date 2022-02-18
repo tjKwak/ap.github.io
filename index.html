@@ -5,10 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+        <!-- css -->
+        <link rel="stylesheet" href="../css/opening/index.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../static/css/main.78c4a366.chunk.css">
+        <link rel="stylesheet" href="../static/css/7.ff67f704.chunk.css">
+        <link rel="stylesheet" href="../static/css/13.db0b29ae.chunk.css">
+    
+        <!-- 부트스트랩 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+    
+        <!-- javascript -->
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../js/form.js"></script>
+        <script  src="js/jquery-1.8.3.min.js"></script>	
+        
+        <!-- <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+        </style> -->
 </head>
 <body>
-    <div class="flx-row flx-center">
-        <button class="pnt-btn btn-brand btn-large w-100" onClick="location.href='html/element__icon.html' ">component 입장</button>
+    <div id="root">
+        <div class="app-container app-theme-pnt-navy">
+            <div class="index_page">
+                <div class="info-area">
+                    <div class="info-wrap">
+                        <b>Html, Css, Js, Images</b>
+                        <h3>쉽고 빠른 <br> 디자인보드 제작을 위한<br>스타일 컴포넌트 파일</h3>
+                        <p>업데이트 : 2022-02-18</p>
+                        <div class="flx-col gap-2">
+                            <button class="pnt-btn btn-brand btn-large btn-icon pl-4" onClick="location.href='html/element__icon.html' ">스타일 컴포넌트 보러가기<span class="icon-next"></span></button>
+                            <button class="pnt-btn btn-secondary btn-large btn-icon pl-4" onClick="location.href='html/element__icon.html' ">github<span class="icon-next"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ppt-area flx-center-center">
+                    <div class="ppt-wrap">
+                        <div class="slide-wrap">
+                            <section class="slide-box">
+                                <ul class="slide-ul">
+                                    <li><img src="images/ppt/pnt_1.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_2.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_3.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_4.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_5.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_6.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_7.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_8.png" alt=""></li>
+                                    <li><img src="images/ppt/pnt_9.png" alt=""></li>
+                                </ul>
+                            </section>
+                            <div class="slide-shadow">
+                                <section class="slide-box">
+                                    <ul class="slide-ul">
+                                        <li><img src="images/ppt/pnt_1.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_2.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_3.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_4.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_5.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_6.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_7.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_8.png" alt=""></li>
+                                        <li><img src="images/ppt/pnt_9.png" alt=""></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="pnt-btn btn-brand btn-icon-only btn-up form-disable" disabled><span class="icon-up"></span></button>
+                            <button class="pnt-btn btn-brand btn-icon-only btn-down"><span class="icon-down"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        const slideUl = $('.slide-ul');
+        const slideItem = slideUl.children('li');
+        const slideBtn1 = $('.btn-up'); 
+        const slideBtn2 = $('.btn-down');
+        let num = 0;
+        var slideHeight = slideItem.prop('scrollHeight')
+
+
+        slideBtn1.on('click', function(e){
+            num+= slideHeight;
+            slideUl.css({marginTop: num});
+
+            if(num > slideHeight * -1){
+                slideBtn1.attr('disabled', true);
+
+                slideBtn1.addClass('form-disable');
+                slideBtn2.removeClass('form-disable');
+            }
+            else{
+                slideBtn1.removeClass('form-disable');
+                slideBtn2.removeClass('form-disable');
+                slideBtn1.attr('disabled', false);
+                slideBtn2.attr('disabled', false);
+            }
+        })
+        slideBtn2.on('click', function(e){
+            num-= slideHeight;
+            slideUl.css({marginTop: num});
+            
+            if(num < slideHeight * 7 * -1){
+                slideBtn2.attr('disabled', true);
+
+                slideBtn2.addClass('form-disable');
+                slideBtn1.removeClass('form-disable');
+            }
+            else{
+                slideBtn1.removeClass('form-disable');
+                slideBtn2.removeClass('form-disable');
+                slideBtn1.attr('disabled', false);
+                slideBtn2.attr('disabled', false);
+            }
+        })
+    </script>
 </body>
 </html>
