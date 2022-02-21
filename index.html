@@ -53,29 +53,29 @@
                         <div class="slide-wrap">
                             <section class="slide-box">
                                 <ul class="slide-ul">
-                                    <li><img src="images/ppt/pnt_1.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_2.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_3.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_4.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_5.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_6.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_7.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_8.png" alt=""></li>
-                                    <li><img src="images/ppt/pnt_9.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_1.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_2.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_3.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_4.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_5.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_6.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_7.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_8.png" alt=""></li>
+                                    <li><img src="images/ppt/1@/pnt_9.png" alt=""></li>
                                 </ul>
                             </section>
                             <div class="slide-shadow">
                                 <section class="slide-box">
                                     <ul class="slide-ul">
-                                        <li><img src="images/ppt/pnt_1.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_2.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_3.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_4.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_5.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_6.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_7.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_8.png" alt=""></li>
-                                        <li><img src="images/ppt/pnt_9.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_1.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_2.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_3.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_4.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_5.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_6.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_7.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_8.png" alt=""></li>
+                                        <li><img src="images/ppt/1@/pnt_9.png" alt=""></li>
                                     </ul>
                                 </section>
                             </div>
@@ -83,56 +83,88 @@
                         <div class="btn-wrap">
                             <button class="pnt-btn btn-brand btn-icon-only btn-up form-disable" disabled><span class="icon-up"></span></button>
                             <button class="pnt-btn btn-brand btn-icon-only btn-down"><span class="icon-down"></span></button>
+                            <button class="pnt-btn btn-secondary btn-icon-only btn-fullsize"><span class="icon-resize"></span></button>
                         </div>
                     </div>
+                </div>
+                <div class="popup-area d-none">
+                    <button class="pnt-btn btn-gray btn-icon-only btn-close-pop"><span class="icon-close"></span></button>
+                    <ul class="popup-list">
+                        <li><img src="images/ppt/2@/pnt_1.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_2.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_3.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_4.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_5.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_6.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_7.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_8.png" alt=""></li>
+                        <li><img src="images/ppt/2@/pnt_9.png" alt=""></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        const slideUl = $('.slide-ul');
-        const slideItem = slideUl.children('li');
-        const slideBtn1 = $('.btn-up'); 
-        const slideBtn2 = $('.btn-down');
-        let num = 0;
-        var slideHeight = slideItem.prop('scrollHeight')
+        
+        
 
+        $(window).on('load resize', function(){
+            const slideUl = $('.slide-ul');
+            const slideItem = slideUl.children('li');
+            const slideBtn1 = $('.btn-up'); 
+            const slideBtn2 = $('.btn-down');
+            const fullBtn = $('.btn-fullsize');
+            const fullBox = $('.popup-area');
+            const fullCloseBtn = $('.btn-close-pop')
 
-        slideBtn1.on('click', function(e){
-            num+= slideHeight;
-            slideUl.css({marginTop: num});
+            let num = 0;
+            var slideHeight = slideItem.prop('scrollHeight')
 
-            if(num > slideHeight * -1){
-                slideBtn1.attr('disabled', true);
+            $('.btn-wrap').css({height: slideHeight })
+            fullBtn.on('click', function(){
+                fullBox.removeClass('d-none');
+            })
+            fullCloseBtn.on('click', function(){
+                fullBox.addClass('d-none');
+            })
 
-                slideBtn1.addClass('form-disable');
-                slideBtn2.removeClass('form-disable');
-            }
-            else{
-                slideBtn1.removeClass('form-disable');
-                slideBtn2.removeClass('form-disable');
-                slideBtn1.attr('disabled', false);
-                slideBtn2.attr('disabled', false);
-            }
+            slideBtn1.on('click', function(e){
+                num+= slideHeight;
+                slideUl.css({marginTop: num});
+
+                if(num > slideHeight * -1){
+                    slideBtn1.attr('disabled', true);
+
+                    slideBtn1.addClass('form-disable');
+                    slideBtn2.removeClass('form-disable');
+                }
+                else{
+                    slideBtn1.removeClass('form-disable');
+                    slideBtn2.removeClass('form-disable');
+                    slideBtn1.attr('disabled', false);
+                    slideBtn2.attr('disabled', false);
+                }
+            })
+
+            slideBtn2.on('click', function(e){
+                num-= slideHeight;
+                slideUl.css({marginTop: num});
+                
+                if(num < slideHeight * 7 * -1){
+                    slideBtn2.attr('disabled', true);
+
+                    slideBtn2.addClass('form-disable');
+                    slideBtn1.removeClass('form-disable');
+                }
+                else{
+                    slideBtn1.removeClass('form-disable');
+                    slideBtn2.removeClass('form-disable');
+                    slideBtn1.attr('disabled', false);
+                    slideBtn2.attr('disabled', false);
+                }
+            })
         })
 
-        slideBtn2.on('click', function(e){
-            num-= slideHeight;
-            slideUl.css({marginTop: num});
-            
-            if(num < slideHeight * 7 * -1){
-                slideBtn2.attr('disabled', true);
-
-                slideBtn2.addClass('form-disable');
-                slideBtn1.removeClass('form-disable');
-            }
-            else{
-                slideBtn1.removeClass('form-disable');
-                slideBtn2.removeClass('form-disable');
-                slideBtn1.attr('disabled', false);
-                slideBtn2.attr('disabled', false);
-            }
-        })
     </script>
 </body>
 </html>

@@ -544,6 +544,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: relative;
 }
 
 .index_page .info-area {
@@ -558,9 +559,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .index_page .info-area .info-wrap b {
@@ -603,13 +604,13 @@
 
 .index_page .ppt-area::before {
   content: '';
-  width: 30rem;
-  height: 30rem;
+  width: 35rem;
+  height: 35rem;
   background-color: white;
   opacity: .1;
   border-radius: 200rem;
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 70%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -657,6 +658,29 @@
           flex-direction: column;
   -webkit-transition: .5s;
   transition: .5s;
+  margin-top: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slideup;
+          animation-name: slideup;
+}
+
+@-webkit-keyframes slideup {
+  from {
+    margin-top: 200px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slideup {
+  from {
+    margin-top: 200px;
+  }
+  to {
+    margin-top: 0;
+  }
 }
 
 .index_page .ppt-area .ppt-wrap .slide-wrap .slide-box ul.slide-ul li {
@@ -670,6 +694,7 @@
 
 .index_page .ppt-area .ppt-wrap .slide-wrap .slide-shadow {
   position: absolute;
+  width: 100%;
   bottom: calc(-100% - .5rem);
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
@@ -707,4 +732,110 @@
       -ms-flex-align: center;
           align-items: center;
   gap: .5rem;
+  position: relative;
+}
+
+.index_page .ppt-area .ppt-wrap .btn-wrap .btn-fullsize {
+  position: absolute;
+  bottom: 3px;
+}
+
+.index_page .popup-area {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(41, 41, 41, 0.9);
+  overflow: auto;
+}
+
+.index_page .popup-area button {
+  position: fixed;
+  top: 8%;
+  right: 8%;
+}
+
+.index_page .popup-area .popup-list {
+  margin: 0 auto;
+  padding: 8%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: popup;
+          animation-name: popup;
+}
+
+@-webkit-keyframes popup {
+  from {
+    margin-top: 200px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes popup {
+  from {
+    margin-top: 200px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+.index_page .popup-area .popup-list li {
+  width: 100%;
+}
+
+.index_page .popup-area .popup-list li img {
+  width: 100%;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .index_page .info-area {
+    width: 25rem;
+  }
+  .index_page .info-area .info-wrap h3 {
+    line-height: auto;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1024px) {
+  .index_page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: overlay;
+  }
+  .index_page .ppt-area {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    padding: 2rem 2rem 2rem 4rem;
+  }
+  .index_page .info-area {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+  }
 }
