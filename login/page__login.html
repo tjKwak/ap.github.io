@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ▒ VMS ▒
+    </title>
+    <script>
+        var locale = "ko";
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login/login.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+</head>
+
+<body>
+    <div id="root">
+        <!-- 랜더링 페이지 -->
+        <div class="page-landering">
+            <!-- 내용 wrap -->
+            <div class="page-landering__cont-wrap">
+                <!-- 모바일용 헤더 -->
+                <div class="lander-mobile-header">
+                    <div class="mobile-header__wrap">
+                        <div class="logo-box">
+                            <div class="pnt-logo logo-o-w"></div>
+                        </div>
+                        <div class="language-box">
+                            <div class="pnt-select--group select-icon-only">
+                                <button class="select__btn">
+                                    <div class="cont-wrap">
+                                        <span class="icon-globe"></span>
+                                    </div>
+                                    <span class="icon-down"></span>
+                                </button>
+                                <ul class="select__options">
+                                    <li class="on"><a href="#">한국어</a></li>
+                                    <li><a href="#">영어</a></li>
+                                    <li><a href="#">중국어</a></li>
+                                    <li><a href="#">아랍어</a></li>
+                                    <li><a href="#">스페인어</a></li>
+                                    <li><a href="#">러시아어</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 왼쪽 - 랜더설명 박스 -->
+                <div class="lander-info">
+                    <div class="lander-info__wrap">
+                        <div class="info--logo">
+                            <div class="pnt-logo logo-b-b"></div>
+                        </div>
+                        <div class="info--txt">
+                            <h3 class="txt__main">EyeWatch</h3>
+                            <b class="txt__sub">피플앤드테크놀러지 CCTV 매니징 서비스입니다.</b>
+                            <p class="txt__desc">EyeWatch는 자산관리 시스템은 고객의 기기, 장비, 물류 등의 위치와 상태를
+                                <br>시각화, 통계화 하여 특정 자산에 대해 취해야 하는 조치와 자산운용 및 플로우
+                                <br>향상을 위해 관리자가 취해야 하는 다음 행동방안을 제시합니다.
+                            </p>
+                        </div>
+                        <div class="info--language">
+                            <div class="pnt-select--group icon-on-left">
+                                <button class="select__btn">
+                                    <div class="cont-wrap">
+                                        <span class="icon-globe"></span>
+                                        한국어
+                                    </div>
+                                    <span class="icon-down"></span>
+                                </button>
+                                <ul class="select__options">
+                                    <li class="on"><a href="#">한국어</a></li>
+                                    <li><a href="#">영어</a></li>
+                                    <li><a href="#">중국어</a></li>
+                                    <li><a href="#">아랍어</a></li>
+                                    <li><a href="#">스페인어</a></li>
+                                    <li><a href="#">러시아어</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info--login-btn">
+                            <button class="pnt-btn btn-brand btn-animation-move">Login<span class="icon-next"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 오른쪽 - 로그인 박스 -->
+                <div class="lander-login">
+                    <div class="lander-login__wrap flx-col">
+                        <!-- 타이틀 박스 -->
+                        <div class="title-box">
+                            <h2 class="txt__main">로그인</h2>
+                            <h3 class="txt__sub">아이디와 패스워드를 입력해주세요.</h3>
+                        </div>
+                        <!-- 컨텐츠 박스 -->
+                        <div class="cont-box">
+                            <div class="flx-col gap-3">
+                                <!-- 에러 박스 * 로그인페이지에서만 input-error 대신 이곳을 사용 -->
+                                <div class="cont--error" style="visibility: hidden;">
+                                    <p>* 에러메세지 입니다.</p>
+                                </div>
+                                <!-- id,pw 인풋 박스 -->
+                                <div class="cont--input flx-col flx-full">
+                                    <div class="pnt-input--group">
+                                        <input class="pnt-input" type="text" placeholder="아이디" autofocus>
+                                        <span class="icon-search"></span>
+                                        <button class="pnt-btn btn-icon-only"><span class="icon-lock"></span></button>
+                                        <p class="input-error-txt">에러문구 입니다</p>
+                                    </div>
+                                    <div class="pnt-input--group btn-on-right">
+                                        <input class="pnt-input" type="text" placeholder="패스워드">
+                                        <span class="icon-search"></span>
+                                        <button class="pnt-btn btn-icon-only"><span class="icon-eye icon-toggle"></span></button>
+                                        <p class="input-error-txt">에러문구 입니다</p>
+                                    </div>
+                                </div>
+                                <!-- 아이디 저장 -->
+                                <label class="pnt-checkbox" for="saveid">
+                                    <input type="checkbox" id="saveid">
+                                    <span class="checkbox-effect"></span>
+                                    <p>아이디 저장</p>
+                                </label>
+                                <!-- 버튼 박스 -->
+                                <div class="cont--btn">
+                                    <button class="pnt-btn btn-brand btn-large w-100" onClick="location.href='../index.html' ">로그인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 하단 박스 - 비밀번호 찾기  -->
+                        <div class="bottom-box">
+                            <div class="bottom-box__wrap">
+                                <div class="find-pw">
+                                    <a href="page__pw-forget.html">비밀번호 찾기</a>
+                                </div>
+                                <div class="sign-in">
+                                    <a href="http://smartcare.indoorplus.io/contact/" target="_blank">데모요청</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 배경 wrap --> 
+            <div class="page-landering__bg">
+            </div>
+        </div>
+    </div>
+    <script src="../js/form.js"></script>
+    <script>
+        //모바일 - 로그인창 오픈버튼
+        var m_login_btn = document.querySelector('.info--login-btn button');
+        var m_login_box = document.querySelector('.page-landering__cont-wrap');
+
+        m_login_btn.addEventListener('click',function(){
+            m_login_box.classList.add('login_clicked');
+        })
+    </script>
+</body>
+
+</html>

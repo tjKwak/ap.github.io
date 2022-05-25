@@ -1,0 +1,1491 @@
+//////////////////////////////
+/* Css link*/
+@import 'font';
+@import '_variables';
+
+$breakpoint-mobile: 570px;
+$breakpoint-tablet: 758px;
+$breakpoint-labtop: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-widemonitor: 1700px;
+//////////////////////////////
+
+
+/////////////////
+//자주 쓰는 문법//
+/////////////////
+
+//flex 정렬
+.tr{
+    text-align: right;
+}
+.tl{
+    text-align: left;
+}
+.tc{
+    text-align: center;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.h-100-m{
+    height: calc(100% - 1rem);
+}
+.flx-1{
+    flex: 1;
+}
+
+.flx-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    &.gap-0{
+        gap: 0;
+    }
+    &.gap-1{
+        gap: .5rem;
+    }
+    &.gap-2{
+        gap: 1rem;
+    }
+    &.gap-3{
+        gap: 2rem;
+    }
+    &.row-top{
+        align-items: unset;
+    }
+    &.flx-right{
+        justify-content: flex-end;
+    }
+    &.flx-center{
+        justify-content: center;
+    }
+    &.flx-mobile-col{
+        @media (max-width:$breakpoint-mobile){
+            flex-direction: column;
+        }
+    }
+}
+.flx-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flx-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: .5rem;
+    &.gap-0{
+        gap: 0;
+    }
+    &.gap-1{
+        gap: .5rem;
+    }
+    &.gap-2{
+        gap: 1rem;
+    }
+    &.gap-3{
+        gap: 2rem;
+    }
+    &.flx-center{
+        justify-content: center;
+    }
+}
+.flx-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.flx-top{
+        align-items: flex-start;
+    }
+}
+.w-10{
+    width: 10% !important;
+}
+.w-20{
+    width: 20% !important;
+}
+.w-30{
+    width: 30% !important;
+}
+.w-40{
+    width: 40% !important;
+}
+.w-50{
+    width: 50% !important;
+}
+.w-60{
+    width: 60% !important;
+}
+.w-70{
+    width: 70% !important;
+}
+.w-80{
+    width: 80% !important;
+}
+.w-90{
+    width: 90% !important;
+}
+.w-100{
+    width: 100% !important;
+}
+
+.h-10{
+    height: 10% !important;
+}
+.h-20{
+    height: 20% !important;
+}
+.h-30{
+    height: 30% !important;
+}
+.h-40{
+    height: 40% !important;
+}
+.h-50{
+    height: 50% !important;
+}
+.h-60{
+    height: 60% !important;
+}
+.h-70{
+    height: 70% !important;
+}
+.h-80{
+    height: 80% !important;
+}
+.h-90{
+    height: 90% !important;
+}
+.h-100{
+    height: 100% !important;
+}
+
+.b-radius-100{
+    border-radius: 100rem;
+}
+.b-radius-0{
+    border-radius: 0px;
+}
+
+//--[옵션] 모바일에서만 보이는 것
+.only-mobile{
+    display: none !important;
+    @media (max-width: $breakpoint-mobile) {
+        display: block !important;
+    }
+}
+.only-tablet{
+    display: none !important;
+    @media (max-width: $breakpoint-tablet) {
+        display: block !important;
+    }
+}
+.only-under-desktop{
+    display: none !important;
+    @media (max-width: $breakpoint-desktop) {
+        display: block !important;
+    }
+}
+.only-labtop{
+    display: none !important;
+    @media (min-width:$breakpoint-labtop) and (max-width:$breakpoint-widemonitor){
+        display: block !important;
+    }
+}
+.only-web{
+    display: block !important;
+    @media (max-width: $breakpoint-mobile) {
+        display: none !important;
+    }
+}
+.border-gray{
+    border: 1px solid gray;
+}
+
+
+//pnt-input(필수), input-short/w-100(옵션)
+input{
+    border: 1px solid $form-border-color;
+}
+input:hover{
+    border: 1px solid $form-border-color-hover;
+    filter: brightness(.95);
+}
+input:focus, input:active {
+    border: 1px solid $form-border-color-hover;
+    filter: none;
+    background-color: white;
+}
+.pnt-input{
+    height: $form-height;
+    border: 1px solid $form-border-color;
+    background-color: #FAFBFC;
+    border-radius: $form-radius;
+    color: $black !important;
+    padding: 0 .5rem;
+    filter: brightness(1);
+    transition: $all-transition;
+    &::placeholder{
+        @include p3-l();
+        font-size: 13px;
+        color: $form-placeholder-txt !important;
+    }
+    
+    //---[옵션]상태---[디폴트]노멀
+    &.input-disable{
+        background-color: $form-disable-bg !important;
+        border: 1px solid $form-border-color !important;
+        &::placeholder{
+            color: $form-disable-font !important;
+        }
+    }
+    &.input-must{
+        border: 2px solid $brand !important;
+        &:hover{
+            border: 2px solid $brand-l2 !important;
+        }
+    }
+}
+.pnt-input--group{
+    position: relative;
+    & .pnt-input{
+        width: 100%;
+    }
+    &.btn-on-left{
+        & input{
+            padding: 0 0 0 2.5rem;
+        }
+        & button{
+            left: 0;
+            padding-left: 10px;
+            & span{
+                opacity: .6;
+                transform: scale(.9);
+            }
+        }
+    }
+}
+//pnt-btn(필수) , btn-icon/btn-icon-only(옵션) , btn-small/btn-full(옵션) , btn-컬러이름(옵션)
+@mixin color-btn-effect{
+    color: white;
+    & span{
+        filter: invert(1) brightness(2);
+    }
+    &:hover{
+        filter: brightness(1.2);
+        transition: $all-transition;
+    }
+}
+button{
+    background-color: inherit;
+}
+//드롭다운 기능이 있는 버튼
+.btn-dropdown{
+    position: relative;
+}
+.btn-dropbox{
+    @media (max-width: $breakpoint-mobile) {
+        width: calc(100% - 2rem);
+    }
+    z-index: 10;
+    border-radius: $form-radius;
+    background-color: white;
+    box-shadow: $form-shadow;
+    padding: 5px 0 0 0;
+    margin: 0;
+    transition: all .3s;
+    position: absolute;
+    top: calc(100% - 1rem);
+    opacity: 0;
+    & li{
+        & a{
+            padding: 0;
+            font-size: 0;
+        }
+    }
+    &.on{
+        transition: all .3s;
+        top: calc(100% - .2rem);
+        opacity: 1;
+        & li{
+            border-bottom: 1px solid $form-border-color;
+            &:hover{
+                background-color: $gray-100;
+                & a{
+                    color: $f-b-2;
+                }
+            }
+            & a{
+                @include p4-b();
+                color: $f-b-4;
+                width: 100%;
+                padding: .5rem 1rem;
+                display: block;
+            }
+        }
+    }
+}
+
+.pnt-btn{
+    @media (max-width: $breakpoint-mobile) {
+        //transform: scale(.9);
+        &.btn-long{
+            width: 100%;
+        }
+    }
+   
+    //기본 세팅
+    display: inline-block;
+    position: relative;
+    min-height: $form-height; //padding이 있기때문에 없어도 괜찮다.
+    border-radius: $form-radius;
+    background-color: transparent;
+    padding: 0 .8rem;
+    border: none;
+    text-align: center;
+    white-space: nowrap;
+    @include p3-n(0.3);
+    filter: brightness(1);
+    transition: $all-transition;
+    &.non-active{
+        background-color: $gray-600 !important;
+        color: white;
+        &:hover{
+            filter: none !important;
+        }
+    }
+    //---[옵션]아이콘 유무---[디폴트]노멀
+    &.btn-icon{
+        padding: .4rem .8rem .2rem .5rem;
+        & span{
+            width: 20px;
+            height: 20px;
+            transform: scale(.8);
+            display: inline-block;
+            vertical-align: middle;
+            margin: -.2rem .3rem 0 0;
+        } 
+    }
+    &.btn-icon-only{
+        padding: .4rem .6rem;
+        max-width: $form-height;
+        max-height: $form-height;
+        & *{font-size: 0;}
+        transition: $all-transition;
+        
+        & span{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &:hover, .on{
+            filter: invert(.3);
+            transition: $all-transition;
+        }
+    }
+    //---[옵션] 사이즈---[디폴트]노멀
+    &.btn-full{
+        @include p2-n;
+        width: 100%;
+        min-height: 46px;
+    }
+    &.btn-large{
+        @include h5-n();
+        padding: 1.5rem 1.8rem 1.2rem 1.8rem;
+    }
+    &.btn-long.btn-icon{
+        padding: .4rem 1.8rem .2rem 1.5rem;
+    }
+    &.btn-small{
+        //padding: .3rem;
+        min-height: 30px;
+        @include p4-l;
+        & span{
+            transform: scale(.8);
+            margin: 0;
+        }
+    }
+    &.btn-small.btn-icon-only{
+        padding: .25rem;
+    }
+
+    //--[옵션] 카드헤더 왼쪽 - 백투페이지 버튼
+    // &.btn-backpage{
+    //     @media (max-width: $breakpoint-mobile) {
+    //         border-radius: 100px;
+    //         max-height: 2.5rem;
+    //         max-width: 2.5rem;
+    //         height: 2.5rem;
+    //         width: 2.5rem;
+    //         top: 50%;
+    //         left: .5rem;
+    //         transform: translateY(-50%);
+    //     }
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     background-color: $gray-100;
+    //     width: 3rem;
+    //     border-radius: 0;
+    //     border-right: 1px solid $gray-300;
+    //     border-bottom: 1px solid $gray-300;
+    //     max-height: unset;
+    //     max-width: unset;
+    // }
+    
+
+    //---[옵션] 인풋 위에 올라간다면 (특수한상황)
+    &.btn-on-input{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0rem;
+    }
+    //---[옵션] 인풋 위에 서치버튼으로 올라갈 때
+    &.btn-on-input-line{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0rem;
+        &::before{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 50%;
+            background-color: rgba(0,0,0,0.3);
+            position: absolute;
+            left: 1px;
+        }
+    }
+
+    //---[옵션] 컬러---
+    &.btn-orange{
+        @include color-btn-effect();
+        background-color: $brand;
+        &.btn-shadow{
+            box-shadow: 0px 5px 10px rgba(168, 71, 7, 0.3);
+        }
+    }
+    &.btn-warning{
+        @include color-btn-effect();
+        background-color: $warning;
+        color: $gray-800;
+        @include p3-b(0.3);
+        & span{
+            filter: invert(.4) brightness(.4);
+        }
+        &:hover{
+            filter: brightness(1.05);
+        }
+        &.btn-shadow{
+            box-shadow: 0px 5px 10px rgba(168, 117, 7, 0.3);
+        }
+    }
+    &.btn-danger{
+        @include color-btn-effect();
+        background-color: $danger;
+        &.btn-shadow{
+            box-shadow: 0px 5px 10px rgba(168, 7, 7, 0.3);
+        }
+    }
+    &.btn-blue{
+        @include color-btn-effect();
+        background-color: $secondary;
+        &.btn-shadow{
+            box-shadow: 0px 0px 5px rgba(100,100,255,0.5);
+        }
+    }
+    &.btn-darkgray{
+        @include color-btn-effect();
+        background-color: $gray-700;
+        &.btn-shadow{
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        }
+    }
+    &.btn-gray{
+        @include color-btn-effect();
+        background-color: $gray-500;
+        &.btn-shadow{
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        }
+        &:hover{
+            filter: brightness(1.1) !important;
+        }
+    }
+    &.btn-disable{
+        @include color-btn-effect();
+        background-color: $gray-400;
+        &.btn-shadow{
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        }
+        &:hover{
+            filter: none !important;
+        }
+    }
+    
+
+}
+
+//pnt-label(필수)
+.pnt-checkbox-label{
+    @include p4-n();
+    color: $f-b-4;
+    min-height: $form-height;
+    padding: .7rem .7rem .7rem 0;
+    position: relative;
+    text-transform: capitalize;
+    margin: 0;
+    &.checked{
+        @include p4-b();
+        color: $f-b-2;
+    }
+}
+
+//라벨 넓이 고정용
+ul, div, li{
+    &.pnt-label-5{
+        & .label-main{width: 5rem; flex-shrink: 0;}
+    }
+    &.pnt-label-6{
+        & .label-main{width: 6rem; flex-shrink: 0;}
+    }
+    &.pnt-label-7{
+        & .label-main{width: 7rem; flex-shrink: 0;}
+    }
+    &.pnt-label-8{
+        & .label-main{width: 8rem; flex-shrink: 0;}
+    }
+    &.pnt-label-9{
+        & .label-main{width: 9rem; flex-shrink: 0;}
+    }
+    &.pnt-label-10{
+        & .label-main{width: 10rem; flex-shrink: 0;}
+    }
+    &.pnt-label-11{
+        & .label-main{width: 11rem; flex-shrink: 0;}
+    }
+    &.pnt-label-12{
+        & .label-main{width: 12rem; flex-shrink: 0;}
+    }
+    &.pnt-label-13{
+        & .label-main{width: 13rem; flex-shrink: 0;}
+    }
+    &.pnt-label-top{
+        & .pnt-label--group{
+            align-items: flex-start;
+        }
+    }
+    &.pnt-label-top-web{
+        @media (min-width: $breakpoint-mobile) {
+            & .pnt-label--group{
+                align-items: flex-start;
+            }
+        }
+    }
+    &.pnt-label-top-mobile{
+        @media (max-width: $breakpoint-mobile) {
+            & .pnt-label--group{
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &.pnt-input-100{
+        & input{
+            width: 100%;
+        }
+    }
+    &.border-left{
+        padding-left: 1.2rem;
+        border-left: 2px solid $gray-300 !important;
+    }
+}
+
+
+//pnt-label(필수) , label-dot,label-bl,label-bb(옵션) , label-2line(옵션)
+.pnt-label--group{
+    min-height: $form-height;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $form-gap;
+    position: relative;
+
+    
+
+    & .label-main{
+        @media (max-width: $breakpoint-tablet) {
+            width: 6rem !important;
+            flex-shrink: 0 !important;
+        }
+
+        min-width: 5rem;
+        overflow: visible;
+        word-break: keep-all;
+        @include p4-b(1.3);
+        text-align: left;
+        text-transform: capitalize;
+        position: relative;
+
+        //info 아이콘이 들어갈때
+        //assetmanagement에 있음. 없어질수도 있음.
+        & .icon-infofill{
+            transform: translateY(-5%) scale(.7);
+            opacity: .3;
+            position: relative;
+            &:hover{
+                opacity: 1;
+                z-index: 5;
+                & .info-box{
+                    transform: scale(1.3);
+                    padding: .5rem;
+                    border: 1px solid $form-border-color;
+                    box-shadow: $form-shadow;
+                    border-radius: $form-radius;
+                    background-color: white;
+                    color: $f-b-3;
+                    @include p4-n();
+                    min-width: 8rem;
+                    min-height: 2rem;
+
+                    position: absolute;
+                    left: 60px;
+                    bottom: 0px;
+                }
+            }
+            // position: absolute;
+            // top: 50%;
+            // right: 0;
+            // transform: translateY(-45%) scale(.7);
+            // opacity: .3;
+        }
+        
+        //---[옵션]라벨 꾸미기---[디폴트]없음
+        &.label-dot{
+            display: inline-block;
+            padding-left: .8rem;
+            &::before{
+                content: '';
+                width: 5px;
+                height: 5px;
+                border-radius: 50px;
+                background-color: $brand;
+                display: inline-block;
+                position: absolute;
+                top: .5rem;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+        &.label-line{
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -8px;
+                width: 2rem;
+                height: 2px;
+                border-radius: 10px;
+                background-color: $gray-200;
+            }
+        }
+        &.label-line-long{
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -8px;
+                width: 100%;
+                height: 1px;
+                background-color: $gray-400;
+            }
+        }
+        &.label-border{
+            border: 1px solid $form-border-color;
+            padding: .5rem;
+            border-radius: $form-radius;
+            margin: 0;
+        }
+        //---[옵션]상태---[디폴트]기본
+        &.label-must{
+            color: $brand;
+        }
+    }
+    & .label-options{
+        flex : 1 1 auto;
+        @include p4-n(1.3);
+        color: $f-b-4;
+
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: $form-gap;
+        position: relative;
+    }
+}
+
+//pnt-select--group(필수) 
+.pnt-select--group{
+    @media (max-width: $breakpoint-mobile) {
+        width: 100% !important;
+        max-width: unset !important;
+    }
+    position: relative;
+    min-width: 8rem;
+    max-width: 12rem;
+    width: 12rem;
+    &:focus { outline: none; }
+    //길이 최대로 고정할때
+    &.w-full{
+        width: 12rem;
+    }
+    //버튼부분
+    & .select__btn{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: $form-height;
+        padding: .5rem 2.1rem .5rem .5rem;
+
+        background-color: $form-bg-color;
+        background-image: url('../images/icon_arrow_black_forselect.svg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: right;
+        border: 1px solid $form-border-color;
+        border-radius: $form-radius;
+
+        @include p4-b(1);
+        color: $form-txt-color;
+        overflow: hidden;
+
+        transition: $all-transition;
+        &:hover,:focus{
+            border: 1px solid $form-border-color-hover;
+            transition: $all-transition;
+            cursor: pointer;
+        }
+        //앞 아이콘(옵션)
+        & span{
+            width: 20px;
+            height: 20px;
+            margin-right: .5rem;
+        }
+    }
+    //ul 드롭다운 부분
+    & .select__options{
+        display: none;
+        z-index: 10;
+        position: absolute;
+        top: $form-height;
+        left: 1px;
+        width: calc(100% - 2px);
+        padding: 0;
+        background-color: $white;
+        box-shadow: $form-shadow;
+        border: 1px solid $form-border-color;
+        border-radius: $form-radius;
+        overflow: hidden;
+        & > li{
+            position: relative;
+            & a{
+                @include p4-n;
+                color: $form-txt-color;
+                display: block;
+                text-align: left;
+                padding: .5rem;
+                text-transform: capitalize;
+                border-bottom: 1px solid $form-border-color;
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+    }
+    //활성화 일때
+    &.on{
+        & .select__btn{
+            box-shadow: $form-active-shadow;
+            border: 1px solid $brand;
+        }
+        & .select__options{
+            display: block;
+            max-height: 14.5rem;
+            overflow: auto;
+            & a{
+                color: $black;
+            }
+            & li.on{
+                &::after{
+                    content: '✔';
+                    position: absolute;
+                    @include p2-n();
+                    right: 0.5rem;
+                    top: 50%;
+                    color: #1f1cd1;
+                    transform: scaleY(.8) translateY(-70%);
+                }
+                & a{
+                    @include p4-b;
+                    color: #1f1cd1 !important;
+                    background-color: #C5D1FE;
+                    border-bottom: 1px solid #2C48B0;
+                    &:hover{
+                        background-color: #C5D1FE;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+    //disable 일때
+    &.select-disable{
+        & .select__btn{
+            background-color: $form-disable-bg;
+            box-shadow: none !important;
+            border: 1px solid $form-border-color;
+            color: $form-disable-font !important;
+            & p{
+                color: $form-disable-font !important;
+            }
+            &:hover{
+                filter: none !important;
+                cursor: default;
+            }
+        }
+    }
+    //must 일때
+    &.select-must{
+        & .select__btn{
+            border: 2px solid $brand !important;
+            &:hover{
+                border: 2px solid $brand-l2 !important;
+            }
+        }
+    }
+    //width 100% 일때
+    &.w-100{
+        max-width: unset;
+    }
+}
+
+//pnt-inner-select--group(필수) 
+.pnt-inner-select--group{
+    position: relative;
+    width: 100%;
+    &:focus { outline: none; }
+    //버튼부분
+    & .inner-select__btn{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: $form-height;
+        padding: .5rem 2.1rem .5rem .5rem;
+
+        background-color: $form-bg-color;
+        background-image: url('../images/icon_arrow_black_forselect.svg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: right;
+        border: 1px solid $form-border-color;
+        border-radius: $form-radius;
+
+        @include p4-n(1);
+        color: $form-txt-color;
+        overflow: hidden;
+
+        transition: $all-transition;
+        &:hover,:focus{
+            border: 1px solid $form-border-color-hover;
+            transition: $all-transition;
+            cursor: pointer;
+        }
+        //앞 아이콘(옵션)
+        & span{
+            width: 20px;
+            height: 20px;
+            margin-right: .5rem;
+            filter: invert(1);
+        }
+    }
+    //ul 드롭다운 부분
+    & .inner-select__options{
+        display: none;
+        z-index: 10;
+        position: absolute;
+        top: $form-height;
+        left: 1px;
+        width: calc(100% - 2px);
+        background-color: $white;
+        box-shadow: $form-shadow;
+        padding: 0;
+        & > li{
+            border-bottom: 1px solid $form-border-color;
+            padding: .5rem;
+            & a{
+                color: $form-txt-color;
+                text-transform: capitalize;
+                @include p4-n;
+            }
+            &:hover{
+                background-color: $gray-100;
+            }
+        }
+    }
+    //활성화 일때
+    &.on{
+        & .inner-select__btn{
+            box-shadow: $form-active-shadow;
+            border: 1px solid $brand;
+        }
+        & .inner-select__options{
+            display: block;
+            & a{
+                color: $black;
+            }
+            & .on{
+                background-color: $brand-l3;
+            }
+        }
+    }
+    //disable 일때
+    &.select-disable{
+        & .select__btn{
+            background-color: $form-disable-bg;
+            box-shadow: none !important;
+            border: 1px solid $form-border-color;
+            & p{
+                color: $form-disable-font !important;
+            }
+            &:hover{
+                filter: none !important;
+            }
+        }
+    }
+    //must 일때
+    &.select-must{
+        & .select__btn{
+            border: 2px solid $brand !important;
+            &:hover{
+                border: 2px solid $brand-l2 !important;
+            }
+        }
+    }
+}
+
+//pnt-tabel--pageing(옵션) //pnt-table(필수)
+.pagination {
+    height: 30px;
+    float: right;
+    & .pnt-table--paging__wrap{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @include p3-b();
+
+        & .now {
+            color: $brand;
+            margin: 0 .1rem .2rem .7rem;
+        }
+        & .whole{
+            color: $f-b-6;
+            margin: 0 .7rem .2rem .1rem;
+        }
+        & .icon-back, .icon-next, .icon-next-double, .icon-back-double{
+            width: 30px;
+            height: 30px;
+            margin: -6px;
+            padding: 1.1rem;
+            transform: scale(.5);
+            border-radius: 10px;
+            background-color: $gray-500;
+            filter: opacity(.8) brightness(1.1);
+            &:hover{
+                filter: opacity(1);
+            }
+        }
+        & .icon-back{
+            background-position: -17px -9px;
+            background-color: $brand-l1;
+        }
+        & .icon-next{
+            background-position: -17px -55px;
+            background-color: $brand-l1;
+        }
+    }
+}
+.table{
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    & .border-box{
+        overflow: auto hidden;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        height: 100%;
+        & .thead{
+            overflow: visible;
+            & .tr{
+                height: 36px;
+                display: flex;
+                padding: 0;
+                & .th{
+                    display: flex;
+                    flex: 1 1 1%;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    background-color: $secondary-l2;
+                    border-right: 1px solid $gray-100;
+                    color: $f-b-1;
+                    @include p4-b();
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        & .tbody{
+            min-height: 10rem;
+            height: calc(100% - 36px) !important;
+            position: relative;
+            background-color: white;
+            &>div{
+                padding: 0;
+                overflow: visible;
+
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                &>div{
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    overflow: overlay;
+                    will-change: transform;
+                    direction: ltr;
+                    &>div{
+                        & .tr{
+                            display: flex;
+                            width: 100%;
+                            height: $form-height;
+                            position: absolute;
+                            left: 0;
+                            &.clickable{
+                                &:hover{
+                                    background-color: #ebecf3;
+                                    cursor: pointer;
+                                }
+                            }
+                            & .td{
+                                display: flex;
+                                flex: 1 1 1%;
+                                align-items: center;
+                                justify-content: center;
+                                box-sizing: border-box;
+
+                                border-bottom: 1px solid $gray-100;
+                                border-right: 1px solid $gray-100;
+                                @include p4-n();
+                                color: rgb(88, 82, 82);
+                                //word-break: break-all;
+                                &:last-child{
+                                    border-right: none;
+                                }
+                            }
+                            &:nth-child(2n) .td{
+                                background-color: rgba(0,0,0,0.02);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//콜룸 모아보기
+.table .border-box{
+    &.col-1-1-2{
+        .thead, .tbody{
+            .th:nth-child(1),.td:nth-child(1){ flex: 1 1 0; }
+            .th:nth-child(2),.td:nth-child(2){ flex: 1 1 0; }
+            .th:nth-child(3),.td:nth-child(3){ flex: 2 1 0; }
+        }
+    }
+    &.col-1-2-1{
+        .thead, .tbody{
+            .th:nth-child(1),.td:nth-child(1){ flex: 1 1 0; }
+            .th:nth-child(2),.td:nth-child(2){ flex: 2 1 0; }
+            .th:nth-child(3),.td:nth-child(3){ flex: 1 1 0; }
+        }
+    }
+    &.col-2-1-1{
+        .thead, .tbody{
+            .th:nth-child(1),.td:nth-child(1){ flex: 2 1 0; }
+            .th:nth-child(2),.td:nth-child(2){ flex: 1 1 0; }
+            .th:nth-child(3),.td:nth-child(3){ flex: 1 1 0; }
+        }
+    }
+    &.col-1-2-3{
+        .thead, .tbody{
+            .th:nth-child(1),.td:nth-child(1){ flex: 1 1 0; }
+            .th:nth-child(2),.td:nth-child(2){ flex: 2 1 0; }
+            .th:nth-child(3),.td:nth-child(3){ flex: 3 1 0; }
+        }
+    }
+    &.col-1-1-full{
+        .thead, .tbody{
+            .th, .td{ flex: 1 1 0 !important;}
+            .th:last-child, .td:last-child{ flex: 3 1 0 !important;}
+            & * {text-align: center;}
+        }
+    }
+    &.col-full-1-1{
+        .thead, .tbody{
+            .th, .td{ flex: 1 1 0 !important;}
+            .th:first-child, .td:first-child{ flex: 3 1 0 !important;}
+            & * {text-align: center;}
+        }
+    }
+    &.col-ful-2-2{
+        .thead, .tbody{
+            .th, .td{ flex: 1 1 0 !important;}
+            .th:first-child, .td:first-child{ flex: 2 1 0 !important;}
+            & * {text-align: center;}
+        }
+    }
+}
+
+
+//pnt-txt(필수) , txt-small,txt-large(옵션)
+.pnt-txt{
+    margin: 0;
+    @include p3-n();
+    &.txt-tiny{
+        @include p5-n();
+    }
+    &.txt-small{
+        @include p4-n();
+    }
+    &.txt-big{
+        @include p1-n();
+    }
+    &.txt-bold{
+        font-weight: 700;
+    }
+    &.txt-large{
+        @include h4-b();
+    }
+    &.txt-subtitle{
+        @include p4-b();
+        border-top: 1px solid $gray-500;
+        background-color: $gray-100;
+        padding: .3rem .5rem .5rem;
+    }
+    &.txt-border{
+        border: 1px solid $form-border-color;
+        padding: 0 .5rem;
+        border-radius: $form-radius;
+        margin: 0;
+        background-color: white;
+        white-space: nowrap;
+        display: inline-block;
+    }
+    &.txt-dot{
+        display: block;
+        width: 100%;
+        &::before{
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: .4rem;
+            background-color: $brand;
+        }
+        &.dot-black{
+            &::before{
+                background-color: $gray-700;
+            }
+        }
+    }
+}
+
+//pnt-border(필수)
+.pnt-border{
+    background-color: rgba(0, 0, 0, 0.2);
+    &.border-vert{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 .3rem;
+        width: 1px;
+        height: 1.5rem;
+        &.border-bold{
+            width: 2px;
+        }
+    }
+    &.border-horiz{
+        width: 100%;
+        height: 1px;
+        margin: .6rem 0;
+        &.border-bold{
+            height: 2px;
+        }
+    }
+}
+
+//맵박스
+.pnt-map-box{
+    background-color: #818AAF;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    //overflow: hidden;
+    & .map__function{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: .5rem;
+        & .map__function--top{
+            display: flex;
+            gap: $form-gap;
+            & > div{
+                padding: .3rem;
+                background-color: white !important;
+                color: black !important;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                border: 1px solid rgba(32, 39, 140, .125);
+                border-radius: .25rem;
+                margin-bottom: 1rem;
+                align-items: center;
+                @include p4-n();
+            }
+        }
+        & .map__function--bottom{
+            display: inline-flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: .5rem;
+            right: .5rem;
+            & button{
+                background-color: white !important;
+                &:hover{
+                    filter: none !important;
+                    background-color: $gray-100 !important;
+                }
+            }
+        }
+    }
+    & .map__pin{
+        position: absolute;
+        //이곳의 위치를 조종
+        // top: 100px;
+        // left: 100px;
+        & .map__pin--balloon{
+            display: none;
+            z-index: 10;
+            background-color: white;
+            box-shadow: $form-shadow;
+            border-radius: $form-radius;
+            padding: .5rem;
+            position: absolute;
+            top: -170px;
+            width: 150px;
+            transition: all .3s;
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -15px;
+                left: 20px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-horiz: 15px 10px 0 10px;
+                border-color: #ffffff transparent transparent transparent;
+            }
+            & .btn-view{
+                width: 100%;
+                min-height: 1rem;
+                padding: .5rem;
+            }
+        }
+        & .icon-gps-fill{
+            margin: 1.2rem 0 0 20px;
+            transform: scale(2);
+        }
+        &.on{
+            & .icon-gps{
+                background-color: $warning;
+                box-shadow: 0px 0px 20px $warning;
+                border-radius: 100px;
+                transition: all .3s;
+            }
+        }
+        &.active{
+            transition: all .3s;
+            & .icon-gps{
+                background-color: $brand;
+                box-shadow: 0px 0px 20px $brand;
+                border-radius: 100px;
+            }
+            & .map__pin--balloon{
+                display: block;
+            }
+        }
+    }
+    & .map__img{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+//pnt-nameplate(필수) , nameplate-disable(옵션)
+.pnt-nameplate{
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem 0 .3rem;
+    border-radius: $form-radius;
+    background-color: $secondary-l1;
+    min-height: $form-height;
+    @include p4-n(1);
+    & span{
+        margin-right: .3rem;
+    }
+    &.nameplate-disable{
+        background-color: $gray-600;
+        opacity: .4;
+        position: relative;
+        & span::before{
+            content: '';
+            display: block;
+            width: 70%;
+            height: 1.2px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+        }
+    }
+}
+
+//pnt-radio
+.pnt-radio-full{
+    display: inline-flex;
+    height: $form-height;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: .5rem;
+    & > li{
+        flex: 1 1 auto;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        border-radius: $form-radius;
+        border: 1px solid $form-border-color;
+        background-color: transparent;
+        & input{
+            visibility: hidden;
+        }
+        & label{
+            @include p4-b();
+            transform: translateX(-10px);
+            margin: 0;
+            
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &.checked{
+            background-color: $gray-900;
+            & label{
+                color: white;
+            }
+        }
+    }
+}
+.pnt-radio-short{
+    display: inline-flex;
+    height: $form-height;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    & > li{
+        & input{
+            visibility: hidden;
+        }
+        & label{
+            color: $f-b-3;
+            @include p4-n();
+            position: relative;
+            &::before{
+                content: '';
+                width: 22px;
+                height: 22px;
+                border-radius: 30px;
+                display: inline-block;
+                background-color: $gray-200;
+                position: absolute;
+                top: 50%;
+                left: -27px;
+                transform: translateY(-50%);
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -27px;
+                filter: invert(1);
+    
+                background-image: url('../images/util.svg');
+                background-position: -58.5px -474px;
+                background-repeat: no-repeat;
+                border: none;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 0;
+                background-size: 240px;
+                width: 20px;
+                height: 20px;
+                flex: 0 0 20px;
+                transform: scale(.7) translateY(-65%) translateX(10%);
+            }
+        }
+        &.checked{
+            & label{
+                color: $f-b-1;
+                &::before{
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+
+

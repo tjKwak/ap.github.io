@@ -1,0 +1,86 @@
+
+// ---------------------------------------------------------
+// ※-------------------------------------------------------
+// 해당 파일의 내용을 고쳐도 html엔 반영이 되지 않습니다.
+// 해당 파일은 theme 폴더를 위해 존재합니다.
+// 새로운 값이 추가되지 않는 이상 해당 파일을 수정할 이유는 없습니다.
+// ---------------------------------------------------------
+
+//--#{$color}
+
+$brand: orange;
+$secondary: blue;
+$success: green;
+$warning: yellow;
+$danger: red;
+$info: cyan;
+
+$light-gray : lightgray;
+$gray: gray;
+$dark-gray : darkgray;
+
+$brand-d4: mix($brand, black, 40%);
+$brand-d3: mix($brand, black, 55%);
+$brand-d2: mix($brand, black, 70%);
+$brand-d1: mix($brand, black, 83%);
+$brand-l4: mix($brand, white, 80%);
+$brand-l3: mix($brand, white, 55%);
+$brand-l2: mix($brand, white, 30%);
+$brand-l1: mix($brand, white, 10%);
+
+$secondary-d4: mix($secondary, black, 40%);
+$secondary-d3: mix($secondary, black, 55%);
+$secondary-d2: mix($secondary, black, 70%);
+$secondary-d1: mix($secondary, black, 83%);
+$secondary-l4: mix($secondary, white, 82%);
+$secondary-l3: mix($secondary, white, 60%);
+$secondary-l2: mix($secondary, white, 35%);
+$secondary-l1: mix($secondary, white, 15%);
+
+$success-d4: mix($success, black, 40%);
+$success-d3: mix($success, black, 55%);
+$success-d2: mix($success, black, 70%);
+$success-d1: mix($success, black, 83%);
+$success-d4: mix($success, black, 40%);
+$success-d3: mix($success, black, 55%);
+$success-d2: mix($success, black, 70%);
+$success-d1: mix($success, black, 83%);
+$success-l4: mix($success, white, 82%);
+$success-l3: mix($success, white, 60%);
+$success-l2: mix($success, white, 35%);
+$success-l1: mix($success, white, 18%);
+
+$warning-d4: mix($warning, black, 40%);
+$warning-d3: mix($warning, black, 58%);
+$warning-d2: mix($warning, black, 75%);
+$warning-d1: mix($warning, black, 90%);
+$warning-l4: mix($warning, white, 75%);
+$warning-l3: mix($warning, white, 55%);
+$warning-l2: mix($warning, white, 35%);
+$warning-l1: mix($warning, white, 20%);
+
+$danger-d4: mix($danger, black, 40%);
+$danger-d3: mix($danger, black, 55%);
+$danger-d2: mix($danger, black, 70%);
+$danger-d1: mix($danger, black, 83%);
+$danger-l4: mix($danger, white, 80%);
+$danger-l3: mix($danger, white, 60%);
+$danger-l2: mix($danger, white, 40%);
+$danger-l1: mix($danger, white, 20%);
+
+$info-d4: mix($info, black, 40%);
+$info-d3: mix($info, black, 55%);
+$info-d2: mix($info, black, 70%);
+$info-d1: mix($info, black, 83%);
+$info-l4: mix($info, white, 75%);
+$info-l3: mix($info, white, 50%);
+$info-l2: mix($info, white, 30%);
+$info-l1: mix($info, white, 10%);
+
+
+$gray-d: mix($gray, black, 30%);
+$gray-l: mix($gray, white, 30%);
+$light-gray-d: mix($light-gray, black, 30%);
+$light-gray-l: mix($light-gray, white, 30%);
+$dark-gray-d: mix($dark-gray, black, 30%);
+$dark-gray-l: mix($dark-gray, white, 30%);
