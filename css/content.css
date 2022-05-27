@@ -30,6 +30,12 @@
   border-radius: 5px;
 }
 
+@media (max-width: 758px) {
+  .app-optionBar__wrap .cctv-list li .screen-thumb {
+    height: 200px;
+  }
+}
+
 .app-optionBar__wrap .cctv-list li .screen-thumb * {
   color: white !important;
 }
@@ -275,10 +281,6 @@
 
 @media (max-width: 758px) {
   .popup .popup-area {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     padding: 1rem;
     width: 100%;
   }
@@ -288,24 +290,24 @@
   }
 }
 
-#newVideo .table--wrap {
+.option__camera .table--wrap {
   width: 101%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: auto;
 }
 
-#newVideo .table--wrap .pnt-table {
+.option__camera .table--wrap .pnt-table {
   width: 700px;
   height: 500px;
 }
 
 @media (max-width: 570px) {
-  #newVideo .table--wrap .pnt-table {
+  .option__camera .table--wrap .pnt-table {
     height: 300px;
   }
 }
 
-#newVideo .table--wrap .pnt-table * {
+.option__camera .table--wrap .pnt-table * {
   overflow: unset;
 }

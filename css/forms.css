@@ -331,6 +331,36 @@
   transition: all .3s;
 }
 
+.btn-dropdown .btn-dropbox.drop-left {
+  left: 0;
+}
+
+.btn-dropdown .btn-dropbox.drop-right {
+  left: 0;
+}
+
+.btn-dropdown .btn-dropbox.drop-left-toright {
+  left: 0;
+}
+
+@media (max-width: 570px) {
+  .btn-dropdown .btn-dropbox.drop-left-toright {
+    left: unset;
+    right: 0;
+  }
+}
+
+.btn-dropdown .btn-dropbox.drop-right-toleft {
+  right: 0;
+}
+
+@media (max-width: 570px) {
+  .btn-dropdown .btn-dropbox.drop-right-toleft {
+    right: unset;
+    left: 0;
+  }
+}
+
 .btn-dropdown .btn-dropbox ul {
   margin: 0;
   padding: 0;

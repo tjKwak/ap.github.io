@@ -51,7 +51,7 @@
   background: linear-gradient(180deg, #161515, #2d2c30);
 }
 
-#root .app-container.app-theme-pnt-dark .mobile-sideBar .icon-menu-list a {
+#root .app-container.app-theme-pnt-dark .mobile-sideBar .m_app-sideBar a {
   border-right: 1px solid #b0a6ff3a;
   border-bottom: 1px solid #b0a6ff3a;
 }

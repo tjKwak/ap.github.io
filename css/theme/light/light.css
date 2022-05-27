@@ -50,7 +50,7 @@
   background: white;
 }
 
-#root .app-container.app-theme-pnt-light .mobile-sideBar .icon-menu-list a {
+#root .app-container.app-theme-pnt-light .mobile-sideBar .m_app-sideBar a {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

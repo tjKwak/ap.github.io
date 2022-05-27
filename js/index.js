@@ -42,6 +42,18 @@ window.onload = function(){
         $('#root .app-container').attr('class','app-container');
         $('#root .app-container').addClass('app-theme-pnt-dark');
     })
+
+    //모바일 헤더 - 메뉴바 활성화하면 유저버튼 히든
+    var m_menu_btn = document.querySelector('.mobile-sideBar');
+    $('.mobile-menu button').click(function(){
+        if ($('.mobile-sideBar').hasClass('active')){
+            $('.user-box').removeClass('d-none')
+        }
+        else{
+            $('.user-box').addClass('d-none')
+        }
+    })
+
     
     //헤더 - 시간단위 변경기능
     var time_btn = document.querySelector('.time-box a');
@@ -61,6 +73,7 @@ window.onload = function(){
     })
 
 
+    /////////////////////////////////////////
     //모바일 사이드바 오픈
     var mobile_side_btn = document.querySelector('.mobile-menu button');
     var mobile_side_box = document.querySelector('.mobile-sideBar');
@@ -72,6 +85,35 @@ window.onload = function(){
         'icon-close' : 'icon-hamburger'
     })
 
+    //모바일 사이드바 메뉴 오픈
+    var m_sidebar_btn_area = document.querySelector('.mobile-sideBar .m_app-sideBar');
+    var m_sidebar_btns = m_sidebar_btn_area.querySelectorAll('a');
+    var m_sidebar_boxs = document.querySelectorAll('.mobile-sideBar .app-optionBar__wrap');
+    var m_sidebar_box_area = document.querySelector('.mobile-sideBar .m_app-optionBar');
+
+    m_sidebar_btn_area.addEventListener('click',function(e){
+        e.preventDefault();
+        if (!e.target.tagName == 'A') return;
+
+
+        //사이드바 완전 접기 기능
+        if(e.target.className === 'active'){
+            m_sidebar_box_area.classList.add('d-none');
+            e.target.className = '';
+        }
+        else{
+            m_sidebar_box_area.classList.remove('d-none');
+
+            //사이드바 다른 메뉴 오픈 기능
+            for(let i=0; i < m_sidebar_boxs.length; i++){
+                m_sidebar_btns[i].classList.remove('active');
+                m_sidebar_boxs[i].classList.remove('active');
+            }
+            var currIndex = Array.from(m_sidebar_btns).indexOf(e.target);
+            e.target.classList.add('active');
+            m_sidebar_boxs[currIndex].classList.add('active');
+        }
+    })
 
     /////////////////////////////////
     //사이드바

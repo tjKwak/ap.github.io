@@ -22,7 +22,7 @@
 .app-container .mobile-sideBar {
   z-index: 10;
   position: fixed;
-  top: 36px;
+  top: 40px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -294,7 +294,7 @@
   height: 38px;
   padding: .1rem .8rem;
   border-radius: 100rem;
-  border: 1px solid #CAC8CF;
+  border: 1.5px solid #CAC8CF;
   font-size: 14px;
   font-weight: 700;
   margin-right: 5px;
@@ -306,6 +306,13 @@
   -webkit-transition: all .1s;
   transition: all .1s;
   border: 1.5px solid #5A61FF;
+}
+
+@media (max-width: 758px) {
+  .app-header .flx-sb .user-box .user-btn {
+    font-size: 12px !important;
+    border: none !important;
+  }
 }
 
 .app-header .flx-sb .user-box .user-dropbox {
@@ -417,7 +424,11 @@
   transition: all .1s;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list {
+.mobile-sideBar .mobile-sideBar__wrap {
+  height: 100%;
+}
+
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -426,15 +437,18 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 90px;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li {
   -webkit-box-flex: 30%;
       -ms-flex: 30%;
           flex: 30%;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li a {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a {
   border-right: 1px solid green;
   border-bottom: 1px solid green;
   display: -webkit-box;
@@ -450,38 +464,42 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.8rem;
+  padding: 1.5rem;
   color: rgba(255, 255, 255, 0.3);
-  font-size: 0.5rem;
+  font-size: 10px;
   white-space: nowrap;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li a span {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a span {
   opacity: 0.3;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   pointer-events: none;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li a.active {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a.active {
   background: linear-gradient(145deg, #4a53ff, #b464ff);
   color: white;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li a.active span {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a.active span {
   opacity: 1;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li a:hover {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li a:hover.on {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a:hover.on {
   background: linear-gradient(145deg, #4a53ff, #b464ff);
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .icon-menu-list li a.click-disable {
+.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a.click-disable {
   height: 100%;
   pointer-events: none;
+}
+
+.mobile-sideBar .mobile-sideBar__wrap .m_app-optionBar {
+  height: calc(100% - 90px);
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list {
@@ -492,7 +510,7 @@
   opacity: 1;
   font-size: 14px;
   display: block;
-  padding: .5rem 0;
+  padding-bottom: .5rem;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul {
@@ -607,7 +625,7 @@
   opacity: 1;
 }
 
-.app-optionBar .app-optionBar__wrap {
+.app-optionBar__wrap {
   color: white;
   width: 100%;
   height: 100%;
@@ -621,13 +639,13 @@
   display: none;
 }
 
-.app-optionBar .app-optionBar__wrap.active {
+.app-optionBar__wrap.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.app-optionBar .app-optionBar__wrap .fixed-layout {
+.app-optionBar__wrap .fixed-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -639,7 +657,7 @@
   padding: 1rem;
 }
 
-.app-optionBar .app-optionBar__wrap .fixed-layout .title {
+.app-optionBar__wrap .fixed-layout .title {
   height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,7 +673,7 @@
   white-space: nowrap;
 }
 
-.app-optionBar .app-optionBar__wrap .scroll-layout {
+.app-optionBar__wrap .scroll-layout {
   -webkit-box-flex: 1;
       -ms-flex: 1 auto;
           flex: 1 auto;
@@ -671,6 +689,19 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
+}
+
+@media (max-width: 758px) {
+  .app-body .app-body__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .app-body .app-body__wrap .cctv-box {
+    width: 100%;
+    max-width: unset;
+  }
 }
 
 .app-footer {
@@ -1012,14 +1043,14 @@
 
 @media (max-width: 758px) {
   .app-container .app-header {
-    height: 36px !important;
+    height: 40px !important;
   }
   .app-container .app-main {
-    top: 36px !important;
+    top: 40px !important;
     bottom: 140px !important;
   }
   .app-container .app-header__menu {
-    top: 36px !important;
+    top: 40px !important;
   }
   .app-container .app-footer {
     height: 140px !important;

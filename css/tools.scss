@@ -187,8 +187,9 @@
 
 .v-visible{visibility: visible !important;}
 .v-hidden{visibility: hidden !important;}
-.d-none{display: none;}
-.d-block{display: block;}
+.d-none{display: none !important;}
+.d-block{display: block !important;}
+.filter-none{filter: none !important;}
 
 //--[옵션] 모바일에서만 보이는 것
 .only-mobile{

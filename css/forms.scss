@@ -190,6 +190,22 @@
         box-shadow: $form-shadow;
         overflow: hidden;
         transition: all .3s;
+        &.drop-left{left: 0;}
+        &.drop-right{left: 0;}
+        &.drop-left-toright{
+            left: 0;
+            @media (max-width:$breakpoint-mobile){
+                left: unset;
+                right: 0;
+            }
+        }
+        &.drop-right-toleft{
+            right: 0;
+            @media (max-width:$breakpoint-mobile){
+                right: unset;
+                left: 0;
+            }
+        }
         & ul{
             margin: 0;
             padding: 0;

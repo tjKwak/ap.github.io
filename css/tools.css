@@ -483,11 +483,16 @@
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .d-block {
-  display: block;
+  display: block !important;
+}
+
+.filter-none {
+  -webkit-filter: none !important;
+          filter: none !important;
 }
 
 .only-mobile {

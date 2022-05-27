@@ -32,7 +32,7 @@
                 <div class="flx-sb">
                     <div class="flx-row h-100">
                         <div class="mobile-menu">
-                            <button class="pnt-btn btn-icon-only btn-trans"><span class="icon-hamburger"></span></button>
+                            <button class="pnt-btn btn-icon-only filter-none btn-trans"><span class="icon-hamburger"></span></button>
                         </div>
                         <h1 class="logo"><a href="#" >EyeWatch</a></h1>
                         <ul class="web-menu">
@@ -98,9 +98,9 @@
                 </div>
             </div>
             <!-- 모바일 사이드바 -->
-            <div class="mobile-sideBar">
+            <div class="mobile-sideBar active">
                 <div class="mobile-sideBar__wrap">
-                    <ul class="icon-menu-list">
+                    <ul class="m_app-sideBar">
                         <li>
                             <a href="#">
                                 <span class="icon-menu-camera"></span>
@@ -141,79 +141,9 @@
                             <a href="#" class="click-disable"></a>
                         </li> -->
                     </ul>
-                    <ul class="setting-menu-list">
-                        <li>
-                            <a class="menu" href="#">새 화면 추가</a>
-                            <ul>
-                                <li><a href="#" onclick="popup_newCamera()">카메라 추가<span class="icon-plus icon-small ml-1"></span></a></li>
-                                <li><a href="#" onclick="popup_newVideo()">비디오 추가<span class="icon-plus icon-small ml-1"></span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="menu" href="#">설정</a>
-                            <ul>
-                                <li><a href="#" onclick="popup_userInfo()">유저 정보</a></li>
-                                <li><a href="#" onclick="popup_videoDate()">영상보관 기간</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="menu has-submenu" href="#">보기</a>
-                            <ul>
-                                <li><a href="#" class="theme-light">라이트모드 보기</a></li>
-                                <li><a href="#" class="theme-dark">다크모드 보기</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 본문 -->
-            <div class="app-main">
-                <div class="app-main__wrap">
-                    <!-- 사이드바 -->
-                    <div class="app-sideBar">
-                        <ul class="icon-menu-list">
-                            <li>
-                                <a href="#" class="active">
-                                    <span class="icon-menu-camera"></span>
-                                    카메라
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon-menu-alert"></span>
-                                    로그
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <a href="#">
-                                    <span class="icon-menu-board"></span>
-                                    보드
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon-menu-track"></span>
-                                    트랙킹
-                                </a>
-                            </li> -->
-                            <li>
-                                <a href="#">
-                                    <span class="icon-menu-flag"></span>
-                                    즐겨찾기
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="info-menu-list">
-                            <li class="">
-                                <a href="#">
-                                    <span class="icon-menu-info"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="app-optionBar">
+                    <div class="m_app-optionBar d-none">
                         <!-- 옵션1. 카메라 -->
-                        <div id="option-camera" class="app-optionBar__wrap active">
+                        <div class="option__camera app-optionBar__wrap">
                             <div class="fixed-layout">
                                 <div class="title">
                                     카메라
@@ -221,7 +151,7 @@
                                         <button class="pnt-btn btn-icon-only btn-small btn-trans">
                                             <span class="icon-more"></span>
                                         </button>
-                                        <div class="btn-dropbox">
+                                        <div class="btn-dropbox drop-left-toright">
                                             <ul>
                                                 <li>
                                                     <a href="#" class="active">큰 카드로 보기</a>
@@ -352,7 +282,7 @@
                             </div>
                         </div>
                         <!-- 옵션2. 로그 -->
-                        <div id="option-alarm" class="app-optionBar__wrap">
+                        <div class="option__alarm app-optionBar__wrap">
                             <div class="fixed-layout">
                                 <div class="title">
                                     로그
@@ -368,7 +298,7 @@
                             </div>
                         </div>
                         <!-- 옵션3. 즐겨찾기 -->
-                        <div id="option-favorite" class="app-optionBar__wrap">
+                        <div class="option__favorite app-optionBar__wrap">
                             <div class="fixed-layout">
                                 <div class="title">
                                     즐겨찾기
@@ -376,7 +306,284 @@
                                         <button class="pnt-btn btn-icon-only btn-small btn-trans">
                                             <span class="icon-more icon-small"></span>
                                         </button>
-                                        <div class="btn-dropbox">
+                                        <div class="btn-dropbox drop-left-toright">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="active">큰 카드로 보기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">작은 카드로 보기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">리스트로 보기</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search">
+                                    <div class="pnt-input--group btn-on-right w-100">
+                                        <input class="pnt-input" type="text" placeholder="search monitor">
+                                        <button class="pnt-btn btn-icon-only"><span class="icon-search icon-can-toggle"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scroll-layout">
+                                <ul class="cctv-list list-full">
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="setting-menu-list">
+                        <li>
+                            <a class="menu" href="#">새 화면 추가</a>
+                            <ul>
+                                <li><a href="#" onclick="popup_newCamera()">카메라 추가<span class="icon-plus icon-small ml-1"></span></a></li>
+                                <li><a href="#" onclick="popup_newVideo()">비디오 추가<span class="icon-plus icon-small ml-1"></span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu" href="#">설정</a>
+                            <ul>
+                                <li><a href="#" onclick="popup_userInfo()">유저 정보</a></li>
+                                <li><a href="#" onclick="popup_videoDate()">영상보관 기간</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu has-submenu" href="#">보기</a>
+                            <ul>
+                                <li><a href="#" class="theme-light">라이트모드 보기</a></li>
+                                <li><a href="#" class="theme-dark">다크모드 보기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 본문 -->
+            <div class="app-main">
+                <div class="app-main__wrap">
+                    <!-- 사이드바 -->
+                    <div class="app-sideBar">
+                        <ul class="icon-menu-list">
+                            <li>
+                                <a href="#" class="active">
+                                    <span class="icon-menu-camera"></span>
+                                    카메라
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon-menu-alert"></span>
+                                    로그
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a href="#">
+                                    <span class="icon-menu-board"></span>
+                                    보드
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon-menu-track"></span>
+                                    트랙킹
+                                </a>
+                            </li> -->
+                            <li>
+                                <a href="#">
+                                    <span class="icon-menu-flag"></span>
+                                    즐겨찾기
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="info-menu-list">
+                            <li class="">
+                                <a href="#">
+                                    <span class="icon-menu-info"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="app-optionBar">
+                        <!-- 옵션1. 카메라 -->
+                        <div class="option__camera app-optionBar__wrap active">
+                            <div class="fixed-layout">
+                                <div class="title">
+                                    카메라
+                                    <div class="btn-dropdown">
+                                        <button class="pnt-btn btn-icon-only btn-small btn-trans">
+                                            <span class="icon-more"></span>
+                                        </button>
+                                        <div class="btn-dropbox drop-left-toright">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="active">큰 카드로 보기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">작은 카드로 보기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">리스트로 보기</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search">
+                                    <div class="pnt-input--group btn-on-right w-100">
+                                        <input class="pnt-input" type="text" placeholder="search monitor">
+                                        <button class="pnt-btn btn-icon-only"><span class="icon-search icon-can-toggle"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scroll-layout">
+                                <ul class="cctv-list list-full">
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-off icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-off icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-off icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-off icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="screen-thumb">
+                                            <div class="thumb-info">
+                                                <span class="icon-eye icon-filter-white icon-off icon-small"></span>
+                                            </div>
+                                            <div class="thumb-hover">
+                                                <div class="flx-row">
+                                                    <button class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span class="icon-star icon-filter-white  opacity-03"></span></button>
+                                                    <p>XNV-8083R</p>
+                                                </div>
+                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span class="icon-setting icon-small"></span></button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <ul class="cctv-list list-small d-none">
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 옵션2. 로그 -->
+                        <div class="option__alarm app-optionBar__wrap">
+                            <div class="fixed-layout">
+                                <div class="title">
+                                    로그
+                                </div>
+                            </div>
+                            <div class="scroll-layout">
+                                <ul class="log-list">
+                                    <li>로그1</li>
+                                    <li>로그2</li>
+                                    <li>로그3</li>
+                                    <li>로그4</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 옵션3. 즐겨찾기 -->
+                        <div class="option__favorite app-optionBar__wrap">
+                            <div class="fixed-layout">
+                                <div class="title">
+                                    즐겨찾기
+                                    <div class="btn-dropdown">
+                                        <button class="pnt-btn btn-icon-only btn-small btn-trans">
+                                            <span class="icon-more icon-small"></span>
+                                        </button>
+                                        <div class="btn-dropbox drop-left-toright">
                                             <ul>
                                                 <li>
                                                     <a href="#" class="active">큰 카드로 보기</a>
