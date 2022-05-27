@@ -1,6 +1,5 @@
 
 window.onload = function(){
-    console.log('index')
     var header_btn_area = document.querySelector('.web-menu');
     var header_btn = header_btn_area.querySelectorAll('.menu');
     var header_box = header_btn_area.querySelectorAll('.app-header__menu');
@@ -110,22 +109,21 @@ window.onload = function(){
                 m_sidebar_boxs[i].classList.remove('active');
             }
             var currIndex = Array.from(m_sidebar_btns).indexOf(e.target);
-            e.target.classList.add('active');
+            e.targㅌet.classList.add('active');
             m_sidebar_boxs[currIndex].classList.add('active');
         }
     })
 
     /////////////////////////////////
     //사이드바
-    var sidebar_btn_area = document.querySelector('.app-sideBar .icon-menu-list');
+    var sidebar_btn_area = document.querySelector('.app-main__wrap .icon-menu-list');
     var sidebar_btns = sidebar_btn_area.querySelectorAll('a');
-    var sidebar_boxs = document.querySelectorAll('.app-optionBar__wrap');
-    var sidebar_box_area = document.querySelector('.app-optionBar');
+    var sidebar_boxs = document.querySelectorAll('.app-main__wrap .app-optionBar__wrap');
+    var sidebar_box_area = document.querySelector('.app-main__wrap .app-optionBar');
 
     sidebar_btn_area.addEventListener('click',function(e){
         e.preventDefault();
         if (!e.target.tagName == 'A') return;
-
         //사이드바 완전 접기 기능
         if(e.target.className === 'active'){
             sidebar_box_area.classList.add('folded');
@@ -149,6 +147,41 @@ window.onload = function(){
     $('.btn-dropdown').click(function(){
         $('.btn-dropbox').toggleClass('active')
     })
+
+    //시시티비 뷰모드 변경 기능
+    var viewMode_btn_area = document.querySelectorAll('.view-mode-select');
+    var viewMode_btns = document.querySelectorAll('.view-mode-select a');
+    var viewMode = document.querySelectorAll('.cctv-list');
+
+    for(let i=0; i < viewMode_btn_area.length; i++){
+        viewMode_btn_area[i].addEventListener('click',function(e){
+            e.preventDefault();
+            if (!e.target.tagName == 'A') return;
+            
+            //사이드바 다른 메뉴 오픈 기능
+            for(let i=0; i < viewMode_btns.length; i++){
+                viewMode_btns[i].classList.remove('active');
+            }
+            e.target.classList.add('active');
+            var currIndex = Array.from(viewMode_btns).indexOf(e.target);
+            if(currIndex %4 == 0){
+                //console.log('1. 큰 카드로 보기')
+                $('.cctv-list').attr('class','cctv-list view__big-card');
+            }else if(currIndex %2 == 0){
+                //console.log('3. 작은카드로 보기')
+                $('.cctv-list').attr('class','cctv-list view__small-card');
+            }
+            else {
+                if(currIndex %4 == 1){
+                    //console.log('2. 중간 카드로 보기')
+                    $('.cctv-list').attr('class','cctv-list view__middle-card');
+                }else{
+                    //console.log('4. 리스트로 보기')
+                    $('.cctv-list').attr('class','cctv-list view__list-card');
+                }
+            }
+        })
+    }
 
     //알람박스 끄고 키는 기능
     var notice_box = document.querySelector('.notice-box');
@@ -196,10 +229,8 @@ window.onload = function(){
         $('#newCamera .sub-content').removeClass('opacity-05');
         $('#newCamera .form-disable').removeClass('form-disable');
     })
-    console.log($('#newVideo .pnt-checkbox input').prop('checked'))
     $('#newVideo .pnt-checkbox input').click(function(){
         if($('#newVideo .pnt-checkbox input').prop('checked') == true){
-            console.log('hi')
             $('#newVideo .form-disable').removeClass('form-disable');
         }
         else return;

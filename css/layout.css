@@ -73,9 +73,10 @@
 }
 
 .app-container .app-main .app-main__wrap .app-optionBar.folded {
+  -webkit-transition: all .5s;
+  transition: all .5s;
   max-width: 0;
   overflow: hidden;
-  -webkit-transition: all .5s;
   transition: all .5s;
   border-right: none !important;
 }
@@ -485,14 +486,6 @@
   opacity: 1;
 }
 
-.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a:hover.on {
-  background: linear-gradient(145deg, #4a53ff, #b464ff);
-}
-
 .mobile-sideBar .mobile-sideBar__wrap .m_app-sideBar li a.click-disable {
   height: 100%;
   pointer-events: none;
@@ -504,13 +497,14 @@
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list {
   padding: 1rem;
+  padding-top: 0rem;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list .menu {
   opacity: 1;
   font-size: 14px;
   display: block;
-  padding-bottom: .5rem;
+  padding: 1.2rem 0 .5rem 0;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul {

@@ -73,6 +73,7 @@ $purple_gradiation : linear-gradient(145deg, #4a53ff, #b464ff);
         overflow: visible;
         transition: all .5s;
         &.folded{
+          transition: all .5s;
           max-width: 0;
           overflow: hidden;
           transition: all .5s;
@@ -375,10 +376,10 @@ $purple_gradiation : linear-gradient(145deg, #4a53ff, #b464ff);
             color: white;
             & span{opacity: 1;}
           }
-          &:hover{
-            background-color: rgba(255, 255, 255, 0.1);
-            &.on{ background: $purple_gradiation;}
-          }
+          // &:hover{
+          //   background-color: rgba(255, 255, 255, 0.1);
+          //   &.on{ background: $purple_gradiation;}
+          // }
           //마지막 빈 a
           &.click-disable{
             height: 100%;
@@ -392,11 +393,12 @@ $purple_gradiation : linear-gradient(145deg, #4a53ff, #b464ff);
     }
     & .setting-menu-list{
       padding: 1rem;
+      padding-top: 0rem;
       & .menu{
         opacity: 1;
         font-size: 14px;
         display: block;
-        padding-bottom: .5rem;
+        padding: 1.2rem 0 .5rem 0;
       }
       & ul{
         background-color: rgba(0, 0, 0, 0.05);

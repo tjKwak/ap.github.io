@@ -968,3 +968,7 @@
 #root .app-container.app-theme-pnt-light .app-optionBar input {
   background-color: white;
 }
+
+#root .app-container.app-theme-pnt-light .view__list-card li::after {
+  background-color: rgba(0, 0, 0, 0.1);
+}
