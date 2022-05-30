@@ -510,11 +510,11 @@
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul {
   background-color: rgba(0, 0, 0, 0.05);
-  padding: 1.4rem;
+  padding: 1.2rem;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul li + li {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul a {

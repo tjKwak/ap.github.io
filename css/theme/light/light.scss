@@ -240,4 +240,5 @@ $drop-box-shadow : 0rem 0.47rem 2.19rem rgba(8,10,37,0.03), 0rem 0.94rem 1.41rem
   //사이드옵션
   & .app-optionBar input{background-color: white;}
   & .view__list-card li::after{ background-color: rgba(0,0,0, 0.1); }
+  & .view__list-card .thumb-hover .flx-row button span{ filter: none !important;}
 }

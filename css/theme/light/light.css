@@ -972,3 +972,8 @@
 #root .app-container.app-theme-pnt-light .view__list-card li::after {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+#root .app-container.app-theme-pnt-light .view__list-card .thumb-hover .flx-row button span {
+  -webkit-filter: none !important;
+          filter: none !important;
+}

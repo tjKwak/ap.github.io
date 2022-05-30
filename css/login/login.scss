@@ -43,10 +43,11 @@
                 }
                 & .info--logo{
                     display: inline-block;
-                    padding: .6rem .8rem .7rem 1.2rem;
+                    padding: 0.2rem 1rem 0.1rem 1rem;
                     border-radius: 5rem;
                     background-color: $default-brand;
-                    transform: scale(.7) translateX(-20%);
+                    font-size: 14px;
+                    //transform: scale(.7) translateX(-20%);
                     margin-bottom: 1rem;
                     box-shadow: $card-shadow;
                     & .pnt-logo{opacity: .9;}
@@ -405,18 +406,21 @@
                     justify-content: space-between;
                     align-items: center;
                     height: 100%;
-                    padding: 0 1rem;
+                    padding: 0 2rem;
                     & .logo-box{
-                        display: inline-block;
-                        padding: .6rem .8rem .7rem 1.2rem;
-                        border-radius: 5rem;
-                        border: 1px solid white;
-                        transform: scale(.5) translateX(-40%) translateY(35%);
-                        margin-bottom: 1rem;
-                        box-shadow: $card-shadow;
-                        & .pnt-logo{opacity: 1;}
+                        // display: inline-block;
+                        // padding: .6rem .8rem .7rem 1.2rem;
+                        // border-radius: 5rem;
+                        // border: 1px solid white;
+                        // transform: scale(.5) translateX(-40%) translateY(35%);
+                        // margin-bottom: 1rem;
+                        // box-shadow: $card-shadow;
+                        // & .pnt-logo{opacity: 1;}
                     }
                     & .language-box{
+                        & .pnt-select--group{
+                            width: 40px;
+                        }
                         & .select__options{
                             background-color: $gray-800;
                             left: unset;
@@ -473,8 +477,10 @@
                     & .info--login-btn{
                         display: block;
                         position: absolute;
-                        right: 1.5rem;
-                        bottom: 10%;
+                        right: 2rem;
+                        bottom: 12%;
+                        & *{font-size: 16px !important;}
+                        
                     }
                 }
             }

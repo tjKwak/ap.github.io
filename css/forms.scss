@@ -194,14 +194,14 @@
         &.drop-right{left: 0;}
         &.drop-left-toright{
             left: 0;
-            @media (max-width:$breakpoint-mobile){
+            @media (max-width:$breakpoint-tablet){
                 left: unset;
                 right: 0;
             }
         }
         &.drop-right-toleft{
             right: 0;
-            @media (max-width:$breakpoint-mobile){
+            @media (max-width:$breakpoint-tablet){
                 right: unset;
                 left: 0;
             }

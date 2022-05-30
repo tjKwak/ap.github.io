@@ -926,3 +926,7 @@
   -webkit-box-shadow: 0px 0px 10px black;
           box-shadow: 0px 0px 10px black;
 }
+
+#root .app-container.app-theme-pnt-dark .mobile-sideBar .setting-menu-list ul {
+  background-color: #b0a6ff0f;
+}

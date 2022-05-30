@@ -343,7 +343,7 @@
   left: 0;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 758px) {
   .btn-dropdown .btn-dropbox.drop-left-toright {
     left: unset;
     right: 0;
@@ -354,7 +354,7 @@
   right: 0;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 758px) {
   .btn-dropdown .btn-dropbox.drop-right-toleft {
     right: unset;
     left: 0;
