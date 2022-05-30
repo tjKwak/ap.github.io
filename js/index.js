@@ -109,7 +109,7 @@ window.onload = function(){
                 m_sidebar_boxs[i].classList.remove('active');
             }
             var currIndex = Array.from(m_sidebar_btns).indexOf(e.target);
-            e.targㅌet.classList.add('active');
+            e.target.classList.add('active');
             m_sidebar_boxs[currIndex].classList.add('active');
         }
     })

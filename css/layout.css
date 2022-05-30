@@ -311,7 +311,8 @@
 
 @media (max-width: 758px) {
   .app-header .flx-sb .user-box .user-btn {
-    font-size: 12px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
     border: none !important;
   }
 }
@@ -501,24 +502,24 @@
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list .menu {
-  opacity: 1;
-  font-size: 14px;
+  opacity: .7;
+  font-size: 12px;
   display: block;
   padding: 1.2rem 0 .5rem 0;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul {
   background-color: rgba(0, 0, 0, 0.05);
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul li + li {
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul a {
   font-size: 14px;
-  opacity: .8;
+  opacity: .9;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul a:hover {
@@ -924,6 +925,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 5px;
+  opacity: .7;
 }
 
 .app-footer .play-box .play-content .time-line .time-line__bottom .times-font p {

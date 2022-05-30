@@ -337,7 +337,7 @@
 }
 .app-header .user-box .user-dropbox{
   @media (max-width:$breakpoint-tablet){
-    width: 100vw;
+    width: calc(100vw - 15px);
     top: $mobile-header-height !important;
     right: 0 !important;
     // left: 50%;

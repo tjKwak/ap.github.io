@@ -1547,7 +1547,7 @@
 
 @media (max-width: 758px) {
   .app-header .user-box .user-dropbox {
-    width: 100vw;
+    width: calc(100vw - 15px);
     top: 40px !important;
     right: 0 !important;
   }
