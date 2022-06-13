@@ -5,6 +5,10 @@
 /* Css link*/
 /* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
+html {
+  overflow: hidden;
+}
+
 .app-container {
   position: relative;
 }
@@ -513,11 +517,11 @@
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul {
   background-color: rgba(0, 0, 0, 0.05);
-  padding: 1.4rem;
+  padding: 1.2rem;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul li + li {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .mobile-sideBar .mobile-sideBar__wrap .setting-menu-list ul a {
@@ -1554,6 +1558,10 @@
           justify-content: flex-end;
   gap: 6px;
   border-top: 1px solid transparent;
+}
+
+.popup .popup-area .pnt-modal .modal-footer > * {
+  margin: 0;
 }
 
 @media (max-width: 758px) {

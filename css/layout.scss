@@ -15,6 +15,9 @@ $purple_gradiation : linear-gradient(145deg, #4a53ff, #b464ff);
 
 /////////////////////////////
 // 1차 레이아웃 - 포지션 & 배경색상
+html{
+  overflow: hidden;
+}
 .app-container{
   position: relative;
   // 헤더

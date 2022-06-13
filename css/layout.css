@@ -2,6 +2,10 @@
 /* Css link*/
 /* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
+html {
+  overflow: hidden;
+}
+
 .app-container {
   position: relative;
 }

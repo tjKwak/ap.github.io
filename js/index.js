@@ -30,7 +30,12 @@ header_btn_area.addEventListener('click',function(e){
 var disable_forms = document.querySelectorAll('#root .form-disable');
         
 for(let i=0; i<disable_forms.length; i++){
-    disable_forms[i].disabled = true;
+    if(disable_forms[i].classList.contains('form-disable')){
+        disable_forms[i].disabled = true;
+    }
+    else{
+        disable_forms[i].disabled = false;
+    }
 }
 
 //테마변경 기능
@@ -235,4 +240,13 @@ $('#newVideo .pnt-checkbox input').click(function(){
         $('#newVideo .form-disable').removeClass('form-disable');
     }
     else return;
+})
+$('#userInfo .cont-1 .input-pw').on('change keyup paste',function(e){
+    $('#userInfo .modal-footer .form-disable').removeAttr('disabled');
+    $('#userInfo .modal-footer .form-disable').removeClass('form-disable');
+})
+$('#userInfo .modal-footer .btn-brand').click(function(e){
+    $('#userInfo .cont-1').addClass('d-none');
+    $('#userInfo .cont-2').removeClass('d-none');
+    e.target.innerText = '변경 완료';
 })
