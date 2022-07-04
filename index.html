@@ -727,7 +727,8 @@
                         <div class="app-body__wrap">
                             <div class="cctv-box">
                                 <div class="cctv-info">
-                                    <div class="live">live</div>
+                                    <!-- 녹화중일때는 span의 클래스가 bg-danger이 됩니다. -->
+                                    <div class="live">live <span class="bg-gray"></span></div>
                                 </div>
                                 <div class="cctv-funtcion">
                                     <div class="flx-sb">
@@ -737,14 +738,30 @@
                                             <div class="name">XNV-8083R very long name for cctv screen</div>
                                         </div>
                                         <div class="flx-row gap-1">
+                                            <!-- 녹화전 -->
+                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
+                                                    class="icon-circle icon-filter-red icon-small"></span></button>
+                                            <!-- 녹화후 -->
+                                            <span>00:01</span>
+                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
+                                                    class="icon-box icon-filter-white icon-small"></span></button>
+                                            <div class="pnt-border border-d"></div>
+                                            <!-- 캡쳐 -->
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
                                                     class="icon-capture icon-filter-white"></span></button>
+                                            <!-- 새창에 띄우기 -->
+                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
+                                                    class="icon-newwindow icon-filter-white"></span></button>
+                                            <!-- 확대 -->
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
                                                     class="icon-zoomin icon-filter-white"></span></button>
+                                            <!-- 회전 -->
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
                                                     class="icon-reset icon-filter-white"></span></button>
+                                            <!-- 전체화면 -->
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
                                                     class="icon-fullscreen icon-filter-white"></span></button>
+                                            <!-- 세팅 -->
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
                                                     class="icon-setting icon-filter-white"></span></button>
                                             <div class="pnt-border border-d"></div>
@@ -767,9 +784,9 @@
                                         </div>
                                         <div class="flx-row gap-1">
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-movie-list icon-filter-white"></span></button>
+                                                class="icon-capture icon-filter-white"></span></button>
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-capture icon-filter-white"></span></button>
+                                                class="icon-newwindow icon-filter-white"></span></button>
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
                                                     class="icon-zoomin icon-filter-white"></span></button>
                                             <button class="pnt-btn btn-icon-only btn-small btn-trans"><span

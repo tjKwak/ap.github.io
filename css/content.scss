@@ -245,6 +245,12 @@ $list_thumb_gap : 6px;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap : 5px;
+      & span{
+        width: 5px;
+        height: 5px;
+        border-radius: 10px;
+      }
     }
   }
   & .cctv-funtcion{

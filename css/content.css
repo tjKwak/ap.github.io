@@ -1433,6 +1433,13 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 5px;
+}
+
+.cctv-box .cctv-info .live span {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
 }
 
 .cctv-box .cctv-funtcion {
