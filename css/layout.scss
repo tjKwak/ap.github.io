@@ -1,838 +1,507 @@
 //////////////////////////////
 /* Css link*/
-@import 'font';
-@import '_variables';
+@import "font";
+@import "_variables";
 
-$header-height : 55px;
-$mobile-header-height : 40px;
-$footer-height : 120px;
-$mobile-footer-height : 140px;
-$footer-fold-height : 20px;
-$sideBar-width : 60px;
-$sideOption-width : 240px;
+$header-height: 55px;
+$mobile-header-height: 48px;
+$footer-height: 60px;
+$mobile-footer-height: 40px;
+$footer-fold-height: 20px;
+$sideBar-width: 60px;
+$sideOption-width: 240px;
 
-$purple_gradiation : linear-gradient(145deg, #4a53ff, #b464ff);
+$purple_gradiation: linear-gradient(145deg, #4a53ff, #b464ff);
+$light-gray: rgb(197, 197, 197);
 
 /////////////////////////////
 // 1차 레이아웃 - 포지션 & 배경색상
-html{
+html {
   overflow: hidden;
 }
-.app-container{
+.app-container {
   position: relative;
   // 헤더
-  & .app-header{
+  & .app-header {
+    z-index: 2;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
     height: $header-height;
-    background: lightgray;
-    border-bottom: 1px solid green;
-    transition: all .3s;
-  }
-  //모바일 사이드바
-  & .mobile-sideBar{
-    z-index: 10;
-    position: fixed;
-    top: $mobile-header-height;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: lightgray;
-    overflow: hidden;
-    display: none;
-    &.active{
-      display: block;
-    }
+    background: white;
+    border-bottom: 1px solid rgb(234, 234, 234);
+    transition: all 0.3s;
   }
   // 본문
-  & .app-main{
+  & .app-body {
     position: fixed;
     top: $header-height;
     left: 0;
     right: 0;
     bottom: $footer-height;
-    transition: all .3s;
-    & .app-main__wrap{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(darkgray, #030409);
-
-      & .app-sideBar{
-        width: $sideBar-width;
-        background-color: lightgray;
-        //border-right: 1px solid green;
-      }
-      & .app-optionBar{
-        max-width: $sideOption-width;
-        width: $sideOption-width;
-        position: relative;
-        background-color: #18181F;
-        border-left: 1px solid green;
-        border-right: 1px solid green;
-        overflow: visible;
-        transition: all .5s;
-        &.folded{
-          transition: all .5s;
-          max-width: 0;
-          overflow: hidden;
-          transition: all .5s;
-          border-right: none !important;
-        }
-      }
-      & .app-body{
-        flex: 1 0 auto;
-        position: relative;
-      }
-    }
-    //알람박스
-    & .notice-area{
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: .5rem;
-    }
+    // & .body-wrap{
+    //   & > div{
+    //     min-height: 700px;
+    //     border: 10px solid red;
+    //     overflow: scroll !important;
+    //     & > .content-wrap{
+    //       border: 10px solid blue;
+    //       height: auto !important;
+    //       overflow: auto !important;
+    //     }
+    //   }
+    // }
   }
   // 푸터
-  & .app-footer{
+  & .app-footer {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     height: $footer-height;
 
-    background: lightgray;
-    border-top: 1px solid green;
+    background: black;
   }
 }
-
 
 /////////////////////////////
 // 2차 레이아웃 - 내용
 /////////////////////////////
-
 //헤더
-.app-header{
-  padding: 0 1rem;
-  @media (max-width:$breakpoint-tablet){
-    padding: 0 .5rem;
+.app-header {
+  padding: 0 2rem;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0 1rem;
   }
   //헤더 메뉴박스
-  & .flx-sb{
+  & .flx-sb {
     height: 100%;
-    & .flx-left, .flx-right{
+    & > div {
       height: 100%;
       display: flex;
     }
-    & .mobile-menu{
+    & > div:nth-of-type(1),
+    div:nth-of-type(3) {
+      width: 100px;
+    }
+    & .mobile-menu {
       display: flex;
       height: 100%;
       align-items: center;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
-    & ul.web-menu{
+    & ul.web-menu {
       display: flex;
       padding: 0;
       margin: 0;
       height: 100%;
-      & li{ position: relative; }
-      & .menu{
-        color: $f-w-2;
-        font-size: 14px;
-        padding: 0 1rem;
-        transition: all .3s;
-        border-bottom: 1px solid transparent;
-        &:hover, &.active{
-          transition: all .3s;
-          border-bottom: 1px solid white;
-        }
+      gap: 1px;
+      & li {
+        position: relative;
       }
-      //헤더 드롭다운
-      & .app-header__menu{
-        position: absolute;
-        top: $header-height;
-        width: 150px;
-        max-height: 0;
-        padding: 0;
-        overflow: hidden;
-        transition: all .3s;
-        border: none;
-        border-radius: $form-radius;
-        box-shadow: $card-shadow;
-        
-        & ul{
-          padding: 0;
-          margin: 0;
-          & a{
-            font-size: 13px;
-            padding: .8rem 1rem;
-            &:hover{
-              background-color: rgba(255, 255, 255, 0.1);
-            }
-          }
-        }
-        // 활성화 기능
-        &.active{
-          padding: .5rem 0;
-          max-height: 150px;
-          transition: all .3s;
+      & .menu {
+        color: $f-b-1;
+        font-weight: 600;
+        font-size: 16px;
+        white-space: nowrap;
+        padding: 0 1.8rem;
+        transition: all 0.3s;
+        border-bottom: 1px solid transparent;
+        &:hover,
+        &.active {
+          transition: all 0.3s;
+          border-bottom: 1px solid black;
         }
       }
     }
-    
-    & a{
+    & a {
       display: flex;
       height: 100%;
       align-items: center;
     }
-    & .logo{
+    & .logo {
       font-size: 1.3rem;
       letter-spacing: -1px;
       margin: 0;
       margin-right: 1rem;
-      & a{
+      & a {
         font-weight: 700 !important;
         background: $purple_gradiation;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      @media (max-width:$breakpoint-tablet){
+      @media (max-width: $breakpoint-tablet) {
         font-size: 1.1rem;
       }
     }
-    & .time-box{
-      height: 100%;
-      margin-right: 20px;
-      & .time{
-        display: flex;
-        align-items: center;
-        color: white;
-        border-bottom: 1px solid transparent;
-        padding-right: 10px;
-        transition: all .1s;
-        & span{
-          transform: scale(.8);
-          opacity: .5;
-        }
-        & b{
-          display: inline-block;
-          text-align: center;
-          font-size: 12px;
-          font-weight: 600;
-          margin-right: 5px;
-          opacity: .5;
-        }
-        & p{
-          color: $f-b-4;
-          font-weight: 500;
-          margin: 0;
-        }
-        &:hover{
-          border-bottom: 1px solid white;
-          transition: all .1s;
-        }
+    @at-root .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      background-color: white;
+      border-radius: $form-radius;
+      box-shadow: 1px 5px 10px rgb(187, 187, 187);
+      min-width: unset;
+      & span {
+        border: 1px solid black;
       }
-    }
-    & .user-box{
-      position: relative;
-      & .user-btn{
-        height: 38px;
-        padding: .1rem .8rem;
-        border-radius: 100rem;
-        border: 1.5px solid $gray-400;
-        
+      & p {
         font-size: 14px;
-        font-weight: 700;
-        margin-right: 5px;
-        transition: all .1s;
-        &:hover, &.active{
-          transition: all .1s;
-          border: 1.5px solid #5A61FF;
-        }
-        @media (max-width:$breakpoint-tablet){
-          font-size: 14px !important;
-          font-weight: 400 !important;
-          border: none !important;
-        }
+        margin: 0;
+        text-transform: uppercase;
       }
-      & .user-dropbox{
-        &.active{
-          visibility: visible;
-          top: $header-height;
-          opacity: 1;
-          transition: all .3s ease;
-        }
-        visibility: hidden;
-        top: 20px;
-        opacity: 0.2;
-        transition: all .3s ease;
-        position: absolute;
-        right: 0;
-        border-radius: $form-radius;
-        background-color: lightgray;
-        box-shadow: $form-shadow;
-        color: white;
-        & .user-info{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 1.5rem 3rem 1rem 3rem;
-          font-size: 20px;
-          & .stor-box{
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            border-radius: $form-radius;
-            padding: .3rem .8rem;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
-            
-            & .storage-gauge{
-              width: 50px;
-              height: 3px;
-              border-radius: $form-radius;
-              background-color: rgba(255, 255, 255, 0.2);
-              position: relative;
-              overflow: hidden;
-              &::before{
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 90%;
-                background-color: $default-brand;
-              }
-            }
-          }
-        }
-        & .user-logout{
-          & a{
-            padding: .6rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            font-weight: 500;
-            font-size: 16px;
-            filter: brightness(1.3);
-            transition: all .1s;
-            &:hover{
-              filter: none;
-              background-color: rgba(255, 255, 255, 0.1);
-              color: white;
-              transition: all .1s;
-            }
-          }
-        }
-      }
-    }
-  }
-
-}
-
-//모바일 사이드바
-.mobile-sideBar{
-  & .mobile-sideBar__wrap{
-    height: 100%;
-    & .m_app-sideBar{
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      flex-shrink: 0;
-      height: 90px;
-      & li{
-        flex: 30%;
-        & a{
-          border-right: 1px solid green;
-          border-bottom: 1px solid green;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 1.5rem;
-
-          color: rgba(255, 255, 255, 0.3);
-          font-size: 10px;
-          white-space: nowrap;
-
-          & span{
-            opacity: 0.3;
-            margin-bottom: 7px;
-            pointer-events: none;
-          }
-          
-          //활성화 기능
-          &.active {
-            background: $purple_gradiation;
-            color: white;
-            & span{opacity: 1;}
-          }
-          // &:hover{
-          //   background-color: rgba(255, 255, 255, 0.1);
-          //   &.on{ background: $purple_gradiation;}
-          // }
-          //마지막 빈 a
-          &.click-disable{
-            height: 100%;
-            pointer-events: none;
-          }
-        }
-      }
-    }
-    & .m_app-optionBar{
-      height: calc(100% - 90px);
-    }
-    & .setting-menu-list{
-      padding: 1rem;
-      padding-top: 0rem;
-      & .menu{
-        opacity: .7;
-        font-size: 12px;
-        display: block;
-        padding: 1.2rem 0 .5rem 0;
-      }
-      & ul{
-        background-color: rgba(0, 0, 0, 0.05);
-        padding: 1.2rem;
-        & li+li{margin-top: 8px;}
-        & a{
-          font-size: 14px;
-          opacity: .9;
-          &:hover{opacity: 1;}
-        }
-      }
-      // & ul{
-      //   border-radius: $form-radius;
-      //   background-color: rgba(255, 255, 255, 0.1);
-      //   padding: .5rem 1rem;
-      //   margin-bottom: 1rem;
-      //   display: none;
-      //   &.active{
-      //     display: block;
-      //   }
-      //   & a{
-      //     font-size: 12px;
-      //   }
-      // }
-    }
-  }
-}
-#root .app-container.app-theme-pnt-light{
-  & .app-sideBar a{
-    opacity: .8;
-    & span{ opacity: .4; }
-    &.active span{opacity: 1;}
-  }
-}
-//픽스 사이드바
-.app-sideBar{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-   & ul{
-     padding: 0;
-     margin: 0;
-     & li{
-        & a{
-          display: block;
-          width: 100%;
-          padding: 0.8rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-
-          font-size: 10px;
-          white-space: nowrap;
-          opacity: .7;
-          & span{
-            pointer-events: none;
-            margin-bottom: 5px;
-            opacity: .8;
-          }
-          
-          //활성화 기능
-          &.active {
-            opacity: 1;
-            background: $purple_gradiation;
-            color: white !important;
-            & span{filter: invert(1); opacity: 1;}
-          }
-          &:hover{
-            background-color: rgba(255, 255, 255, 0.1);
-            &.on{ background: $purple_gradiation;}
-          }
-       }
-     }
-   }
-}
-
-//사이드바 옵션
-.app-optionBar{
-  &:hover .app-scroll-hide{
-    opacity: 0;
-    -webkit-transition: all .5s;
-  }
-  & .app-scroll-hide{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 4px;
-    background-color: red;
-    -webkit-transition: all .5s;
-    opacity: 1;
-  }
-  @at-root .app-optionBar__wrap{
-    color: white;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    display: none;
-    &.active{
-      display: flex;
-    }
-    //타이틀 부분
-    & .fixed-layout{
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-      & .title{
-        height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        font-size: 14px;
-        font-weight: 600;
-        white-space: nowrap;
-      }
-    }
-    //컨텐츠 부분
-    & .scroll-layout{
-      flex: 1 auto;
-      overflow-y: scroll;
-      padding: 1rem;
     }
   }
 }
 
 //바디
-.app-body{
-  .app-body__wrap{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    @media (max-width:$breakpoint-tablet){
+.app-body {
+  position: relative;
+  background-color: white;
+  & .side-wrap {
+    & > div {
+      z-index: 2;
+      position: fixed;
+      top: $header-height;
+      bottom: $footer-height;
+      padding: 2rem;
+      width: 120px;
+      display: flex;
       flex-direction: column;
-      & .cctv-box{width: 100%; max-width: unset;}
+      justify-content: space-between;
+      & > div {
+        height: 100px;
+        //border: 1px solid red;
+      }
+      &.side-left {
+        left: 0;
+      }
+      &.side-right {
+        right: 0;
+        align-items: flex-end;
+      }
+      //위젯 - 언어
+      & .lang-btn {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        padding: 0;
+        padding-top: 5px;
+        width: 70px;
+        height: 70px;
+        border-radius: 100px !important;
+        background-color: $gray-400;
+        border-radius: $form-radius;
+        box-shadow: 1px 5px 10px rgb(187, 187, 187);
+        min-width: unset;
+        & span {
+          opacity: 0.3;
+        }
+        &:nth-of-type(1) {
+          margin-bottom: 10px;
+        }
+        &:hover,
+        &.active {
+          opacity: 1;
+          background-color: $gray-900;
+          & span {
+            opacity: 1;
+          }
+        }
+        & span {
+          border: 1px solid black;
+        }
+        & p {
+          font-size: 12px;
+          margin: 0;
+          text-transform: uppercase;
+          color: white;
+        }
+      }
+      //위젯 - 다운로드 버튼
+      & .widget-download {
+        & button {
+          margin-top: 4rem;
+          text-transform: uppercase;
+          margin-bottom: 6px;
+          color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          &:hover{
+            transform: scale(1.05);
+          }
+          & p {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 14px;
+            opacity: 0.6;
+            margin: 0;
+          }
+          & b {
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 18px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  & .body-wrap {
+    & > div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      &.active {
+        display: block;
+      }
     }
   }
 }
 
 //푸터
-.app-footer{
-  transition: all .3s;
-  //플레이박스
-  & .play-box{
-    height: 100px;
-    & .play-title{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 20px;
-      padding: 0 1rem;
-      & p{
-        padding: 0;
-        margin: 0;
-        color: $f-w-4;
-        font-size: 13px;
-      }
+.app-footer {
+  padding: 0 2rem;
+  & .flx-sb {
+    height: 100%;
+  }
+  & * {
+    color: white;
+    line-height: 1.3;
+  }
+}
+
+//팝업
+.app-popup {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //display: none;
+  z-index: -2;
+  transition: all 0.3s;
+  &.active {
+    z-index: 100;
+    //display: block;
+    transition: all 0.3s;
+    & .popup-bg {
+      opacity: 0.7;
+      transition: all 0.3s;
     }
-    & .play-content{
-      height: calc(100% - 20px);
-      display: flex;
-      & .time-now{
-        width: 160px;
+    & .popup-area .popup-card {
+      margin-top: 0;
+      opacity: 1;
+      transition: all 0.3s;
+    }
+  }
+  & .popup-bg {
+    background-color: black;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  & .popup-area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .popup-card {
+      background-color: white;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+      margin-top: -100px;
+      opacity: 0;
+      transition: all 0.3s;
+      & .popup-close-btn {
+        position: absolute;
+        top: -25px;
+        right: 5%;
+        background-color: black;
+        width: 56px;
+        height: 56px;
+        border-radius: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        & p{
-          color: lightpink;
-          font-size: 18px;
-          margin: 0;
+        box-shadow: $card-shadow;
+        transform: scale(1);
+        transition: all 0.3s;
+        &:hover {
+          transition: all 0.3s;
+          background-color: $default-brand;
+          transform: scale(1.1);
         }
       }
-      & .time-line{
-        flex: 1 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        & .time-line__top{
-          height: 30px;
+      & .content-wrap {
+        padding: 3rem;
+        & .title {
+          margin-left: 14px;
+          margin-bottom: 1.5rem;
+          position: relative;
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          padding: 1.5rem 1rem;
-          &>div{
-            display: flex;
-            flex-direction: row;
-            gap: .5rem;
-            align-items: center;
+          gap: 6px;
+          &::after {
+            content: "";
+            position: absolute;
+            left: -10px;
+            height: 26px;
+            width: 6px;
+            background-color: black;
+            border-radius: 100px;
           }
-          & .top-function{
-            transform: translateX(-120px);
-            gap: .7rem;
-          }
-          & p{
+          & p {
             margin: 0;
-            margin-left: .5rem;
-            color: $f-w-5;
-            font-size: 12px;
-          }
-          & .sound-wrap{
-            width: 90px;
-            height: 5px;
-            border-radius: $form-radius;
-            position: relative;
-            &::before{
-              content: '';
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 50%;
-              background-color: $default-brand;
-              border-radius: $form-radius;
-            }
-            &::after{
-              content: '';
-              position: absolute;
-              transform: translate(-50%, -50%);
-              top: 50%;
-              left: 50%;
-              width: 10px;
-              height: 10px;
-              background-color: $default-brand;
-              box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
-              border-radius: 100px;
-            }
+            margin-left: 10px;
+            font-weight: 600;
+            font-size: 28px;
           }
         }
-        & .time-line__bottom{
+        & .address-wrap {
           display: flex;
-          flex-direction: column;
-          padding: 0 1rem;
-
-          & .times-stick{
-            height: 4px;
-            width: 100%;
-            border-radius: $form-radius;
-            position: relative;
-            & .gauge{
-              height: 100%;
-              width: 300px;
-              background-color: $default-brand;
+          gap: 2.5rem;
+          & .map-wrap {
+            flex: 3;
+            height: 360px;
+            border-radius: 1rem;
+            overflow: hidden;
+          }
+          & .cont-wrap {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            & .item {
+              //flex: 40%;
+              margin-bottom: 0.7rem;
+              border-bottom: 1px solid $gray-200;
               position: relative;
-              &::after{
-                content: '';
+              &::after {
+                content: "";
                 position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 18px;
-                height: 18px;
-                border: 2px solid $default-brand;
+                top: 5px;
+                left: -15px;
+                height: 12px;
+                width: 6px;
+                background-color: black;
                 border-radius: 100px;
-                background-color: lightgray;
               }
-            }
-            & .graduation{
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              height: 6px;
-              display: flex;
-              justify-content: space-between;
-              & div{
-                height: 6px;
-                width: 20px;
+              & b {
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 16px;
+                display: block;
+              }
+              & p,
+              a {
+                font-weight: 400;
+                font-size: 14px;
+                opacity: 0.6;
+                margin-top: 4px;
+              }
+              &:last-of-type {
+                //background-color: black;
+                //color: $default-brand;
+                //border: 1px solid black;
+                border: none;
                 position: relative;
-                &::after{
-                  content: '';
-                  position: absolute;
-                  left: 50%;
-                  width: 1px;
-                  height: 6px;
-                  background-color: rgba(255, 255, 255, 0.3);
+                & a {
+                  text-decoration: underline !important;
+                  font-size: 16px;
+                  display: inline-block;
+                  color: $default-brand;
+                  font-weight: 700;
+                  &:hover {
+                    opacity: 1;
+                  }
                 }
               }
             }
           }
-          & .times-font{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 5px;
-            opacity: .7;
-            & p{
-              color: $f-w-4;
-              font-size: 12px;
-              margin: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (max-width:$breakpoint-tablet){
-    & .play-box{
-      height: 120px;
-      & .play-content{
-        flex-direction: column;
-        & .time-now{
-          display: block;
-          width: 100%;
-          height: 36px;
-          position: relative;
-          & p{ display: none; }
-        }
-        & .time-line{
-          & .time-line__top{
-            padding: 0 1rem;
-            & .top-name{
-              & b{font-size: 12px;}
-            }
-            & .top-function{
-              position: absolute;
-              left: 5px;
-              top: 20px;
-            }
-            & .top-sound{
-              position: absolute;
-              top: 26px;
-              right: 1rem;
-            }
-          }
         }
       }
     }
   }
 }
-//전체화면닫기 박스
-.fullsc-box{
-  border-radius: $form-radius;
-  & a{
-    display: inline-block;
-    padding: .5rem;
-    color: white;
-    opacity: .8;
-    font-size: 12px;
-    &:hover{
-      color: white;
-      opacity: 1;
-    }
-  }
-}
-//알람박스
-.notice-box{
-  border-radius: $form-radius;
-  background: $purple_gradiation;
-  font-size: 14px;
-  & * {color: white !important;}
-
-  &.appear{
-    transition: all ease 1s;
-    opacity: 1;
-    transform: none;
-  }
-  &.disappear{
-    transition: all ease 1s;
-    opacity: 0;
-    transform: translateX(110%);
-  }
-  & .notice-bottom{
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: .2rem .5rem;
-    & .pnt-checkbox.check-checked .checkbox-effect{background-color: black !important;}
-    & .t-small{
-      opacity: .8;
-    }
-    & a{
-      color: white;
-      font-size: 10px;
-      opacity: .8;
-      &:hover{
-        opacity: 1;
-      }
-    }
-  }
-}
-
-
 
 /////////////////////////////
 // 큰 레이아웃 반응형
-.app-container{
-  //모바일 이하
-  @media (max-width:$breakpoint-tablet){
-    & .app-header{ height: $mobile-header-height !important; }
-    & .app-main{ top: $mobile-header-height !important; bottom: $mobile-footer-height !important;}
-    & .app-header__menu{ top: $mobile-header-height !important; }
-    & .app-footer{ height: $mobile-footer-height !important;}
-    & .web-menu{ display: none !important; }
-    & .app-sideBar{ display: none !important; }
-    & .app-optionBar{ display: none !important; }
-    & .storage-box{ display: none !important; }
-    & .time-box{ display: none !important; }
-    & .user-btn{ height: 26px !important; }
+@mixin tabletlayout() {
+  & .app-header {
+    height: $mobile-header-height !important;
   }
-  //랩탑 이하
-  @media (max-width:$breakpoint-labtop){
-    & .time-line__top .top-function{
-      transform: none !important;
+  & .app-footer {
+    height: $mobile-footer-height !important;
+  }
+  & .app-body {
+    top: $mobile-header-height !important;
+    bottom: $mobile-footer-height !important;
+  }
+  & .side-wrap > div {
+    top: $mobile-header-height !important;
+    bottom: $mobile-footer-height !important;
+  }
+}
+@mixin mobilelayout() {
+  & .side-wrap {
+    display: none;
+  }
+  & .app-header {
+    & .logo span {
+      transform: scale(0.8);
+    }
+    & li a {
+      padding: 0 0.8rem !important;
+      font-size: 1rem !important;
+    }
+    & .space {
+      display: none;
     }
   }
-  //태블릿 이상
-  @media (min-width:$breakpoint-tablet){
-    & .mobile-menu{ display: none !important; }
-    & .mobile-sideBar{ display: none !important;}
+  & .app-footer {
+    padding: 0 1rem;
+    & .flx-row.gap-3 {
+      flex-direction: column !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0 !important;
+      & > div:last-of-type {
+        display: none;
+      }
+      & > div {
+        font-size: 14px;
+      }
+    }
   }
 }
-
-//////////////////////////////
-// 프레임 실행시
-#root .frame-active{
-  & .app-main{ bottom: $footer-fold-height !important; }
-  & .app-footer{ height: $footer-fold-height !important; }
-}
-
-//////////////////////////////
-// 전체화면 실행시
-#root .full-screen-active{
-  & .app-main{
-    top: 0 !important;
-    bottom: 0 !important;
+.app-container {
+  @media (max-height: $breakpoint-labtop) {
+    @include tabletlayout();
   }
-  & .app-header, .app-sideBar, .app-optionBar, .app-footer{ display: none !important; }
+  @media (max-width: $breakpoint-widemonitor) {
+    @include tabletlayout();
+  }
+  @media (max-width: $breakpoint-tablet) {
+    @include mobilelayout();
+  }
 }

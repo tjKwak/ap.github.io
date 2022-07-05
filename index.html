@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VMS</title>
+    <title>Indoorplus</title>
 
     <!-- css -->
     <link rel="stylesheet" href="css/base.css">
@@ -25,1332 +25,271 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <!-- 지도 -->
+
 </head>
 
 <body>
     <div id="root">
-        <div class="app-container app-theme-pnt-dark">
+        <div class="app-container pnt-theme-white">
             <!-- 헤더 -->
             <div class="app-header">
                 <div class="flx-sb">
-                    <div class="flx-row h-100">
-                        <div class="mobile-menu">
-                            <button class="pnt-btn btn-icon-only filter-none btn-trans"><span
-                                    class="icon-hamburger"></span></button>
-                        </div>
-                        <h1 class="logo"><a href="#">EyeWatch</a></h1>
+                    <div class="flx-row">
+                        <h1 class="logo"><span class="pnt-logo logo-b-o"></span></h1>
+                    </div>
+                    <div class="flx-row">
                         <ul class="web-menu">
                             <li>
-                                <a class="menu" href="#">새 화면 추가</a>
-                                <div class="app-header__menu dropcard">
-                                    <ul>
-                                        <li><a href="#" onclick="popup_newCamera()"><span
-                                                    class="icon-plus icon-small mr-1"></span>카메라 추가</a></li>
-                                        <li><a href="#" onclick="popup_newVideo()"><span
-                                                    class="icon-plus icon-small mr-1"></span>비디오 추가</a></li>
-                                    </ul>
-                                </div>
+                                <a class="menu active" href="#">홈</a>
                             </li>
                             <li>
-                                <a class="menu" href="#">설정</a>
-                                <div class="app-header__menu dropcard">
-                                    <ul>
-                                        <li><a href="#" onclick="popup_userInfo()">유저 정보</a></li>
-                                        <li><a href="#" onclick="popup_videoDate()">영상보관 기간</a></li>
-                                    </ul>
-                                </div>
+                                <a class="menu" href="#">제품 보기</a>
                             </li>
                             <li>
-                                <a class="menu" href="#">보기</a>
-                                <div class="app-header__menu dropcard">
-                                    <ul>
-                                        <li><a href="#" class="btn-fullscreen">전체화면 보기</a></li>
-                                        <li><a href="#" class="theme-light">라이트모드 보기</a></li>
-                                        <li><a href="#" class="theme-dark">다크모드 보기</a></li>
-                                    </ul>
-                                </div>
+                                <a class="menu" href="#">문의</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="flx-row h-100">
-                        <div class="time-box">
-                            <a href="#" class="time">
-                                <span class="icon-clock"></span>
-                                <p><b>AM</b>03:30:01</p>
-                            </a>
-                        </div>
-                        <div class="user-box">
-                            <a class="user-btn" href="#">
-                                <span class="icon-profile icon-line opacity-04 mr-1"></span>admin
-                            </a>
-                            <div class="user-dropbox dropcard">
-                                <div class="user-info">
-                                    <div class="flx-row gap-2">
-                                        <span class="icon-profile-fill icon-big"></span>
-                                        admin@pntbiz.com
-                                    </div>
-                                    <div class="stor-box">
-                                        <span>STOR</span>
-                                        <b>(10%)</b>
-                                        <div class="storage-gauge bg-trans-gray"></div>
-                                    </div>
-                                </div>
-                                <div class="pnt-border border-w m-0"></div>
-                                <div class="user-logout">
-                                    <a class="color-brand" href="login/page__login.html">logout</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="space">
                     </div>
-                </div>
-            </div>
-            <!-- 모바일 사이드바 -->
-            <div class="mobile-sideBar">
-                <div class="mobile-sideBar__wrap">
-                    <ul class="m_app-sideBar">
-                        <li>
-                            <a href="#">
-                                <span class="icon-menu-camera"></span>
-                                카메라
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon-menu-alert"></span>
-                                로그
-                            </a>
-                            <!-- </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon-menu-board"></span>
-                                보드
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="icon-menu-track"></span>
-                                트랙킹
-                            </a>
-                        </li> -->
-                        <li>
-                            <a href="#">
-                                <span class="icon-menu-flag"></span>
-                                즐겨찾기
-                            </a>
-                        </li>
-                        <!-- <li>
-                            <a href="#">
-                                <span class="icon-menu-info"></span>
-                                도움
-                            </a>
-                        </li> -->
-                        <!-- <li>
-                            <a href="#" class="click-disable"></a>
-                        </li> -->
-                    </ul>
-                    <div class="m_app-optionBar d-none">
-                        <!-- 옵션1. 카메라 -->
-                        <div class="option__camera app-optionBar__wrap">
-                            <div class="fixed-layout">
-                                <div class="title">
-                                    카메라
-                                    <div class="btn-dropdown">
-                                        <button class="pnt-btn btn-icon-only btn-small btn-trans">
-                                            <span class="icon-more"></span>
-                                        </button>
-                                        <div class="btn-dropbox drop-left-toright">
-                                            <ul class="view-mode-select">
-                                                <li>
-                                                    <a href="#" class="active">큰 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">중간 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">작은 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">리스트로 보기</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="search">
-                                    <div class="pnt-input--group btn-on-right w-100">
-                                        <input class="pnt-input" type="text" placeholder="search monitor">
-                                        <button class="pnt-btn btn-icon-only"><span
-                                                class="icon-search icon-can-toggle"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-layout">
-                                <ul class="cctv-list view__big-card">
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083Rasd</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- 옵션2. 로그 -->
-                        <div class="option__alarm app-optionBar__wrap">
-                            <div class="fixed-layout">
-                                <div class="title">
-                                    로그
-                                </div>
-                            </div>
-                            <div class="scroll-layout">
-                                <ul class="log-list">
-                                    <li>로그1</li>
-                                    <li>로그2</li>
-                                    <li>로그3</li>
-                                    <li>로그4</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- 옵션3. 즐겨찾기 -->
-                        <div class="option__favorite app-optionBar__wrap">
-                            <div class="fixed-layout">
-                                <div class="title">
-                                    즐겨찾기
-                                    <div class="btn-dropdown">
-                                        <button class="pnt-btn btn-icon-only btn-small btn-trans">
-                                            <span class="icon-more"></span>
-                                        </button>
-                                        <div class="btn-dropbox drop-left-toright">
-                                            <ul class="view-mode-select">
-                                                <li>
-                                                    <a href="#" class="active">큰 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">중간 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">작은 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">리스트로 보기</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="search">
-                                    <div class="pnt-input--group btn-on-right w-100">
-                                        <input class="pnt-input" type="text" placeholder="search monitor">
-                                        <button class="pnt-btn btn-icon-only"><span
-                                                class="icon-search icon-can-toggle"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-layout">
-                                <ul class="cctv-list view__big-card">
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="setting-menu-list">
-                        <li>
-                            <a class="menu" href="#">새 화면 추가</a>
-                            <ul>
-                                <li><a href="#" onclick="popup_newCamera()">카메라 추가<span
-                                            class="icon-plus icon-small ml-1"></span></a></li>
-                                <li><a href="#" onclick="popup_newVideo()">비디오 추가<span
-                                            class="icon-plus icon-small ml-1"></span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="menu" href="#">설정</a>
-                            <ul>
-                                <li><a href="#" onclick="popup_userInfo()">유저 정보</a></li>
-                                <li><a href="#" onclick="popup_videoDate()">영상보관 기간</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="menu has-submenu" href="#">보기</a>
-                            <ul>
-                                <li><a href="#" class="theme-light">라이트모드 보기</a></li>
-                                <li><a href="#" class="theme-dark">다크모드 보기</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <!-- 본문 -->
-            <div class="app-main">
-                <div class="app-main__wrap">
-                    <!-- 사이드바 -->
-                    <div class="app-sideBar">
-                        <ul class="icon-menu-list">
-                            <li>
-                                <a href="#" class="active">
-                                    <span class="icon-menu-camera"></span>
-                                    카메라
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon-menu-alert"></span>
-                                    로그
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <a href="#">
-                                    <span class="icon-menu-board"></span>
-                                    보드
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon-menu-track"></span>
-                                    트랙킹
-                                </a>
-                            </li> -->
-                            <li>
-                                <a href="#">
-                                    <span class="icon-menu-flag"></span>
-                                    즐겨찾기
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="info-menu-list">
-                            <li class="">
-                                <a href="#">
-                                    <span class="icon-menu-info"></span>
-                                </a>
-                            </li>
-                        </ul>
+            <div class="app-body">
+                <div class="side-wrap">
+                    <div class="side-left">
+                        <div></div>
+                        <div class="flx-col gap-4">
+                            <button id="btn-address-open" class="pnt-btn btn-icon-only btn-black"><span
+                                    class="icon-gps-fill">adress</span></button>
+                            <button id="btn-call-open" class="pnt-btn btn-icon-only btn-black"
+                                onclick="location.href='tel:070-8650-3600'"><span
+                                    class="icon-phone">phone</span></button>
+                        </div>
+                        <div></div>
                     </div>
-                    <div class="app-optionBar">
-                        <!-- 옵션1. 카메라 -->
-                        <div class="option__camera app-optionBar__wrap active">
-                            <div class="fixed-layout">
-                                <div class="title">
-                                    카메라
-                                    <div class="btn-dropdown">
-                                        <button class="pnt-btn btn-icon-only btn-small btn-trans">
-                                            <span class="icon-more"></span>
-                                        </button>
-                                        <div class="btn-dropbox drop-left-toright">
-                                            <ul class="view-mode-select">
-                                                <li>
-                                                    <a href="#" class="active">큰 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">중간 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">작은 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">리스트로 보기</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="search">
-                                    <div class="pnt-input--group btn-on-right w-100">
-                                        <input class="pnt-input" type="text" placeholder="search monitor">
-                                        <button class="pnt-btn btn-icon-only"><span
-                                                class="icon-search icon-can-toggle"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-layout">
-                                <ul class="cctv-list view__big-card ">
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R very long name for cctv screen</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                                <ul class="cctv-list list-small d-none">
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
+                    <div class="side-right">
+                        <div class="widget-lang">
+                            <button class="lang-btn active">
+                                <span class="icon-kr"></span>
+                                <p>kor</p>
+                            </button>
+                            <button class="lang-btn">
+                                <span class="icon-eng"></span>
+                                <p>Eng</p>
+                            </button>
                         </div>
-                        <!-- 옵션2. 로그 -->
-                        <div class="option__alarm app-optionBar__wrap">
-                            <div class="fixed-layout">
-                                <div class="title">
-                                    로그
-                                </div>
-                            </div>
-                            <div class="scroll-layout">
-                                <ul class="log-list">
-                                    <li>로그1</li>
-                                    <li>로그2</li>
-                                    <li>로그3</li>
-                                    <li>로그4</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- 옵션3. 즐겨찾기 -->
-                        <div class="option__favorite app-optionBar__wrap">
-                            <div class="fixed-layout">
-                                <div class="title">
-                                    즐겨찾기
-                                    <div class="btn-dropdown">
-                                        <button class="pnt-btn btn-icon-only btn-small btn-trans">
-                                            <span class="icon-more"></span>
-                                        </button>
-                                        <div class="btn-dropbox drop-left-toright">
-                                            <ul class="view-mode-select">
-                                                <li>
-                                                    <a href="#" class="active">큰 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">중간 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">작은 카드로 보기</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">리스트로 보기</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="search">
-                                    <div class="pnt-input--group btn-on-right w-100">
-                                        <input class="pnt-input" type="text" placeholder="search monitor">
-                                        <button class="pnt-btn btn-icon-only"><span
-                                                class="icon-search icon-can-toggle"></span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-layout">
-                                <ul class="cctv-list view__big-card">
-                                    <li>
-                                        <div class="screen-thumb">
-                                            <div class="thumb-info">
-                                                <button class="pnt-btn btn-tiny btn-icon-only"><span
-                                                        class="icon-eye icon-toggle icon-off icon-filter-white"></span></button>
-                                            </div>
-                                            <div class="thumb-hover">
-                                                <div class="flx-row">
-                                                    <button
-                                                        class="pnt-btn btn-icon-only btn-small btn-trans mr-1 btn-favorite"><span
-                                                            class="icon-star icon-filter-white"></button>
-                                                    <p>XNV-8083R</p>
-                                                </div>
-                                                <button class="pnt-btn btn-icon-only btn-tiny btn-brand"><span
-                                                        class="icon-setting icon-small"></span></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- 옵션3. 보드 -->
-                        <!-- <div id="option-board" class="app-optionBar__wrap">
-                            보드
-                        </div> -->
-                        <!-- 옵션4. 트랙킹 -->
-                        <!-- <div id="option-track" class="app-optionBar__wrap">
-                            트랙킹
-                        </div> -->
-
-
-                        <!-- 스크롤바 -->
-                        <div class="app-scroll-hide"></div>
-                    </div>
-                    <!-- 바디 -->
-                    <div class="app-body">
-                        <div class="app-body__wrap">
-                            <div class="cctv-box">
-                                <div class="cctv-info">
-                                    <!-- 녹화중일때는 span의 클래스가 bg-danger이 됩니다. -->
-                                    <div class="live">live <span class="bg-gray"></span></div>
-                                </div>
-                                <div class="cctv-funtcion">
-                                    <div class="flx-sb">
-                                        <div class="flx-row gap-1">
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans btn-favorite"><span
-                                                    class="icon-star icon-filter-white"></button>
-                                            <div class="name">XNV-8083R very long name for cctv screen</div>
-                                        </div>
-                                        <div class="flx-row gap-1">
-                                            <!-- 녹화전 -->
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-circle icon-filter-red icon-small"></span></button>
-                                            <!-- 녹화후 -->
-                                            <span>00:01</span>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-box icon-filter-white icon-small"></span></button>
-                                            <div class="pnt-border border-d"></div>
-                                            <!-- 캡쳐 -->
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-capture icon-filter-white"></span></button>
-                                            <!-- 새창에 띄우기 -->
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-newwindow icon-filter-white"></span></button>
-                                            <!-- 확대 -->
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-zoomin icon-filter-white"></span></button>
-                                            <!-- 회전 -->
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-reset icon-filter-white"></span></button>
-                                            <!-- 전체화면 -->
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-fullscreen icon-filter-white"></span></button>
-                                            <!-- 세팅 -->
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-setting icon-filter-white"></span></button>
-                                            <div class="pnt-border border-d"></div>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-close icon-filter-white opacity-05"></span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cctv-box">
-                                <div class="cctv-info">
-                                    <div class="live">playing</div>
-                                </div>
-                                <div class="cctv-funtcion">
-                                    <div class="flx-sb">
-                                        <div class="flx-row gap-1">
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans btn-favorite"><span
-                                                    class="icon-star icon-filter-white"></button>
-                                            <div class="name">XNV-8083R</div>
-                                        </div>
-                                        <div class="flx-row gap-1">
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                class="icon-capture icon-filter-white"></span></button>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                class="icon-newwindow icon-filter-white"></span></button>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-zoomin icon-filter-white"></span></button>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-reset icon-filter-white"></span></button>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-fullscreen icon-filter-white"></span></button>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-setting icon-filter-white"></span></button>
-                                            <div class="pnt-border border-d"></div>
-                                            <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                                    class="icon-close icon-filter-white opacity-05"></span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="widget-download">
+                            <button class="pnt-btn btn-icon btn-white btn-shadow pl-3 pr-1" onclick="myFunction()">
+                                <p>download</p><b>brochure</b>
+                                <span class="icon-download-line"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <!-- 알람 -->
-                <div class="notice-area">
-                    <!-- 알람1 - 가이드보기 -->
-                    <div class="notice-box flx-col gap-0 appear">
-                        <div class="p-3">
-                            EyeWatch가 처음이라면? <b>가이드</b>를 확인해주세요.
-                            <span class="icon-next icon-small icon-filter-white"></span>
+                <div class="body-wrap">
+                    <div id="home" class="active">
+                        <div class="background">
                         </div>
-                        <div class="pnt-border border-w m-0"></div>
-                        <div class="flx-sb notice-bottom">
-                            <div class="flx-row">
-                                <label class="pnt-checkbox form-h-small" for="test1">
-                                    <input type="checkbox" checked id="test1">
-                                    <span class="checkbox-effect"></span>
-                                    <p>일주일동안 보지않기</p>
-                                </label>
+                        <div class="content-wrap">
+                            <div class="p-5 flx-col flx-center tc">
+                                <span class="pnt-logo logo-b-o mb-4" style="transform: scale(1.3);"></span>
+                                <p class="sub-txt">Full package for smart Iot solution</p>
+                                <p class="main-txt">Actionable <b>Geolocation</b> Intelligence <br>
+                                    and <b>Smart Sensing</b>
+                                </p>
+                                <div class="img-indoorplus">
+                                    <div class="screen"></div>
+                                </div>
                             </div>
-                            <a href="#">닫기</a>
                         </div>
                     </div>
-                    <!-- 알람2 - 전체화면 종료 -->
-                    <div class="fullsc-box bg-trans-gray d-none">
-                        <a href="#">전체화면 종료</a>
+                    <div id="product" class="">
+                        <div class="content-wrap">
+                            <div class="tab-cont rms">
+                                <div class="labtop-wrap">
+                                    <button id="product-prev" class="pnt-btn btn-icon-only btn-trans"><span
+                                            class="icon-back-light icon-large"></span></button>
+                                    <img id="product-img" class="img-white" src="" alt="">
+                                    <button id="product-next" class="pnt-btn btn-icon-only btn-trans"><span
+                                            class="icon-next-light icon-large"></span></button>
+                                </div>
+                                <div class="txt-wrap">
+                                    <h2>RMS</h2>
+                                    <h3>RTLS Managing System</h3>
+                                    <p>WMS 솔루션의 새로운 모니터링 솔루션은<br>정해진 메뉴에만 구분하지 않고 자유롭게 커스텀하는 메뉴들을 구성합니다.<br>고객 요구사항에 맞는
+                                        맞춤형 대시보드 RMS를 소개합니다.</p>
+                                </div>
+                            </div>
+                            <ul class="tab-list">
+                                <li class="rms active">
+                                    <a href="#">
+                                        <div class="txt-wrap">
+                                            <span class="color-rms">rms</span>
+                                            <p>RTLS Monitorting<br>System</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="at">
+                                    <a href="#">
+                                        <div class="txt-wrap">
+                                            <span class="color-at">at</span>
+                                            <p>Asset<br>Tracking</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="am">
+                                    <a href="#">
+                                        <div class="txt-wrap">
+                                            <span class="color-am">am</span>
+                                            <p>Asset<br>Management</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- <li class="">
+                                    <a href="#">
+                                        <div class="overlay"></div>
+                                        <div class="txt-wrap">
+                                            <div class="color-ps">ps</div>
+                                            <p>Patient Safety</p>
+                                        </div>
+                                    </a>
+                                </li> -->
+                                <li class="ws">
+                                    <a href="#">
+                                        <div class="txt-wrap">
+                                            <span class="color-ws">ws</span>
+                                            <p>Worker<br>Safety</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sh">
+                                    <a href="#">
+                                        <div class="txt-wrap">
+                                            <span class="color-sh">sh</span>
+                                            <p>Smart<br>Hospital</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <div class="widget-theme">
+                                    <div class="switch-txt">
+                                        <div>all product<br>provide</div>
+                                        <p>dark<br>mode</p>
+                                    </div>
+                                    <button class="switch-btn">
+                                        <div class="top">WHITE</div>
+                                        <div class="bottom">BLACK</div>
+                                    </button>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="contact" class="">
+                        <div class="content-wrap">
+                            <img src="/images/balloon_3.svg" alt="">
+                            <div class="wrap-left">
+                                <h2>Contact</h2>
+                                <h3>"다양한 문의내용에 최선을 다해 응답 드리겠습니다."</h3>
+                            </div>
+                            <div class="wrap-right">
+                                <ul class="cont-wrap">
+                                    <li>
+                                        <b>Tel</b>
+                                        <p>070-8650-3600</p>
+                                    </li>
+                                    <li>
+                                        <b>Fax</b>
+                                        <p>02-562-3986</p>
+                                    </li>
+                                    <li>
+                                        <b>Sales Inquiry</b>
+                                        <p>sales@pntbiz.com</p>
+                                    </li>
+                                    <li>
+                                        <b>EMEA Region Inquiry</b>
+                                        <p>sales@pntbiz.eu.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- 푸터 -->
             <div class="app-footer">
-                <div class="play-box">
-                    <div class="play-title">
-                        <p>프레임 조절</p>
-                        <div class="ml-1">
-                            <button class="pnt-btn btn-icon-only btn-tiny btn-trans btn-frame-fold"><span
-                                    class="icon-up"></span></button>
-                        </div>
+                <div class="flx-sb">
+                    <div class="flx-row gap-3">
+                        <div class="pnt-txt opacity-06">피플앤드테크놀러지</div>
+                        <div class="pnt-txt p2-n">people and technology</div>
                     </div>
-                    <div class="play-content">
-                        <div class="time-now">
-                            <p>0;00;00;00</p>
-                        </div>
-                        <div class="time-line">
-                            <div class="time-line__top">
-                                <div class="top-name">
-                                    <span class="icon-cctv"></span>
-                                    <b>XNV-8083R</b>
-                                    <p>2022.04.07</p>
-                                </div>
-                                <div class="top-function">
-                                    <button class="pnt-btn btn-icon-only btn-trans mr-2 ml-1"><span
-                                            class="icon-play icon-big"></span></button>
-                                    <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                            class="icon-play-back"></span></button>
-                                    <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                            class="icon-play-next"></span></button>
-                                </div>
-                                <div class="top-sound">
-                                    <button class="pnt-btn btn-icon-only btn-small btn-trans"><span
-                                            class="icon-sound icon-toggle"></span></button>
-                                    <div class="sound-wrap bg-trans-gray"></div>
-                                </div>
-                            </div>
-                            <div class="time-line__bottom">
-                                <div class="times-stick bg-trans-gray">
-                                    <div class="gauge"></div>
-                                </div>
-                                <div class="times-font">
-                                    <p>00:00</p>
-                                    <p>10:00</p>
-                                </div>
-                                <div class="times-font d-none">
-                                    <p>01:00</p>
-                                    <p>02:00</p>
-                                    <p>03:00</p>
-                                    <p>04:00</p>
-                                    <p>05:00</p>
-                                    <p>06:00</p>
-                                    <p>07:00</p>
-                                    <p>08:00</p>
-                                    <p>09:00</p>
-                                    <p>10:00</p>
-                                    <p>11:00</p>
-                                    <p>12:00</p>
-                                    <p>13:00</p>
-                                    <p>14:00</p>
-                                    <p>15:00</p>
-                                    <p>16:00</p>
-                                    <p>17:00</p>
-                                    <p>18:00</p>
-                                    <p>19:00</p>
-                                    <p>20:00</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="flx-row gap-2">
+                        <button class="pnt-btn btn-icon-only btn-black">
+                            <span class="icon-facebook icon-big">facebook</span>
+                        </button>
+                        <button class="pnt-btn btn-icon-only btn-black">
+                            <span class="icon-instagram icon-big">instagram</span>
+                        </button>
+                        <button class="pnt-btn btn-icon-only btn-black">
+                            <span class="icon-youtube icon-big">youtube</span>
+                        </button>
+                        <button class="pnt-btn btn-icon-only btn-black">
+                            <span class="icon-twitter icon-big">twitter</span>
+                        </button>
                     </div>
                 </div>
             </div>
             <!-- 팝업 -->
-            <div class="popup">
+            <div class="app-popup">
+                <div class="popup-bg"></div>
                 <div class="popup-area">
-                    <!-- 팝업1. 카메라추가 -->
-                    <div id="newCamera" class="pnt-modal card">
-                        <div class="modal-header">
-                            카메라 추가
-                            <a href="#" class="icon-close"></a>
-                        </div>
-                        <div class="modal-body">
-                            <P class="t-title color-brand color-light m-0">Url 정보</P>
-                            <div class="pnt-label--group pb-3">
-                                <div class="label-main">Path URL</div>
-                                <div class="label-options">
-                                    <div class="pnt-input--group f-100">
-                                        <input class="pnt-input" type="text" placeholder="입력하세요" autofocus>
-                                        <span class="icon-search"></span>
-                                        <p class="input-error-txt">에러문구 입니다</p>
-                                    </div>
-                                    <button class="pnt-btn btn-brand btn-url-input">입력</button>
-                                </div>
+                    <div id="popup-address" class="popup-card">
+                        <button class="popup-close-btn">
+                            <span class="icon-close icon-big icon-filter-white"></span>
+                        </button>
+                        <div class="content-wrap">
+                            <div class="title">
+                                <!-- <span class="icon-gps-fill icon-big mr-1 opacity-04"></span> -->
+                                <p>오시는길</p>
                             </div>
-                            <div class="t-small v-hidden"><span class="icon-info-fill icon-small opacity-04"></span> URL
-                                인증이 성공했습니다. 옵션정보를 입력해주세요.</div>
-
-                            <div class="pnt-border border-w mb-4"></div>
-                            <div class="sub-content opacity-05">
-                                <p class="t-title color-brand color-light">옵션 정보</p>
-                                <div class="flx-col gap-2 pnt-label-100">
-                                    <div class="pnt-label--group">
-                                        <div class="label-main">모니터 ID</div>
-                                        <div class="label-options">
-                                            <div class="pnt-input--group form-disable">
-                                                <input class="pnt-input" type="text" value="vjakdljsfsa">
-                                                <span class="icon-search"></span>
-                                            </div>
-                                        </div>
+                            <div class="address-wrap">
+                                <div class="map-wrap">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0266251518956!2d127.05156371619911!3d37.50729017980905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca46b5d012add%3A0x9b7e6ea9b3bf10cf!2sPEOPLE%20AND%20TECHNOLOGY!5e0!3m2!1sko!2skr!4v1656924957564!5m2!1sko!2skr"
+                                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                                <div class="cont-wrap">
+                                    <div class="item">
+                                        <b>address</b>
+                                        <p>서울특별시 강남구 삼성로 95길 27 영창빌딩 2층, 5층</p>
                                     </div>
-                                    <div class="pnt-label--group">
-                                        <div class="label-main">모니터 이름</div>
-                                        <div class="label-options">
-                                            <div class="pnt-input--group form-disable">
-                                                <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                <span class="icon-search"></span>
-                                                <p class="input-error-txt">에러문구 입니다</p>
-                                            </div>
-                                        </div>
+                                    <div class="item">
+                                        <b>tel</b>
+                                        <p>070-8650-3600</p>
                                     </div>
-                                    <div class="pnt-label--group">
-                                        <div class="label-main">인풋타입</div>
-                                        <div class="label-options">
-                                            <div class="pnt-select--group form-disable" tabindex="0">
-                                                <button class="select__btn">
-                                                    <div class="cont-wrap">
-                                                        <span class="icon-person"></span>
-                                                        Selected
-                                                    </div>
-                                                    <span class="icon-down"></span>
-                                                </button>
-                                                <ul class="select__options">
-                                                    <li class="on"><a href="#">리스트1</a></li>
-                                                    <li><a href="#">리스트2</a></li>
-                                                    <li><a href="#">리스트3</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <div class="item">
+                                        <b>subway</b>
+                                        <p>선릉역(10분), 삼성역(15분)<br>삼성중앙역(20분)</p>
                                     </div>
-                                    <div class="pnt-label--group">
-                                        <div class="label-main">메모</div>
-                                        <div class="label-options">
-                                            <div class="pnt-input--group form-disable">
-                                                <input class="pnt-input" type="text" placeholder="입력하세요">
-                                                <span class="icon-search"></span>
-                                                <p class="input-error-txt">에러문구 입니다</p>
-                                            </div>
-                                        </div>
+                                    <div class="item">
+                                        <b>hompage</b>
+                                        <a href="https://www.pntbiz.com/" target="_blank">pntbiz.com</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="pnt-btn btn-brand form-disable">추가 완료</button>
-                            <button class="pnt-btn btn-gray">취소</button>
-                        </div>
-                    </div>
-                    <!-- 팝업2. 비디오추가 -->
-                    <div id="newVideo" class="pnt-modal card">
-                        <div class="modal-header">
-                            비디오 추가
-                            <a href="#" class="icon-close"></a>
-                        </div>
-                        <div class="modal-body">
-                            <div class="flx-row gap-4 row-top flx-labtop-col">
-                                <div class="flx-col gap-2 pnt-label-100">
-                                    <div class="pnt-label--group">
-                                        <div class="label-main">모니터 선택</div>
-                                        <div class="label-options">
-                                            <div class="pnt-select--group form-must" tabindex="0">
-                                                <button class="select__btn">
-                                                    <div class="cont-wrap">
-                                                        <span class="icon-person"></span>
-                                                        Selected
-                                                    </div>
-                                                    <span class="icon-down"></span>
-                                                </button>
-                                                <ul class="select__options">
-                                                    <li class="on"><a href="#">리스트1</a></li>
-                                                    <li><a href="#">리스트2</a></li>
-                                                    <li><a href="#">리스트3</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pnt-label--group">
-                                        <div class="label-main">날짜 범위</div>
-                                        <div class="label-options">
-                                            <div class="pnt-input--group">
-                                                <input class="pnt-input" type="date">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pnt-label--group">
-                                        <div class="label-main">표시 비디오 수 한도</div>
-                                        <div class="label-options">
-                                            <div class="pnt-input--group">
-                                                <input class="pnt-input" type="text" placeholder="숫자를 입력하세요">
-                                                <span class="icon-search"></span>
-                                                <p class="input-error-txt">에러문구 입니다</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="table--wrap">
-                                    <div role="table" class="pnt-table table-clickable">
-                                        <div class="border-box">
-                                            <div class="thead">
-                                                <div role="row" class="tr">
-                                                    <div colspan="1" role="columnheader" class="th cell-small">
-                                                        <label class="pnt-checkbox form-h-small" for="v0">
-                                                            <input type="checkbox" id="v0">
-                                                            <span class="checkbox-effect"></span>
-                                                        </label>
-                                                    </div>
-                                                    <div colspan="1" role="columnheader" class="th">모니터 이름</div>
-                                                    <div colspan="1" role="columnheader" class="th">파일 이름</div>
-                                                    <div colspan="1" role="columnheader" class="th">파일 사이즈(mb)</div>
-                                                    <div colspan="1" role="columnheader" class="th">녹화 시작</div>
-                                                    <div colspan="1" role="columnheader" class="th">녹화 끝</div>
-                                                    <div colspan="1" role="columnheader" class="th cell-small">보기</div>
-                                                </div>
-                                            </div>
-                                            <div role="rowgroup" class="tbody">
-                                                <div>
-                                                    <div>
-                                                        <div>
-                                                            <div role="row" class="tr">
-                                                                <div role="cell" class="td cell-small">
-                                                                    <label class="pnt-checkbox form-h-small" for="v1">
-                                                                        <input type="checkbox" id="v1">
-                                                                        <span class="checkbox-effect"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div role="cell" class="td" title="">2번 복도</div>
-                                                                <div role="cell" class="td" title="">2nd gate.avi</div>
-                                                                <div role="cell" class="td" title="">5</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-01<br>2:28:35</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-02<br>2:28:35</div>
-                                                                <div role="cell" class="td cell-small" title="">
-                                                                    <button
-                                                                        class="pnt-btn btn-trans btn-icon-only btn-tiny"><span
-                                                                            class="icon-play opacity-05"></span></button>
-                                                                </div>
-                                                            </div>
-                                                            <div role="row" class="tr">
-                                                                <div role="cell" class="td cell-small">
-                                                                    <label class="pnt-checkbox form-h-small" for="v2">
-                                                                        <input type="checkbox" id="v2">
-                                                                        <span class="checkbox-effect"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div role="cell" class="td" title="">2번 복도</div>
-                                                                <div role="cell" class="td" title="">2nd gate.avi</div>
-                                                                <div role="cell" class="td" title="">5</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-01<br>2:28:35</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-02<br>2:28:35</div>
-                                                                <div role="cell" class="td cell-small" title="">
-                                                                    <button
-                                                                        class="pnt-btn btn-trans btn-icon-only btn-tiny"><span
-                                                                            class="icon-play opacity-05"></span></button>
-                                                                </div>
-                                                            </div>
-                                                            <div role="row" class="tr">
-                                                                <div role="cell" class="td cell-small">
-                                                                    <label class="pnt-checkbox form-h-small" for="v3">
-                                                                        <input type="checkbox" id="v3">
-                                                                        <span class="checkbox-effect"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div role="cell" class="td" title="">2번 복도</div>
-                                                                <div role="cell" class="td" title="">2nd gate.avi</div>
-                                                                <div role="cell" class="td" title="">5</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-01<br>2:28:35</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-02<br>2:28:35</div>
-                                                                <div role="cell" class="td cell-small" title="">
-                                                                    <button
-                                                                        class="pnt-btn btn-trans btn-icon-only btn-tiny"><span
-                                                                            class="icon-play opacity-05"></span></button>
-                                                                </div>
-                                                            </div>
-                                                            <div role="row" class="tr">
-                                                                <div role="cell" class="td cell-small">
-                                                                    <label class="pnt-checkbox form-h-small" for="v4">
-                                                                        <input type="checkbox" id="v4">
-                                                                        <span class="checkbox-effect"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div role="cell" class="td" title="">2번 복도</div>
-                                                                <div role="cell" class="td" title="">2nd gate.avi</div>
-                                                                <div role="cell" class="td" title="">5</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-01<br>2:28:35</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-02<br>2:28:35</div>
-                                                                <div role="cell" class="td cell-small" title="">
-                                                                    <button
-                                                                        class="pnt-btn btn-trans btn-icon-only btn-tiny"><span
-                                                                            class="icon-play opacity-05"></span></button>
-                                                                </div>
-                                                            </div>
-                                                            <div role="row" class="tr">
-                                                                <div role="cell" class="td cell-small">
-                                                                    <label class="pnt-checkbox form-h-small" for="v5">
-                                                                        <input type="checkbox" id="v5">
-                                                                        <span class="checkbox-effect"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div role="cell" class="td" title="">2번 복도</div>
-                                                                <div role="cell" class="td" title="">2nd gate.avi</div>
-                                                                <div role="cell" class="td" title="">5</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-01<br>2:28:35</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-02<br>2:28:35</div>
-                                                                <div role="cell" class="td cell-small" title="">
-                                                                    <button
-                                                                        class="pnt-btn btn-trans btn-icon-only btn-tiny"><span
-                                                                            class="icon-play opacity-05"></span></button>
-                                                                </div>
-                                                            </div>
-                                                            <div role="row" class="tr">
-                                                                <div role="cell" class="td cell-small">
-                                                                    <label class="pnt-checkbox form-h-small" for="v5">
-                                                                        <input type="checkbox" id="v5">
-                                                                        <span class="checkbox-effect"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div role="cell" class="td" title="">2번 복도</div>
-                                                                <div role="cell" class="td" title="">2nd gate.avi</div>
-                                                                <div role="cell" class="td" title="">5</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-01<br>2:28:35</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-02<br>2:28:35</div>
-                                                                <div role="cell" class="td cell-small" title="">
-                                                                    <button
-                                                                        class="pnt-btn btn-trans btn-icon-only btn-tiny"><span
-                                                                            class="icon-play opacity-05"></span></button>
-                                                                </div>
-                                                            </div>
-                                                            <div role="row" class="tr">
-                                                                <div role="cell" class="td cell-small">
-                                                                    <label class="pnt-checkbox form-h-small" for="v5">
-                                                                        <input type="checkbox" id="v5">
-                                                                        <span class="checkbox-effect"></span>
-                                                                    </label>
-                                                                </div>
-                                                                <div role="cell" class="td" title="">2번 복도</div>
-                                                                <div role="cell" class="td" title="">2nd gate.avi</div>
-                                                                <div role="cell" class="td" title="">5</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-01<br>2:28:35</div>
-                                                                <div role="cell" class="td" title="">
-                                                                    2022-01-02<br>2:28:35</div>
-                                                                <div role="cell" class="td cell-small" title="">
-                                                                    <button
-                                                                        class="pnt-btn btn-trans btn-icon-only btn-tiny"><span
-                                                                            class="icon-play opacity-05"></span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="flx-sb w-100">
-                                <div class="flx-row gap-2">
-                                    <button class="pnt-btn btn-icon btn-brand form-disable"><span
-                                            class="icon-download"></span>압축 및 다운로드</button>
-                                    <button class="pnt-btn btn-icon btn-danger pl-2 form-disable"><span
-                                            class="icon-delete"></span>삭제</button>
-                                </div>
-                                <div class="flx-row gap-2">
-                                    <button class="pnt-btn btn-brand">확인</button>
-                                    <button class="pnt-btn btn-gray">취소</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- 팝업3. 유저정보 -->
-                    <div id="userInfo" class="pnt-modal card">
-                        <div class="modal-header">
-                            유저 정보
-                            <a href="#" class="icon-close"></a>
-                        </div>
-                        <div class="modal-body">
-                            <div class="cont-1">
-                                <div class="flx-col flx-center tc mb-5 opacity-04">
-                                    <span class="icon-warning"></span>
-                                    유저정보를 변경하려면 <br>먼저 이메일과 패스워드를 인증해주세요.
-                                </div>
-                                <div class="pnt-label--group mb-2">
-                                    <div class="label-main">이메일</div>
-                                    <div class="label-options">
-                                        <div class="pnt-input--group f-100">
-                                            <input class="pnt-input" type="text" value="admin@pntbiz.com"
-                                                placeholder="입력하세요" autofocus>
-                                            <span class="icon-search"></span>
-                                            <p class="input-error-txt">에러문구 입니다</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pnt-label--group">
-                                    <div class="label-main">패스워드</div>
-                                    <div class="label-options">
-                                        <div class="pnt-input--group btn-on-right f-100">
-                                            <input class="pnt-input input-pw" type="text" value="" placeholder="입력하세요">
-                                            <span class="icon-search"></span>
-                                            <button class="pnt-btn btn-icon-only"><span
-                                                    class="icon-eye icon-toggle icon-off"></span></button>
-                                            <p class="input-error-txt">에러문구 입니다</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cont-2 d-none">
-                                <div class="flx-row gap-2 mb-3 opacity-04">
-                                    <span class="icon-info"></span>
-                                    새 이메일과 패스워드로 변경할 수 있습니다.
-                                </div>
-                                <div class="pnt-label--group mb-2">
-                                    <div class="label-main">새 이메일</div>
-                                    <div class="label-options">
-                                        <div class="pnt-input--group f-100">
-                                            <input class="pnt-input" type="text" value="admin@pntbiz.com"
-                                                placeholder="입력하세요" autofocus>
-                                            <span class="icon-search"></span>
-                                            <p class="input-error-txt">에러문구 입니다</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pnt-label--group">
-                                    <div class="label-main">새 패스워드</div>
-                                    <div class="label-options">
-                                        <div class="pnt-input--group btn-on-right f-100">
-                                            <input class="pnt-input" type="text" value="********" placeholder="입력하세요">
-                                            <span class="icon-search"></span>
-                                            <button class="pnt-btn btn-icon-only"><span
-                                                    class="icon-eye icon-toggle icon-off"></span></button>
-                                            <p class="input-error-txt">에러문구 입니다</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="pnt-btn btn-brand form-disable">인증 확인</button>
-                            <button class="pnt-btn btn-gray">취소</button>
-                        </div>
-                    </div>
-                    <!-- 팝업4. 유저정보 -->
-                    <div id="videoDate" class="pnt-modal card">
-                        <div class="modal-header">
-                            영상 보관 기간
-                            <a href="#" class="icon-close"></a>
-                        </div>
-                        <div class="modal-body">
-                            <div class="pnt-label--group pnt-label-7">
-                                <div class="label-main">영상 보관 기간<br>(일)</div>
-                                <div class="label-options">
-                                    <div class="pnt-input--group f-100">
-                                        <input class="pnt-input" type="text" placeholder="입력하세요" autofocus>
-                                        <span class="icon-search"></span>
-                                        <p class="input-error-txt">에러문구 입니다</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="pnt-btn btn-brand">완료</button>
-                            <button class="pnt-btn btn-gray">취소</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/index.js"></script>
     <script src="js/form.js"></script>
-
+    <script src="js/index.js"></script>
     <script>
-        //팝업 공통
-        function popup_reset() {
-            $('.popup').addClass('active');
-            $('.pnt-modal').addClass('d-none');
-        }
-        //팝업 닫기
-        $('.modal-header a').click(function () {
-            $('.popup').toggleClass('active')
-        })
-        //팝업창 1번
-        function popup_newCamera() {
-            popup_reset();
-            $('#newCamera').removeClass('d-none');
-        }
-        //팝업창 2번
-        function popup_newVideo() {
-            popup_reset();
-            $('#newVideo').removeClass('d-none');
-        }
-        //팝업창 3번
-        function popup_userInfo() {
-            popup_reset();
-            $('#userInfo').removeClass('d-none');
-        }
-        //팝업창 4번
-        function popup_videoDate() {
-            popup_reset();
-            $('#videoDate').removeClass('d-none');
+        function myFunction() {
+            alert("I am an alert box!");
         }
     </script>
 </body>

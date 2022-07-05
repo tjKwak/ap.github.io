@@ -13,6 +13,18 @@ $('.icon-toggle').click(function(){
     }
 })
 
+//모든 form-disable 에 disalbed 속성 추가
+var disable_forms = document.querySelectorAll('#root .form-disable');
+        
+for(let i=0; i<disable_forms.length; i++){
+    if(disable_forms[i].classList.contains('form-disable')){
+        disable_forms[i].disabled = true;
+    }
+    else{
+        disable_forms[i].disabled = false;
+    }
+}
+
 //체크박스 기능
 var check_btns = document.querySelectorAll('.pnt-checkbox')
 for(let i=0; i<check_btns.length; i++){
