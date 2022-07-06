@@ -46,14 +46,17 @@
 }
 
 #home .content-wrap .sub-txt {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: center;
   margin-bottom: 5rem;
-  color: #86858a;
-  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  color: #656467;
+  padding: 4px 15px;
+  border-radius: 100px;
+  background-color: #eceaf2;
+  opacity: 0.8;
 }
 
 #home .content-wrap .main-txt {
