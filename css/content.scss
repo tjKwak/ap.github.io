@@ -64,7 +64,7 @@ $img_small_w: 400px;
       & .screen {
         width: calc(100% - 40px);
         height: calc(100% - 40px);
-        background-image: url("/images/main_img_test.svg");
+        background-image: url("../images/main_img_test.svg");
         background-size: contain;
         background-repeat: no-repeat;
       }
@@ -104,43 +104,43 @@ $img_small_w: 400px;
     //border: 5px solid blue;
     overflow: hidden;
     &.rms {
-      & img.img-white {
-        background-image: url("/images/product/rms_white.png");
+      & .img-white {
+        background-image: url("../images/product/rms_white.png");
       }
-      & img.img-dark {
-        background-image: url("/images/product/rms_dark.png");
+      & .img-dark {
+        background-image: url("../images/product/rms_dark.png");
       }
     }
     &.at {
-      & img.img-white {
-        background-image: url("/images/product/at_white.png");
+      & .img-white {
+        background-image: url("../images/product/at_white.png");
       }
-      & img.img-dark {
-        background-image: url("/images/product/at_dark.png");
+      & .img-dark {
+        background-image: url("../images/product/at_dark.png");
       }
     }
     &.am {
-      & img.img-white {
-        background-image: url("/images/product/am_white.png");
+      & .img-white {
+        background-image: url("../images/product/am_white.png");
       }
-      & img.img-dark {
-        background-image: url("/images/product/am_dark.png");
+      & .img-dark {
+        background-image: url("../images/product/am_dark.png");
       }
     }
     &.ws {
-      & img.img-white {
-        background-image: url("/images/product/ws_white.png");
+      & .img-white {
+        background-image: url("../images/product/ws_white.png");
       }
-      & img.img-dark {
-        background-image: url("/images/product/ws_dark.png");
+      & .img-dark {
+        background-image: url("../images/product/ws_dark.png");
       }
     }
     &.sh {
-      & img.img-white {
-        background-image: url("/images/product/sh_white.png");
+      & .img-white {
+        background-image: url("../images/product/sh_white.png");
       }
-      & img.img-dark {
-        background-image: url("/images/product/sh_dark.png");
+      & .img-dark {
+        background-image: url("../images/product/sh_dark.png");
       }
     }
     & .labtop-wrap {
@@ -179,7 +179,7 @@ $img_small_w: 400px;
           left: 0;
           right: 0;
           bottom: 0;
-          background-image: url("/images/product/labtop_hover.png");
+          background-image: url("../images/product/labtop_hover.png");
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
@@ -209,7 +209,7 @@ $img_small_w: 400px;
           left: 0;
           right: 0;
           bottom: 0;
-          background-image: url("/images/product/labtop_hover.png");
+          background-image: url("../images/product/labtop_hover.png");
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
@@ -286,6 +286,7 @@ $img_small_w: 400px;
         }
       }
       & .switch-btn {
+        cursor: pointer;
         width: 70px;
         height: 120px;
         border: 1px solid lightgray;
@@ -447,7 +448,8 @@ $img_small_w: 400px;
       }
     }
     & img {
-      width: 10rem;
+      width: 6rem;
+      margin-bottom: 0.5rem;
     }
     & .wrap-right {
       margin-top: 2rem;
