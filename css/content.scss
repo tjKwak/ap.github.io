@@ -10,6 +10,17 @@ $img_medium_w: 680px;
 $img_small_h: 300px;
 $img_small_w: 400px;
 
+@keyframes up {
+  0% {
+    transform: translateY(1.5rem);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 //홈
 #home {
   & .background {
@@ -27,14 +38,17 @@ $img_small_w: 400px;
       font-family: Pretendard;
     }
     & .sub-txt {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 400;
       line-height: 22px;
       letter-spacing: 0em;
       text-align: center;
-      opacity: 0.5;
+      margin-bottom: 5rem;
+      color: $gray-600;
+      text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     }
     & .main-txt {
+      margin-top: 2rem;
       font-weight: 700;
       font-size: 48px;
       line-height: 64px;
@@ -42,7 +56,8 @@ $img_small_w: 400px;
       text-align: center;
       color: $gray-500;
       opacity: 1;
-      margin-bottom: 5rem;
+      animation: up 600ms ease-out forwards;
+
       & b {
         color: $gray-900;
       }
@@ -102,6 +117,8 @@ $img_small_w: 400px;
     align-items: center;
     padding: 2.5rem 0 2rem 0;
     //border: 5px solid blue;
+
+    animation: up 600ms ease-out forwards;
     overflow: hidden;
     &.rms {
       & .img-white {
@@ -259,6 +276,14 @@ $img_small_w: 400px;
     padding: 0;
     display: flex;
     position: relative;
+    //화살표
+    & .info-arrow{
+      position: absolute;
+      top: calc(-40px);
+      left: 0;
+      right: 0;
+      padding: 0 1rem;
+    }
     //위젯 - 테마모드 스위치
     & .widget-theme {
       position: absolute;
@@ -431,6 +456,8 @@ $img_small_w: 400px;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+
+    animation: up 600ms ease-out forwards;
     & .wrap-left {
       flex-direction: column;
       text-align: center;
@@ -666,22 +693,6 @@ $img_small_w: 400px;
       bottom: 0;
       left: 0;
     }
-    // &::after{
-    //     content: '▶';
-    //     width: 20px;
-    //     height: 20px;
-    //     position: fixed;
-    //     bottom: 70px;
-    //     right: 1rem;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     border-radius: 100px;
-    //     box-shadow: $card-shadow;
-    //     background-color: white;
-    //     color: gray;
-    //     font-size: 8px;
-    // }
     & li {
       flex: 0 0 160px !important;
       & a .txt-wrap {
@@ -744,7 +755,9 @@ $img_small_w: 400px;
       display: none;
     }
     & .sub-txt {
-      display: none;
+      //display: none;
+      font-size: 0.8rem;
+      margin-bottom: 0;
     }
     & .main-txt {
       font-weight: 700;
@@ -754,7 +767,6 @@ $img_small_w: 400px;
       text-align: center;
       color: $gray-500;
       margin-top: 5rem;
-      margin-bottom: 0;
       & b {
         color: $gray-900;
       }

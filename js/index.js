@@ -51,7 +51,7 @@ var product_name = document.querySelectorAll('#product .tab-list span');
 var product_img = product_cont.querySelector('img');
 var product_txt = product_cont.querySelector('.txt-wrap');
 
-
+const PRO_LEN = product_name.length
 
 product_btn_area.addEventListener('click', function(e){
     let currClass = e.target.parentNode.className;
@@ -76,6 +76,17 @@ product_btn_area.addEventListener('click', function(e){
 //정렬
 function contArray(nextIndex) {
     let itemlist = Array.from(product_name);
+
+
+
+    ///수정중
+    // const product = productObject[productName];
+    // let pntlist = product.link
+
+
+
+
+
     var arr = new Array();
     for(let i=0; i<product_name.length; i++){
         arr.push(itemlist[i].innerHTML);
@@ -85,7 +96,8 @@ function contArray(nextIndex) {
 
     product_cont.className = 'tab-cont';
 
-    if (currIndex + nextIndex === product_name.length) {
+
+    if (currIndex + nextIndex === PRO_LEN) {
         product_cont.classList.add(classgroup[0])
         newActive(0)
         changeTxt(classgroup[0]);
@@ -93,8 +105,10 @@ function contArray(nextIndex) {
         return;
     }
     if (currIndex + nextIndex === -1) {
-        product_cont.classList.add(classgroup[4])
-        newActive(classgroup[4])
+        product_cont.classList.add(classgroup[PRO_LEN - 1])
+        newActive(PRO_LEN - 1)
+        changeTxt(classgroup[PRO_LEN - 1]);
+        changeLink(classgroup[PRO_LEN - 1]);
         return;
     }
     product_cont.classList.add(classgroup[currIndex + nextIndex])
@@ -137,7 +151,7 @@ const productObject = {
     rms: {
         title: 'RMS',
         subTitle: 'RTLS Managing System',
-        desc: 'WMS 솔루션의 새로운 모니터링 솔루션은<br>정해진 메뉴에만 구분하지 않고 자유롭게 커스텀하는 메뉴들을 구성합니다.<br>고객 요구사항에 맞는 맞춤형 대시보드 RMS를 소개합니다.',
+        desc: 'WMS 솔루션의 새로운 모니터링 솔루션은<br>사용자의 니즈에 따라 메뉴를 커스텀할 수 있습니다.<br>고객 요구사항에 맞는 맞춤형 대시보드 RMS를 소개합니다.',
         link: 'https://asia1-rms.indoorplus.io'
     },
     at: {
@@ -149,13 +163,13 @@ const productObject = {
     am: {
         title: 'AM',
         subTitle: 'Asset Management',
-        desc: '고객의 기기,장비,물류 등의 위치와 상태를 시각화,통계화합니다.<br>특정 자산의 조치와 자산 운용 및 플로우 현상을 위해 관리자가 취해야 할 행동반경을 제시합니다.<br>효율적 활용, 안정성 제고, 운영/관리 효율화를 위한 자산관리 시스템 솔루션입니다.',
+        desc: '고객의 기기,장비,물류 등의 위치와 상태를 시각화,통계화 하여,<br> 관리자가 취해야 할 최적의 행동반경을 제시합니다.<br>효율적인 자산 활용, 안정성 제고를 위한 최고의 솔루션입니다.',
         link: 'https://asia1-am.indoorplus.io'
     },
     ws: {
         title: 'WS',
         subTitle: 'Worker Safety',
-        desc: '사고의 예방과 조치를 위해 가장 중요한 것은 작업자의 실시간 위치 파악입니다.<br>작업자 안전 관리솔루션은 작업자의 위치 및 생체데이터를 모니터링 하여,<br>안전 관리자에게 시설 현황 파악 및 구역별 인원 관리를 돕습니다.',
+        desc: '작업자 안전 관리솔루션은 작업자의 실시간 위치를 제공하여 <br> 안전사고의 예방 및 조치를 도와드립니다.<br>또한 시설 현황 파악 및 구역별 인원 관리를 제공합니다.',
         link: 'https://asia1-ws.indoorplus.io'
     },
     sh: {
@@ -165,6 +179,19 @@ const productObject = {
         link: 'https://asia1-sh.indoorplus.io'
     }
 }
+// const pntArray = [
+//     {
+//         index : 0,
+//         title: 'RMS',
+//         subTitle: 'RTLS Managing System',
+//         desc: 'WMS 솔루션의 새로운 모니터링 솔루션은<br>정해진 메뉴에만 구분하지 않고 자유롭게 커스텀하는 메뉴들을 구성합니다.<br>고객 요구사항에 맞는 맞춤형 대시보드 RMS를 소개합니다.',
+//         link: 'https://asia1-rms.indoorplus.io'
+//     }
+// ]
+
+// console.log(Object.keys(productObject));
+
+
 function changeLink(productName){
     const product = productObject[productName];
     product_img.parentElement.href = product.link

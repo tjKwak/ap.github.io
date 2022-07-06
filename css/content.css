@@ -2,6 +2,31 @@
 /* Css link*/
 /* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
+@-webkit-keyframes up {
+  0% {
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes up {
+  0% {
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 #home .background {
   width: 100%;
   height: 100%;
@@ -21,15 +46,18 @@
 }
 
 #home .content-wrap .sub-txt {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: center;
-  opacity: 0.5;
+  margin-bottom: 5rem;
+  color: #86858a;
+  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 #home .content-wrap .main-txt {
+  margin-top: 2rem;
   font-weight: 700;
   font-size: 48px;
   line-height: 64px;
@@ -37,7 +65,8 @@
   text-align: center;
   color: #a8a7ac;
   opacity: 1;
-  margin-bottom: 5rem;
+  -webkit-animation: up 600ms ease-out forwards;
+          animation: up 600ms ease-out forwards;
 }
 
 #home .content-wrap .main-txt b {
@@ -118,6 +147,8 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 2.5rem 0 2rem 0;
+  -webkit-animation: up 600ms ease-out forwards;
+          animation: up 600ms ease-out forwards;
   overflow: hidden;
 }
 
@@ -307,6 +338,14 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+#product .tab-list .info-arrow {
+  position: absolute;
+  top: calc(-40px);
+  left: 0;
+  right: 0;
+  padding: 0 1rem;
 }
 
 #product .tab-list .widget-theme {
@@ -541,6 +580,8 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
+  -webkit-animation: up 600ms ease-out forwards;
+          animation: up 600ms ease-out forwards;
 }
 
 #contact .content-wrap .wrap-left {
@@ -1087,7 +1128,8 @@
     display: none;
   }
   .app-container #home .sub-txt {
-    display: none;
+    font-size: 0.8rem;
+    margin-bottom: 0;
   }
   .app-container #home .main-txt {
     font-weight: 700;
@@ -1097,7 +1139,6 @@
     text-align: center;
     color: #a8a7ac;
     margin-top: 5rem;
-    margin-bottom: 0;
   }
   .app-container #home .main-txt b {
     color: #212122;
