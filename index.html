@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indoorplus</title>
+    <title>test</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="v1/css/base.css">
+    <link rel="stylesheet" href="index/index.css">
 
     <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,289 +21,75 @@
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-
-    <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" as="style" crossorigin
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
-
-    <!-- 지도 -->
-
 </head>
 
 <body>
-    <div id="root">
-        <div class="app-container pnt-theme-white">
-            <!-- 헤더 -->
-            <div class="app-header">
-                <div class="flx-sb">
-                    <div class="flx-row">
-                        <h1 class="logo"><span class="pnt-logo logo-b-o"></span></h1>
+    <div class="body-wrap">
+        <div class="title">
+            <h1>피플앤드테크놀러지</h1>
+            <h2>제품 퍼블리싱 페이지 입니다.</h2>
+            <div class="flx-row gap-1">
+                <span class="icon-info-fill opacity-07"></span>
+                <p>기능은 들어가 있지 않으며, 오직 디자인을 보기 위한 Html 파일 입니다.</p>
+            </div>
+        </div>
+        <div class="flx-row gap-1">
+            <div class="sub">관리자 : 곽태정</div>
+            <div class="sub">업데이트 : 2022-07-19</div>
+        </div>
+        <div class="row">
+            <!-- <div class="col-xl-3 col-sm-6 col-12">
+                <div class="item">
+                    <div class="img-wrap"></div>
+                    <div class="txt-wrap">
+                        <b>[hanwha] Private Masking</b>
+                        <p>[한화] CCTV 프라이빗 마스킹 프로덕트</p>
+                        <a href="">사이트가기</a>
                     </div>
-                    <div class="flx-row">
-                        <ul class="web-menu">
-                            <li>
-                                <a class="menu active" href="#">홈</a>
-                            </li>
-                            <li>
-                                <a class="menu" href="#">제품 보기</a>
-                            </li>
-                            <li>
-                                <a class="menu" href="#">문의</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="space">
+                </div>
+            </div> -->
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="item">
+                    <div class="img-wrap"></div>
+                    <div class="txt-wrap">
+                        <b>[hanwha] Hive Road Ai</b>
+                        <p>[한화] 도로주행 AI 프로덕트</p>
+                        <a href="product/hra/index.html" target="_blank">사이트가기</a>
                     </div>
                 </div>
             </div>
-            <!-- 본문 -->
-            <div class="app-body">
-                <div class="side-wrap">
-                    <div class="side-left">
-                        <div></div>
-                        <div class="flx-col gap-4">
-                            <button id="btn-address-open" class="pnt-btn btn-icon-only btn-black"><span
-                                    class="icon-gps-fill">adress</span></button>
-                            <button id="btn-call-open" class="pnt-btn btn-icon-only btn-black"
-                                onclick="location.href='tel:070-8650-3600'"><span
-                                    class="icon-phone">phone</span></button>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="side-right">
-                        <div class="widget-lang">
-                            <button class="lang-btn active">
-                                <span class="icon-kr"></span>
-                                <p>kor</p>
-                            </button>
-                            <button class="lang-btn">
-                                <span class="icon-eng"></span>
-                                <p>Eng</p>
-                            </button>
-                        </div>
-                        <div class="widget-info">
-                            <div class="flx-row gap-2">
-                                <p>© 2022</p><b>People&Technology</b>
-                            </div>
-                        </div>
-                        <!-- <div class="widget-download">
-                            <button class="pnt-btn btn-icon btn-white btn-shadow pl-3 pr-1" onclick="myFunction()">
-                                <p>download</p><b>brochure</b>
-                                <span class="icon-download-line"></span>
-                            </button>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="body-wrap">
-                    <div id="home" class="active">
-                        <div class="background">
-                        </div>
-                        <div class="content-wrap">
-                            <div class="p-5 flx-col flx-center tc">
-                                <span class="pnt-logo logo-b-o mb-4" style="transform: scale(1.6);"></span>
-                                <p class="main-txt">Actionable <b>Geolocation</b> Intelligence <br>
-                                    and <b>Smart Sensing</b>
-                                </p>
-                                <p class="sub-txt">Full package for smart <b>IoT solution</b></p>
-                                <div class="img-indoorplus">
-                                    <div class="screen"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="product" class="">
-                        <div class="content-wrap">
-                            <div class="tab-cont rms">
-                                <div class="labtop-wrap">
-                                    <button id="product-prev" class="pnt-btn btn-icon-only btn-trans"><span
-                                            class="icon-back-light icon-large"></span></button>
-                                    <a href="https://asia1-rms.indoorplus.io" target="_blank"><img id="product-img"
-                                            class="img-white" src="" alt=""></img></a>
-                                    <button id="product-next" class="pnt-btn btn-icon-only btn-trans"><span
-                                            class="icon-next-light icon-large"></span></button>
-                                </div>
-                                <div class="txt-wrap">
-                                    <h2>RMS</h2>
-                                    <h3>RTLS Managing System</h3>
-                                    <p>WMS 솔루션의 새로운 모니터링 솔루션은<br>사용자의 니즈에 따라 메뉴를 커스텀할 수 있습니다.<br>고객 요구사항에 맞는 맞춤형 대시보드
-                                        RMS를 소개합니다.</p>
-                                </div>
-                            </div>
-                            <ul class="tab-list">
-                                <li class="rms active">
-                                    <a href="#">
-                                        <div class="txt-wrap">
-                                            <span class="color-rms">rms</span>
-                                            <p>RTLS Monitorting<br>System</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="at">
-                                    <a href="#">
-                                        <div class="txt-wrap">
-                                            <span class="color-at">at</span>
-                                            <p>Asset<br>Tracking</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="am">
-                                    <a href="#">
-                                        <div class="txt-wrap">
-                                            <span class="color-am">am</span>
-                                            <p>Asset<br>Management</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!-- <li class="">
-                                    <a href="#">
-                                        <div class="overlay"></div>
-                                        <div class="txt-wrap">
-                                            <div class="color-ps">ps</div>
-                                            <p>Patient Safety</p>
-                                        </div>
-                                    </a>
-                                </li> -->
-                                <li class="ws">
-                                    <a href="#">
-                                        <div class="txt-wrap">
-                                            <span class="color-ws">ws</span>
-                                            <p>Worker<br>Safety</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sh">
-                                    <a href="#">
-                                        <div class="txt-wrap">
-                                            <span class="color-sh">sh</span>
-                                            <p>Smart<br>Hospital</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!-- <div class="info-arrow">
-                                    <div class="flx-sb">
-                                        <span class="icon-back"></span>
-                                        <span class="icon-next"></span>
-                                    </div>
-                                </div> -->
-                                <div class="widget-theme">
-                                    <div class="switch-txt">
-                                        <div>all product<br>provide</div>
-                                        <p>dark<br>mode</p>
-                                    </div>
-                                    <button class="switch-btn">
-                                        <div class="top">WHITE</div>
-                                        <div class="bottom">BLACK</div>
-                                    </button>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="contact" class="">
-                        <div class="content-wrap">
-                            <img src="images/balloon_3.svg" alt="">
-                            <div class="wrap-left">
-                                <h2>Contact</h2>
-                                <h3>"다양한 문의내용에 최선을 다해 응답 드리겠습니다."</h3>
-                            </div>
-                            <div class="wrap-right">
-                                <ul class="cont-wrap">
-                                    <li>
-                                        <b>Tel</b>
-                                        <p>070-8650-3600</p>
-                                    </li>
-                                    <li>
-                                        <b>Fax</b>
-                                        <p>02-562-3986</p>
-                                    </li>
-                                    <li>
-                                        <b>Sales Inquiry</b>
-                                        <p>sales@pntbiz.com</p>
-                                    </li>
-                                    <li>
-                                        <b>EMEA Region Inquiry</b>
-                                        <p>sales@pntbiz.eu.com</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="item">
+                    <div class="img-wrap vms"></div>
+                    <div class="txt-wrap">
+                        <b>EyeWatch</b>
+                        <p>VMS 비디오 매니징 시스템</p>
+                        <a href="product/vms/index.html" target="_blank">사이트가기</a>
                     </div>
                 </div>
             </div>
-            <!-- 푸터 -->
-            <div class="app-footer">
-                <div class="flx-sb">
-                    <div class="flx-row gap-3">
-                        <div class="pnt-txt opacity-06">피플앤드테크놀러지</div>
-                        <div class="pnt-txt p2-n">people and technology</div>
-                    </div>
-                    <div class="flx-row gap-2">
-                        <button class="pnt-btn btn-icon-only btn-black">
-                            <span class="icon-facebook icon-big">facebook</span>
-                        </button>
-                        <button class="pnt-btn btn-icon-only btn-black">
-                            <span class="icon-instagram icon-big">instagram</span>
-                        </button>
-                        <button class="pnt-btn btn-icon-only btn-black">
-                            <span class="icon-youtube icon-big">youtube</span>
-                        </button>
-                        <button class="pnt-btn btn-icon-only btn-black">
-                            <span class="icon-twitter icon-big">twitter</span>
-                        </button>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="item">
+                    <div class="img-wrap indoorplus"></div>
+                    <div class="txt-wrap">
+                        <b>Indoor Plus</b>
+                        <p>인도어플러스 제품모음 사이트</p>
+                        <a href="product/indoorplus/index.html" target="_blank">사이트가기</a>
                     </div>
                 </div>
             </div>
-            <!-- 팝업 -->
-            <div class="app-popup">
-                <div class="popup-bg"></div>
-                <div class="popup-area">
-                    <div id="popup-address" class="popup-card">
-                        <button class="popup-close-btn">
-                            <span class="icon-close icon-big icon-filter-white"></span>
-                        </button>
-                        <div class="content-wrap">
-                            <div class="title">
-                                <p>오시는길</p>
-                            </div>
-                            <div class="address-wrap">
-                                <div class="map-wrap">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0266251518956!2d127.05156371619911!3d37.50729017980905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca46b5d012add%3A0x9b7e6ea9b3bf10cf!2sPEOPLE%20AND%20TECHNOLOGY!5e0!3m2!1sko!2skr!4v1656924957564!5m2!1sko!2skr"
-                                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                                <div class="cont-wrap">
-                                    <div class="item">
-                                        <b>address</b>
-                                        <p>서울특별시 강남구 삼성로 95길 27 영창빌딩 2층, 5층</p>
-                                    </div>
-                                    <div class="item">
-                                        <b>tel</b>
-                                        <p>070-8650-3600</p>
-                                    </div>
-                                    <div class="item">
-                                        <b>subway</b>
-                                        <p>선릉역(10분), 삼성역(15분)<br>삼성중앙역(20분)</p>
-                                    </div>
-                                    <div class="item">
-                                        <b>hompage</b>
-                                        <a href="https://www.pntbiz.co.kr/" target="_blank">pntbiz.co.kr</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="item">
+                    <div class="img-wrap designsystem"></div>
+                    <div class="txt-wrap">
+                        <b>Design System</b>
+                        <p>피엔티 디자인 시스템 및 컴포넌트</p>
+                        <a href="product/designsystem/index.html" target="_blank">사이트가기</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/form.js"></script>
-    <script src="js/index.js"></script>
-    <!-- <script>
-        function myFunction() {
-            alert("I am an alert box!");
-        }
-    </script> -->
 </body>
 
 </html>

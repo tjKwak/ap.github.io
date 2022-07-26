@@ -1,0 +1,400 @@
+//////////////////////////////
+/* Css link*/
+@import 'font';
+@import '_variables';
+@import 'layout';
+/////////////////////////////
+
+
+//사이드바
+//사이드바 옵션
+$list_thumb_size : 64px;
+$list_thumb_gap : 6px;
+.app-optionBar__wrap{
+  //시시티비
+  & .cctv-list{
+    display: flex;
+    flex-direction: column;
+    gap: $list_thumb_gap;
+    margin: 0;
+    padding: 0;
+    & li{
+      width: 100%;
+      height: 120px;
+      @media (max-width:$breakpoint-tablet){
+        height: 200px;
+      }
+      &:nth-of-type(2n) .screen-thumb{
+        background-image: url('../images/test_1.png');
+      }
+    }
+    & .screen-thumb{
+      position: relative;
+      margin-top: 3px;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/test_2.png');
+      background-size: cover;
+      background-position: center center;
+      border-radius: $form-radius;
+      &:hover .thumb-hover{
+        opacity: 1;
+        transition: all .1s;
+      }
+      & .thumb-info{
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: $form-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      & .thumb-hover{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem .3rem .5rem 0rem;
+        opacity: 0;
+        transition: all .1s;
+        & p{
+          color: $f-w-2;
+          font-size: 12px;
+          margin: 0;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  //큰 카드로 보기
+  & .view__big-card{
+    & .screen-thumb p{
+      width:140px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+    @media (min-width:$breakpoint-mobile) and (max-width:$breakpoint-tablet){
+      & li{ height: 360px; }
+    }
+    @media (max-width:$breakpoint-mobile){
+      & li{ height: 220px; }
+    }
+  }
+  //중간 카드로 보기
+  & .view__middle-card{
+    flex-direction: row;
+    flex-wrap: wrap;
+    & li{
+      height: 100px;
+      float: left;
+      width: calc( 50% - (#{$list_thumb_gap} / 2));
+      & .screen-thumb p{
+        width:50px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+    }
+    @media (min-width:$breakpoint-mobile) and (max-width:$breakpoint-tablet){
+      & li{ height: 180px; }
+    }
+    @media (max-width:$breakpoint-mobile){
+      & li{ height: 150px; }
+    }
+  }
+  //작은 카드로 보기
+  & .view__small-card{
+    flex-direction: row;
+    flex-wrap: wrap;
+    & li{
+      height: 60px;
+      float: left;
+      width: calc( 33.3% - (#{$list_thumb_gap} - 2px ));
+      
+      & .screen-thumb p{
+        display: none;
+      }
+    }
+    @media (max-width:$breakpoint-tablet){
+      & li{max-width: unset !important;}
+    }
+  }
+
+  //리스트 카드로 보기
+  & .view__list-card{
+    flex-direction: column;
+    & li{
+      width: 100%;
+      height: 70px;
+      max-width: $list_thumb_size;
+      margin-bottom: 1rem;
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: - 0.8rem;
+        left: 0;
+        height: 1px;
+        width: calc( (#{$list_thumb_size} * 3 ) + (#{$list_thumb_gap} * 2 ));
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      & .thumb-hover{
+        opacity: 1 !important;
+        position: absolute;
+        top: 0 !important;
+        bottom: 0;
+        left: $list_thumb_size !important;
+        width: 140px;
+        height: unset !important;
+        background-color: transparent !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding: 0 !important;
+        & .flx-row{
+          align-items: flex-start !important;
+          & button{opacity: .5;}
+        }
+        & button{
+          margin-left: auto;
+        }
+        & p{
+          color: $f-w-2;
+          font-size: 12px;
+          margin: 0;
+          margin-top: 5px !important;
+          line-height: 1.2 !important;
+          width: 7rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /* 라인수 */
+          -webkit-box-orient: vertical;
+          word-wrap:break-word; 
+        }
+      }
+    }
+    @media (max-width:$breakpoint-tablet){
+      & .thumb-hover{
+        width: calc(100vw - 100px) !important;
+      }
+      & li{
+        &::after{
+          width: calc(100vw - 35px) !important;
+        }
+      }
+    }
+  }
+  //로그
+  .log-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0;
+    & li{
+      font-size: 12px;
+      padding: .5rem 0;
+      border-bottom: 1px solid $form-border-color;
+    }
+  }
+}
+
+//바디
+//cctv 박스
+.cctv-box{
+  width: 50%;
+  max-width: 600px;
+  height: 400px;
+  outline: 1px solid $form-border-color;
+  border-radius: $form-radius;
+  background-image: url('../images/test_1.png');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  transition: all .3s;
+  & * {
+    color: white !important;
+    font-size: 12px;
+  }
+  &:nth-of-type(2){
+    background-image: url('../images/test_2.png');
+  }
+  & .cctv-info{
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    & .live{
+      height: 20px;
+      padding: 0 5px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: $form-radius;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap : 5px;
+      & span{
+        width: 5px;
+        height: 5px;
+        border-radius: 10px;
+      }
+    }
+  }
+  & .cctv-funtcion{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    border-top: 1px solid #b0a6ff3a;
+    background: rgba(24, 18, 37, 0.6);
+    opacity: 0;
+    transition: all .3s;
+    & .flx-sb{
+      height: 100%;
+      padding: 0 .5rem;
+    }
+    & .name{
+      margin-top: 2px;
+      width: 80px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+    & .pnt-border{
+      background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+  }
+  &:hover .cctv-funtcion{
+    opacity: 1;
+    transition: all .3s;
+  }
+}
+
+.t-small{
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+.t-title{
+  padding: 0;
+  margin : 0;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+//팝업(임시)
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  &.active{
+    display: block;
+  }
+  & .popup-area{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    & .pnt-modal{
+      border-radius: $form-radius;
+      background-color: #b0a6ff3a;
+      box-shadow: $card-shadow;
+      color: white;
+      min-width: 500px;
+      & .modal-header{
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid $form-border-color;
+        & a{
+          opacity: .7;
+          &:hover{opacity: 1;}
+        }
+      }
+      & .modal-body{
+        padding: 2rem 1rem;
+      }
+      & .modal-footer{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+        border-top: 1px solid $form-border-color;
+        & > *{
+          margin: 0;
+        }
+      }
+    }
+    @media (max-width:$breakpoint-tablet){
+      padding: 1rem;
+      width: 100%;
+      & .pnt-modal{
+        min-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}
+//팝업 - 카메라
+#newVideo{
+  & .table--wrap{
+    width: 105%;
+    box-sizing: border-box;
+    overflow: auto;
+    & .pnt-table{
+      width: 700px;
+      height: 500px;
+      @media (max-width:$breakpoint-mobile){
+        height: 200px;
+      }
+      & * { white-space: nowrap;}
+    }
+    @media (max-width:$breakpoint-tablet){
+      width: 100%;
+    }
+  }
+  @media (max-width:$breakpoint-mobile){
+    & .modal-footer{
+      & .flx-sb{
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+}
+.app-header .user-box .user-dropbox{
+  @media (max-width:$breakpoint-tablet){
+    width: calc(100vw - 15px);
+    top: $mobile-header-height !important;
+    right: 0 !important;
+    // left: 50%;
+    // right: unset;
+    // transform: translateX(-50%);
+  }
+}

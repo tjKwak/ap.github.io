@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Hanwha]HiveRoadAi</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../v1/css/base.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container app-theme-hh">
+            <!-- 헤더 -->
+            <div class="app-header">
+                <div class="header-wrap">
+                    <div class="space">
+                        <h1 class="logo">HiveRoadAi</h1>
+                    </div>
+                    <div class="web-menu">
+                        <a class="menu active" href="#">Analytics</a>
+                        <a class="menu" href="#">search</a>
+                        <a class="menu" href="#">setup</a>
+                    </div>
+                    <div class="space">
+                    </div>
+                </div>
+            </div>
+            <!-- 바디 -->
+            <div class="app-body">
+                <!-- 사이드메뉴 -->
+                <div class="side-wrap d-none">
+                    <ul>
+                        <li>
+                            <a href="#" class="active">
+                                <span class="icon-hh-backup"></span>
+                                Backup/Restore
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">
+                                <span class="icon-hh-setting"></span>
+                                Common setup
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">
+                                <span class="icon-hh-tree"></span>
+                                Data server setup
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">
+                                <span class="icon-hh-note"></span>
+                                Log
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 본문 -->
+                <div class="body-wrap">
+                    <div class="Analytics-page">
+                        <div class="analytics-wrap">
+                            <div class="top">
+                                <div>
+                                    <a href="html/analytics_ea.html">
+                                        <span class="icon-hh-menu-1"></span>
+                                        <div class="flx-col">
+                                            <div class="title">Exclude area</div>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="other">
+                                <div>
+                                    <a href="html/analytics_anpr.html">
+                                        <span class="icon-hh-menu-2"></span>
+                                        <div class="flx-col">
+                                            <div class="title">ANPR</div>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="html/analytics_vs.html">
+                                        <span class="icon-hh-menu-3"></span>
+                                        <div class="flx-col">
+                                            <div class="title">Vehicle Speed</div>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="html/analytics_ip.html">
+                                        <span class="icon-hh-menu-4"></span>
+                                        <div class="flx-col">
+                                            <div class="title">Illegal parking</div>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span class="icon-hh-menu-5"></span>
+                                        <div class="flx-col">
+                                            <div class="title">Reverse Run</div>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span class="icon-hh-menu-6"></span>
+                                        <div class="flx-col">
+                                            <div class="title">Illegal U-turn</div>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 팝업 -->
+            <div class="app-popup">
+                <div class="popup-bg"></div>
+                <div class="popup-area">
+                    <div id="popup-address" class="popup-card">
+                        <button class="popup-close-btn">
+                            <span class="icon-close icon-big icon-filter-white"></span>
+                        </button>
+                        <div class="content-wrap">
+                            <div class="title">
+                                <p>오시는길</p>
+                            </div>
+                            <div class="address-wrap">
+                                <div class="map-wrap">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0266251518956!2d127.05156371619911!3d37.50729017980905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca46b5d012add%3A0x9b7e6ea9b3bf10cf!2sPEOPLE%20AND%20TECHNOLOGY!5e0!3m2!1sko!2skr!4v1656924957564!5m2!1sko!2skr"
+                                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                                <div class="cont-wrap">
+                                    <div class="item">
+                                        <b>address</b>
+                                        <p>서울특별시 강남구 삼성로 95길 27 영창빌딩 2층, 5층</p>
+                                    </div>
+                                    <div class="item">
+                                        <b>tel</b>
+                                        <p>070-8650-3600</p>
+                                    </div>
+                                    <div class="item">
+                                        <b>subway</b>
+                                        <p>선릉역(10분), 삼성역(15분)<br>삼성중앙역(20분)</p>
+                                    </div>
+                                    <div class="item">
+                                        <b>homepage</b>
+                                        <a href="https://www.pntbiz.co.kr/" target="_blank">pntbiz.co.kr</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../v1/js/form.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

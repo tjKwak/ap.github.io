@@ -1,0 +1,637 @@
+@charset "UTF-8";
+/* Css link*/
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+html {
+  overflow: hidden;
+}
+
+.app-container {
+  position: relative;
+}
+
+.app-container .app-header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-container .app-body {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+}
+
+.app-container .app-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background: black;
+}
+
+.app-header {
+  padding: 0 2rem;
+}
+
+@media (max-width: 800px) {
+  .app-header {
+    padding: 0 1rem;
+  }
+}
+
+.app-header .flx-sb {
+  height: 100%;
+}
+
+.app-header .flx-sb > div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app-header .flx-sb > div:nth-of-type(1),
+.app-header .flx-sb div:nth-of-type(3) {
+  width: 100px;
+}
+
+.app-header .flx-sb .mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0.5rem;
+}
+
+.app-header .flx-sb ul.web-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  gap: 1px;
+}
+
+.app-header .flx-sb ul.web-menu li {
+  position: relative;
+}
+
+.app-header .flx-sb ul.web-menu .menu {
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+  padding: 0 1.8rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.app-header .flx-sb ul.web-menu .menu:hover, .app-header .flx-sb ul.web-menu .menu.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: 1px solid black;
+}
+
+.app-header .flx-sb a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-header .flx-sb .logo {
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  margin: 0;
+  margin-right: 1rem;
+}
+
+.app-header .flx-sb .logo a {
+  font-weight: 700 !important;
+  background: linear-gradient(145deg, #4a53ff, #b464ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 800px) {
+  .app-header .flx-sb .logo {
+    font-size: 1.1rem;
+  }
+}
+
+.lang-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 5px 10px #bbbbbb;
+          box-shadow: 1px 5px 10px #bbbbbb;
+  min-width: unset;
+}
+
+.lang-btn span {
+  border: 1px solid black;
+}
+
+.lang-btn p {
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.app-body {
+  position: relative;
+  background-color: white;
+}
+
+.app-body .side-wrap > div {
+  z-index: 2;
+  position: fixed;
+  top: 55px;
+  bottom: 60px;
+  padding: 2rem;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .side-wrap > div.side-left {
+  left: 0;
+}
+
+.app-body .side-wrap > div.side-right {
+  right: 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.app-body .side-wrap > div.side-right.short {
+  bottom: unset;
+  height: 20vh;
+}
+
+.app-body .side-wrap > div .lang-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1px;
+  padding: 0;
+  padding-top: 5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px !important;
+  background-color: #cac8cf;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 5px 10px #bbbbbb;
+          box-shadow: 1px 5px 10px #bbbbbb;
+  min-width: unset;
+}
+
+.app-body .side-wrap > div .lang-btn span {
+  opacity: 0.3;
+}
+
+.app-body .side-wrap > div .lang-btn:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.app-body .side-wrap > div .lang-btn:hover, .app-body .side-wrap > div .lang-btn.active {
+  opacity: 1;
+  background-color: #212122;
+}
+
+.app-body .side-wrap > div .lang-btn:hover span, .app-body .side-wrap > div .lang-btn.active span {
+  opacity: 1;
+}
+
+.app-body .side-wrap > div .lang-btn span {
+  border: 1px solid black;
+}
+
+.app-body .side-wrap > div .lang-btn p {
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+  color: white;
+}
+
+.app-body .side-wrap > div .widget-info > div {
+  padding: 5px 15px 5px 10px;
+  background-color: white;
+  -webkit-box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+          box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+  border-radius: 10rem;
+}
+
+.app-body .side-wrap > div .widget-info > div * {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.app-body .side-wrap > div .widget-info > div p {
+  font-weight: 700;
+  opacity: 0.7;
+  font-size: 14px;
+  letter-spacing: -1.5px;
+}
+
+.app-body .side-wrap > div .widget-info > div b {
+  font-weight: 900;
+}
+
+.app-body .side-wrap > div .widget-download button {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.app-body .side-wrap > div .widget-download button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.app-body .side-wrap > div .widget-download button p {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.app-body .side-wrap > div .widget-download button b {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.app-body .body-wrap > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.app-body .body-wrap > div.active {
+  display: block;
+}
+
+.app-footer {
+  padding: 0 2rem;
+}
+
+.app-footer .flx-sb {
+  height: 100%;
+}
+
+.app-footer * {
+  color: white;
+  line-height: 1.3;
+}
+
+.app-popup {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup.active {
+  z-index: 100;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup.active .popup-bg {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup.active .popup-area .popup-card {
+  margin-top: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-bg {
+  background-color: black;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-popup .popup-area .popup-card {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  margin-top: -100px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-area .popup-card .popup-close-btn {
+  position: absolute;
+  top: -25px;
+  right: 5%;
+  background-color: black;
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+          box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-area .popup-card .popup-close-btn:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #ff8800;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.app-popup .popup-area .popup-card .content-wrap {
+  padding: 3rem;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .title {
+  margin-left: 14px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .title::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  height: 26px;
+  width: 6px;
+  background-color: black;
+  border-radius: 100px;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .title p {
+  margin: 0;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .map-wrap {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  height: 360px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item {
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid #eceaf2;
+  position: relative;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -15px;
+  height: 12px;
+  width: 6px;
+  background-color: black;
+  border-radius: 100px;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item b {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+  display: block;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item p,
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item a {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item:last-of-type {
+  border: none;
+  position: relative;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item:last-of-type a {
+  text-decoration: underline !important;
+  font-size: 16px;
+  display: inline-block;
+  color: #ff8800;
+  font-weight: 700;
+}
+
+.app-popup .popup-area .popup-card .content-wrap .address-wrap .cont-wrap .item:last-of-type a:hover {
+  opacity: 1;
+}
+
+@media (max-height: 1024px) {
+  .app-container .app-header {
+    height: 48px !important;
+  }
+  .app-container .app-footer {
+    height: 40px !important;
+  }
+  .app-container .app-body {
+    top: 48px !important;
+    bottom: 40px !important;
+  }
+  .app-container .side-wrap > div {
+    top: 48px !important;
+    bottom: 40px !important;
+  }
+}
+
+@media (max-width: 1700px) {
+  .app-container .app-header {
+    height: 48px !important;
+  }
+  .app-container .app-footer {
+    height: 40px !important;
+  }
+  .app-container .app-body {
+    top: 48px !important;
+    bottom: 40px !important;
+  }
+  .app-container .side-wrap > div {
+    top: 48px !important;
+    bottom: 40px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .app-container .side-wrap {
+    display: none;
+  }
+  .app-container .app-header .logo span {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .app-container .app-header li a {
+    padding: 0 0.8rem !important;
+    font-size: 1rem !important;
+  }
+  .app-container .app-header .space {
+    display: none;
+  }
+  .app-container .app-footer {
+    padding: 0 1rem;
+  }
+  .app-container .app-footer .flx-row.gap-3 {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0 !important;
+  }
+  .app-container .app-footer .flx-row.gap-3 > div:last-of-type {
+    display: none;
+  }
+  .app-container .app-footer .flx-row.gap-3 > div {
+    font-size: 14px;
+  }
+}

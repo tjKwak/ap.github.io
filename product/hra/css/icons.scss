@@ -1,0 +1,82 @@
+//////////////////////////////
+/* Css link*/
+@import "../../../v1/css/icons.scss";
+
+////////////////////////////////////////
+@mixin icon-hh {
+  @include icons();
+  background-size: calc((#{$icon} * 1) + (#{$icon-gap} * 0)); //가로 1줄
+  background-image: url("../images/hh_icon.svg");
+}
+
+@mixin icon-hh-menu {
+  @include icons();
+  background-size: calc((#{$icon} * 1) + (#{$icon-gap} * 0)); //가로 1줄
+  background-image: url("../images/menu.svg");
+}
+
+////////////////////////////////////////
+//미니 아이콘
+.icon-hh-backup {
+  @include bgp($p1, $p1);
+  @include icon-hh();
+}
+.icon-hh-setting {
+  @include bgp($p1, $p2);
+  @include icon-hh();
+}
+.icon-hh-tree {
+  @include bgp($p1, $p3);
+  @include icon-hh();
+}
+.icon-hh-note {
+  @include bgp($p1, $p4);
+  @include icon-hh();
+}
+.icon-hh-delete {
+  @include bgp($p1, $p5);
+  @include icon-hh();
+}
+.icon-hh-select {
+  @include bgp($p1, $p6);
+  @include icon-hh();
+}
+.icon-hh-draw {
+  @include bgp($p1, $p7);
+  @include icon-hh();
+}
+.icon-hh-info {
+  @include bgp($p1, $p8);
+  @include icon-hh();
+}
+
+////////////////////////////////////////
+//메인 메뉴 아이콘
+.icon-hh-menu-1 {
+  @include bgp($p1, $p1);
+  @include icon-hh-menu();
+}
+.icon-hh-menu-2 {
+  @include bgp($p1, $p2);
+  @include icon-hh-menu();
+}
+.icon-hh-menu-3 {
+  @include bgp($p1, $p3);
+  @include icon-hh-menu();
+}
+.icon-hh-menu-4 {
+  @include bgp($p1, $p4);
+  @include icon-hh-menu();
+}
+.icon-hh-menu-5 {
+  @include bgp($p1, $p5);
+  @include icon-hh-menu();
+}
+.icon-hh-menu-6 {
+  @include bgp($p1, $p6);
+  @include icon-hh-menu();
+}
+.icon-hh-menu-7 {
+  @include bgp($p1, $p7);
+  @include icon-hh-menu();
+}

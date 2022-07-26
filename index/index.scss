@@ -1,0 +1,79 @@
+.body-wrap {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  & .title {
+    & h1 {
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    & h2 {
+      font-weight: 400;
+      font-size: 1.8rem;
+    }
+    & p {
+      margin-top: 1rem;
+    }
+  }
+  & .sub {
+    font-size: 0.85rem;
+    margin: 2rem 0 1rem 0;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: rgb(234, 235, 239);
+  }
+  & .item {
+    border: 1px solid rgb(236, 236, 236);
+    box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03),
+      0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03),
+      0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05),
+      0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    & .img-wrap {
+      width: 100%;
+      height: 30vh;
+      background-color: black;
+      border-radius: 10px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      &.indoorplus {
+        background-image: url("indoorplus.JPG");
+      }
+      &.vms {
+        background-image: url("vms.JPG");
+      }
+      &.designsystem {
+        background-image: url("designsystem.JPG");
+      }
+    }
+    & .txt-wrap {
+      padding: 2rem;
+      text-align: center;
+      & b {
+        font-size: 1rem;
+      }
+      & p {
+        margin-top: 1px;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+      & a {
+        border: 1px solid rgb(225, 225, 225);
+        border-radius: 10rem;
+        padding: 10px 15px;
+        color: rgb(71, 71, 71);
+        font-size: 0.9rem;
+        transition: all 0.1s;
+        &:hover {
+          transition: all 0.1s;
+          border-color: orangered;
+          color: orangered;
+        }
+      }
+    }
+  }
+}
