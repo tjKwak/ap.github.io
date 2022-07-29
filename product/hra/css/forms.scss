@@ -54,7 +54,7 @@
   text-overflow: ellipsis;
 
   filter: brightness(1);
-  transition: $form-transition;
+  //transition: $form-transition;
 
   //---[옵션]아이콘 유무---[디폴트]노멀
   &.btn-icon {
@@ -69,14 +69,10 @@
     }
   }
   &.btn-icon-only {
-    padding: 0;
-    min-width: $form-height;
-    max-width: $form-height;
-    max-height: $form-height;
+    padding: 15px 0;
     & * {
       font-size: 0;
     }
-    transition: $form-transition;
 
     & span {
       width: 20px;
@@ -85,9 +81,10 @@
       vertical-align: middle;
     }
     &:hover,
-    .on {
-      filter: invert(0.3);
-      transition: $form-transition;
+    .active {
+      & span {
+        filter: invert(1);
+      }
     }
   }
   //---[옵션]사이즈
@@ -141,89 +138,60 @@
     }
   }
   &.btn-brand {
-    //@include btn-effect-white();
-    background-color: $default-brand;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($default-brand, 0.3);
+    background-color: white;
+    border: 1px solid $default-brand;
+    color: $default-brand;
+    &:hover {
+      background-color: $default-brand;
+      color: white;
     }
   }
   &.btn-secondary {
-    @include btn-effect-white();
     background-color: $default-secondary;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($default-secondary, 0.3);
-    }
   }
   &.btn-success {
-    @include btn-effect-black();
     background-color: $default-success;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($default-success, 0.3);
-    }
-    &:hover {
-      filter: brightness(1.05);
-    }
   }
   &.btn-warning {
-    @include btn-effect-black();
     background-color: $default-warning;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($default-warning, 0.3);
-    }
   }
   &.btn-danger {
-    @include btn-effect-white();
     background-color: $default-danger;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($default-danger, 0.3);
-    }
   }
   &.btn-info {
-    @include btn-effect-black();
     background-color: $default-info;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($default-info, 0.3);
-    }
   }
   &.btn-lightgray {
-    //@include btn-effect-black();
+    background-color: white;
+    border: 1px solid $hh-gray-l-04;
+    color: $hh-gray-d-02;
     font-size: 10px;
-    background-color: $gray-300;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($gray-300, 0.3);
+    &:hover {
+      background-color: $hh-gray-m-02;
+      color: white;
     }
   }
   &.btn-gray {
-    @include btn-effect-white();
-    background-color: $gray-500;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($gray-500, 0.3);
+    background-color: white;
+    border: 1px solid $hh-gray-m-02;
+    color: $hh-gray-d-03;
+    &:hover {
+      background-color: $hh-gray-m-02;
+      color: white;
     }
   }
   &.btn-darkgray {
-    @include btn-effect-white();
     background-color: $gray-700;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($gray-700, 0.3);
-    }
   }
   &.btn-white {
-    @include btn-effect-black();
     background-color: $white;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($black, 0.3);
-    }
     &:hover {
       filter: none;
       background-color: $default-brand;
     }
   }
   &.btn-black {
-    @include btn-effect-white();
     background-color: $black;
-    &.btn-shadow {
-      box-shadow: 0px 5px 10px rgba($black, 0.3);
-    }
     &:hover {
       filter: none;
       background-color: $default-brand;
@@ -245,19 +213,23 @@ input:-webkit-autofill {
 
 .pnt-input--group {
   position: relative;
-  min-width: 8rem;
-  width: 12rem;
+  min-width: none;
+  width: 80px;
   & .pnt-input {
     width: 100%;
     height: 100%;
-    border: 1px solid $form-border-color;
-    background-color: $form-bg-color;
-    border-radius: $form-radius;
-    padding: 0 $form-left-padding;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    padding: 0;
     box-sizing: border-box;
-    transition: $form-transition;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     &::placeholder {
-      @include p3-l;
+      color: $hh-gray-l-07;
+      font-weight: 300 !important;
       white-space: nowrap;
       font-size: 13px;
       opacity: 0.8;
@@ -266,11 +238,7 @@ input:-webkit-autofill {
   input:focus,
   input:active,
   input:focus-visible {
-    filter: none !important;
-    background-color: $form-bg-color;
-    border: 1px solid $gray-600;
     outline: none;
-    box-shadow: $form-shadow;
   }
   & .input-error-txt,
   b,
@@ -291,29 +259,26 @@ input:-webkit-autofill {
   }
   //옵션
   &.icon-on-left {
-    & input {
-      padding-left: 2rem;
-    }
     & span {
       left: 0.5rem;
       display: block;
     }
   }
-  &.icon-on-right {
+  &.txt-on-right {
     & input {
-      padding-left: $form-left-padding;
+      padding-right: 2rem;
     }
     & span {
-      right: 0.5rem;
+      right: 0;
       display: block;
     }
   }
   &.btn-on-right {
     & input {
-      padding-left: $form-left-padding;
+      padding-right: 2rem;
     }
     & button {
-      right: 0.8rem;
+      right: 0;
       display: block;
     }
   }
@@ -440,14 +405,17 @@ input:-webkit-autofill {
 // 3. pnt-select--group(필수)
 .pnt-select--group {
   position: relative;
-  min-width: 8rem;
-  width: 12rem;
-  @media (max-width: $breakpoint-mobile) {
-    width: 100%;
-    max-width: unset;
-  }
+  width: 80px;
   & b {
     display: none;
+  }
+  //활성화 일때
+  &.active {
+    & .select__btn {
+    }
+    & .select__options {
+      display: block;
+    }
   }
   //버튼부분
   & .select__btn {
@@ -455,12 +423,8 @@ input:-webkit-autofill {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 0.5rem;
-    padding-left: $form-left-padding;
-    padding-right: 2rem;
-    background-color: $form-bg-color;
-    border: 1px solid $form-border-color;
-    border-radius: $form-radius;
+    background-color: transparent;
+    border-bottom: 1px solid $form-border-color;
     position: relative;
     transition: $form-transition;
     & .cont-wrap {
@@ -475,77 +439,42 @@ input:-webkit-autofill {
       right: 0;
       transform: scale(0.5);
       opacity: 0.5;
-      margin-left: 0.5rem;
-    }
-    //앞 아이콘(옵션)
-    & span {
-      width: 20px;
-      height: 20px;
-      margin-right: 0.5rem;
     }
   }
   //ul 드롭다운 부분
   & .select__options {
     display: none;
-    z-index: 10;
+    z-index: 2;
     position: absolute;
     top: 100%;
-    left: 1px;
-    width: calc(100% - 2px);
+    //width: 100%;
+    margin-top: -1px;
     padding: 0;
     background-color: white;
     box-shadow: $form-shadow;
     border: 1px solid $form-border-color;
-    border-radius: $form-radius;
     overflow: hidden;
     & li {
       & a {
         display: flex;
-        padding: 0.5rem 1rem;
-        color: $black;
-        border-radius: $form-radius;
-        border-top: 1px solid $form-border-color;
+        padding: 10px 1rem;
+        border-top: 1px solid $hh-gray-l-04;
         background-color: transparent;
         text-transform: capitalize;
-        transition: $form-transition;
-        &:last-child {
-          border: none;
-        }
-        & span {
-          transform: scale(0.7);
-          margin-left: -5px;
-          margin-right: 7px;
-        }
+        white-space: nowrap;
+        font-size: 12px;
       }
       &:hover a {
-        background-color: $gray-100;
-        transition: $form-transition;
+        background-color: $hh-gray-l-02;
+        color: $form-txt;
       }
-      &.on a {
-        background-color: $default-secondary;
+      &.active a {
+        background-color: $default-brand;
         color: white;
       }
     }
   }
-  //활성화 일때
-  &.on {
-    & .select__btn {
-      filter: none !important;
-      border: 1px solid $gray-600;
-      box-shadow: $form-shadow;
-      transition: $form-transition;
-    }
-    & .select__options {
-      display: block;
-    }
-  }
-  & .cont-wrap span {
-    display: none;
-    position: absolute;
-    opacity: 0.5;
-    transform: scale(0.8) translateY(-60%);
-    top: 50%;
-  }
+
   //옵션
   &.icon-on-left {
     & .cont-wrap {
@@ -671,14 +600,14 @@ input:-webkit-autofill {
     width: 0;
     height: 0;
     &:checked + .slider {
-      background-color: $default-success;
+      background-color: $default-brand;
       &::before {
         transform: translateX(30px) translateY(-50%);
       }
     }
   }
   & .slider {
-    background-color: $gray-300;
+    background-color: $hh-gray-l-07;
     border-radius: 100rem;
     position: absolute;
     top: 0;
@@ -713,7 +642,7 @@ input:-webkit-autofill {
       margin: 0;
       font-size: 12px;
       &:nth-of-type(1) {
-        color: gray;
+        color: white;
         right: 12px;
         opacity: 1;
         transition: 0.2s;
@@ -1229,125 +1158,64 @@ li {
 // 11_2. table
 //table은 퍼블리싱 파일에서만 사용합니다.
 //스타일만 신경쓰면 됩니다. 리액트 컴포넌트 사용하기 때문에 구조 업데이트는 필요x
+$table-height: 36px;
+
 .pnt-table {
+  border-top: 1px solid $hh-gray-l-04;
+  font-size: 0.8rem;
+
+  & tr {
+    border-bottom: 1px solid $hh-gray-l-04;
+    & td,
+    th {
+      height: $table-height;
+      padding: 0 10px;
+      text-align: center;
+      color: $hh-gray-d-01;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+  & tbody {
+    & tr:hover {
+      background-color: $hh-gray-l-02;
+      & td {
+        color: black;
+      }
+    }
+  }
+}
+
+.flx-table {
+  border-top: 1px solid $hh-gray-l-04;
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   height: 300px;
-  & .border-box {
-    overflow: auto hidden;
-    border-top: 1.4px solid black;
-    border-bottom: 1.4px solid black;
-    height: 100%;
-    & .thead {
-      overflow: visible;
-      & .tr {
-        height: 36px;
-        display: flex;
-        padding: 0;
-        & .th {
-          display: flex;
-          flex: 1 1 1%;
-          align-items: center;
-          justify-content: center;
-
-          background-color: #d2d2fd;
-          border-right: 1px solid $gray-100;
-          font-weight: bold;
-          &:last-child {
-            border-right: none;
-          }
-        }
-      }
-    }
-    & .tbody {
-      min-height: 10rem;
-      height: calc(100% - 36px);
-      position: relative;
-      background-color: white;
-      & > div {
-        padding: 0;
-        overflow: visible;
-        height: 100%;
-        & > div {
-          position: relative;
-          height: 100%;
-          width: 100%;
-          overflow: overlay;
-          will-change: transform;
-          direction: ltr;
-          & > div {
-            & .tr {
-              display: flex;
-              width: 100%;
-              height: $form-height;
-              position: absolute;
-              left: 0;
-              & .td {
-                display: flex;
-                flex: 1 1 1%;
-                align-items: center;
-                justify-content: center;
-                box-sizing: border-box;
-
-                border-bottom: 1px solid $gray-100;
-                border-right: 1px solid $gray-100;
-                //word-break: break-all;
-                &:last-child {
-                  border-right: none;
-                }
-              }
-              &:nth-child(2n) {
-                background-color: rgba(0, 0, 0, 0.02);
-              }
-              //임시 js
-              &:nth-child(1) {
-                top: 0;
-              }
-              &:nth-child(2) {
-                top: calc(36px * 1);
-              }
-              &:nth-child(3) {
-                top: calc(36px * 2);
-              }
-              &:nth-child(4) {
-                top: calc(36px * 3);
-              }
-              &:nth-child(5) {
-                top: calc(36px * 4);
-              }
-              &:nth-child(6) {
-                top: calc(36px * 5);
-              }
-              &:nth-child(7) {
-                top: calc(36px * 6);
-              }
-              &:nth-child(8) {
-                top: calc(36px * 7);
-              }
-              &:nth-child(9) {
-                top: calc(36px * 8);
-              }
-              &:nth-child(10) {
-                top: calc(36px * 9);
-              }
-            }
-          }
-        }
-      }
+  & .colgroup {
+    & .col-1 {
     }
   }
-  //옵션
-  &.table-clickable .border-box .tr {
-    &:hover {
-      background-color: #ebecf3;
-      cursor: pointer;
-      transition: $form-transition;
+  & .trow {
+    border-bottom: 1px solid $hh-gray-l-04;
+    display: flex;
+    height: $table-height;
+    & .cell {
+      width: 100%;
+      padding: 0 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $hh-gray-d-01;
+      font-size: 12px;
     }
-    &.active {
-      background-color: $default-secondary;
-      & .td {
-        color: $f-w-1;
+  }
+  & .tbody {
+    & .trow:hover {
+      background-color: $hh-gray-l-01;
+      & .cell {
+        color: black;
       }
     }
   }
@@ -1487,6 +1355,12 @@ li {
 .pnt-nameplate,
 .pnt-file--group {
   @include form-height();
+  &.form-medium {
+    width: 120px;
+  }
+  &.form-long {
+    width: 212px;
+  }
 }
 
 //토글과 체크박스는 다른 높이 설정을 가짐. 하지만 사용하는 class 명은 같음
@@ -1567,9 +1441,10 @@ $check-size: 24px;
 .pnt-table .th,
 .pnt-table .td,
 .pnt-txt {
-  @include p4-n();
-  font-weight: 500 !important;
-  color: $f-b-3; //각 theme 폴더에 의해 덮여지고 있음
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $form-txt; //각 theme 폴더에 의해 덮여지고 있음
 }
 
 // 5. form의 hover 설정

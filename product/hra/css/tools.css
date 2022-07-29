@@ -3,7 +3,7 @@
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
 /* 3. 자주 쓰는 문법  */
 .color-brand {
-  color: #ff7800;
+  color: #f37321;
 }
 
 .color-secondary {
@@ -47,11 +47,11 @@
 }
 
 .bg-brand {
-  background-color: #ff7800;
+  background-color: #f37321;
 }
 
 .bg-brand.bg-light {
-  background-color: #ffe4cc;
+  background-color: #fde3d3;
 }
 
 .bg-secondary {

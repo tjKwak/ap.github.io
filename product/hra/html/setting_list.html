@@ -40,9 +40,9 @@
                         <h1 class="logo">HiveRoadAi</h1>
                     </div>
                     <div class="web-menu">
-                        <a class="menu active" href="#">Analytics</a>
-                        <a class="menu" href="#">search</a>
-                        <a class="menu" href="#">setup</a>
+                        <a class="menu" href="../index.html">Analytics</a>
+                        <a class="menu" href="search.html">search</a>
+                        <a class="menu active" href="setting.html">setup</a>
                     </div>
                     <div class="space">
                     </div>
@@ -54,41 +54,56 @@
                 <div class="side-wrap">
                     <ul>
                         <li>
-                            <a href="#" class="active">
-                                <span class="icon-hh-backup"></span>
-                                Backup/Restore
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="active">
-                                <span class="icon-hh-setting"></span>
-                                Common setup
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="active">
-                                <span class="icon-hh-tree"></span>
-                                Data server setup
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="active">
+                            <a href="setting_license.html" class="">
                                 <span class="icon-hh-note"></span>
-                                Log
+                                라이센스
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setting_sd.html" class="">
+                                <span class="icon-hh-sdcard"></span>
+                                SD 카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setting_common.html" class="">
+                                <span class="icon-hh-setting"></span>
+                                공통 설정
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setting_list.html" class="active">
+                                <span class="icon-hh-tree"></span>
+                                차량 리스트
                             </a>
                         </li>
                     </ul>
                 </div>
                 <!-- 본문 -->
                 <div class="body-wrap">
-                    <div id="Analytics">
-
+                    <div class="p-4 flx-col gap-4" style="width: 400px;">
+                        <div class="flx-sb">
+                            <p class="small-txt">차량 번호</p>
+                            <div class="pnt-input--group form-long">
+                                <input class="pnt-input" type="text" value="미인증">
+                            </div>
+                        </div>
+                        <div class="flx-sb">
+                            <p class="small-txt">키</p>
+                            <div class="pnt-input--group form-long">
+                                <input class="pnt-input" type="text" placeholder="입력해주세요">
+                            </div>
+                        </div>
+                        <div class="flx-row gap-2 flx-end mt-4">
+                            <button class="pnt-btn btn-gray">자동인증</button>
+                            <button class="pnt-btn btn-brand">적용</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="../../../v1/js/form.js"></script>
+    <script src="../js/form.js"></script>
     <script src="../js/index.js"></script>
 </body>
 

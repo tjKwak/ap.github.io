@@ -40,8 +40,8 @@
                     </div>
                     <div class="web-menu">
                         <a class="menu active" href="../index.html">Analytics</a>
-                        <a class="menu" href="#">search</a>
-                        <a class="menu" href="#">setup</a>
+                        <a class="menu" href="search.html">search</a>
+                        <a class="menu" href="setting_license.html">setup</a>
                     </div>
                     <div class="space">
                     </div>
@@ -58,12 +58,7 @@
                                 Exclude area
                             </a>
                         </li>
-                        <li>
-                            <a href="analytics_anpr.html" class="">
-                                <span class="icon-hh-menu-2"></span>
-                                ANPR
-                            </a>
-                        </li>
+
                         <li>
                             <a href="analytics_vs.html" class="active">
                                 <span class="icon-hh-menu-3"></span>
@@ -113,8 +108,7 @@
                         <div class="setting-wrap">
                             <div class="menu-tab">
                                 <div class="menu-left">
-                                    <a href="#" class="active">ANPR</a>
-                                    <a href="#" class="">Speed Detect</a>
+                                    <a href="#" class="active">Speeding Detection</a>
                                     <a href="#" class="">List</a>
                                 </div>
                                 <div class="menu-right">
@@ -124,102 +118,49 @@
                             </div>
                             <div class="menu-content">
                                 <!-- 한줄 -->
-                                <div class="item h-100">
+                                <div class="item">
                                     <div class="content-title">
-                                        인식 영역
+                                        기준 사각형 설정
+                                    </div>
+                                    <div class="content-wrap">
+                                        <div class="content flx-col">
+                                            <div class="flx-sb p-3 w-100">
+                                                <p class="small-txt">너비</p>
+                                                <div class="pnt-input--group txt-on-right">
+                                                    <input class="pnt-input" type="text" placeholder="0">
+                                                    <span>m</sp>
+                                                        <p class="input-error-txt">에러문구 입니다</p>
+                                                </div>
+                                            </div>
+                                            <div class="flx-sb p-3 w-100">
+                                                <p class="small-txt">높이</p>
+                                                <div class="pnt-input--group txt-on-right">
+                                                    <input class="pnt-input" type="text" placeholder="0">
+                                                    <span>m</sp>
+                                                        <p class="input-error-txt">에러문구 입니다</p>
+                                                </div>
+                                            </div>
+                                            <div class="flx-sb p-3 w-100">
+                                                <p class="small-txt">제한 속도</p>
+                                                <div class="pnt-input--group txt-on-right">
+                                                    <input class="pnt-input" type="text" placeholder="0">
+                                                    <span>km/h</sp>
+                                                        <p class="input-error-txt">에러문구 입니다</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content d-none" id="list-content">
+                                <!-- 한줄 -->
+                                <div class="item">
+                                    <div class="content-title">
+                                        리스트
                                     </div>
                                     <div class="content-wrap">
                                         <div class="content">
                                             표
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 한줄 -->
-                                <div class="item">
-                                    <div class="content-title">
-                                        설정
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="content h-50 bg-g-1">
-                                            <div class="flx-sb p-3 w-100">
-                                                <p class="small-txt">제외영역 활성화</p>
-                                                <label class="pnt-toggle toggle-txt">
-                                                    <input type="checkbox" checked>
-                                                    <span class="slider"></span>
-                                                    <p>off</p>
-                                                    <p>on</p>
-                                                    <div class="icon-toggle-type icon-lock off"></div>
-                                                    <div class="icon-toggle-type icon-lock"></div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="content h-50">
-                                            <div class="flx-sb p-3 w-100">
-                                                <p class="small-txt">제외영역 활성화</p>
-                                                <label class="pnt-toggle toggle-txt">
-                                                    <input type="checkbox" checked>
-                                                    <span class="slider"></span>
-                                                    <p>off</p>
-                                                    <p>on</p>
-                                                    <div class="icon-toggle-type icon-lock off"></div>
-                                                    <div class="icon-toggle-type icon-lock"></div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 한줄 -->
-                                <div class="item">
-                                    <div class="content-title">
-                                        민감도
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="content h-50">
-                                            <div class="flx-sb p-3 w-100">
-                                                <p class="small-txt">제외영역 활성화</p>
-                                                <label class="pnt-toggle toggle-txt">
-                                                    <input type="checkbox" checked>
-                                                    <span class="slider"></span>
-                                                    <p>off</p>
-                                                    <p>on</p>
-                                                    <div class="icon-toggle-type icon-lock off"></div>
-                                                    <div class="icon-toggle-type icon-lock"></div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="content h-50 bg-g-1">
-                                            <div class="flx-sb p-3 w-100">
-                                                <p class="small-txt">제외영역 활성화</p>
-                                                <label class="pnt-toggle toggle-txt">
-                                                    <input type="checkbox" checked>
-                                                    <span class="slider"></span>
-                                                    <p>off</p>
-                                                    <p>on</p>
-                                                    <div class="icon-toggle-type icon-lock off"></div>
-                                                    <div class="icon-toggle-type icon-lock"></div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 한줄 -->
-                                <div class="item">
-                                    <div class="content-title">
-                                        민감도
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="content h-50 bg-g-1">
-                                            <div class="flx-sb p-3 w-100">
-                                                <p class="small-txt">번호판 인식 최소 크기</p>
-                                                <label class="pnt-toggle toggle-txt">
-                                                    <input type="checkbox" checked>
-                                                    <span class="slider"></span>
-                                                    <p>off</p>
-                                                    <p>on</p>
-                                                    <div class="icon-toggle-type icon-lock off"></div>
-                                                    <div class="icon-toggle-type icon-lock"></div>
-                                                </label>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -230,7 +171,7 @@
             </div>
         </div>
     </div>
-    <script src="../../../v1/js/form.js"></script>
+    <script src="../js/form.js"></script>
     <script src="../js/index.js"></script>
 </body>
 

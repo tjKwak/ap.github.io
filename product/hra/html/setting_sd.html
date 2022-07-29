@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Hanwha]HiveRoadAi</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../../v1/css/base.css">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container pnt-theme-white">
+            <!-- 헤더 -->
+            <div class="app-header">
+                <div class="header-wrap">
+                    <div class="space">
+                        <h1 class="logo">HiveRoadAi</h1>
+                    </div>
+                    <div class="web-menu">
+                        <a class="menu" href="../index.html">Analytics</a>
+                        <a class="menu" href="search.html">search</a>
+                        <a class="menu active" href="setting_license.html">setup</a>
+                    </div>
+                    <div class="space">
+                    </div>
+                </div>
+            </div>
+            <!-- 바디 -->
+            <div class="app-body">
+                <!-- 사이드메뉴 -->
+                <div class="side-wrap">
+                    <ul>
+                        <li>
+                            <a href="setting_license.html" class="">
+                                <span class="icon-hh-note"></span>
+                                라이센스
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setting_sd.html" class="active">
+                                <span class="icon-hh-sdcard"></span>
+                                SD 카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setting_common.html" class="">
+                                <span class="icon-hh-setting"></span>
+                                공통 설정
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setting_list.html" class="">
+                                <span class="icon-hh-tree"></span>
+                                차량 리스트
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 본문 -->
+                <div class="body-wrap">
+                    <div class="p-4 flx-col gap-4" style="width: 600px;">
+                        <div class="flx-sb flx-start">
+                            <p class="small-txt mt-2">상태</p>
+                            <div>
+                                <div class="pnt-input--group form-long">
+                                    <input class="pnt-input" type="text" value="양호">
+                                </div>
+                                <div class="flx-row flx-start gap-2 mt-3">
+                                    <span class="icon-info opacity-05"></span>
+                                    <div class="info-txt">SD카드는 제품별로 지정된 Read/Write 횟수가 정해져 있습니다.<br>
+                                        안전한 DATA 저장을 위해, 6~12개월마다 SD카드의 교체를 권장드립니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/form.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

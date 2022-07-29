@@ -295,6 +295,12 @@
   color: #3d3d3d;
 }
 
+.info-txt {
+  margin: 0;
+  font-size: 12px;
+  color: #797979;
+}
+
 @media (min-width: 1680px) {
   .setting-page--wrap .cctv-wrap {
     height: 58%;

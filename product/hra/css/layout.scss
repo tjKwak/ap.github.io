@@ -102,12 +102,12 @@ html {
 //사이드 메뉴
 .side-wrap {
   border-right: 1px solid $hh-gray-l-04;
-  & ul {
+  & > ul {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    & li {
+    & > li {
       margin: 0;
       padding: 0;
       & a {
@@ -122,10 +122,54 @@ html {
         line-height: 1.2;
         &:hover,
         &.active {
-          color: $hh-brand;
+          color: $default-brand;
           & span {
             filter: invert(40%) sepia(82%) saturate(2000%) hue-rotate(0deg)
               brightness(100%) contrast(100%) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+//검색 사이드 메뉴
+.search-side-wrap {
+  padding: 5px 0;
+  border-right: 1px solid $hh-gray-l-04;
+  width: 300px;
+  & > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    & > li {
+      height: 68px;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $hh-gray-l-04;
+      gap: 10px;
+      color: $hh-gray-d-02;
+      font-size: 15px;
+      line-height: 1.2;
+      &:hover {
+        background-color: $hh-gray-l-02;
+      }
+      &:first-child {
+        border-top: 1px solid $hh-gray-l-04;
+      }
+      &:last-child {
+        height: auto;
+        padding: 10px;
+        &:hover {
+          background-color: transparent;
+        }
+        & button {
+          height: 40px;
+          &:last-child {
+            width: 40px;
           }
         }
       }
@@ -201,7 +245,7 @@ html {
         transition: all 0.3s;
         &:hover {
           transition: all 0.3s;
-          background-color: $hh-brand;
+          background-color: $default-brand;
           transform: scale(1.1);
         }
       }

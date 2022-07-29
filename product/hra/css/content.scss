@@ -184,6 +184,11 @@
   font-size: 12px;
   color: $hh-gray-d-02;
 }
+.info-txt {
+  margin: 0;
+  font-size: 12px;
+  color: $hh-gray-m-03;
+}
 
 @media (min-width: $breakpoint-widemonitor) {
   .setting-page--wrap {

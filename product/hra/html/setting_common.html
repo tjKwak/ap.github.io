@@ -8,6 +8,7 @@
     <title>[Hanwha]HiveRoadAi</title>
 
     <!-- css -->
+    <link rel="stylesheet" href="../../../v1/css/base.css">
     <link rel="stylesheet" href="../css/base.css">
 
     <!-- 부트스트랩 -->
@@ -31,7 +32,7 @@
 
 <body>
     <div id="root">
-        <div class="app-container app-theme-hh">
+        <div class="app-container pnt-theme-white">
             <!-- 헤더 -->
             <div class="app-header">
                 <div class="header-wrap">
@@ -39,9 +40,9 @@
                         <h1 class="logo">HiveRoadAi</h1>
                     </div>
                     <div class="web-menu">
-                        <a class="menu active" href="../index.html">Analytics</a>
+                        <a class="menu" href="../index.html">Analytics</a>
                         <a class="menu" href="search.html">search</a>
-                        <a class="menu" href="setting_license.html">setup</a>
+                        <a class="menu active" href="setting.html">setup</a>
                     </div>
                     <div class="space">
                     </div>
@@ -53,34 +54,27 @@
                 <div class="side-wrap">
                     <ul>
                         <li>
-                            <a href="analytics_ea.html" class="">
-                                <span class="icon-hh-menu-1"></span>
-                                Exclude area
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="analytics_vs.html" class="">
-                                <span class="icon-hh-menu-3"></span>
-                                Vehicle Speed
+                            <a href="setting_license.html" class="">
+                                <span class="icon-hh-note"></span>
+                                라이센스
                             </a>
                         </li>
                         <li>
-                            <a href="analytics_ip.html" class="active">
-                                <span class="icon-hh-menu-4"></span>
-                                Illegal parking
+                            <a href="setting_sd.html" class="">
+                                <span class="icon-hh-sdcard"></span>
+                                SD 카드
                             </a>
                         </li>
                         <li>
-                            <a href="analytics_rr.html" class="">
-                                <span class="icon-hh-menu-5"></span>
-                                Reverse Run
+                            <a href="setting_common.html" class="active">
+                                <span class="icon-hh-setting"></span>
+                                공통 설정
                             </a>
                         </li>
                         <li>
-                            <a href="analytics_iut.html" class="">
-                                <span class="icon-hh-menu-6"></span>
-                                Illegal U-turn
+                            <a href="setting_list.html" class="">
+                                <span class="icon-hh-tree"></span>
+                                차량 리스트
                             </a>
                         </li>
                     </ul>
@@ -109,7 +103,6 @@
                             <div class="menu-tab">
                                 <div class="menu-left">
                                     <a href="#" class="active">setting</a>
-                                    <a href="#" class="">list</a>
                                 </div>
                                 <div class="menu-right">
                                     <button class="pnt-btn btn-gray">Cancle</button>
@@ -119,7 +112,7 @@
                             <div class="menu-content">
                                 <div class="item">
                                     <div class="content-title">
-                                        인식 영역
+                                        제외 영역
                                     </div>
                                     <div class="content-wrap">
                                         <div class="content">
@@ -129,24 +122,21 @@
                                 </div>
                                 <div class="item">
                                     <div class="content-title">
-                                        인식 대상
+                                        활성화
                                     </div>
                                     <div class="content-wrap">
-                                        <div class="content">
-                                            차량들
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-content d-none" id="list-content">
-                                <!-- 한줄 -->
-                                <div class="item">
-                                    <div class="content-title">
-                                        리스트
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="content">
-                                            표
+                                        <div class="content h-50">
+                                            <div class="flx-sb p-3 w-100">
+                                                <p class="small-txt">제외영역 활성화</p>
+                                                <label class="pnt-toggle toggle-txt">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                    <p>off</p>
+                                                    <p>on</p>
+                                                    <div class="icon-toggle-type icon-lock off"></div>
+                                                    <div class="icon-toggle-type icon-lock"></div>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
