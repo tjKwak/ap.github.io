@@ -138,6 +138,8 @@ html {
   padding: 5px 0;
   border-right: 1px solid $hh-gray-l-04;
   width: 300px;
+  height: 100%;
+  overflow: auto;
   & > ul {
     margin: 0;
     padding: 0;

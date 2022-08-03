@@ -78,7 +78,7 @@ window.onload = function(){
 
     //인풋 에러 기능
     for(let i=0; i<input_error.length; i++){
-        input_error[i].parentNode.classList.add('flx-top');
+        input_error[i].parentNode.classList.add('align-start');
     }
 
     

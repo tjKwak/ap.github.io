@@ -314,7 +314,7 @@ $layout-shadow: 0 0 1rem rgba(30, 10, 10, 0.15);
   &.flx-center {
     justify-content: center;
   }
-  &.row-top {
+  &.align-start {
     align-items: unset;
   }
   &.flx-mobile-col {
@@ -358,7 +358,7 @@ $layout-shadow: 0 0 1rem rgba(30, 10, 10, 0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &.flx-top {
+  &.align-start {
     align-items: flex-start;
   }
 }

@@ -145,6 +145,10 @@
       background-color: $default-brand;
       color: white;
     }
+    &.active {
+      background-color: $default-brand-d;
+      color: white;
+    }
   }
   &.btn-secondary {
     background-color: $default-secondary;
@@ -166,7 +170,8 @@
     border: 1px solid $hh-gray-l-04;
     color: $hh-gray-d-02;
     font-size: 10px;
-    &:hover {
+    &:hover,
+    &.active {
       background-color: $hh-gray-m-02;
       color: white;
     }
@@ -179,27 +184,34 @@
       background-color: $hh-gray-m-02;
       color: white;
     }
+    &.active {
+      background-color: $hh-gray-d-01;
+      color: white;
+    }
   }
   &.btn-darkgray {
     background-color: $gray-700;
   }
   &.btn-white {
     background-color: $white;
-    &:hover {
+    &:hover,
+    &.active {
       filter: none;
       background-color: $default-brand;
     }
   }
   &.btn-black {
     background-color: $black;
-    &:hover {
+    &:hover,
+    &.active {
       filter: none;
       background-color: $default-brand;
     }
   }
   &.btn-trans {
     background-color: transparent;
-    &:hover {
+    &:hover,
+    &.active {
       filter: none;
       background-color: $default-brand;
     }
@@ -228,11 +240,8 @@ input:-webkit-autofill {
     overflow: hidden;
     text-overflow: ellipsis;
     &::placeholder {
-      color: $hh-gray-l-07;
-      font-weight: 300 !important;
+      color: $form-placeholder-txt;
       white-space: nowrap;
-      font-size: 13px;
-      opacity: 0.8;
     }
   }
   input:focus,
@@ -447,7 +456,7 @@ input:-webkit-autofill {
     z-index: 2;
     position: absolute;
     top: 100%;
-    //width: 100%;
+    width: 100%;
     margin-top: -1px;
     padding: 0;
     background-color: white;
@@ -1251,9 +1260,6 @@ $table-height: 36px;
       background-color: $form-disable-bg;
       color: $form-disable-txt;
       filter: none;
-      &::placeholder {
-        color: $f-b-7;
-      }
       &:hover {
         box-shadow: none;
       }
@@ -1429,7 +1435,6 @@ $check-size: 24px;
 
 // 4. form의 폰트 설정(수정 불가)
 .pnt-input--group input,
-.pnt-input--group input::placeholder,
 .pnt-select--group .cont-wrap,
 .pnt-select--group a,
 .pnt-btn,

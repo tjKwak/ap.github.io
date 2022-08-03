@@ -145,6 +145,11 @@
   color: white;
 }
 
+.pnt-btn.btn-brand.active {
+  background-color: #c25c1a;
+  color: white;
+}
+
 .pnt-btn.btn-secondary {
   background-color: #3e66fb;
 }
@@ -172,7 +177,7 @@
   font-size: 10px;
 }
 
-.pnt-btn.btn-lightgray:hover {
+.pnt-btn.btn-lightgray:hover, .pnt-btn.btn-lightgray.active {
   background-color: #8d8d8d;
   color: white;
 }
@@ -188,6 +193,11 @@
   color: white;
 }
 
+.pnt-btn.btn-gray.active {
+  background-color: #606060;
+  color: white;
+}
+
 .pnt-btn.btn-darkgray {
   background-color: #656467;
 }
@@ -196,7 +206,7 @@
   background-color: #fff;
 }
 
-.pnt-btn.btn-white:hover {
+.pnt-btn.btn-white:hover, .pnt-btn.btn-white.active {
   -webkit-filter: none;
           filter: none;
   background-color: #f37321;
@@ -206,7 +216,7 @@
   background-color: #000;
 }
 
-.pnt-btn.btn-black:hover {
+.pnt-btn.btn-black:hover, .pnt-btn.btn-black.active {
   -webkit-filter: none;
           filter: none;
   background-color: #f37321;
@@ -216,7 +226,7 @@
   background-color: transparent;
 }
 
-.pnt-btn.btn-trans:hover {
+.pnt-btn.btn-trans:hover, .pnt-btn.btn-trans.active {
   -webkit-filter: none;
           filter: none;
   background-color: #f37321;
@@ -249,34 +259,22 @@ input:-webkit-autofill {
 
 .pnt-input--group .pnt-input::-webkit-input-placeholder {
   color: #b4b4b4;
-  font-weight: 300 !important;
   white-space: nowrap;
-  font-size: 13px;
-  opacity: 0.8;
 }
 
 .pnt-input--group .pnt-input:-ms-input-placeholder {
   color: #b4b4b4;
-  font-weight: 300 !important;
   white-space: nowrap;
-  font-size: 13px;
-  opacity: 0.8;
 }
 
 .pnt-input--group .pnt-input::-ms-input-placeholder {
   color: #b4b4b4;
-  font-weight: 300 !important;
   white-space: nowrap;
-  font-size: 13px;
-  opacity: 0.8;
 }
 
 .pnt-input--group .pnt-input::placeholder {
   color: #b4b4b4;
-  font-weight: 300 !important;
   white-space: nowrap;
-  font-size: 13px;
-  opacity: 0.8;
 }
 
 .pnt-input--group input:focus,
@@ -527,6 +525,7 @@ input:-webkit-autofill {
   z-index: 2;
   position: absolute;
   top: 100%;
+  width: 100%;
   margin-top: -1px;
   padding: 0;
   background-color: white;
@@ -1553,22 +1552,6 @@ li.pnt-label-top .pnt-label--group {
           filter: none;
 }
 
-.form-disable.pnt-input--group .pnt-input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
-
-.form-disable.pnt-input--group .pnt-input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
-
-.form-disable.pnt-input--group .pnt-input::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
-
-.form-disable.pnt-input--group .pnt-input::placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
-
 .form-disable.pnt-input--group .pnt-input:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1791,64 +1774,6 @@ li.pnt-label-top .pnt-label--group {
 }
 
 .pnt-input--group input,
-.pnt-input--group input::-webkit-input-placeholder,
-.pnt-select--group .cont-wrap,
-.pnt-select--group a,
-.pnt-btn,
-.pnt-checkbox p,
-.pnt-nameplate .cont-wrap,
-.pnt-radio label,
-.pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
-.pnt-txt {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #606060;
-}
-
-.pnt-input--group input,
-.pnt-input--group input:-ms-input-placeholder,
-.pnt-select--group .cont-wrap,
-.pnt-select--group a,
-.pnt-btn,
-.pnt-checkbox p,
-.pnt-nameplate .cont-wrap,
-.pnt-radio label,
-.pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
-.pnt-txt {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #606060;
-}
-
-.pnt-input--group input,
-.pnt-input--group input::-ms-input-placeholder,
-.pnt-select--group .cont-wrap,
-.pnt-select--group a,
-.pnt-btn,
-.pnt-checkbox p,
-.pnt-nameplate .cont-wrap,
-.pnt-radio label,
-.pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
-.pnt-txt {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #606060;
-}
-
-.pnt-input--group input,
-.pnt-input--group input::placeholder,
 .pnt-select--group .cont-wrap,
 .pnt-select--group a,
 .pnt-btn,

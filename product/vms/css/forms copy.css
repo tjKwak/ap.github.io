@@ -63,7 +63,7 @@
   gap: 2rem;
 }
 
-.flx-row.row-top {
+.flx-row.align-start {
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
@@ -149,7 +149,7 @@
           align-items: center;
 }
 
-.flx-sb.flx-top {
+.flx-sb.align-start {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;

@@ -51,7 +51,7 @@ window.onload = function(){
     //인풋 에러 기능
     var input_error = document.querySelectorAll('.pnt-input--group.input-error');
     for(let i=0; i<input_error.length; i++){
-        input_error[i].parentNode.classList.add('flx-top');
+        input_error[i].parentNode.classList.add('align-start');
     }
 
     

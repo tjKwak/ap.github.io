@@ -3,7 +3,7 @@
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
 /* 3. 자주 쓰는 문법  */
 .color-brand {
-  color: #ff7800;
+  color: #f37321;
 }
 
 .color-secondary {
@@ -47,11 +47,11 @@
 }
 
 .bg-brand {
-  background-color: #ff7800;
+  background-color: #f37321;
 }
 
 .bg-brand.bg-light {
-  background-color: #ffe4cc;
+  background-color: #fde3d3;
 }
 
 .bg-secondary {
@@ -172,34 +172,34 @@
   height: calc(100% - 1rem);
 }
 
+.align-start {
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+}
+
+.align-end {
+  -webkit-box-align: end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important;
+}
+
 .flx-start {
   -webkit-box-pack: start !important;
       -ms-flex-pack: start !important;
           justify-content: flex-start !important;
-  -webkit-box-align: start !important;
-      -ms-flex-align: start !important;
-          align-items: flex-start !important;
 }
 
 .flx-end {
   -webkit-box-pack: end !important;
       -ms-flex-pack: end !important;
           justify-content: flex-end !important;
-  -webkit-box-align: end !important;
-      -ms-flex-align: end !important;
-          align-items: flex-end !important;
 }
 
 .flx-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
 }
 
 .flx-row {
@@ -233,18 +233,6 @@
 
 .flx-row.gap-3 {
   gap: 2rem;
-}
-
-.flx-row.flx-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.flx-row.row-top {
-  -webkit-box-align: unset;
-      -ms-flex-align: unset;
-          align-items: unset;
 }
 
 @media (max-width: 570px) {
@@ -303,12 +291,6 @@
   gap: 2rem;
 }
 
-.flx-col.flx-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .flx-sb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,12 +301,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.flx-sb.flx-top {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .flx-full > * {
@@ -711,7 +687,7 @@
   display: none !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .show__under-desktop {
     display: block !important;
   }
@@ -721,7 +697,7 @@
   display: none !important;
 }
 
-@media (min-width: 1024px) and (max-width: 1700px) {
+@media (min-width: 1024px) and (max-width: 1680px) {
   .show__only-labtop {
     display: block !important;
   }
@@ -738,7 +714,7 @@
 }
 
 .mini-box {
-  border-radius: 5px;
+  border-radius: 0px;
   -webkit-box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
   padding: 1rem;

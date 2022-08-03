@@ -102,7 +102,8 @@
                         <div class="setting-wrap">
                             <div class="menu-tab">
                                 <div class="menu-left">
-                                    <a href="#" class="active">setting</a>
+                                    <a href="#" class="active">번호인식 설정(ANPR)</a>
+                                    <a href="#" class="">차량인식 설정(MMCR)</a>
                                 </div>
                                 <div class="menu-right">
                                     <button class="pnt-btn btn-gray">Cancle</button>
@@ -110,9 +111,9 @@
                                 </div>
                             </div>
                             <div class="menu-content">
-                                <div class="item">
+                                <div class="content-row">
                                     <div class="content-title">
-                                        제외 영역
+                                        인식 영역
                                     </div>
                                     <div class="content-wrap">
                                         <div class="content">
@@ -120,23 +121,78 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
+                                <div class="content-row">
                                     <div class="content-title">
-                                        활성화
+                                        Detect Size
+                                    </div>
+                                    <div class="content-wrap">
+                                        <div class="content h-50 bg-g-1">
+                                            <div class="flx-sb p-3 w-100">
+                                                <div class="flx-sb w-100">
+                                                    <p class="small-txt">번호판 최소 인식 크기</p>
+                                                    <div class="pnt-input--group txt-on-right">
+                                                        <input class="pnt-input" type="text" placeholder="0">
+                                                        <span>px</sp>
+                                                            <p class="input-error-txt">에러문구 입니다</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content h-50">
+                                            <div class="flx-sb p-3 w-100">
+                                                <p class="small-txt">크기 미리보기</p>
+                                                <div class="flx-row gap-2">
+                                                    <div class="bold-txt">
+                                                        202 x 108
+                                                    </div>
+                                                    <label class="pnt-toggle toggle-txt">
+                                                        <input type="checkbox" checked>
+                                                        <span class="slider"></span>
+                                                        <p>off</p>
+                                                        <p>on</p>
+                                                        <div class="icon-toggle-type icon-lock off"></div>
+                                                        <div class="icon-toggle-type icon-lock"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-row">
+                                    <div class="content-title">
+                                        Unit
                                     </div>
                                     <div class="content-wrap">
                                         <div class="content h-50">
                                             <div class="flx-sb p-3 w-100">
-                                                <p class="small-txt">제외영역 활성화</p>
-                                                <label class="pnt-toggle toggle-txt">
-                                                    <input type="checkbox" checked>
-                                                    <span class="slider"></span>
-                                                    <p>off</p>
-                                                    <p>on</p>
-                                                    <div class="icon-toggle-type icon-lock off"></div>
-                                                    <div class="icon-toggle-type icon-lock"></div>
-                                                </label>
+                                                <div class="flx-sb w-100">
+                                                    <p class="small-txt">단위 변경</p>
+                                                    <div class="pnt-select--group" tabindex="0">
+                                                        <button class="select__btn">
+                                                            <div class="cont-wrap">
+                                                                km/h
+                                                            </div>
+                                                            <span class="icon-down"></span>
+                                                        </button>
+                                                        <ul class="select__options">
+                                                            <li class="active"><a href="#">km/h</a></li>
+                                                            <li><a href="#">mile</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content d-none" id="list-content">
+                                <div class="content-row">
+                                    <div class="content-title">
+                                        인식 영역
+                                    </div>
+                                    <div class="content-wrap">
+                                        <div class="content">
+                                            표
                                         </div>
                                     </div>
                                 </div>
