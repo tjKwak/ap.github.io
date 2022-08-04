@@ -37,9 +37,6 @@
       flex-wrap: wrap;
       & > div {
         flex: 30%;
-        &:nth-of-type(5) a {
-          pointer-events: none;
-        }
         &:nth-of-type(6) a {
           pointer-events: none;
         }

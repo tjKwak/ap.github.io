@@ -79,10 +79,6 @@
           flex: 30%;
 }
 
-.Analytics-page .analytics-wrap .other > div:nth-of-type(5) a {
-  pointer-events: none;
-}
-
 .Analytics-page .analytics-wrap .other > div:nth-of-type(6) a {
   pointer-events: none;
 }
