@@ -290,10 +290,6 @@
   border-top: none;
 }
 
-#setting-page .body-wrap {
-  overflow: auto;
-}
-
 .flx-row.flx-full.w-100 {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;

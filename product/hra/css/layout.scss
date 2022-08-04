@@ -99,6 +99,7 @@ html {
     }
   }
 }
+
 //사이드 메뉴
 .side-wrap {
   border-right: 1px solid $hh-gray-l-04;
@@ -176,6 +177,13 @@ html {
         }
       }
     }
+  }
+}
+
+//스크롤
+#search-page {
+  & .body-wrap {
+    overflow: auto;
   }
 }
 

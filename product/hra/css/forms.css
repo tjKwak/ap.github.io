@@ -193,6 +193,11 @@
   color: white;
 }
 
+.pnt-btn.btn-gray:hover span {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 .pnt-btn.btn-gray.active {
   background-color: #606060;
   color: white;
@@ -1421,26 +1426,24 @@ li.pnt-label-top .pnt-label--group {
   position: relative;
 }
 
-.pagination {
+.pnt-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.pagination .now {
-  line-height: auto;
-  font-size: 0.9rem;
-  font-weight: 700;
+.pnt-pagination * {
+  font-size: 12px;
+}
+
+.pnt-pagination .now {
   color: #f37321;
 }
 
-.pagination .whole {
-  line-height: auto;
-  font-size: 0.9rem;
-  font-weight: 400;
+.pnt-pagination .whole {
   color: #606060;
 }
 
@@ -1681,7 +1684,7 @@ li.pnt-label-top .pnt-label--group {
 .pnt-radio.form-medium,
 .pnt-nameplate.form-medium,
 .pnt-file--group.form-medium {
-  width: 120px;
+  width: 144px;
 }
 
 .pnt-input--group.form-long,

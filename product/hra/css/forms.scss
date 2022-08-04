@@ -183,6 +183,9 @@
     &:hover {
       background-color: $hh-gray-m-02;
       color: white;
+      & span {
+        filter: invert(1);
+      }
     }
     &.active {
       background-color: $hh-gray-d-01;
@@ -1152,15 +1155,14 @@ li {
 }
 
 // 11_1. pagination
-.pagination {
+.pnt-pagination {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  & *{font-size: 12px;}
   & .now {
-    @include p3-b();
     color: $default-brand;
   }
   & .whole {
-    @include p3-n();
     color: $form-txt;
   }
 }
@@ -1362,7 +1364,7 @@ $table-height: 36px;
 .pnt-file--group {
   @include form-height();
   &.form-medium {
-    width: 120px;
+    width: 144px;
   }
   &.form-long {
     width: 212px;

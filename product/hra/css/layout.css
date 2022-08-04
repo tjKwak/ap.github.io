@@ -239,6 +239,10 @@ html {
   width: 40px;
 }
 
+#search-page .body-wrap {
+  overflow: auto;
+}
+
 .app-popup {
   z-index: 100;
   position: fixed;
