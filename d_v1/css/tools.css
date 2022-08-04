@@ -184,6 +184,12 @@
           align-items: flex-end !important;
 }
 
+.align-center {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
 .flx-start {
   -webkit-box-pack: start !important;
       -ms-flex-pack: start !important;
