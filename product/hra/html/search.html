@@ -36,14 +36,17 @@
             <!-- 헤더 -->
             <div class="app-header">
                 <div class="header-wrap">
+                    <!-- 로고 -->
                     <div class="space">
                         <h1 class="logo">HiveRoadAi</h1>
                     </div>
+                    <!-- 메뉴 -->
                     <div class="web-menu">
                         <a class="menu" href="../index.html">Analytics</a>
                         <a class="menu active" href="search.html">search</a>
                         <a class="menu" href="setting_license.html">setup</a>
                     </div>
+                    <!-- 레이아웃을 위해 만든 빈 태그(빼면안됌) -->
                     <div class="space">
                     </div>
                 </div>
@@ -59,16 +62,20 @@
                                 <input class="pnt-input" type="text" placeholder="번호 입력">
                             </div>
                         </li>
-                        <li>
-                            <p class="small-txt">시작일</p>
-                            <div class="pnt-input--group form-medium">
-                                <input class="pnt-input" type="datetime-local">
+                        <li class="flx-col" style="height: 110px;">
+                            <div class="w-100 flx-sb">
+                                <p class="small-txt">시작일</p>
+                                <!-- 윈도우의 기본 input[date] 쓰지 말고 react datepicker 사용해주세요 -->
+                                <div class="pnt-input--group form-medium">
+                                    <input class="pnt-input" type="date">
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <p class="small-txt">종료일</p>
-                            <div class="pnt-input--group form-medium">
-                                <input class="pnt-input" type="datetime-local">
+                            <div class="w-100 flx-sb">
+                                <p class="small-txt">종료일</p>
+                                <!-- 윈도우의 기본 input[date] 쓰지 말고 react datepicker 사용해주세요 -->
+                                <div class="pnt-input--group form-medium">
+                                    <input class="pnt-input" type="date">
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -190,6 +197,7 @@
                 <!-- 본문 -->
                 <div class="body-wrap">
                     <div class="p-4 flx-col gap-4" style="max-width: 1200px;">
+                        <!-- 테이블 -->
                         <table class="pnt-table">
                             <colgroup>
                                 <col width="5%" />
@@ -415,73 +423,9 @@
                                     <td>White</td>
                                     <td>27</td>
                                 </tr>
-                                <tr>
-                                    <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
-                                    <td>107너 5116</td>
-                                    <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
-                                    <td>Hyundai</td>
-                                    <td>G80</td>
-                                    <td>White</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
-                                    <td>107너 5116</td>
-                                    <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
-                                    <td>Hyundai</td>
-                                    <td>G80</td>
-                                    <td>White</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
-                                    <td>107너 5116</td>
-                                    <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
-                                    <td>Hyundai</td>
-                                    <td>G80</td>
-                                    <td>White</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
-                                    <td>107너 5116</td>
-                                    <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
-                                    <td>Hyundai</td>
-                                    <td>G80</td>
-                                    <td>White</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
-                                    <td>107너 5116</td>
-                                    <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
-                                    <td>Hyundai</td>
-                                    <td>G80</td>
-                                    <td>White</td>
-                                    <td>27</td>
-                                </tr>
                             </tbody>
                         </table>
+                        <!-- 테이블 페이지버튼 -->
                         <div class="pnt-pagination">
                             <button class="pnt-btn btn-trans btn-icon-only"><span
                                     class="icon-back-double-light icon-small"></span></button>

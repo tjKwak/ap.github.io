@@ -25,21 +25,16 @@
   & .analytics-wrap {
     width: 1020px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     border-left: 1px solid $hh-gray-l-04;
     border-top: 1px solid $hh-gray-l-04;
-    & .top {
-      flex: 1;
-    }
-    & .other {
-      flex: 2;
-      display: flex;
-      flex-wrap: wrap;
-      & > div {
-        flex: 30%;
-        &:nth-of-type(6) a {
-          pointer-events: none;
-        }
+    & > div {
+      flex: 30%;
+      &:nth-of-type(1) {
+        flex: 100%;
+      }
+      &:nth-of-type(7) a {
+        pointer-events: none;
       }
     }
     //한 블럭
@@ -179,6 +174,7 @@
     }
   }
 }
+
 
 .flx-row.flx-full.w-100 {
   //border: 1px solid red;
