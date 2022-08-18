@@ -1,0 +1,267 @@
+//////////////////////////////
+/* Css link*/
+@import "_variables";
+
+/////////////////////////////
+// 1차 레이아웃 - 포지션 & 배경색상
+html {
+  overflow: hidden;
+}
+.app-container {
+  position: relative;
+  // 헤더
+  & .app-header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header-height;
+  }
+  // 바디
+  & .app-body {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    // 사이드메뉴
+    & .side-wrap {
+      width: $sideBar-width;
+      min-width: $sideBar-width;
+      height: 100%;
+    }
+    // 본문
+    & .body-wrap {
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+}
+
+/////////////////////////////
+// 2차 레이아웃 - 내용
+/////////////////////////////
+//헤더
+.app-header {
+  padding: 0 $layout-padding;
+  background: $hh-gray-l-02;
+  border-bottom: 1px solid $hh-gray-l-04;
+  & .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    & .space {
+      width: 100px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      &:nth-of-type(1) {
+        justify-content: flex-start;
+      }
+      &:nth-of-type(3) {
+        justify-content: flex-end;
+      }
+    }
+    & .logo {
+      margin: 0;
+      font-size: 0;
+      width: 76px;
+      height: 12px;
+      background-image: url("../images/logo_wisenet.svg");
+    }
+    & .web-menu {
+      display: flex;
+      height: 100%;
+      gap: 0.5rem;
+      & .menu {
+        color: $hh-gray-m-01;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        transition: all 0.3s;
+        border-bottom: 1px solid transparent;
+        &:hover,
+        &.active {
+          color: black;
+          transition: all 0.3s;
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}
+
+//사이드 메뉴
+.side-wrap {
+  border-right: 1px solid $hh-gray-l-04;
+  & > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    & > li {
+      margin: 0;
+      padding: 0;
+      & a {
+        height: 52px;
+        padding: 0 $layout-padding;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $hh-gray-l-04;
+        gap: 10px;
+        color: $hh-gray-d-02;
+        font-size: 15px;
+        line-height: 1.2;
+        &:hover,
+        &.active {
+          color: $default-brand;
+          & span {
+            filter: invert(40%) sepia(82%) saturate(2000%) hue-rotate(0deg)
+              brightness(100%) contrast(100%) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+//검색 사이드 메뉴
+.search-side-wrap {
+  padding: 5px 0;
+  border-right: 1px solid $hh-gray-l-04;
+  width: 300px;
+  height: 100%;
+  overflow: auto;
+  & > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    & > li {
+      height: 68px;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $hh-gray-l-04;
+      gap: 10px;
+      color: $hh-gray-d-02;
+      font-size: 15px;
+      line-height: 1.2;
+      &:hover {
+        background-color: $hh-gray-l-02;
+      }
+      &:first-child {
+        border-top: 1px solid $hh-gray-l-04;
+      }
+      &:last-child {
+        height: auto;
+        padding: 10px;
+        &:hover {
+          background-color: transparent;
+        }
+        & button {
+          height: 40px;
+          &:last-child {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//스크롤
+#search-page {
+  & .body-wrap {
+    overflow: auto;
+  }
+}
+
+//팝업
+.app-popup {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //display: none;
+  z-index: -2;
+  transition: all 0.3s;
+  &.active {
+    z-index: 100;
+    //display: block;
+    transition: all 0.3s;
+    & .popup-bg {
+      opacity: 0.7;
+      transition: all 0.3s;
+    }
+    & .popup-area .popup-card {
+      margin-top: 0;
+      opacity: 1;
+      transition: all 0.3s;
+    }
+  }
+  & .popup-bg {
+    background-color: black;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  & .popup-area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .popup-card {
+      background-color: white;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+      margin-top: -100px;
+      opacity: 0;
+      transition: all 0.3s;
+      & .popup-close-btn {
+        position: absolute;
+        top: -25px;
+        right: 5%;
+        background-color: black;
+        width: 56px;
+        height: 56px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $card-shadow;
+        transform: scale(1);
+        transition: all 0.3s;
+        &:hover {
+          transition: all 0.3s;
+          background-color: $default-brand;
+          transform: scale(1.1);
+        }
+      }
+      & .content-wrap {
+        padding: 3rem;
+      }
+    }
+  }
+}

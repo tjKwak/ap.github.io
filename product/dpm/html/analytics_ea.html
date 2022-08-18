@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Hanwha]HiveRoadAi</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../../d_v1/css/base.css">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container app-theme-hh">
+            <!-- 헤더 -->
+            <div class="app-header">
+                <div class="header-wrap">
+                    <!-- 로고 -->
+                    <div class="space">
+                        <h1 class="logo">HiveRoadAi</h1>
+                    </div>
+                    <!-- 메뉴 -->
+                    <div class="web-menu">
+                        <a class="menu active" href="../index.html">Analytics</a>
+                        <a class="menu" href="search.html">search</a>
+                        <a class="menu" href="setting_license.html">setup</a>
+                    </div>
+                    <!-- 레이아웃을 위해 만든 빈 태그(빼면안됌) -->
+                    <div class="space">
+                    </div>
+                </div>
+            </div>
+            <!-- 바디 -->
+            <div class="app-body">
+                <!-- 사이드메뉴 -->
+                <div class="side-wrap">
+                    <ul>
+                        <li>
+                            <a href="analytics_ea.html" class="active">
+                                <span class="icon-hh-menu-1"></span>
+                                Exclude area
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="analytics_vs.html" class="">
+                                <span class="icon-hh-menu-3"></span>
+                                Vehicle Speed
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics_ip.html" class="">
+                                <span class="icon-hh-menu-4"></span>
+                                Illegal parking
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics_rr.html" class="">
+                                <span class="icon-hh-menu-5"></span>
+                                Reverse Run
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics_iut.html" class="">
+                                <span class="icon-hh-menu-6"></span>
+                                Illegal U-turn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics_anpr.html" class="">
+                                <span class="icon-hh-menu-2"></span>
+                                License Plate Recognition
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 본문 -->
+                <div class="body-wrap">
+                    <div class="setting-page--wrap">
+                        <!-- cctv 영상 영역 -->
+                        <div class="cctv-wrap">
+                            <div class="cctv-box">
+                                <!-- 화면 영역 -->
+                                <div class="movie-wrap">
+                                    <img src="../images/movie.png" alt="">
+                                </div>
+                                <!-- 그리기 툴 영역 -->
+                                <div class="function-wrap">
+                                    <button class="pnt-btn btn-icon-only btn-cctv">
+                                        <div class="hover-txt">Select</div>
+                                        <span class="icon-hh-select"></span>
+                                    </button>
+                                    <button class="pnt-btn btn-icon-only btn-cctv">
+                                        <div class="hover-txt">Draw</div>
+                                        <span class="icon-hh-draw"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cctv 세팅 영역 -->
+                        <div class="setting-wrap">
+                            <!-- 세팅 탭 -->
+                            <div class="menu-tab">
+                                <div class="menu-left">
+                                    <a href="#" class="active">setting</a>
+                                </div>
+                                <div class="menu-right">
+                                    <button class="pnt-btn btn-gray">Cancle</button>
+                                    <button class="pnt-btn btn-brand">Apply</button>
+                                </div>
+                            </div>
+                             <!-- 세팅 컨텐츠들 -->
+                            <div class="menu-content">
+                                <div class="content-row">
+                                    <div class="content-title">
+                                        제외 영역
+                                    </div>
+                                    <div class="content-wrap">
+                                        <div class="content">
+                                            표
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-row">
+                                    <div class="content-title">
+                                        활성화
+                                    </div>
+                                    <div class="content-wrap">
+                                        <div class="content h-50">
+                                            <div class="flx-sb p-3 w-100">
+                                                <p class="small-txt">제외영역 활성화</p>
+                                                <label class="pnt-toggle toggle-txt">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                    <p>off</p>
+                                                    <p>on</p>
+                                                    <div class="icon-toggle-type icon-lock off"></div>
+                                                    <div class="icon-toggle-type icon-lock"></div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/form.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

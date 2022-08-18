@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/* Css link*/
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+html {
+  overflow: hidden;
+}
+
+.app-container {
+  position: relative;
+}
+
+.app-container .app-header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
+.app-container .app-body {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app-container .app-body .side-wrap {
+  width: 240px;
+  min-width: 240px;
+  height: 100%;
+}
+
+.app-container .app-body .body-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+}
+
+.app-header {
+  padding: 0 1.5rem;
+  background: #f6f6f6;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.app-header .header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.app-header .header-wrap .space {
+  width: 100px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-header .header-wrap .space:nth-of-type(1) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.app-header .header-wrap .space:nth-of-type(3) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.app-header .header-wrap .logo {
+  margin: 0;
+  font-size: 0;
+  width: 76px;
+  height: 12px;
+  background-image: url("../images/logo_wisenet.svg");
+}
+
+.app-header .header-wrap .web-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.app-header .header-wrap .web-menu .menu {
+  color: #929292;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.app-header .header-wrap .web-menu .menu:hover, .app-header .header-wrap .web-menu .menu.active {
+  color: black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: 1px solid black;
+}
+
+.side-wrap {
+  border-right: 1px solid #e0e0e0;
+}
+
+.side-wrap > ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.side-wrap > ul > li {
+  margin: 0;
+  padding: 0;
+}
+
+.side-wrap > ul > li a {
+  height: 52px;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  gap: 10px;
+  color: #3d3d3d;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.side-wrap > ul > li a:hover, .side-wrap > ul > li a.active {
+  color: #f37321;
+}
+
+.side-wrap > ul > li a:hover span, .side-wrap > ul > li a.active span {
+  -webkit-filter: invert(40%) sepia(82%) saturate(2000%) hue-rotate(0deg) brightness(100%) contrast(100%) !important;
+          filter: invert(40%) sepia(82%) saturate(2000%) hue-rotate(0deg) brightness(100%) contrast(100%) !important;
+}
+
+.search-side-wrap {
+  padding: 5px 0;
+  border-right: 1px solid #e0e0e0;
+  width: 300px;
+  height: 100%;
+  overflow: auto;
+}
+
+.search-side-wrap > ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search-side-wrap > ul > li {
+  height: 68px;
+  padding: 20px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  gap: 10px;
+  color: #3d3d3d;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.search-side-wrap > ul > li:hover {
+  background-color: #f6f6f6;
+}
+
+.search-side-wrap > ul > li:first-child {
+  border-top: 1px solid #e0e0e0;
+}
+
+.search-side-wrap > ul > li:last-child {
+  height: auto;
+  padding: 10px;
+}
+
+.search-side-wrap > ul > li:last-child:hover {
+  background-color: transparent;
+}
+
+.search-side-wrap > ul > li:last-child button {
+  height: 40px;
+}
+
+.search-side-wrap > ul > li:last-child button:last-child {
+  width: 40px;
+}
+
+#search-page .body-wrap {
+  overflow: auto;
+}
+
+.app-popup {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup.active {
+  z-index: 100;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup.active .popup-bg {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup.active .popup-area .popup-card {
+  margin-top: 0;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-bg {
+  background-color: black;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-popup .popup-area .popup-card {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  margin-top: -100px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-area .popup-card .popup-close-btn {
+  position: absolute;
+  top: -25px;
+  right: 5%;
+  background-color: black;
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+          box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-popup .popup-area .popup-card .popup-close-btn:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #f37321;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.app-popup .popup-area .popup-card .content-wrap {
+  padding: 3rem;
+}

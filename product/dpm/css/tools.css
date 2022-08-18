@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+.color-brand {
+  color: #f37321;
+}
+
+.color-secondary {
+  color: #3e66fb;
+}
+
+.color-success {
+  color: #3ac062;
+}
+
+.color-info {
+  color: #3bc1ff;
+}
+
+.color-warning {
+  color: #ffc107;
+}
+
+.color-danger {
+  color: #ff3333;
+}
+
+.color-lightgray {
+  color: #dcd9e1;
+}
+
+.color-gray {
+  color: #a8a7ac;
+}
+
+.color-darkgray {
+  color: #434245;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-black {
+  color: black;
+}
+
+.bg-brand {
+  background-color: #f37321;
+}
+
+.bg-brand.bg-light {
+  background-color: #fde3d3;
+}
+
+.bg-secondary {
+  background-color: #3e66fb;
+}
+
+.bg-secondary.bg-light {
+  background-color: #d8e0fe;
+}
+
+.bg-success {
+  background-color: #3ac062;
+}
+
+.bg-success.bg-light {
+  background-color: #d8f2e0;
+}
+
+.bg-info {
+  background-color: #3bc1ff;
+}
+
+.bg-info.bg-light {
+  background-color: #d8f3ff;
+}
+
+.bg-warning {
+  background-color: #ffc107;
+}
+
+.bg-warning.bg-light {
+  background-color: #fff3cd;
+}
+
+.bg-danger {
+  background-color: #ff3333;
+}
+
+.bg-danger.bg-light {
+  background-color: #ffd6d6;
+}
+
+.bg-gray {
+  background-color: #a8a7ac;
+}
+
+.bg-gray.bg-light {
+  background-color: #cac8cf;
+}
+
+.bg-lightgray {
+  background-color: #dcd9e1;
+}
+
+.bg-lightgray.bg-light {
+  background-color: #eceaf2;
+}
+
+.bg-darkgray {
+  background-color: #434245;
+}
+
+.bg-darkgray.bg-light {
+  background-color: #656467;
+}
+
+.bg-g-1 {
+  background-color: #fafafa;
+}
+
+.bg-g-2 {
+  background-color: #f6f6f6;
+}
+
+.bg-g-3 {
+  background-color: #f1f1f1;
+}
+
+.bg-g-4 {
+  background-color: #e0e0e0;
+}
+
+.bg-g-5 {
+  background-color: #d2d2d2;
+}
+
+.bg-g-6 {
+  background-color: #c4c4c4;
+}
+
+.bg-g-7 {
+  background-color: #b4b4b4;
+}
+
+.bg-g-8 {
+  background-color: #929292;
+}
+
+.bg-g-9 {
+  background-color: #8d8d8d;
+}
+
+.bg-g-10 {
+  background-color: #797979;
+}
+
+.bg-g-11 {
+  background-color: #606060;
+}
+
+.bg-g-12 {
+  background-color: #3d3d3d;
+}
+
+.bg-g-13 {
+  background-color: #262626;
+}
+
+.small-txt {
+  margin: 0;
+  font-size: 12px;
+  color: #3d3d3d;
+}
+
+.info-txt {
+  margin: 0;
+  font-size: 12px;
+  color: #797979;
+}
+
+.bold-txt {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+}
