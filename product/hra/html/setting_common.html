@@ -74,6 +74,12 @@
                                 공통 설정
                             </a>
                         </li>
+                        <!-- 초기 설정 가이드는 은지님 파일을 참고 -->
+                        <li class="mt-auto">
+                            <div class="flx-row flx-center p-3">
+                                <button class="pnt-btn btn-gray">초기 설정 가이드</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <!-- 본문 -->
@@ -96,6 +102,10 @@
                                         <div class="hover-txt">Draw</div>
                                         <span class="icon-hh-draw"></span>
                                     </button>
+                                    <button class="pnt-btn btn-icon-only btn-cctv">
+                                        <div class="hover-txt">Delete</div>
+                                        <span class="icon-hh-delete"></span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -108,19 +118,31 @@
                                     <a href="#" class="">차량인식 설정(MMCR)</a>
                                 </div>
                                 <div class="menu-right">
-                                    <button class="pnt-btn btn-gray">Cancle</button>
                                     <button class="pnt-btn btn-brand">Apply</button>
+                                    <button class="pnt-btn btn-gray">Cancel</button>
                                 </div>
                             </div>
                             <!-- 세팅 컨텐츠들 -->
                             <div class="menu-content">
                                 <div class="content-row">
                                     <div class="content-title">
-                                        인식 영역
+                                        Plate
                                     </div>
                                     <div class="content-wrap">
-                                        <div class="content">
-                                            표
+                                        <div class="content h-50">
+                                            <div class="flx-sb p-3 w-100">
+                                                <div class="flx-sb w-100">
+                                                    <p class="small-txt">번호판만 검출</p>
+                                                    <label class="pnt-toggle toggle-txt">
+                                                        <input type="checkbox" checked>
+                                                        <span class="slider"></span>
+                                                        <p>off</p>
+                                                        <p>on</p>
+                                                        <div class="icon-toggle-type icon-lock off"></div>
+                                                        <div class="icon-toggle-type icon-lock"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

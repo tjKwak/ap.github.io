@@ -26,8 +26,7 @@
     width: 1020px;
     display: flex;
     flex-wrap: wrap;
-    border-left: 1px solid $hh-gray-l-04;
-    border-top: 1px solid $hh-gray-l-04;
+    border: 1px solid $hh-gray-l-04;
     & > div {
       flex: 30%;
       &:nth-of-type(1) {
@@ -43,11 +42,15 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      border-right: 1px solid $hh-gray-l-04;
-      border-bottom: 1px solid $hh-gray-l-04;
+      border: 1px solid $hh-gray-l-04;
       padding: 1rem;
       &:hover {
         background-color: $hh-gray-l-02;
+        border: 1px solid $default-brand;
+        & *{
+          filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
+          brightness(105%) contrast(103%) !important;
+        }
       }
       & > span {
         transform: scale(2.8) translate(0.6rem, 0.55rem);
@@ -58,6 +61,9 @@
         color: black;
         margin-left: 1px;
         margin-bottom: 4px;
+      }
+      & .icon-hh-arrow{
+        transform: scale(1.7) translateX(3px);
       }
     }
   }
@@ -84,14 +90,48 @@
         }
       }
       & .function-wrap {
-        width: 34px;
+        width: 48px;
         height: 100%;
         border-right: 1px solid #3d3d3d;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 4px;
-        gap: 10px;
+        gap: 0px;
+        & .btn-cctv {
+          width: 40px;
+          height: 40px;
+          background-color: transparent;
+          position: relative;
+          overflow: visible;
+          & span {
+            filter: invert(1);
+          }
+          & .hover-txt {
+            display: none !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #3d3d3d;
+            padding: 5px;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+
+            color: white;
+            font-size: 12px;
+            text-transform: capitalize;
+          }
+          &:hover,
+          &.active {
+            filter: none !important;
+            & .hover-txt {
+              display: flex !important;
+            }
+          }
+        }
       }
     }
   }
@@ -175,6 +215,42 @@
   }
 }
 
+.pnt-table {
+  & .btn-bestshot {
+    overflow: visible;
+    position: relative;
+    margin: 0 auto;
+    &:hover {
+      & span {
+        filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
+          brightness(105%) contrast(103%) !important;
+      }
+    }
+    &.active {
+      & span {
+        filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
+          brightness(105%) contrast(103%) !important;
+      }
+      & .bestshot-wrap {
+        display: block;
+      }
+    }
+    & .bestshot-wrap {
+      display: none;
+      position: absolute;
+      top: -60px;
+      right: 40px;
+      width: 160px;
+      height: 160px;
+      & img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        box-shadow: $card-shadow;
+      }
+    }
+  }
+}
 
 .flx-row.flx-full.w-100 {
   //border: 1px solid red;

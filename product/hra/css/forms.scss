@@ -105,38 +105,7 @@
     @include p2-n();
   }
   //---[옵션] 컬러---
-  &.btn-cctv {
-    background-color: transparent;
-    position: relative;
-    overflow: visible;
-    & span {
-      filter: invert(1);
-    }
-    & .hover-txt {
-      display: none !important;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      background-color: #3d3d3d;
-      padding: 5px;
-      padding-right: 20px;
-      display: flex;
-      align-items: center;
-      padding-left: 34px;
 
-      color: white;
-      font-size: 12px;
-      text-transform: capitalize;
-    }
-    &:hover,
-    &.active {
-      filter: none !important;
-      & .hover-txt {
-        display: block !important;
-      }
-    }
-  }
   &.btn-brand {
     background-color: white;
     border: 1px solid $default-brand;

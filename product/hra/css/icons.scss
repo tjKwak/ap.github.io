@@ -36,7 +36,7 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
 ////////////////////////////////////////
 @mixin icon-hh {
   @include icons();
-  background-size: calc((#{$icon} * 1) + (#{$icon-gap} * 0)); //가로 1줄
+  background-size: calc((#{$icon} * 2) + (#{$icon-gap} * 1)); //가로 2줄
   background-image: url("../images/hh_icon.svg");
 }
 
@@ -64,30 +64,41 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
   @include bgp($p1, $p4);
   @include icon-hh();
 }
-.icon-hh-delete {
+.icon-hh-anpr {
   @include bgp($p1, $p5);
   @include icon-hh();
 }
-.icon-hh-select {
+.icon-hh-sdcard {
   @include bgp($p1, $p6);
   @include icon-hh();
 }
+
+.icon-hh-select {
+  @include bgp($p2, $p1);
+  @include icon-hh();
+}
 .icon-hh-draw {
-  @include bgp($p1, $p7);
+  @include bgp($p2, $p2);
+  @include icon-hh();
+}
+.icon-hh-delete {
+  @include bgp($p2, $p3);
   @include icon-hh();
 }
 .icon-hh-info {
-  @include bgp($p1, $p8);
+  @include bgp($p2, $p4);
   @include icon-hh();
 }
-.icon-hh-anpr {
-  @include bgp($p1, $p9);
+.icon-hh-picture {
+  @include bgp($p2, $p5);
   @include icon-hh();
 }
-.icon-hh-sdcard {
-  @include bgp($p1, $p10);
+.icon-hh-arrow {
+  @include bgp($p2, $p6);
   @include icon-hh();
 }
+
+
 
 ////////////////////////////////////////
 //메인 메뉴 아이콘

@@ -1,3 +1,26 @@
+// $('.btn-bestshot').click(function(){
+//     $('.btn-bestshot').toggleClass('active');
+// })
+
+const best_btn = document.querySelectorAll('.btn-bestshot')
+
+for(let i=0; i<best_btn.length; i++){
+    best_btn[i].addEventListener('click',function(){
+        if(best_btn[i].classList.contains('active')){
+            best_btn[i].classList.remove('active')
+        }
+        else{
+            for(let i=0; i<best_btn.length; i++){
+                best_btn[i].classList.remove('active')
+            }
+            best_btn[i].classList.toggle('active')
+        }
+    })
+}
+
+
+
+
 const tab_first = document.querySelector('.menu-tab .menu-left a:first-child')
 const tab_last = document.querySelector('.menu-tab .menu-left a:last-child')
 
@@ -18,11 +41,5 @@ tab_first.addEventListener('click',function(){
     tab_cont_last.classList.add('d-none')
     tab_cont_first.classList.remove('d-none')
 })
-// const tabs = document.querySelectorAll('.menu-tab .menu-left a')
 
-// for(let i=0; i<tab_list.length; i++){
-//     tab_list[i].addEventListener('click',function(){
-//         console.log('hi')
-//     })
-// }
 

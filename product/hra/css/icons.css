@@ -23,7 +23,7 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
@@ -39,7 +39,7 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
@@ -55,7 +55,7 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
@@ -71,11 +71,11 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
-.icon-hh-delete {
+.icon-hh-anpr {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
@@ -87,11 +87,11 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
-.icon-hh-select {
+.icon-hh-sdcard {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
@@ -103,12 +103,28 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
+  background-image: url("../images/hh_icon.svg");
+}
+
+.icon-hh-select {
+  background-position: calc((20px * -1) - (10px * 1)) calc((20px * -0) - (10px * 0));
+  background-repeat: no-repeat;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
 .icon-hh-draw {
-  background-position: calc((20px * -0) - (10px * 0)) calc((20px * -6) - (10px * 6));
+  background-position: calc((20px * -1) - (10px * 1)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
   display: inline-block;
@@ -119,12 +135,28 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
+  background-image: url("../images/hh_icon.svg");
+}
+
+.icon-hh-delete {
+  background-position: calc((20px * -1) - (10px * 1)) calc((20px * -2) - (10px * 2));
+  background-repeat: no-repeat;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
 .icon-hh-info {
-  background-position: calc((20px * -0) - (10px * 0)) calc((20px * -7) - (10px * 7));
+  background-position: calc((20px * -1) - (10px * 1)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
   display: inline-block;
@@ -135,12 +167,12 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
-.icon-hh-anpr {
-  background-position: calc((20px * -0) - (10px * 0)) calc((20px * -8) - (10px * 8));
+.icon-hh-picture {
+  background-position: calc((20px * -1) - (10px * 1)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
   display: inline-block;
@@ -151,12 +183,12 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 
-.icon-hh-sdcard {
-  background-position: calc((20px * -0) - (10px * 0)) calc((20px * -9) - (10px * 9));
+.icon-hh-arrow {
+  background-position: calc((20px * -1) - (10px * 1)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
   display: inline-block;
@@ -167,7 +199,7 @@ span[class*="icon-"] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20px;
           flex: 0 0 20px;
-  background-size: calc((20px * 1) + (10px * 0));
+  background-size: calc((20px * 2) + (10px * 1));
   background-image: url("../images/hh_icon.svg");
 }
 

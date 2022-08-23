@@ -93,47 +93,6 @@
   font-weight: 400;
 }
 
-.pnt-btn.btn-cctv {
-  background-color: transparent;
-  position: relative;
-  overflow: visible;
-}
-
-.pnt-btn.btn-cctv span {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-.pnt-btn.btn-cctv .hover-txt {
-  display: none !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #3d3d3d;
-  padding: 5px;
-  padding-right: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 34px;
-  color: white;
-  font-size: 12px;
-  text-transform: capitalize;
-}
-
-.pnt-btn.btn-cctv:hover, .pnt-btn.btn-cctv.active {
-  -webkit-filter: none !important;
-          filter: none !important;
-}
-
-.pnt-btn.btn-cctv:hover .hover-txt, .pnt-btn.btn-cctv.active .hover-txt {
-  display: block !important;
-}
-
 .pnt-btn.btn-brand {
   background-color: white;
   border: 1px solid #f37321;

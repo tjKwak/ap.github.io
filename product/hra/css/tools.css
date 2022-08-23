@@ -2,39 +2,39 @@
 /* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
 .color-brand {
-  color: #f37321;
+  color: #f37321 !important;
 }
 
 .color-secondary {
-  color: #3e66fb;
+  color: #3e66fb !important;
 }
 
 .color-success {
-  color: #3ac062;
+  color: #3ac062 !important;
 }
 
 .color-info {
-  color: #3bc1ff;
+  color: #3bc1ff !important;
 }
 
 .color-warning {
-  color: #ffc107;
+  color: #ffc107 !important;
 }
 
 .color-danger {
-  color: #ff3333;
+  color: #ff3333 !important;
 }
 
 .color-lightgray {
-  color: #dcd9e1;
+  color: #dcd9e1 !important;
 }
 
 .color-gray {
-  color: #a8a7ac;
+  color: #a8a7ac !important;
 }
 
 .color-darkgray {
-  color: #434245;
+  color: #434245 !important;
 }
 
 .color-white {

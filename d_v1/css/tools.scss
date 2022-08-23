@@ -6,37 +6,37 @@
 /* 3. 자주 쓰는 문법  */
 //컬러들
 .color-brand {
-  color: $default-brand;
+  color: $default-brand !important;
 }
 .color-secondary {
-  color: $default-secondary;
+  color: $default-secondary !important;
 }
 .color-success {
-  color: $default-success;
+  color: $default-success !important;
 }
 .color-info {
-  color: $default-info;
+  color: $default-info !important;
 }
 .color-warning {
-  color: $default-warning;
+  color: $default-warning !important;
 }
 .color-danger {
-  color: $default-danger;
+  color: $default-danger !important;
 }
 .color-lightgray {
-  color: $gray-300;
+  color: $gray-300 !important;
 }
 .color-gray {
-  color: $gray-500;
+  color: $gray-500 !important;
 }
 .color-darkgray {
-  color: $gray-800;
+  color: $gray-800 !important;
 }
 .color-white {
-  color: white;
+  color: white !important;
 }
 .color-black {
-  color: black;
+  color: black !important;
 }
 
 .bg-brand {
@@ -396,6 +396,18 @@
 }
 .mb-5 {
   margin-bottom: 3rem !important;
+}
+.mt-auto {
+  margin-top: auto !important;
+}
+.mb-auto {
+  margin-bottom: auto !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.mr-auto {
+  margin-right: auto !important;
 }
 
 .pr-0 {

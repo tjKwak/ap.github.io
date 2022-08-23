@@ -1,487 +1,490 @@
 //////////////////////////////
 /* Css link*/
-@import 'font';
-@import 'tools';
+@import "font";
+@import "tools";
 
 //////////////////////////////
 
 //카드
-$card-header-height : 3.5rem;
+$card-header-height: 3.5rem;
 
 .card {
-    border: 1px solid rgba(32, 39, 140, .125);
-    border-radius: $form-radius !important;
-    box-shadow: $card-shadow;
-    margin-bottom: 1rem;
+  border: 1px solid rgba(32, 39, 140, 0.125);
+  border-radius: $form-radius !important;
+  box-shadow: $card-shadow;
+  margin-bottom: 1rem;
 
-    position: relative;
-    word-wrap: break-word;
-    transition: $form-transition;
-    opacity: 1;
+  position: relative;
+  word-wrap: break-word;
+  transition: $form-transition;
+  opacity: 1;
 
-    //카드 탭 - 타입 1 (card 안에서 쓰임)
-    & .card-tab{
-        @media (max-width: $breakpoint-mobile) {
-            & ul{
-                width: 100%;
-                padding: .5rem .3rem 0 .3rem !important;
-                & li{
-                    flex: 1 1 auto;
-                    padding: 0 !important;
-                    & a{
-                        @include p4-b();
-                    }
-                }
-            }
+  //카드 탭 - 타입 1 (card 안에서 쓰임)
+  & .card-tab {
+    @media (max-width: $breakpoint-mobile) {
+      & ul {
+        width: 100%;
+        padding: 0.5rem 0.3rem 0 0.3rem !important;
+        & li {
+          flex: 1 1 auto;
+          padding: 0 !important;
+          & a {
+            @include p4-b();
+          }
         }
-        margin-bottom: 0;
-        display: flex;
-        height: 3rem;
-        overflow: hidden;
-        border-radius: $form-radius $form-radius 0 0;
-        background-color: $default-secondary;
-        & ul{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            margin: 0;
-            padding-top: .5rem;
-            & li{
-                box-shadow: $form-shadow;
-                line-height: 2.5rem;
-                border-radius: .8rem .8rem 0 0;
-                background-color: $default-secondary-l;
-                transition: $form-transition;
-                & a{
-                    display: block;
-                    padding: 0 1rem;
-                    text-align: center;
-                    @include p3-b();
-                    white-space: nowrap;
-                    color: $f-w-1 ;
-                }
-            }
-            & li+li{
-                margin-left: .3rem;
-            }
-            & li.on{
-                transition: $form-transition;
-                background-color: white;
-                & a{
-                    color: $default-secondary-d ;
-                }
-            }
-        }
+      }
     }
-    //카드 탭 - 타입 2 (card-header 안에서 쓰임)
-    & .card-header__tab{
-        padding: 0 1rem;
-        & ul{
-            display: flex;
-            gap: .3rem;
-            margin: 0;
-            padding: 0;
-            & li{
-                & a{
-                    display: block;
-                    min-height: $card-header-height;
-                    line-height: $card-header-height;
-                    padding: 0 1rem;
-                    text-align: center;
-                    @include p4-n();
-                    white-space: nowrap;
-                    color: $f-b-2 ;
-                    text-transform: initial;
-                    position: relative;
-                    &::after{
-                        opacity: 0;
-                        transition: $form-transition;
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        height: 4px;
-                        border-radius: 10rem;
-                        background-color: $default-secondary-d;
-                    }
-                }
-            }
-            & li.on a{
-                color: $default-secondary-d;
-                &::after{
-                    opacity: 1;
-                    transition: $form-transition;
-                }
-            }
+    margin-bottom: 0;
+    display: flex;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: $form-radius $form-radius 0 0;
+    background-color: $default-secondary;
+    & ul {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin: 0;
+      padding-top: 0.5rem;
+      & li {
+        box-shadow: $form-shadow;
+        line-height: 2.5rem;
+        border-radius: 0.8rem 0.8rem 0 0;
+        background-color: $default-secondary-l;
+        transition: $form-transition;
+        & a {
+          display: block;
+          padding: 0 1rem;
+          text-align: center;
+          @include p3-b();
+          white-space: nowrap;
+          color: $f-w-1;
         }
+      }
+      & li + li {
+        margin-left: 0.3rem;
+      }
+      & li.on {
+        transition: $form-transition;
+        background-color: white;
+        & a {
+          color: $default-secondary-d;
+        }
+      }
     }
-
-    //카드 헤더 
-    & .card-header {
-        min-height: $card-header-height;
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
-
-        border-bottom: 1px solid $gray-200;
-        border-radius: $form-radius $form-radius 0 0;
-        padding: 0; //chunk때문에 사용
-
-        & .card-header__title{
-            min-height: $card-header-height;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            gap: .58rem;
-            overflow:hidden;
-            padding-left: 1.25rem;
-            & span{opacity: .5;}
-            //아이콘이 있을때의 title-wrap 길이
-            & span + .title-wrap{
-                width: calc(100% - 1rem);
-            }
-            & .title-wrap{
-                width: 100%;
-                text-align: left;
-                & *{
-                    margin: 0;
-                    padding: .05rem 0;
-                    width: calc(100% - 1rem);
-                    text-transform: capitalize;
-                    white-space:nowrap;
-                    overflow:hidden;
-                    text-overflow:ellipsis;
-                }
-                & .title__main{
-                    @include p3-b();
-                    opacity: 1;
-                }
-                & .title__sub{
-                    @include p5-n();
-                    opacity: .7;
-                }
-            }
-        }
-        & .card-header__function{
-            padding: 0 1.25rem;
-            min-height: $card-header-height;
-            display: flex;
-            align-items: center;
-            align-content: center;
-            text-align: center;
-            justify-content: flex-end;
-            gap: $form-gap;
-            & .card-overwrap-btn{
-                padding: 0;
-                opacity: 20%;
-            }
-        }
-        //모바일
-        @media (max-width: $breakpoint-mobile) {
-            flex-wrap: wrap;
-            min-height: unset !important; //임시
-            & .card-header__title{
-                width: 100%;
-            }
-            & .card-header__function{
-                width: 100%;
-                border-top: 1px solid $form-border-color;
-                background-color: rgba(0, 0, 0, 0.03);
-                & button{
-                    width: 100%;
-                }
-                & .card-overwrap-btn{
-                    display: none;
-                }
-            }
-        }
-    }
-
-    //카드 바디
-    & .card-body {
-        padding: 1.25rem;
-        overflow: auto;
-        @include p3-n();
-
-        //없으면 생략 가능
-        & .card-title {
-            text-transform: uppercase;
-            color: rgba(18, 21, 78, .7);
-            font-weight: 700;
-            font-size: .88rem;
-            margin-bottom: .75rem;
-        }
-        //에러메세지
-        & .card-error{
-            color: $default-danger;
-            @include p3-b();
-            &::before{
-                content: '!';
-                font-weight: 900;
-                margin-right: .3rem;
-                width: 1rem;
-                height: 100%;
-            }
-        }
-    }
-
-    //카드 버튼
-    & .card-button{
-        padding: .8rem 1rem;
-        display: flex;
-        justify-content: flex-end;
-        gap: $form-gap;
-        & button{
-            min-width: 4rem;
-        }
-        & .btn-cancle{
-            color: $default-brand;
-        }
-    }
-
-    //옵션
-    &.card-danger{
-        & .card-header{
-            & .card-header__title{
-                & .title__main{
-                    @include h5-b();
-                    color: $default-danger !important;
-                    &::before{
-                        content: '⚠';
-                        padding-right: .3rem;
-                    }
-                }
-            }
-        }
-    }
-    &.card-folded{
-        & .card-body{
-            transition: all .4s;
-            padding: 0;
-            max-height: 0 !important;
-            overflow: hidden;
+  }
+  //카드 탭 - 타입 2 (card-header 안에서 쓰임)
+  & .card-header__tab {
+    padding: 0 1rem;
+    & ul {
+      display: flex;
+      gap: 0.3rem;
+      margin: 0;
+      padding: 0;
+      & li {
+        & a {
+          display: block;
+          min-height: $card-header-height;
+          line-height: $card-header-height;
+          padding: 0 1rem;
+          text-align: center;
+          @include p4-n();
+          white-space: nowrap;
+          color: $f-b-2;
+          text-transform: initial;
+          position: relative;
+          &::after {
             opacity: 0;
+            transition: $form-transition;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 10rem;
+            background-color: $default-secondary-d;
+          }
         }
+      }
+      & li.on a {
+        color: $default-secondary-d;
+        &::after {
+          opacity: 1;
+          transition: $form-transition;
+        }
+      }
     }
-    //카드바디 접고싶을때
-    // &.card-foldable{
-    // }
-    
-    & .card-overlay{
-        display: none;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 1rem;
-        
-        &.on{
-            display: block;
+  }
+
+  //카드 헤더
+  & .card-header {
+    min-height: $card-header-height;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid $gray-200;
+    border-radius: $form-radius $form-radius 0 0;
+    padding: 0; //chunk때문에 사용
+
+    & .card-header__title {
+      min-height: $card-header-height;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.58rem;
+      overflow: hidden;
+      padding-left: 1.25rem;
+      & span {
+        opacity: 0.5;
+      }
+      //아이콘이 있을때의 title-wrap 길이
+      & span + .title-wrap {
+        width: calc(100% - 1rem);
+      }
+      & .title-wrap {
+        width: 100%;
+        text-align: left;
+        & * {
+          margin: 0;
+          padding: 0.05rem 0;
+          width: calc(100% - 1rem);
+          text-transform: capitalize;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
-        & .card{
-            background-color: white !important;
-            & * {color: black !important;}
-            & .card-header{
-                background-color: rgba(0, 0, 0, 0.1) !important;
-            }
+        & .title__main {
+          @include p3-b();
+          opacity: 1;
         }
+        & .title__sub {
+          @include p5-n();
+          opacity: 0.7;
+        }
+      }
     }
+    & .card-header__function {
+      padding: 0 1.25rem;
+      min-height: $card-header-height;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      justify-content: flex-end;
+      gap: $form-gap;
+      & .card-overwrap-btn {
+        padding: 0;
+        opacity: 20%;
+      }
+    }
+    //모바일
+    @media (max-width: $breakpoint-mobile) {
+      flex-wrap: wrap;
+      min-height: unset !important; //임시
+      & .card-header__title {
+        width: 100%;
+      }
+      & .card-header__function {
+        width: 100%;
+        border-top: 1px solid $form-border-color;
+        background-color: rgba(0, 0, 0, 0.03);
+        & button {
+          width: 100%;
+        }
+        & .card-overwrap-btn {
+          display: none;
+        }
+      }
+    }
+  }
+
+  //카드 바디
+  & .card-body {
+    padding: 1.25rem;
+    overflow: auto;
+    @include p3-n();
+
+    //없으면 생략 가능
+    & .card-title {
+      text-transform: uppercase;
+      color: rgba(18, 21, 78, 0.7);
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 0.75rem;
+    }
+    //에러메세지
+    & .card-error {
+      color: $default-danger;
+      @include p3-b();
+      &::before {
+        content: "!";
+        font-weight: 900;
+        margin-right: 0.3rem;
+        width: 1rem;
+        height: 100%;
+      }
+    }
+  }
+
+  //카드 버튼
+  & .card-button {
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: $form-gap;
+    & button {
+      min-width: 4rem;
+    }
+    & .btn-cancel {
+      color: $default-brand;
+    }
+  }
+
+  //옵션
+  &.card-danger {
+    & .card-header {
+      & .card-header__title {
+        & .title__main {
+          @include h5-b();
+          color: $default-danger !important;
+          &::before {
+            content: "⚠";
+            padding-right: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+  &.card-folded {
+    & .card-body {
+      transition: all 0.4s;
+      padding: 0;
+      max-height: 0 !important;
+      overflow: hidden;
+      opacity: 0;
+    }
+  }
+  //카드바디 접고싶을때
+  // &.card-foldable{
+  // }
+
+  & .card-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+
+    &.on {
+      display: block;
+    }
+    & .card {
+      background-color: white !important;
+      & * {
+        color: black !important;
+      }
+      & .card-header {
+        background-color: rgba(0, 0, 0, 0.1) !important;
+      }
+    }
+  }
 }
 
-
 //트리 박스
-.tree-box{
-    border: 1px solid lightgray;
-    & .tree-box__btn-box{
-        padding: .5rem;
-        border-bottom: 1px solid lightgray;
-        margin-bottom: .5rem;
-        text-align: right;
-    }
+.tree-box {
+  border: 1px solid lightgray;
+  & .tree-box__btn-box {
+    padding: 0.5rem;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 0.5rem;
+    text-align: right;
+  }
 }
 
 //컬러박스
-.color-box{
+.color-box {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  //background-color: #3e66fb;
+  margin-right: 0.5rem;
+  &::after {
+    content: "";
     position: absolute;
-    display: inline-block;
-    top: 10px;
-    right: 5px;
-    width: 20px;
-    height: 20px;
-    //background-color: #3e66fb;
-    margin-right: .5rem;
-    &::after{
-        content: '';
-        position: absolute;
-        right: 30px;
-        width: 1px;
-        height: 100%;
-        background-color: $gray-400;
-    }
+    right: 30px;
+    width: 1px;
+    height: 100%;
+    background-color: $gray-400;
+  }
 }
 
 //권한 박스
-.move-box--group{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-   & .move-box{
-        border: 1px solid $form-border-color;
-        border-radius: $form-radius;
-        width: 50%;
-        height: 13.8rem;
-        overflow: auto;
-        & .move-box__title{
-            padding: .3rem .5rem;
-            border-bottom: 1px solid $form-border-color;
-            background-color: $gray-100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        & .move-box__list{
-            margin: 0;
-            padding: 1rem .5rem;
-            display: flex;
-            flex-direction: column;
-            gap: $form-gap;
-        }
-        @media (min-width:$breakpoint-mobile) and (max-width:$breakpoint-tablet){
-            & .name{
-                max-width:5rem;
-                white-space: nowrap;
-                overflow: hidden;
-                display: inline-block;
-                vertical-align: middle;
-                text-overflow: ellipsis;
-            }
-        }
+.move-box--group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  & .move-box {
+    border: 1px solid $form-border-color;
+    border-radius: $form-radius;
+    width: 50%;
+    height: 13.8rem;
+    overflow: auto;
+    & .move-box__title {
+      padding: 0.3rem 0.5rem;
+      border-bottom: 1px solid $form-border-color;
+      background-color: $gray-100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    @media (max-width: $breakpoint-mobile) {
-        flex-direction: column;
-        & .move-box{
-            width: 100%;
-        }
-        &>span{
-            transform: rotate(90deg);
-            margin-top: .5rem;
-        }
+    & .move-box__list {
+      margin: 0;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: $form-gap;
     }
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+      & .name {
+        max-width: 5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    & .move-box {
+      width: 100%;
+    }
+    & > span {
+      transform: rotate(90deg);
+      margin-top: 0.5rem;
+    }
+  }
 }
 
 //맵박스
-.pnt-map-box{
-    background-color: #818AAF;
+.pnt-map-box {
+  background-color: #818aaf;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  //overflow: hidden;
+  & .map__function {
     width: 100%;
     height: 100%;
-    position: relative;
-    //overflow: hidden;
-    & .map__function{
-        width: 100%;
-        height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    & .map__function--top {
+      display: flex;
+      gap: $form-gap;
+      & > div {
+        padding: 0.3rem;
+        background-color: white !important;
+        color: black !important;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(32, 39, 140, 0.125);
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+        align-items: center;
+        @include p4-n();
+      }
+    }
+    & .map__function--bottom {
+      display: inline-flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+      & button {
+        background-color: white !important;
+        &:hover {
+          filter: none !important;
+          background-color: $gray-100 !important;
+        }
+      }
+    }
+  }
+  & .map__pin {
+    position: absolute;
+    //이곳의 위치를 조종
+    // top: 100px;
+    // left: 100px;
+    & .map__pin--balloon {
+      display: none;
+      z-index: 10;
+      background-color: white;
+      box-shadow: $form-shadow;
+      border-radius: $form-radius;
+      padding: 0.5rem;
+      position: absolute;
+      top: -170px;
+      width: 150px;
+      transition: all 0.3s;
+      &::after {
+        content: "";
+        display: block;
         position: absolute;
-        top: 0;
-        left: 0;
-        padding: .5rem;
-        & .map__function--top{
-            display: flex;
-            gap: $form-gap;
-            & > div{
-                padding: .3rem;
-                background-color: white !important;
-                color: black !important;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-                border: 1px solid rgba(32, 39, 140, .125);
-                border-radius: .25rem;
-                margin-bottom: 1rem;
-                align-items: center;
-                @include p4-n();
-            }
-        }
-        & .map__function--bottom{
-            display: inline-flex;
-            flex-direction: column;
-            position: absolute;
-            bottom: .5rem;
-            right: .5rem;
-            & button{
-                background-color: white !important;
-                &:hover{
-                    filter: none !important;
-                    background-color: $gray-100 !important;
-                }
-            }
-        }
-    }
-    & .map__pin{
-        position: absolute;
-        //이곳의 위치를 조종
-        // top: 100px;
-        // left: 100px;
-        & .map__pin--balloon{
-            display: none;
-            z-index: 10;
-            background-color: white;
-            box-shadow: $form-shadow;
-            border-radius: $form-radius;
-            padding: .5rem;
-            position: absolute;
-            top: -170px;
-            width: 150px;
-            transition: all .3s;
-            &::after{
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: -15px;
-                left: 20px;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                //border-horiz: 15px 10px 0 10px;
-                border-color: #ffffff transparent transparent transparent;
-            }
-            & .btn-view{
-                width: 100%;
-                min-height: 1rem;
-                padding: .5rem;
-            }
-        }
-        & .icon-gps-fill{
-            margin: 1.2rem 0 0 20px;
-            transform: scale(2);
-        }
-        &.on{
-            & .icon-gps{
-                background-color: #FFC107;
-                box-shadow: 0px 0px 20px #FFC107;
-                border-radius: 100px;
-                transition: all .3s;
-            }
-        }
-        &.active{
-            transition: all .3s;
-            & .icon-gps{
-                background-color: #FF7800;
-                box-shadow: 0px 0px 20px #FF7800;
-                border-radius: 100px;
-            }
-            & .map__pin--balloon{
-                display: block;
-            }
-        }
-    }
-    & .map__img{
+        bottom: -15px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        //border-horiz: 15px 10px 0 10px;
+        border-color: #ffffff transparent transparent transparent;
+      }
+      & .btn-view {
         width: 100%;
-        height: 100%;
-        overflow: hidden;
-        & img{
-            width: 100%;
-        }
+        min-height: 1rem;
+        padding: 0.5rem;
+      }
     }
+    & .icon-gps-fill {
+      margin: 1.2rem 0 0 20px;
+      transform: scale(2);
+    }
+    &.on {
+      & .icon-gps {
+        background-color: #ffc107;
+        box-shadow: 0px 0px 20px #ffc107;
+        border-radius: 100px;
+        transition: all 0.3s;
+      }
+    }
+    &.active {
+      transition: all 0.3s;
+      & .icon-gps {
+        background-color: #ff7800;
+        box-shadow: 0px 0px 20px #ff7800;
+        border-radius: 100px;
+      }
+      & .map__pin--balloon {
+        display: block;
+      }
+    }
+  }
+  & .map__img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    & img {
+      width: 100%;
+    }
+  }
 }
