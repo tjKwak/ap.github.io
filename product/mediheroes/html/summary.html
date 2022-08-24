@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Mediheroes]cloud PACS</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/base.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container">
+            <!-- 헤더 -->
+            <div class="app-header header-white">
+                <div class="header-wrap">
+                    <!-- 로고 -->
+                    <a href="worklist.html" class="logo">Mediheroes.AI</a>
+                    <!-- 로그인 -->
+                    <div class="flx-row gap-2">
+                        <div class="mybtn">
+                            Admin<span class="icon-profile ml-2"></span>
+                            <div class="myoption">
+                                <b>Admin</b>
+                                <p>Admin@test.com</p>
+                                <a href="../index.html">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 바디 -->
+            <div id="page-list" class="app-body">
+                <div class="page-title">
+                    <h4>Result Summary</h4>
+                    <p class="mb-1">Check and Compare the test results
+                    </p>
+                    <p class="color-danger">
+                        * Please note that all results should be validated by qualified MDs.
+                    </p>
+                </div>
+                <div class="flx-col gap-4">
+                    <!-- 테이블 -->
+                    <table class="pnt-table">
+                        <colgroup>
+                            <col width="20%" />
+                            <col width="30%" />
+                            <col width="50%" />
+                            <col width="5%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td>AI Category</td>
+                                <td>Normal/Abnormal</td>
+                                <td>Key Findking</td>
+                                <td>Link</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Company A - Solution A</td>
+                                <td>Abnormal</td>
+                                <td>xxx(0.98)</td>
+                                <td>
+                                    <button onclick="location.href='result_1.html'"
+                                        class="pnt-btn btn-icon-only btn-link">
+                                        <span class="icon-next-light"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Company A - Solution A</td>
+                                <td>Abnormal</td>
+                                <td>xxx(0.98)</td>
+                                <td>
+                                    <button onclick="location.href='result_1.html'"
+                                        class="pnt-btn btn-icon-only btn-link">
+                                        <span class="icon-next-light"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Company A - Solution A</td>
+                                <td>Abnormal</td>
+                                <td>xxx(0.98)</td>
+                                <td>
+                                    <button onclick="location.href='result_1.html'"
+                                        class="pnt-btn btn-icon-only btn-link">
+                                        <span class="icon-next-light"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 테이블 페이지버튼 -->
+                    <div class="pnt-pagination">
+                        <button class="pnt-btn btn-trans btn-icon-only"><span
+                                class="icon-back-double-light icon-small"></span></button>
+                        <button class="pnt-btn btn-trans btn-icon-only"><span
+                                class="icon-back-light icon-small"></span></button>
+                        <div class="flx-row gap-3 pl-3 pr-3">
+                            <div class="now">1</div>
+                            <div>/</div>
+                            <div class="whole">20</div>
+                        </div>
+                        <button class="pnt-btn btn-trans btn-icon-only"><span
+                                class="icon-next-light icon-small"></span></button>
+                        <button class="pnt-btn btn-trans btn-icon-only"><span
+                                class="icon-next-double-light icon-small"></span></button>
+                    </div>
+                </div>
+            </div>
+            <!-- 푸터 -->
+            <div class="app-footer">
+                <h1 class="logo"></h1>
+                <div>© 2022 MediHeroes.AI</div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/form.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

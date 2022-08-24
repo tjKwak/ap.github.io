@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Mediheroes]cloud PACS</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/base.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <style>
+        html {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container">
+            <!-- 바디 -->
+            <div id="page-login" class="app-body">
+                <h1 class="logo">Mediheroes.AI</h1>
+                <p>Sign into MediHeroes.AI</p>
+                <!-- 로그인 영역 -->
+                <div class="login-wrap">
+                    <div class="flx-col label-col-web gap-4">
+                        <div class="pnt-label--group">
+                            <div class="label-main">Username or email address</div>
+                            <div class="label-options w-100">
+                                <div class="pnt-input--group w-100">
+                                    <input class="pnt-input" type="text" placeholder="입력하세요" value="Admin">
+                                    <span class="icon-search"></span>
+                                    <button class="pnt-btn btn-icon-only"><span
+                                            class="icon-toggle-type icon-lock"></span></button>
+                                    <p class="input-error-txt">에러문구 입니다</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pnt-label--group">
+                            <div class="label-main">Password <a href="#" style="margin-left: 5rem;">Forgot
+                                    password?</a> </div>
+                            <div class="label-options w-100">
+                                <div class="pnt-input--group w-100">
+                                    <input class="pnt-input" type="text" placeholder="비밀번호를 입력하세요" value="*********">
+                                    <span class="icon-search"></span>
+                                    <button class="pnt-btn btn-icon-only"><span
+                                            class="icon-toggle-type icon-lock"></span></button>
+                                    <p class="input-error-txt">에러문구 입니다</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="location.href='worklist.html'" class="pnt-btn btn-secondary form-h-big mt-4 w-100">
+                        Log in</button>
+                </div>
+                <!-- 비밀번호 찾기 -->
+                <div class="login-wrap">
+                    <div class="flx-row flx-center gap-2">
+                        <div>New Here?</div>
+                        <a href="#">Create an account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/form.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

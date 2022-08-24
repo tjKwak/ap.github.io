@@ -1,0 +1,371 @@
+@charset "UTF-8";
+/* Css link*/
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  padding: 0 40px;
+}
+
+.app-header.header-white {
+  background-color: white;
+  -webkit-box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+          box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+  height: 70px;
+}
+
+.app-header.header-white .header-wrap .logo {
+  background-image: url("../images/logo-purple.png");
+}
+
+.app-header.header-white .header-wrap .signup,
+.app-header.header-white .header-wrap .login {
+  color: black;
+  font-size: 16px;
+}
+
+.app-header.header-white .header-wrap .login {
+  border: 1px solid #895ba6;
+}
+
+.app-header.header-white .header-wrap .mybtn {
+  border: 1px solid #d4b9d7;
+  padding: 8px 10px 5px 10px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+          box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+  cursor: pointer;
+  font-size: 14px;
+  color: #0e303c;
+  font-weight: 600;
+  position: relative;
+}
+
+.app-header.header-white .header-wrap .mybtn span {
+  -webkit-filter: invert(20%) sepia(100%) saturate(100%) hue-rotate(269deg) brightness(2) contrast(100%);
+          filter: invert(20%) sepia(100%) saturate(100%) hue-rotate(269deg) brightness(2) contrast(100%);
+}
+
+.app-header.header-white .header-wrap .mybtn .myoption {
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  width: 150px;
+  border: 1px solid #d4b9d7;
+  padding: 20px 15px 15px 15px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+          box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+  display: none;
+}
+
+.app-header.header-white .header-wrap .mybtn .myoption.active {
+  display: block;
+}
+
+.app-header.header-white .header-wrap .mybtn .myoption b {
+  font-size: 14px;
+}
+
+.app-header.header-white .header-wrap .mybtn .myoption p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 3rem;
+}
+
+.app-header.header-white .header-wrap .mybtn .myoption a {
+  color: #a77bb7;
+  position: relative;
+  display: block;
+}
+
+.app-header.header-white .header-wrap .mybtn .myoption a::after {
+  content: "";
+  width: calc(100% + 30px);
+  height: 1px;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background-color: lightgray;
+  display: block;
+}
+
+.app-header.header-white .header-wrap .mybtn .myoption a:hover {
+  color: purple;
+}
+
+.app-header .header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  margin: 0;
+  font-size: 0;
+  width: 146px;
+  height: 30px;
+  background-image: url("../images/logo-white.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app-header .header-wrap .signup,
+.app-header .header-wrap .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-header .header-wrap .signup:hover,
+.app-header .header-wrap .login:hover {
+  cursor: pointer;
+}
+
+.app-header .header-wrap .signup:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.app-header .header-wrap .login {
+  border: 1px solid white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.app-header .header-wrap .login:hover {
+  color: #895ba6;
+  background-color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.banner-wrap {
+  width: 100%;
+  height: 560px;
+  background-image: url("../images/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.banner-wrap .content-wrap {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-name: banner;
+          animation-name: banner;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes banner {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+@keyframes banner {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+.banner-wrap .content-wrap * {
+  color: white;
+}
+
+.banner-wrap .content-wrap h2 {
+  margin-top: 40px;
+  font-size: 96px;
+  font-weight: 800;
+}
+
+.banner-wrap .content-wrap h2 b {
+  color: #d4b9d7;
+}
+
+.banner-wrap .content-wrap h3 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.banner-wrap .content-wrap p {
+  font-size: 16px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.human-wrap {
+  padding: 80px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  background-image: url("../images/circle-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.human-wrap .human-title {
+  text-align: center;
+}
+
+.human-wrap .human-title h4 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.human-wrap .human-title h5 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.human-wrap .human-title p {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+  margin: 50px 0;
+}
+
+.human-wrap .img-human {
+  border: 10px solid red;
+}
+
+.human-wrap .human-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.human-wrap .human-item-wrap .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #84cca7;
+  -webkit-box-shadow: 0px 7px 16px rgba(24, 30, 111, 0.05);
+          box-shadow: 0px 7px 16px rgba(24, 30, 111, 0.05);
+  border-radius: 5px;
+}
+
+.human-wrap .human-item-wrap .item .title {
+  color: #0e303c;
+  font-size: 20px;
+  font-weight: 900;
+  padding-left: 17px;
+}
+
+.human-wrap .human-item-wrap .item .desc {
+  padding-left: 0;
+  margin: 0;
+}
+
+.human-wrap .human-item-wrap .item .desc li {
+  list-style: inside;
+  color: #895ba6;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.app-footer {
+  background-color: #f0ecf3;
+  height: 60px;
+  width: 100%;
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  color: #9fa09f;
+}
+
+.app-footer .logo {
+  display: none;
+}
+
+.app-footer.main-footer {
+  background-color: #a77bb7;
+  height: 100px;
+  color: white;
+}
+
+.app-footer.main-footer .logo {
+  display: block;
+}

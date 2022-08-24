@@ -64,6 +64,10 @@
   background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.06) 100%);
 }
 
+.body-wrap .item .img-wrap.medi {
+  background-image: url("mediheroes.png");
+}
+
 .body-wrap .item .img-wrap.hra {
   background-image: url("hra.png");
 }

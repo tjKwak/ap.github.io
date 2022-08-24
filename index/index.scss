@@ -54,6 +54,9 @@
           rgba(0, 0, 0, 0.06) 100%
         );
       }
+      &.medi {
+        background-image: url("mediheroes.png");
+      }
       &.hra {
         background-image: url("hra.png");
       }
