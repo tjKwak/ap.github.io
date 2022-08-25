@@ -129,27 +129,6 @@ window.onload = function(){
             e.target.parentNode.classList.add('active')
         })  
     }
-    
-
-
-
-    //모달
-    var modalWrap = document.querySelector('.modal-test-class')
-    var modalbox = modalWrap.querySelector('.modal');
-    var modalbg = modalWrap.querySelector('.modal-backdrop');
-    var modalOpenBtn = document.querySelector('.btn-open-modal');
-    var modalCloseBtn = document.querySelector('.btn-close-modal');
-
-    modalOpenBtn.addEventListener('click', function(){
-        modalWrap.classList.remove('d-none')
-        modalbox.classList.add('show')
-        modalbg.classList.add('show')
-    })
-    modalCloseBtn.addEventListener('click', function(){
-        modalWrap.classList.add('d-none')
-        modalbox.classList.remove('show')
-        modalbg.classList.remove('show')
-    })
 };
 
 
