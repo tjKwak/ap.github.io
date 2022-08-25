@@ -4,6 +4,28 @@ $('.mybtn').click(function(){
     $('.myoption').toggleClass('active');
 })
 
+///////////////////////////////////////////////
+//헤더 스크롤 css변환 기능
+window.addEventListener('scroll', function(){
+    console.log(window.pageYOffset)
+
+    if (window.pageYOffset === 0) {
+        $('.app-header').removeClass('header-white')
+    }
+    if (window.pageYOffset > 10) {
+        $('.app-header').addClass('header-white')
+    }
+    if (window.pageYOffset > 400) {
+        console.log('hi')
+        $('.img-human').addClass('animation')
+    }
+    if (window.pageYOffset > 1000) {
+        console.log('hi')
+        $('.human-item-wrap .item').addClass('animation')
+    }
+
+});
+//홈페이지 애니메이션 기능
 
 
 ///////////////////////////////////////////////

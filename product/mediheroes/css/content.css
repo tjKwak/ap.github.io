@@ -4,9 +4,9 @@
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
 @-webkit-keyframes up {
   0% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-    opacity: 0.6;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
@@ -16,15 +16,200 @@
 }
 @keyframes up {
   0% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-    opacity: 0.6;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
   }
+}
+
+#page-home .banner-wrap {
+  width: 100%;
+  height: 560px;
+  background-image: url("../images/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+#page-home .banner-wrap .content-wrap {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-name: banner;
+          animation-name: banner;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes banner {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+@keyframes banner {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+#page-home .banner-wrap .content-wrap * {
+  color: white;
+}
+
+#page-home .banner-wrap .content-wrap h2 {
+  margin-top: 40px;
+  font-size: 96px;
+  font-weight: 800;
+}
+
+#page-home .banner-wrap .content-wrap h2 b {
+  color: #d4b9d7;
+}
+
+#page-home .banner-wrap .content-wrap h3 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+#page-home .banner-wrap .content-wrap p {
+  font-size: 16px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+#page-home .human-wrap {
+  padding: 80px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  background-image: url("../images/circle-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+#page-home .human-wrap .human-title {
+  text-align: center;
+}
+
+#page-home .human-wrap .human-title h4 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#page-home .human-wrap .human-title h5 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+#page-home .human-wrap .human-title p {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+  margin: 50px 0;
+}
+
+#page-home .human-wrap .img-human {
+  opacity: 0;
+}
+
+#page-home .human-wrap .img-human.animation {
+  -webkit-animation: up 800ms ease-out forwards;
+          animation: up 800ms ease-out forwards;
+}
+
+#page-home .human-wrap .human-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+#page-home .human-wrap .human-item-wrap .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #84cca7;
+  -webkit-box-shadow: 0px 7px 16px rgba(24, 30, 111, 0.05);
+          box-shadow: 0px 7px 16px rgba(24, 30, 111, 0.05);
+  border-radius: 5px;
+  opacity: 0;
+}
+
+#page-home .human-wrap .human-item-wrap .item.animation {
+  -webkit-animation: up 800ms ease-out forwards;
+          animation: up 800ms ease-out forwards;
+}
+
+#page-home .human-wrap .human-item-wrap .item .title {
+  color: #0e303c;
+  font-size: 20px;
+  font-weight: 900;
+  padding-left: 17px;
+}
+
+#page-home .human-wrap .human-item-wrap .item .desc {
+  padding-left: 0;
+  margin: 0;
+}
+
+#page-home .human-wrap .human-item-wrap .item .desc li {
+  list-style: inside;
+  color: #895ba6;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 #page-login {
