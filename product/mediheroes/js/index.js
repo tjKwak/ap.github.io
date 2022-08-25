@@ -7,37 +7,89 @@ $('.mybtn').click(function(){
 ///////////////////////////////////////////////
 //헤더 스크롤 css변환 기능
 window.addEventListener('scroll', function(){
-    console.log(window.pageYOffset)
-
     if (window.pageYOffset === 0) {
         $('.app-header').removeClass('header-white')
     }
     if (window.pageYOffset > 10) {
         $('.app-header').addClass('header-white')
     }
+    //홈페이지 애니메이션 기능
     if (window.pageYOffset > 400) {
-        console.log('hi')
         $('.img-human').addClass('animation')
     }
     if (window.pageYOffset > 1000) {
-        console.log('hi')
         $('.human-item-wrap .item').addClass('animation')
     }
-
 });
-//홈페이지 애니메이션 기능
 
 
 ///////////////////////////////////////////////
 //내용 변환 기능
+const url = '../images/';
+var jsData = [
+    {
+        no : '1',
+        title : '-',
+        num : '-',
+        img : `${url}1.svg`
+    },
+    {
+        no : '2',
+        title : 'Tuberculosis',
+        num : '0 %',
+        img : `${url}2.png`
+    },
+    {
+        no : '3',
+        title : 'Preumonia',
+        num : '11.95 %',
+        img : `${url}3.png`
+    },
+    {
+        no : '4',
+        title : 'Atelectasis',
+        num : '0.68 %',
+        img : `${url}4.png`
+    },
+    {
+        no : '5',
+        title : 'Effusion',
+        num : '0.7 %',
+        img : `${url}5.png`
+    },
+    {
+        no : '6',
+        title : 'Mass',
+        num : '21.42 %',
+        img : `${url}6.png`
+    },
+    {
+        no : '7',
+        title : 'Nodule',
+        num : '21.42 %',
+        img : `${url}7.png`
+    },
+    {
+        no : '8',
+        title : 'Preumothorax',
+        num : '96.78 %',
+        img : `${url}8.png`
+    },
+    {
+        no : '9',
+        title : 'Consolidation',
+        num : '11.39 %',
+        img : `${url}9.png`
+    }
+]
+//import jsData from "./data.js";
+
 var No = document.querySelector('#dataNo');
 var Title = document.querySelector('#dataTitle');
 var Num = document.querySelector('#dataNum');
 var Img = document.querySelector('#dataImg img');
 var info = document.querySelector('.info');
 var currIndex = 0;
-
-import jsData from "./data.js";
 
 function changeData(index){
     const DATA_LEN = jsData.length;
