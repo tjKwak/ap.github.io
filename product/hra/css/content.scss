@@ -47,9 +47,9 @@
       &:hover {
         background-color: $hh-gray-l-02;
         border: 1px solid $default-brand;
-        & *{
+        & * {
           filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
-          brightness(105%) contrast(103%) !important;
+            brightness(105%) contrast(103%) !important;
         }
       }
       & > span {
@@ -62,13 +62,12 @@
         margin-left: 1px;
         margin-bottom: 4px;
       }
-      & .icon-hh-arrow{
+      & .icon-hh-arrow {
         transform: scale(1.7) translateX(3px);
       }
     }
   }
 }
-
 .setting-page--wrap {
   width: 100%;
   height: 100%;
@@ -85,8 +84,46 @@
       justify-content: center;
       & .movie-wrap {
         height: 100%;
+        position: relative;
         & img {
           height: 100%;
+        }
+        & .top-area {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 35px;
+          background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        & .bottom-area {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 35px;
+          background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          & p {
+            color: white;
+            font-size: 14px;
+            margin: 0;
+          }
+          & button {
+            position: absolute;
+            right: 0;
+            & span {
+              filter: invert(1);
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
         }
       }
       & .function-wrap {
@@ -195,6 +232,13 @@
           font-size: 14px;
           text-transform: capitalize;
           margin-bottom: 0.2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          & span {
+            color: $hh-gray-m-03;
+            font-size: 12px;
+          }
         }
         & .content-wrap {
           height: 100%;

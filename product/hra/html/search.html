@@ -42,9 +42,9 @@
                     </div>
                     <!-- 메뉴 -->
                     <div class="web-menu">
-                        <a class="menu" href="../index.html">Analytics</a>
-                        <a class="menu active" href="search.html">search</a>
-                        <a class="menu" href="setting_license.html">setup</a>
+                        <a class="menu" href="../index.html">분석</a>
+                        <a class="menu active" href="search.html">검색</a>
+                        <a class="menu" href="setting_license.html">설정</a>
                     </div>
                     <!-- 레이아웃을 위해 만든 빈 태그(빼면안됌) -->
                     <div class="space">
@@ -90,13 +90,13 @@
                                 <ul class="select__options">
                                     <li class="active"><a href="#">ANPR</a></li>
                                     <li><a href="#">Speed Detection</a></li>
-                                    <li><a href="#">Vehicle Speed</a></li>
-                                    <li><a href="#">Illegal U-turn</a></li>
+                                    <li><a href="#">과속 감지</a></li>
+                                    <li><a href="#">불법 유턴</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <p class="small-txt">차량 타입</p>
+                            <p class="small-txt">차종</p>
                             <div class="pnt-select--group form-medium" tabindex="0">
                                 <button class="select__btn">
                                     <div class="cont-wrap">
@@ -107,8 +107,8 @@
                                 <ul class="select__options">
                                     <li class="active"><a href="#">ANPR</a></li>
                                     <li><a href="#">Speed Detection</a></li>
-                                    <li><a href="#">Vehicle Speed</a></li>
-                                    <li><a href="#">Illegal U-turn</a></li>
+                                    <li><a href="#">과속 감지</a></li>
+                                    <li><a href="#">불법 유턴</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -124,13 +124,13 @@
                                 <ul class="select__options">
                                     <li class="active"><a href="#">ANPR</a></li>
                                     <li><a href="#">Speed Detection</a></li>
-                                    <li><a href="#">Vehicle Speed</a></li>
-                                    <li><a href="#">Illegal U-turn</a></li>
+                                    <li><a href="#">과속 감지</a></li>
+                                    <li><a href="#">불법 유턴</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <p class="small-txt">브랜드</p>
+                            <p class="small-txt">제조사</p>
                             <div class="pnt-select--group form-medium" tabindex="0">
                                 <button class="select__btn">
                                     <div class="cont-wrap">
@@ -141,8 +141,8 @@
                                 <ul class="select__options">
                                     <li class="active"><a href="#">ANPR</a></li>
                                     <li><a href="#">Speed Detection</a></li>
-                                    <li><a href="#">Vehicle Speed</a></li>
-                                    <li><a href="#">Illegal U-turn</a></li>
+                                    <li><a href="#">과속 감지</a></li>
+                                    <li><a href="#">불법 유턴</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -158,8 +158,8 @@
                                 <ul class="select__options">
                                     <li class="active"><a href="#">ANPR</a></li>
                                     <li><a href="#">Speed Detection</a></li>
-                                    <li><a href="#">Vehicle Speed</a></li>
-                                    <li><a href="#">Illegal U-turn</a></li>
+                                    <li><a href="#">과속 감지</a></li>
+                                    <li><a href="#">불법 유턴</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -175,13 +175,13 @@
                                 <ul class="select__options">
                                     <li class="active"><a href="#">ANPR</a></li>
                                     <li><a href="#">Speed Detection</a></li>
-                                    <li><a href="#">Vehicle Speed</a></li>
-                                    <li><a href="#">Illegal U-turn</a></li>
+                                    <li><a href="#">과속 감지</a></li>
+                                    <li><a href="#">불법 유턴</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <p class="small-txt">속도(이상)</p>
+                            <p class="small-txt">속도(과속)</p>
                             <div class="pnt-input--group txt-on-right form-medium">
                                 <input class="pnt-input" type="text" placeholder="0" value="0">
                                 <span>km/h</sp>
@@ -216,14 +216,14 @@
                             <thead>
                                 <tr>
                                     <td>번호</td>
-                                    <td>일자</td>
+                                    <td>일시</td>
                                     <td>이벤트 타입</td>
                                     <td>차량 번호</td>
-                                    <td>번호판</td>
-                                    <td>차량 타입</td>
-                                    <td>색상</td>
-                                    <td>브랜드</td>
+                                    <td>번호판 이미지</td>
+                                    <td>제조사</td>
                                     <td>모델</td>
+                                    <td>색상</td>
+                                    <td>차종</td>
                                     <td>리스트</td>
                                     <td>속도</td>
                                     <td>베스트샷</td>
@@ -232,315 +232,600 @@
                             <tbody>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>ANPR</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Illegal U-turn</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>01</td>
-                                    <td>2021-08-12</td>
-                                    <td>Speed Detection</td>
+                                    <td>2021-08-12 (02:22:27)</td>
+                                    <td>과속 감지</td>
                                     <td>107너 5116</td>
                                     <td><img src="../images/numplate_test.png" alt=""></td>
-                                    <td>SUV</td>
-                                    <td>black</td>
                                     <td>Hyundai</td>
                                     <td>G80</td>
-                                    <td>White</td>
+                                    <td>black</td>
+                                    <td>SUV</td>
+                                    <td>블랙리스트</td>
                                     <td>27</td>
                                     <td>
                                         <button class="pnt-btn btn-icon-only btn-bestshot">
                                             <span class="icon-hh-picture"></span>
                                             <div class="bestshot-wrap">
                                                 <img src="../images/movie.png" alt="">
+                                                <!-- 화면 위의 이벤트 영역 -->
+                                                <div class="top-area">
+                                                    <div class="flx-row gap-3">
+                                                        <p class="small-txt color-white">이벤트</p>
+                                                        <label class="pnt-toggle toggle-txt">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                            <p>off</p>
+                                                            <p>on</p>
+                                                            <div class="icon-toggle-type icon-lock off"></div>
+                                                            <div class="icon-toggle-type icon-lock"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- 화면 아래 이벤트 영역 -->
+                                                <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                             </div>
                                         </button>
                                     </td>

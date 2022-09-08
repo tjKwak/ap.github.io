@@ -22,7 +22,7 @@ for(let i=0; i<best_btn.length; i++){
 
 
 const tab_first = document.querySelector('.menu-tab .menu-left a:first-child')
-const tab_last = document.querySelector('.menu-tab .menu-left a:last-child')
+const tab_last = document.querySelector('.menu-tab .menu-left a:nth-child(2)')
 
 const tab_cont_first = document.querySelector('.setting-wrap .menu-content')
 const tab_cont_last = document.querySelector('.setting-wrap #list-content')

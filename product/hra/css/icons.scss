@@ -72,6 +72,14 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
   @include bgp($p1, $p6);
   @include icon-hh();
 }
+.icon-hh-car {
+  @include bgp($p1, $p7);
+  @include icon-hh();
+}
+.icon-hh-exclude {
+  @include bgp($p1, $p8);
+  @include icon-hh();
+}
 
 .icon-hh-select {
   @include bgp($p2, $p1);
@@ -97,8 +105,6 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
   @include bgp($p2, $p6);
   @include icon-hh();
 }
-
-
 
 ////////////////////////////////////////
 //메인 메뉴 아이콘

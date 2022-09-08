@@ -42,9 +42,9 @@
                     </div>
                     <!-- 메뉴 -->
                     <div class="web-menu">
-                        <a class="menu active" href="../index.html">Analytics</a>
-                        <a class="menu" href="search.html">search</a>
-                        <a class="menu" href="setting_license.html">setup</a>
+                        <a class="menu active" href="../index.html">분석</a>
+                        <a class="menu" href="search.html">검색</a>
+                        <a class="menu" href="setting_license.html">설정</a>
                     </div>
                     <!-- 레이아웃을 위해 만든 빈 태그(빼면안됌) -->
                     <div class="space">
@@ -59,38 +59,38 @@
                         <li>
                             <a href="analytics_ea.html" class="">
                                 <span class="icon-hh-menu-1"></span>
-                                Exclude area
+                                제외 영역
                             </a>
                         </li>
 
                         <li>
                             <a href="analytics_vs.html" class="active">
                                 <span class="icon-hh-menu-3"></span>
-                                Vehicle Speed
+                                과속 감지
                             </a>
                         </li>
                         <li>
                             <a href="analytics_ip.html" class="">
                                 <span class="icon-hh-menu-4"></span>
-                                Illegal parking
-                            </a>
-                        </li>
-                        <li>
-                            <a href="analytics_rr.html" class="">
-                                <span class="icon-hh-menu-5"></span>
-                                Reverse Run
+                                불법 주정차
                             </a>
                         </li>
                         <li>
                             <a href="analytics_iut.html" class="">
                                 <span class="icon-hh-menu-6"></span>
-                                Illegal U-turn
+                                불법 유턴
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics_rr.html" class="">
+                                <span class="icon-hh-menu-5"></span>
+                                역주행
                             </a>
                         </li>
                         <li>
                             <a href="analytics_anpr.html" class="">
                                 <span class="icon-hh-menu-2"></span>
-                                Vehicle Recognition
+                                차량 및 번호 인식
                             </a>
                         </li>
                     </ul>
@@ -104,9 +104,28 @@
                                 <!-- 화면 영역 -->
                                 <div class="movie-wrap">
                                     <img src="../images/movie.png" alt="">
+                                    <!-- 화면 위의 이벤트 영역 -->
+                                    <div class="top-area">
+                                        <div class="flx-row gap-3">
+                                            <p class="small-txt color-white">이벤트</p>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- 화면 아래 이벤트 영역 -->
+                                    <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                 </div>
                                 <!-- 그리기 툴 영역 -->
-                                <div class="function-wrap">
+                                <div class="function-wrap v-hidden">
                                     <button class="pnt-btn btn-icon-only btn-cctv">
                                         <div class="hover-txt">Select</div>
                                         <span class="icon-hh-select"></span>
@@ -127,12 +146,12 @@
                             <!-- 세팅 탭 -->
                             <div class="menu-tab">
                                 <div class="menu-left">
-                                    <a href="#" class="active">Area & Speed Setup</a>
-                                    <a href="#" class="">List</a>
+                                    <a href="#" class="active">영역 및 속도 설정</a>
+                                    <a href="#" class="">감지 리스트</a>
                                 </div>
                                 <div class="menu-right">
-                                    <button class="pnt-btn btn-brand">Apply</button>
-                                    <button class="pnt-btn btn-gray">Cancel</button>
+                                    <button class="pnt-btn btn-brand">적용</button>
+                                    <button class="pnt-btn btn-gray">취소</button>
                                 </div>
                             </div>
                             <!-- 세팅 컨텐츠들 -->
@@ -140,11 +159,12 @@
                                 <!-- 한줄 -->
                                 <div class="content-row">
                                     <div class="content-title">
-                                        기준 사각형 설정
+                                        정보 입력
+                                        <span>현장에서 실측한 값을 A, B 거리에 입력해 주세요</span>
                                     </div>
                                     <div class="content-wrap">
-                                        <div class="content flx-col">
-                                            <div class="flx-sb p-3 w-100">
+                                        <div class="content flx-col p-2 pb-5" style="border: none">
+                                            <div class="flx-sb p-2 w-100">
                                                 <p class="small-txt color-danger">A 거리(m)</p>
                                                 <div class="pnt-input--group txt-on-right">
                                                     <input class="pnt-input" type="text" placeholder="0">
@@ -152,7 +172,7 @@
                                                         <p class="input-error-txt">에러문구 입니다</p>
                                                 </div>
                                             </div>
-                                            <div class="flx-sb p-3 w-100">
+                                            <div class="flx-sb p-2 w-100">
                                                 <p class="small-txt color-secondary">B 거리(m)</p>
                                                 <div class="pnt-input--group txt-on-right">
                                                     <input class="pnt-input" type="text" placeholder="0">
@@ -160,7 +180,7 @@
                                                         <p class="input-error-txt">에러문구 입니다</p>
                                                 </div>
                                             </div>
-                                            <div class="flx-sb p-3 w-100">
+                                            <div class="flx-sb p-2 w-100">
                                                 <p class="small-txt">제한 속도</p>
                                                 <div class="pnt-input--group txt-on-right">
                                                     <input class="pnt-input" type="text" placeholder="0">
@@ -174,7 +194,7 @@
                                 <!-- 한줄 -->
                                 <div class="content-row" style="width: 305px;">
                                     <div class="content-title">
-                                        ① 디폴트 상태
+                                        ① 초기 상태
                                     </div>
                                     <div class="content-wrap">
                                         <div class="content flx-col flx-start align-start">
@@ -210,7 +230,7 @@
                                         <div class="content flx-col flx-start align-start">
                                             <img src="../images/vs_guide_3.png" alt="">
                                             <div class="p-3 small-txt">
-                                                지면상 실제 몇 m인지 하단 설정탭에 입력해주세요.<br>
+                                                현장에서 실측한 값을 ‘정보입력’ 탭에 입력해주세요.<br>
                                                 설정에 입력한 실측데이터가 화면과 연동됩니다.
                                             </div>
                                         </div>
@@ -221,7 +241,7 @@
                             <div class="menu-content d-none" id="list-content">
                                 <!-- 한줄 -->
                                 <div class="content-row">
-                                    <div class="content-title">
+                                    <div class="content-title v-hidden">
                                         리스트
                                     </div>
                                     <div class="content-wrap">

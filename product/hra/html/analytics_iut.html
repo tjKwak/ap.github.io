@@ -42,9 +42,9 @@
                     </div>
                     <!-- 메뉴 -->
                     <div class="web-menu">
-                        <a class="menu active" href="../index.html">Analytics</a>
-                        <a class="menu" href="search.html">search</a>
-                        <a class="menu" href="setting_license.html">setup</a>
+                        <a class="menu active" href="../index.html">분석</a>
+                        <a class="menu" href="search.html">검색</a>
+                        <a class="menu" href="setting_license.html">설정</a>
                     </div>
                     <!-- 레이아웃을 위해 만든 빈 태그(빼면안됌) -->
                     <div class="space">
@@ -59,37 +59,37 @@
                         <li>
                             <a href="analytics_ea.html" class="">
                                 <span class="icon-hh-menu-1"></span>
-                                Exclude area
+                                제외 영역
                             </a>
                         </li>
                         <li>
                             <a href="analytics_vs.html" class="">
                                 <span class="icon-hh-menu-3"></span>
-                                Vehicle Speed
+                                과속 감지
                             </a>
                         </li>
                         <li>
                             <a href="analytics_ip.html" class="">
                                 <span class="icon-hh-menu-4"></span>
-                                Illegal parking
-                            </a>
-                        </li>
-                        <li>
-                            <a href="analytics_rr.html" class="">
-                                <span class="icon-hh-menu-5"></span>
-                                Reverse Run
+                                불법 주정차
                             </a>
                         </li>
                         <li>
                             <a href="analytics_iut.html" class="active">
                                 <span class="icon-hh-menu-6"></span>
-                                Illegal U-turn
+                                불법 유턴
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics_rr.html" class="">
+                                <span class="icon-hh-menu-5"></span>
+                                역주행
                             </a>
                         </li>
                         <li>
                             <a href="analytics_anpr.html" class="">
                                 <span class="icon-hh-menu-2"></span>
-                                Vehicle Recognition
+                                차량 및 번호 인식
                             </a>
                         </li>
                     </ul>
@@ -103,6 +103,25 @@
                                 <!-- 화면 영역 -->
                                 <div class="movie-wrap">
                                     <img src="../images/movie.png" alt="">
+                                    <!-- 화면 위의 이벤트 영역 -->
+                                    <div class="top-area">
+                                        <div class="flx-row gap-3">
+                                            <p class="small-txt color-white">이벤트</p>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- 화면 아래 이벤트 영역 -->
+                                    <!-- <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div> -->
                                 </div>
                                 <!-- 그리기 툴 영역 -->
                                 <div class="function-wrap">
@@ -126,18 +145,18 @@
                             <!-- 세팅 탭 -->
                             <div class="menu-tab">
                                 <div class="menu-left">
-                                    <a href="#" class="active">setting</a>
-                                    <a href="#" class="">list</a>
+                                    <a href="#" class="active">설정</a>
+                                    <a href="#" class="">감지 리스트</a>
                                 </div>
                                 <div class="menu-right">
-                                    <button class="pnt-btn btn-brand">Apply</button>
-                                    <button class="pnt-btn btn-gray">Cancel</button>
+                                    <button class="pnt-btn btn-brand">적용</button>
+                                    <button class="pnt-btn btn-gray">취소</button>
                                 </div>
                             </div>
-                             <!-- 세팅 컨텐츠들 -->
+                            <!-- 세팅 컨텐츠들 -->
                             <div class="menu-content">
                                 <div class="content-row">
-                                    <div class="content-title">
+                                    <div class="content-title v-hidden">
                                         인식 라인
                                     </div>
                                     <div class="content-wrap">
@@ -151,7 +170,7 @@
                             <div class="menu-content d-none" id="list-content">
                                 <!-- 한줄 -->
                                 <div class="content-row">
-                                    <div class="content-title">
+                                    <div class="content-title v-hidden">
                                         리스트
                                     </div>
                                     <div class="content-wrap">

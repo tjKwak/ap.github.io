@@ -107,6 +107,38 @@ span[class*="icon-"] {
   background-image: url("../images/hh_icon.svg");
 }
 
+.icon-hh-car {
+  background-position: calc((20px * -0) - (10px * 0)) calc((20px * -6) - (10px * 6));
+  background-repeat: no-repeat;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 2) + (10px * 1));
+  background-image: url("../images/hh_icon.svg");
+}
+
+.icon-hh-exclude {
+  background-position: calc((20px * -0) - (10px * 0)) calc((20px * -7) - (10px * 7));
+  background-repeat: no-repeat;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 2) + (10px * 1));
+  background-image: url("../images/hh_icon.svg");
+}
+
 .icon-hh-select {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;

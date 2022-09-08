@@ -42,9 +42,9 @@
                     </div>
                     <!-- 메뉴 -->
                     <div class="web-menu">
-                        <a class="menu" href="../index.html">Analytics</a>
-                        <a class="menu" href="search.html">search</a>
-                        <a class="menu active" href="setting.html">setup</a>
+                        <a class="menu" href="../index.html">분석</a>
+                        <a class="menu" href="search.html">검색</a>
+                        <a class="menu active" href="#">설정</a>
                     </div>
                     <!-- 레이아웃을 위해 만든 빈 태그(빼면안됌) -->
                     <div class="space">
@@ -59,7 +59,7 @@
                         <li>
                             <a href="setting_license.html" class="">
                                 <span class="icon-hh-note"></span>
-                                라이센스
+                                라이선스
                             </a>
                         </li>
                         <li>
@@ -69,9 +69,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="setting_common.html" class="active">
-                                <span class="icon-hh-setting"></span>
-                                공통 설정
+                            <a href="setting_nameplate.html" class="active">
+                                <span class="icon-hh-anpr"></span>
+                                번호판 설정
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setting_car.html" class="">
+                                <span class="icon-hh-car"></span>
+                                차량인식 설정
                             </a>
                         </li>
                         <!-- 초기 설정 가이드는 은지님 파일을 참고 -->
@@ -91,6 +97,25 @@
                                 <!-- 화면 영역 -->
                                 <div class="movie-wrap">
                                     <img src="../images/movie.png" alt="">
+                                    <!-- 화면 위의 이벤트 영역 -->
+                                    <div class="top-area">
+                                        <div class="flx-row gap-3">
+                                            <p class="small-txt color-white">라이브 영상</p>
+                                            <label class="pnt-toggle toggle-txt">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                                <p>off</p>
+                                                <p>on</p>
+                                                <div class="icon-toggle-type icon-lock off"></div>
+                                                <div class="icon-toggle-type icon-lock"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- 화면 아래 이벤트 영역 -->
+                                    <div class="bottom-area">
+                                        <p>번호인식 영역을 설정해주세요</p>
+                                        <button class="pnt-btn"><span class="icon-close"></span></button>
+                                    </div>
                                 </div>
                                 <!-- 그리기 툴 영역 -->
                                 <div class="function-wrap">
@@ -114,19 +139,18 @@
                             <!-- 세팅 탭 -->
                             <div class="menu-tab">
                                 <div class="menu-left">
-                                    <a href="#" class="active">번호인식 설정(ANPR)</a>
-                                    <a href="#" class="">차량인식 설정(MMCR)</a>
+                                    <a href="#" class="active">번호판 인식 설정</a>
                                 </div>
                                 <div class="menu-right">
-                                    <button class="pnt-btn btn-brand">Apply</button>
-                                    <button class="pnt-btn btn-gray">Cancel</button>
+                                    <button class="pnt-btn btn-brand">적용</button>
+                                    <button class="pnt-btn btn-gray">취소</button>
                                 </div>
                             </div>
                             <!-- 세팅 컨텐츠들 -->
                             <div class="menu-content">
                                 <div class="content-row">
                                     <div class="content-title">
-                                        Plate
+                                        번호판
                                     </div>
                                     <div class="content-wrap">
                                         <div class="content h-50">
@@ -148,7 +172,7 @@
                                 </div>
                                 <div class="content-row">
                                     <div class="content-title">
-                                        Detect Size
+                                        검출 크기
                                     </div>
                                     <div class="content-wrap">
                                         <div class="content h-50 bg-g-1">
@@ -165,7 +189,7 @@
                                         </div>
                                         <div class="content h-50">
                                             <div class="flx-sb p-3 w-100">
-                                                <p class="small-txt">크기 미리보기</p>
+                                                <p class="small-txt">크기 미리보기<br>(단위 / px)</p>
                                                 <div class="flx-row gap-2">
                                                     <div class="bold-txt">
                                                         202 x 108
@@ -180,19 +204,6 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 리스트 컨텐츠 (html용을 위한것이니 리액트 변환시 무시해주세요) -->
-                            <div class="menu-content d-none" id="list-content">
-                                <div class="content-row">
-                                    <div class="content-title">
-                                        인식 영역
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="content">
-                                            표
                                         </div>
                                     </div>
                                 </div>

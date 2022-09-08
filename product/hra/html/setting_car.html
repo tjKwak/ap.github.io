@@ -32,7 +32,7 @@
 
 <body>
     <div id="root">
-        <div class="app-container app-theme-hh">
+        <div class="app-container pnt-theme-white">
             <!-- 헤더 -->
             <div class="app-header">
                 <div class="header-wrap">
@@ -42,9 +42,9 @@
                     </div>
                     <!-- 메뉴 -->
                     <div class="web-menu">
-                        <a class="menu active" href="../index.html">분석</a>
+                        <a class="menu" href="../index.html">분석</a>
                         <a class="menu" href="search.html">검색</a>
-                        <a class="menu" href="setting_license.html">설정</a>
+                        <a class="menu active" href="#">설정</a>
                     </div>
                     <!-- 레이아웃을 위해 만든 빈 태그(빼면안됌) -->
                     <div class="space">
@@ -57,41 +57,34 @@
                 <div class="side-wrap">
                     <ul>
                         <li>
-                            <a href="analytics_ea.html" class="">
-                                <span class="icon-hh-menu-1"></span>
-                                제외 영역
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="analytics_vs.html" class="">
-                                <span class="icon-hh-menu-3"></span>
-                                과속 감지
+                            <a href="setting_license.html" class="">
+                                <span class="icon-hh-note"></span>
+                                라이선스
                             </a>
                         </li>
                         <li>
-                            <a href="analytics_ip.html" class="">
-                                <span class="icon-hh-menu-4"></span>
-                                불법 주정차
+                            <a href="setting_sd.html" class="">
+                                <span class="icon-hh-sdcard"></span>
+                                SD 카드
                             </a>
                         </li>
                         <li>
-                            <a href="analytics_iut.html" class="">
-                                <span class="icon-hh-menu-6"></span>
-                                불법 유턴
+                            <a href="setting_nameplate.html" class="">
+                                <span class="icon-hh-anpr"></span>
+                                번호판 설정
                             </a>
                         </li>
                         <li>
-                            <a href="analytics_rr.html" class="active">
-                                <span class="icon-hh-menu-5"></span>
-                                역주행
+                            <a href="setting_car.html" class="active">
+                                <span class="icon-hh-car"></span>
+                                차량인식 설정
                             </a>
                         </li>
-                        <li>
-                            <a href="analytics_anpr.html" class="">
-                                <span class="icon-hh-menu-2"></span>
-                                차량 및 번호 인식
-                            </a>
+                        <!-- 초기 설정 가이드는 은지님 파일을 참고 -->
+                        <li class="mt-auto">
+                            <div class="flx-row flx-center p-3">
+                                <button class="pnt-btn btn-gray">초기 설정 가이드</button>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -107,7 +100,7 @@
                                     <!-- 화면 위의 이벤트 영역 -->
                                     <div class="top-area">
                                         <div class="flx-row gap-3">
-                                            <p class="small-txt color-white">이벤트</p>
+                                            <p class="small-txt color-white">라이브 영상</p>
                                             <label class="pnt-toggle toggle-txt">
                                                 <input type="checkbox" checked>
                                                 <span class="slider"></span>
@@ -119,10 +112,10 @@
                                         </div>
                                     </div>
                                     <!-- 화면 아래 이벤트 영역 -->
-                                    <!-- <div class="bottom-area">
-                                        <p>번호인식 영역을 설정해주세요</p>
+                                    <div class="bottom-area">
+                                        <p>차량 전체모습이 감지될 수 있도록 영역을 설정 해주세요.</p>
                                         <button class="pnt-btn"><span class="icon-close"></span></button>
-                                    </div> -->
+                                    </div>
                                 </div>
                                 <!-- 그리기 툴 영역 -->
                                 <div class="function-wrap">
@@ -146,8 +139,7 @@
                             <!-- 세팅 탭 -->
                             <div class="menu-tab">
                                 <div class="menu-left">
-                                    <a href="#" class="active">설정</a>
-                                    <a href="#" class="">감지 리스트</a>
+                                    <a href="#" class="active">차량인식 설정</a>
                                 </div>
                                 <div class="menu-right">
                                     <button class="pnt-btn btn-brand">적용</button>
@@ -156,38 +148,6 @@
                             </div>
                             <!-- 세팅 컨텐츠들 -->
                             <div class="menu-content">
-                                <div class="content-row">
-                                    <div class="content-title v-hidden">
-                                        인식 영역
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="content">
-                                            표
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-row">
-                                    <div class="content-title">
-                                        차량 방향
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="content" style="width: 138px;">
-                                            <div class="flx-col p-3 h-100 w-100">
-                                                <div class="flx-row flx-center h-100">
-                                                    <img src="../images/arrow.svg" alt="">
-                                                </div>
-                                                <div class="flx-row flx-center">
-                                                    <button class="pnt-btn btn-gray pr-3">
-                                                        90°<span class="icon-reset icon-small"></span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 리스트 컨텐츠 (html용을 위한것이니 리액트 변환시 무시해주세요) -->
-                            <div class="menu-content d-none" id="list-content">
                                 <!-- 한줄 -->
                                 <div class="content-row">
                                     <div class="content-title v-hidden">
