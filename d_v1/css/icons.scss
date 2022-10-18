@@ -4,8 +4,6 @@
 @mixin icons {
   background-repeat: no-repeat;
   border: none;
-  //display: inline-block;
-  // vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -35,7 +33,7 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
 
 @mixin icon-util {
   @include icons();
-  background-size: calc((#{$icon} * 7) + (#{$icon-gap} * 6)); //가로 7줄
+  background-size: calc((#{$icon} * 8) + (#{$icon-gap} * 7)); //가로 8줄
   background-image: url("../images/util.svg");
 }
 @mixin icon-direction {
@@ -615,6 +613,15 @@ span[class*="icon-off"] {
 }
 .icon-sun {
   @include bgp($p7, $p10);
+  @include icon-util();
+}
+
+.icon-createtab {
+  @include bgp($p8, $p1);
+  @include icon-util();
+}
+.icon-newtab {
+  @include bgp($p8, $p2);
   @include icon-util();
 }
 

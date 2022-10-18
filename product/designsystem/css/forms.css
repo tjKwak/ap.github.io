@@ -16,6 +16,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  line-height: 38px;
   -webkit-filter: brightness(1);
           filter: brightness(1);
   -webkit-transition: all 0.2s;
@@ -33,10 +34,6 @@
 }
 
 .pnt-btn.btn-icon span {
-  width: 20px;
-  height: 20px;
-  -webkit-transform: scale(0.7) translateY(5%);
-          transform: scale(0.7) translateY(5%);
   display: inline-block;
   vertical-align: middle;
   margin: -0.2rem 0.3rem 0 0;
@@ -47,6 +44,7 @@
   min-width: 38px;
   max-width: 38px;
   max-height: 38px;
+  line-height: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -74,7 +72,7 @@
   height: auto;
   min-width: unset;
   padding: 0.3rem;
-  line-height: auto;
+  line-height: 1.2;
   font-size: 0.7rem;
   font-weight: 400;
 }
@@ -88,11 +86,12 @@
           transform: scale(0.5);
 }
 
-.pnt-btn.btn-large {
-  height: 52px;
-  line-height: auto;
-  font-size: 1rem;
-  font-weight: 400;
+.pnt-btn.form-h-small {
+  line-height: 32px;
+}
+
+.pnt-btn.form-h-big {
+  font-size: 1.1rem;
 }
 
 .pnt-btn.btn-brand {

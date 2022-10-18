@@ -50,6 +50,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  line-height: $form-height;
 
   filter: brightness(1);
   transition: $form-transition;
@@ -58,9 +59,6 @@
   &.btn-icon {
     min-width: 4.7rem;
     & span {
-      width: 20px;
-      height: 20px;
-      transform: scale(0.7) translateY(5%);
       display: inline-block;
       vertical-align: middle;
       margin: -0.2rem 0.3rem 0 0;
@@ -71,6 +69,7 @@
     min-width: $form-height;
     max-width: $form-height;
     max-height: $form-height;
+    line-height: 1;
     & * {
       font-size: 0;
     }
@@ -93,7 +92,7 @@
     height: auto;
     min-width: unset;
     padding: 0.3rem;
-    @include p5-n();
+    @include p5-n(1.2);
     &.btn-icon-only {
       padding: 0;
       & span {
@@ -101,9 +100,11 @@
       }
     }
   }
-  &.btn-large {
-    height: 52px;
-    @include p2-n();
+  &.form-h-small{
+    line-height: $form-height-small;
+  }
+  &.form-h-big{
+    font-size: 1.1rem;
   }
   //---[옵션] 컬러---
   &.btn-brand {
