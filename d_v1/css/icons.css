@@ -1,8 +1,6 @@
 span[class*="icon-"] {
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -45,6 +43,10 @@ span[class*="icon-"] {
   position: absolute;
   top: -50%;
   left: -50%;
+}
+
+span[class*="icon-off"] {
+  position: relative;
 }
 
 span[class*="icon-off"]::after {
@@ -134,8 +136,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -150,8 +150,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -166,8 +164,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -182,8 +178,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -198,8 +192,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -214,8 +206,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -230,8 +220,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -246,8 +234,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -262,8 +248,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -278,8 +262,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -294,8 +276,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -310,8 +290,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -326,8 +304,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -342,8 +318,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -358,8 +332,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -374,8 +346,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -390,8 +360,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -406,8 +374,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -422,8 +388,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -438,8 +402,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -454,8 +416,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -470,8 +430,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -486,8 +444,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -502,8 +458,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -518,8 +472,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -534,8 +486,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -550,8 +500,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -566,8 +514,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -582,8 +528,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -598,8 +542,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -614,8 +556,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -630,8 +570,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -646,8 +584,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -662,8 +598,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -678,8 +612,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -694,8 +626,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -710,8 +640,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -726,8 +654,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -742,8 +668,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -758,8 +682,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -774,8 +696,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -790,8 +710,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -806,8 +724,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -822,8 +738,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -838,8 +752,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -854,8 +766,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -870,8 +780,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -886,8 +794,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -902,8 +808,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -918,8 +822,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -934,8 +836,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -950,8 +850,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -966,8 +864,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -982,8 +878,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -998,8 +892,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1014,8 +906,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1030,8 +920,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1046,8 +934,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1062,8 +948,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1078,8 +962,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1094,8 +976,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1110,8 +990,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1126,8 +1004,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1142,8 +1018,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1158,8 +1032,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1174,8 +1046,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1190,8 +1060,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1206,8 +1074,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1222,8 +1088,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1238,8 +1102,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1254,8 +1116,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1270,8 +1130,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1286,8 +1144,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1302,8 +1158,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1318,8 +1172,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1334,8 +1186,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1350,8 +1200,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1366,8 +1214,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1382,8 +1228,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1398,8 +1242,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1414,8 +1256,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1430,8 +1270,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1446,8 +1284,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1462,8 +1298,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -4) - (10px * 4)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1478,8 +1312,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1494,8 +1326,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1510,8 +1340,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1526,8 +1354,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1542,8 +1368,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1558,8 +1382,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1574,8 +1396,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1590,8 +1410,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1606,8 +1424,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1622,8 +1438,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -5) - (10px * 5)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1638,8 +1452,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1654,8 +1466,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1670,8 +1480,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1686,8 +1494,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1702,8 +1508,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1718,8 +1522,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1734,8 +1536,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1750,8 +1550,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1766,8 +1564,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1782,8 +1578,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -6) - (10px * 6)) calc((20px * -9) - (10px * 9));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1798,8 +1592,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1814,8 +1606,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1830,8 +1620,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1846,8 +1634,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1862,8 +1648,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1878,8 +1662,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1894,8 +1676,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1910,8 +1690,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1926,8 +1704,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -8) - (10px * 8));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1942,8 +1718,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1958,8 +1732,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1974,8 +1746,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -1990,8 +1760,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2006,8 +1774,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2022,8 +1788,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2038,8 +1802,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2054,8 +1816,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2070,8 +1830,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2086,8 +1844,6 @@ span[class*="icon-off"]::after {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2156,8 +1912,6 @@ span[class*="icon-off"]::after {
 span[class*="icon-menu-"] {
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2197,8 +1951,6 @@ span[class*="icon-menu-"] {
 .icon-kr {
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2219,8 +1971,6 @@ span[class*="icon-menu-"] {
 .icon-eng {
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2242,8 +1992,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2258,8 +2006,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2274,8 +2020,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2290,8 +2034,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2306,8 +2048,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2322,8 +2062,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2338,8 +2076,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2354,8 +2090,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2370,8 +2104,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2386,8 +2118,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2402,8 +2132,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -2) - (10px * 2));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2418,8 +2146,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -3) - (10px * 3));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2434,8 +2160,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2450,8 +2174,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2466,8 +2188,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2482,8 +2202,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2498,8 +2216,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2514,8 +2230,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2530,8 +2244,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2546,8 +2258,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -1) - (10px * 1)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2562,8 +2272,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -4) - (10px * 4));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2578,8 +2286,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2594,8 +2300,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -6) - (10px * 6));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -2610,8 +2314,6 @@ span[class*="icon-menu-"] {
   background-position: calc((20px * -2) - (10px * 2)) calc((20px * -7) - (10px * 7));
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;

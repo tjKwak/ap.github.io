@@ -4,8 +4,8 @@
 @mixin icons {
   background-repeat: no-repeat;
   border: none;
-  display: inline-block;
-  vertical-align: middle;
+  //display: inline-block;
+  // vertical-align: middle;
   font-size: 0;
   width: 20px;
   height: 20px;
@@ -104,6 +104,7 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
 
 //아이콘 오프
 span[class*="icon-off"] {
+  position: relative;
   &::after {
     content: "";
     position: absolute;

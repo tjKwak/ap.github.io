@@ -13,6 +13,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../../../d_v1/css/base.css">
     <link rel="stylesheet" href="../static/css/main.78c4a366.chunk.css">
     <link rel="stylesheet" href="../static/css/7.ff67f704.chunk.css">
     <link rel="stylesheet" href="../static/css/13.db0b29ae.chunk.css">
@@ -23,11 +24,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
+    <script src="jquery.slim.min.js"></script>
 
-    <!-- javascript -->
+    <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/form.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+
+    <!-- 폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -47,8 +55,7 @@
                 <div class="app-header__content">
                     <div class="app-header-left">
                         <span class="menu-sub">Commons</span>
-                        <span class="icon-next icon-small"></span
-                            ><span class="menu-main">card</span>
+                        <span class="icon-next icon-small"></span><span class="menu-main">card</span>
                     </div>
                     <div class="app-header-right gap-3">
                         <div class="theme-box header-app">
@@ -60,11 +67,16 @@
                                     <span class="icon-down"></span>
                                 </button>
                                 <ul class="select__options">
-                                    <li class="on theme-btn-1"><a href="#"><span class="figure-circle bg-gray"></span>light</a></li>
-                                    <li class=" theme-btn-2"><a href="#"><span class="figure-circle bg-dark"></span>dark</a></li>
-                                    <li class=" theme-btn-3"><a href="#"><span class="figure-circle bg-secondary"></span>navy</a></li>
-                                    <li class=" theme-btn-4"><a href="#"><span class="figure-circle bg-danger bg-light"></span>flower</a></li>
-                                    <li class=" theme-btn-5"><a href="#"><span class="figure-circle bg-success bg-light"></span>plant</a></li>
+                                    <li class="on theme-btn-1"><a href="#"><span
+                                                class="figure-circle bg-gray"></span>light</a></li>
+                                    <li class=" theme-btn-2"><a href="#"><span
+                                                class="figure-circle bg-dark"></span>dark</a></li>
+                                    <li class=" theme-btn-3"><a href="#"><span
+                                                class="figure-circle bg-secondary"></span>navy</a></li>
+                                    <li class=" theme-btn-4"><a href="#"><span
+                                                class="figure-circle bg-danger bg-light"></span>flower</a></li>
+                                    <li class=" theme-btn-5"><a href="#"><span
+                                                class="figure-circle bg-success bg-light"></span>plant</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -111,7 +123,8 @@
                                 <li class="metismenu-item"><a href="form__button.html">button</a></li>
                                 <li class="metismenu-item"><a href="form__input.html">input</a></li>
                                 <li class="metismenu-item"><a href="form__select.html">select</a></li>
-                                <li class="metismenu-item"><a href="form__ect.html">check, toggle, radio, nameplate</a></li>
+                                <li class="metismenu-item"><a href="form__ect.html">check, toggle, radio, nameplate</a>
+                                </li>
                                 <li class="metismenu-item"><a href="form__label.html">label</a></li>
                                 <li class="metismenu-item"><a href="form__table.html">table</a></li>
                             </ul>
@@ -148,11 +161,11 @@
                                 <li class="metismenu-item"><a href="page__login.html">login</a></li>
                                 <li class="metismenu-item"><a href="page__pw-forget.html">forget password</a></li>
                                 <li class="metismenu-item"><a href="page__register.html">register</a></li>
-                            </ul> 
+                            </ul>
                         </li>
                     </ul>
                     <div class="d-none">
-                        <a href="page_setting__summary.html" class="main__txt nav-btn__change-mode" >Setting</a>
+                        <a href="page_setting__summary.html" class="main__txt nav-btn__change-mode">Setting</a>
                     </div>
                 </div>
                 <!-- 본문 -->
@@ -184,17 +197,24 @@
                                         </div>
                                         <div class="tab-body1">
                                             <div class="card-body">
-                                                This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt molestiae aperiam magnam rerum, sint excepturi placeat at eos amet aut ipsa numquam hic magni non, quos praesentium, blanditiis dicta?
+                                                This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit. Quasi incidunt molestiae aperiam magnam rerum, sint excepturi
+                                                placeat at eos amet aut ipsa numquam hic magni non, quos praesentium,
+                                                blanditiis dicta?
                                             </div>
                                             <div class="card-body d-none">
-                                                This is tab test 2 - Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                This is tab test 2 - Lorem ipsum dolor sit, amet consectetur adipisicing
+                                                elit.
                                             </div>
                                             <div class="card-body d-none">
-                                                This is tab test 3 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quas nihil at quo et omnis harum necessitatibus placeat voluptas iusto voluptatibus!
+                                                This is tab test 3 - Lorem ipsum dolor, sit amet consectetur adipisicing
+                                                elit. Dolorem quas nihil at quo et omnis harum necessitatibus placeat
+                                                voluptas iusto voluptatibus!
                                             </div>
                                         </div>
                                         <div class="card-button">
-                                            <button class="pnt-btn btn-brand btn-icon"><span class="icon-check m-0"></span> 완료 </button>
+                                            <button class="pnt-btn btn-brand btn-icon"><span
+                                                    class="icon-check m-0"></span> 완료 </button>
                                         </div>
                                     </div>
                                 </div>
@@ -223,18 +243,25 @@
                                         </div>
                                         <div class="tab-body2">
                                             <div class="card-body">
-                                                This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt molestiae aperiam magnam rerum, sint excepturi placeat at eos amet aut ipsa numquam hic magni non, quos praesentium, blanditiis dicta?
+                                                This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit. Quasi incidunt molestiae aperiam magnam rerum, sint excepturi
+                                                placeat at eos amet aut ipsa numquam hic magni non, quos praesentium,
+                                                blanditiis dicta?
                                             </div>
                                             <div class="card-body d-none">
-                                                This is tab test 2 - Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                This is tab test 2 - Lorem ipsum dolor sit, amet consectetur adipisicing
+                                                elit.
                                             </div>
                                             <div class="card-body d-none">
-                                                This is tab test 3 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quas nihil at quo et omnis harum necessitatibus placeat voluptas iusto voluptatibus!
+                                                This is tab test 3 - Lorem ipsum dolor, sit amet consectetur adipisicing
+                                                elit. Dolorem quas nihil at quo et omnis harum necessitatibus placeat
+                                                voluptas iusto voluptatibus!
                                             </div>
                                         </div>
                                         <div class="card-button">
                                             <button class="pnt-btn btn-lightgray w-10">닫기</button>
-                                            <button class="pnt-btn btn-brand btn-icon btn-long"><span class="icon-check m-0"></span> 생성 완료 </button>
+                                            <button class="pnt-btn btn-brand btn-icon btn-long"><span
+                                                    class="icon-check m-0"></span> 생성 완료 </button>
                                         </div>
                                     </div>
                                 </div>
@@ -254,7 +281,8 @@
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit.
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +298,8 @@
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit.
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +317,8 @@
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            This is tab test 1 - Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit.
                                         </div>
                                     </div>
                                 </div>
@@ -311,7 +341,8 @@
                                             <div class="mb-3">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                                 In expedita quasi facilis et officia nobis architecto explicabo eum ad,
-                                                corporis quod, dolorum at sit repellendus commodi tempora ipsam, vel aliquam.
+                                                corporis quod, dolorum at sit repellendus commodi tempora ipsam, vel
+                                                aliquam.
                                             </div>
                                             <div class="pnt-label--group">
                                                 <div class="label-main">label</div>
@@ -349,7 +380,8 @@
                                             <div class="mb-3">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                                 In expedita quasi facilis et officia nobis architecto explicabo eum ad,
-                                                corporis quod, dolorum at sit repellendus commodi tempora ipsam, vel aliquam.
+                                                corporis quod, dolorum at sit repellendus commodi tempora ipsam, vel
+                                                aliquam.
                                             </div>
                                             <div class="pnt-label--group">
                                                 <div class="label-main">label</div>
@@ -407,10 +439,10 @@
         var tabs1 = document.querySelectorAll('.tab-list1 ul li')
         var tab_conts1 = document.querySelectorAll('.tab-body1 > div')
 
-        for(let i = 0; i<tabs1.length; i++){
-            tabs1[i].addEventListener('click', function(e){
+        for (let i = 0; i < tabs1.length; i++) {
+            tabs1[i].addEventListener('click', function (e) {
                 //리셋
-                for(let i=0; i<tabs1.length; i++){
+                for (let i = 0; i < tabs1.length; i++) {
                     tabs1[i].classList.remove('on');
                     tab_conts1[i].classList.add('d-none');
                 }
@@ -423,10 +455,10 @@
         var tabs2 = document.querySelectorAll('.tab-list2 ul li')
         var tab_conts2 = document.querySelectorAll('.tab-body2 > div')
 
-        for(let i = 0; i<tabs2.length; i++){
-            tabs2[i].addEventListener('click', function(e){
+        for (let i = 0; i < tabs2.length; i++) {
+            tabs2[i].addEventListener('click', function (e) {
                 //리셋
-                for(let i=0; i<tabs2.length; i++){
+                for (let i = 0; i < tabs2.length; i++) {
                     tabs2[i].classList.remove('on');
                     tab_conts2[i].classList.add('d-none');
                 }
@@ -435,7 +467,6 @@
                 tab_conts2[i].classList.remove('d-none');
             })
         }
-
     </script>
 </body>
 
