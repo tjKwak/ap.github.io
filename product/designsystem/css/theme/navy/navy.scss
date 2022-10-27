@@ -2,7 +2,7 @@
 /* Css link*/
 @import "../default/_colors";
 @import "../default/_default";
-@import "../../tools";
+@import "../../variables";
 
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
@@ -116,7 +116,7 @@ $header-hamburger-btn: invert(1);
 //웹 - 사이드바
 $menu-body-bg: #353653;
 $menu-active-bg: #6054aa;
-$menu-line-color: orange;
+$menu-line-color: #6054aa;
 $menu-icon-filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
   brightness(105%) contrast(103%);
 $menu-down-icon-filter: opacity(1) invert(1);

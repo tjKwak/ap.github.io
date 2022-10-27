@@ -38,6 +38,7 @@
   color: black !important;
 }
 
+
 .bg-brand {
   background-color: $default-brand;
   &.bg-light {
@@ -91,8 +92,10 @@
   &.bg-light {
     background-color: $gray-700;
   }
-}
+  & .bg-light{
 
+  }
+}
 //////////////////////////////////////////////////////
 /* 3. 자주 쓰는 문법  */
 

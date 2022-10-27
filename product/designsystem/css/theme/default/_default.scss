@@ -1,7 +1,6 @@
 //////////////////////////////
 /* Css link*/
-@import '_variables';
-
+@import "_colors";
 
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
@@ -10,14 +9,14 @@
 // ---------------------------------------------------------
 
 //웹 - 공통txt
-$base-txt : white;
+$base-txt: white;
 
 //////////////////////////////
 //웹 - 바디
 //(그라디언트만 있습니다. solid로 바꾸고 싶으면, gradient 둘다에 동일색을 넣으세요.)
 $whole-body-gradient-start: white;
 $whole-body-gradient-end: white;
-$body-title-bg : white;
+$body-title-bg: white;
 
 //웹 - 헤더
 $header-bg: white;
@@ -26,20 +25,20 @@ $header-menu-box: white;
 $header-menu-text1: white;
 $header-menu-text2: white;
 $header-menu-icon-next: none;
-$header-hamburger-btn : none;
+$header-hamburger-btn: none;
 
 //웹 - 사이드바
 $menu-body-bg: white;
 $menu-active-bg: white;
 $menu-line-color: white;
-$menu-icon-filter : none;
-$menu-down-icon-filter : none;
-$menu-main-txt : white;
-$menu-sub-txt : white;
-$menu-active-txt : white;
+$menu-icon-filter: none;
+$menu-down-icon-filter: none;
+$menu-main-txt: white;
+$menu-sub-txt: white;
+$menu-active-txt: white;
 //(옵션: 배경 이미지 있을시에만 수정)
-$menu-bg-overlay1 : white;
-$menu-bg-overlay2 : white;
+$menu-bg-overlay1: white;
+$menu-bg-overlay2: white;
 
 //웹 - 푸터
 $footer-bg: white;
@@ -54,50 +53,49 @@ $card-header-bg: white;
 $card-tab: white;
 $card-tab-li: white;
 $card-tab-li-active: white;
-$card-tab-txt : white;
-$card-tab-li-txt : white;
-$card-tab-2 : white;
-$card-button-body : white;
+$card-tab-txt: white;
+$card-tab-li-txt: white;
+$card-tab-2: white;
+$card-button-body: white;
 
 //테이블
 $table-border: white;
 $table-inner-border: white;
 $table-2row-bg: white;
 $table-thead-bg: white;
-$table-tbody-bg:white;
+$table-tbody-bg: white;
 $table-hover-bg: white;
-$table-clicked-bg :white;
-$table-clicked-txt : white;
+$table-clicked-bg: white;
+$table-clicked-txt: white;
 $table-th-txt: white;
 $table-td-txt: white;
 
 //라디오
-$radio-checked-bg : white;
+$radio-checked-bg: white;
 
 //토글
-$toggle-bg : white;
-$toggle-bar-bg : white;
+$toggle-bg: white;
+$toggle-bar-bg: white;
 
 //네임플레이트
-$nameplate-bg : white;
-$nameplate-txt : white;
+$nameplate-bg: white;
+$nameplate-txt: white;
 
 //스크롤바
-$scrollbar-bg : white;
-$scrollbar-track-bg :white;
+$scrollbar-bg: white;
+$scrollbar-track-bg: white;
 
 //form 기본
 $form-bg: white;
-$form-border : white;
+$form-border: white;
 $form-txt: white;
 $form-active-bg: white;
-$form-active-border : white;
-$form-active-txt : white;
-$form-selected-txt : white;
-$form-disable-bg : white;
-$form-disable-txt : white;
-$form-placeholder-txt : white;
-
+$form-active-border: white;
+$form-active-txt: white;
+$form-selected-txt: white;
+$form-disable-bg: white;
+$form-disable-txt: white;
+$form-placeholder-txt: white;
 
 // ---------------------------------------------------------
 // ---------------------------------------------------------
@@ -105,784 +103,1069 @@ $form-placeholder-txt : white;
 // ---------------------------------------------------------
 // ---------------------------------------------------------
 
-@mixin theme-default{
-    /////////////////////////////////////////////////////////
-    //공통 글자
+@mixin theme-default {
+  /////////////////////////////////////////////////////////
+  //공통 글자
+  color: $base-txt;
+  & input,
+  textarea,
+  select,
+  table,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  span,
+  div {
     color: $base-txt;
-    & input,textarea,select,table,h1,h2,h3,h4,h5,p,span,div{
-        color: $base-txt;
-    }
-    /////////////////////////////////////////////////////////
-    //헤더 영역
-    & .app-header__logo{
-        background-color: $header-logobox;
-        //for React
-        & .header__pane{	
-            .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {	
-                filter: $header-hamburger-btn;	
-            }	
-        }
-        //for Html
-        & button{ filter: $header-hamburger-btn; }
-    }
-    & .app-header__content{
-        background: $header-bg;
-        & .app-header-left {
-            background-color: $header-menu-box;
-            padding: .5rem 1rem;
-            border-radius: 100rem;
-            & .menu-main{ color: $header-menu-text1; }
-            & .icon-next{ filter: $header-menu-icon-next;}
-            & .menu-sub{ color: $header-menu-text2; }
-        }
-    }
-    /////////////////////////////////////////////////////////
-    //사이드바 영역
+  }
+  /////////////////////////////////////////////////////////
+  //헤더 영역
+  & .app-header__logo {
+    background-color: $header-logobox;
     //for React
-    & .app-sidebar{
-        background: $menu-body-bg;	
-        &.nav-box__img-bg::before{background : $menu-bg-overlay;}
-        & .metismenu-container{
-            //대시보드 목록 위의 경계선
-            & .metismenu-item:first-child{
-                & .visible > .metismenu-item:nth-last-of-type(2){
-                    & div{
-                        border-bottom: 1px solid $menu-line-color;
-                    }
-                }
-            }
-            & .metismenu-item{
-                //대 메뉴 부분
-                //메뉴 아이콘
-                & .metismenu-icon{	
-                    filter: $menu-icon-filter;	
-                    top: 67%;	
-                    left: 13px;	
-                }	
-                & .metismenu-state-icon{	
-                    color : $menu-sub-txt;	
-                }
-                //대메뉴 타이틀
-                & > .metismenu-link, .last-custom-dashboard-link{
-                    & span{
-                        color: $menu-main-txt;
-                        filter: none;
-                    }
-                    //편집버튼
-                    & button {	
-                        border-color: $brand !important;	
-                        color: $brand;	
-                        &:hover{	
-                            opacity: .7;	
-                            background-color: transparent;	
-                        }	
-                    }
-                    &:hover{
-                        background: $menu-active-bg;
-                    }
-                }
-                //하위메뉴 부분
-                & > .metismenu-container {
-                    &::before {
-                        background-color: $menu-line-color;
-                    }
-
-                    & li {
-                        & a > span {
-                            color: $menu-sub-txt;
-                        }
-                        & svg > path {
-                            color: $brand;
-                        }
-                    }
-
-                    //클릭 또는 호버부분
-                    & li.on, li:hover, li > a.active, li > a:hover, .last-custom-dashboard-link:hover, .last-custom-dashboard-link.active{
-                        background-color: $menu-active-bg;
-                        border-radius: 0.25rem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
-                        & a {
-                            color: $menu-active-txt;
-                        }
-                    }
-                }
-            }
-        }
+    & .header__pane {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        filter: $header-hamburger-btn;
+      }
     }
     //for Html
-    & .app-sidebar{
-        background: $menu-body-bg;
-        &.nav-box__img-bg::before{background : $menu-bg-overlay;}
-        & .metismenu{
-            //대 메뉴 부분
-            & .metismenu-link{
-                //메뉴 아이콘
-                & div{
-                    filter: $menu-icon-filter;
-                }
-                //대메뉴 타이틀
-                & .main__txt{
-                    color: $menu-main-txt;
-                }
-                //접기버튼
-                & span{
-                    filter: $menu-down-icon-filter;
-                }
-            }
-            //하위메뉴 부분
-            & .metismenu-container{
-                &::before{
-                    background-color: $menu-line-color;
-                }
-                & .metismenu-item{
-                    & a{ color: $menu-sub-txt; }
-                    //클릭 또는 호버부분
-                    &.on, &:hover{
-                        background-color: $menu-active-bg;
-                        & a{ color: $menu-active-txt; }
-                    }
-                }
-            }
-        }
+    & button {
+      filter: $header-hamburger-btn;
     }
-    /////////////////////////////////////////////////////////
-    //바디 영역
-    & .app-main__inner{
-        background: linear-gradient($whole-body-gradient-start, $whole-body-gradient-end);
+  }
+  & .app-header__content {
+    background: $header-bg;
+    & .app-header-left {
+      background-color: $header-menu-box;
+      padding: 0.5rem 1rem;
+      border-radius: 100rem;
+      & .menu-main {
+        color: $header-menu-text1;
+      }
+      & .icon-next {
+        filter: $header-menu-icon-next;
+      }
+      & .menu-sub {
+        color: $header-menu-text2;
+      }
     }
-    & .app-page-title{
-        background: $body-title-bg;
+  }
+  /////////////////////////////////////////////////////////
+  //사이드바 영역
+  //for React
+  & .app-sidebar {
+    background: $menu-body-bg;
+    &.nav-box__img-bg::before {
+      background: $menu-bg-overlay;
     }
-    & .app-footer{
-        background-color: $footer-bg;
-        color: $footer-txt;
-    }
-    //카드
-    & .card{
-        background-color: $card-body-bg;
-        & .card-header{
-            background-color: $card-header-bg;
-            border-bottom: 1px solid $form-border;
+    & .metismenu-container {
+      //대시보드 목록 위의 경계선
+      & .metismenu-item:first-child {
+        & .visible > .metismenu-item:nth-last-of-type(2) {
+          & div {
+            border-bottom: 1px solid $menu-line-color;
+          }
         }
-        & .card-tab{
-            background-color: $card-tab;
-            & li{
-                background-color: $card-tab-li;
-                & a{
-                color: $card-tab-li-txt;
-                }
-                &.on{
-                background-color: $card-tab-li-active;
-                & a{ color: $card-tab-txt; }
-                }
-            }
+      }
+      & .metismenu-item {
+        //대 메뉴 부분
+        //메뉴 아이콘
+        & .metismenu-icon {
+          filter: $menu-icon-filter;
+          top: 67%;
+          left: 13px;
         }
-        & .card-header__tab{
-            & li a{
-                color: $form-txt;
-                &::after{ background-color: $card-tab-2; }
-            }
-            & li.on a{ color: $card-tab-2; }
+        & .metismenu-state-icon {
+          color: $menu-sub-txt;
         }
-        & .card-button{
-            border-top: 1px solid $form-border;
-            background-color: $card-button-body;
-        }
-    } 
-    
-    //모달
-    & .pnt-modal{
-        & .modal-header{
-            background-color: $card-header-bg;
-            border-bottom: 1px solid $form-border !important;
-        }
-        & .modal-body{
-            background-color: $card-body-bg;
-        }
-        & .modal-footer{
-            background-color: $card-button-body;
-            border-top: 1px solid $form-border !important;
-        }
-    }
-
-    /////////////////////////////////////////////////////////
-    //리액트 영역
-    //react-datePicker		
-    & .pnt-datepicker-container{		
-        & .form-control:focus {		
-            outline: 0;		
-            box-shadow:0 0 0 1px $form-active-border;		
-        }		
-        & .react-datepicker__input-container input{		
-            background-color: $form-bg;		
-            border: 1px solid $form-border;		
-        }		
-        & .input-group-text {		
-            background-color: $table-thead-bg;	
-            border: 1px solid $form-border;	
-        }	
-        & .react-datepicker {	
-            border-radius : 0;	
-            border: 1px solid $form-border;	
-            *::-webkit-scrollbar-track {	
-                background-color: $table-thead-bg;	
-            }	
-            *::-webkit-scrollbar-thumb{	
-                background-color: $form-bg;	
-            }	
-            .react-datepicker__triangle{	
-                border-bottom-color: $form-bg;	
-                border-top-color: $form-bg;	
-                &::before{	
-                    border-bottom-color:  $form-border;	
-                    border-top-color: $form-border;	
-                }	
-            }	
-            & .react-datepicker__month-container {	
-                & .react-datepicker__header {	
-                    background-color: $table-thead-bg;	
-                    border-top-left-radius: 0;	
-                    border-top-right-radius: 0;	
-                    border-bottom: 1px solid $form-border ;	
-                    & .react-datepicker__day-names {	
-                        background-color: $form-bg;	
-                        border-top :  1px solid $form-border	
-                    }	
-                }	
-                & .react-datepicker__day {	
-                    &:hover, &:focus, &:active {	
-                        background-color: $table-hover-bg;	
-                    }	
-                }	
-                background-color: $form-bg;	
-            }	
-            & .react-datepicker__time-container {	
-                border-left: 1px solid $form-border ;	
-                & .react-datepicker__header {	
-                    background-color: $table-thead-bg;	
-                    border-top-left-radius: 0;	
-                    border-top-right-radius: 0;	
-                    border-bottom: 1px solid $form-border ;	
-                }	
-                & .react-datepicker__time {	
-                    & .react-datepicker__time-list-item {	
-                        &:hover, &:focus, &:active {	
-                            background-color: $table-hover-bg;	
-                        }	
-                    }	
-                    background-color: $form-bg;	
-                }	
-                background-color: $form-bg;	
-            }	
-            & .react-datepicker__input-time-container {	
-                & .react-datepicker-time__input{	
-                    border-left: 1px solid $form-border;	
-                    & .react-datepicker__header{	
-                        border-top-left-radius: 0;	
-                        border-top-right-radius: 0;	
-                        background-color: $table-thead-bg;	
-                        border-bottom: 1px solid $form-border ;	
-                    }	
-                    & .time-label-box {	
-                        border-bottom: 1px solid $form-border ;	
-                        div:last-child {	
-                            border-left: 1px solid $form-border;	
-                        }	
-                    }	
-                    & .list-wrap button{	
-                        color : $base-txt;	
-                        background-color: $form-bg;	
-                        }	
-                    }	
-                & .time-label-box{	
-                    background-color: $form-bg;	
-                }	
-                background-color: $form-bg;	
-            }	
-        }	
-    }	
-    //기본 리액트 셀렉트 컴포넌트	
-    & .react-select{	
-        &:hover{	
-            -webkit-filter: brightness(0.98);	
-            filter: brightness(0.98);	
-            -webkit-transition: all 0.2s;	
-            transition: all 0.2s;	
-        }	
-        & .react-select__control{	
-            cursor: pointer;	
-            background-color: $form-bg;	
-            border: 1px solid $form-border;	
-            box-shadow: none;	
-        }	
-        & .react-select__control--menu-is-open{	
-            box-shadow: 0 0 0 1px $form-active-border;	
-        }	
-        & .react-select__multi-value{	
-            & .react-select__multi-value__remove{	
-                &:hover, &:focus, &:active {	
-                    background-color: $table-hover-bg;	
-                }	
-            }	
-            background-color: $table-thead-bg;	
-        }	
-        & .react-select__indicator-separator{	
-            display: none;	
-        }	
-        & .select-dropdown-svg{	
-            color: $form-bg;	
-        }	
-        & .react-select__indicator{	
-            opacity: .5;	
-            & svg{	
-                height: 16px;	
-                width: 18px;	
-            }	
-        }	
-        & .react-select__placeholder{	
-            font-size: 0.8rem;	
-        }	
-    }	
-    //option 클래스	
-    & .react-select__menu{	
-        & .react-select__menu-list{	
-            padding: 0;	
-            border-radius: 5px;	
-            & .react-select__option {	
-                cursor: pointer;	
-                font-size: 0.8rem;	
-                color: $form-txt;	
-                border-bottom: 1px solid $table-thead-bg;	
-                background-color:$form-bg;	
-                &:hover, &:focus, &:active {	
-                    background-color: $table-hover-bg;	
-                }	
-                &:last-child{	
-                    border-bottom: none;	
-                }	
-            }	
-        }	
-        background-color: $form-bg;	
-    }	
-    //리액트 셀렉트(커스텀 컴포넌트)	
-    & .select-dropdown{	
-        & .styled-option{	
-            &:hover, &:focus, &:active{	
-                background-color: $table-hover-bg;	
-            }	
-        }	
-        & .select-control{	
-            background-color: $form-bg;	
-            box-shadow: none;	
-            &:hover, &:focus, &:active{	
-                box-shadow: none;	
-                border: 1px solid $form-active-border;	
-            }	
-        }	
-        & .select-container{	
-            background-color: $form-bg ;	
-            border: 1px solid $form-border;	
-            box-shadow: none;	
-            &.container-open{	
-                box-shadow: 0 0 0 1px $form-active-border;	
-            }	
-            &:hover{	
-                -webkit-filter: brightness(0.98);	
-                filter: brightness(0.98);	
-                -webkit-transition: all 0.2s;	
-                transition: all 0.2s;	
-            }	
-        }	
-        & .select-menu{	
-            background-color: $form-bg ;	
-        }	
-        & .select-option{	
-            >div{	
-                &:hover, &:focus, &:active{	
-                    background-color: $table-hover-bg;	
-                }	
-                background-color: $form-bg;	
-                & .select-label{	
-                    color: $base-txt;	
-                }	
-            }	
-        }	
-        & .select-group-title{	
-            border-bottom: 1px solid $base-txt;	
-            padding: 4px 8px;	
-            font-weight: bold;	
-        }	
-        & .rct-icon{	
-            color: $base-txt;	
-        }	
-        & .tree-wrapper{	
-            border: 1px solid $base-txt;	
-            padding: 5px;	
-        }	
-        & .select-dropdown-svg{	
-            opacity: .5;	
-        }	
-    }
-
-    /////////////////////////////////////////////////////////
-    //기본 폼
-    //1. 버튼
-    & .pnt-btn{
-        &.btn-brand{ background-color: $brand; }
-        &.btn-secondary{ background-color: $secondary; }
-        &.btn-success{ background-color: $success; }
-        &.btn-warning{ background-color: $warning; }
-        &.btn-danger{ background-color: $danger; }
-        &.btn-info{ background-color: $info;}
-        &.btn-lightgray{ background-color: $light-gray; }
-        &.btn-gray{ background-color: $gray; }
-        &.btn-darkgray{ background-color: $dark-gray; }
-        &.btn-disable{ background-color: $light-gray-l; }
-    }
-    //2. 인풋
-    & .pnt-input--group{
-        & input{
-            background-color: $form-bg;
-            border: 1px solid $form-border;
-            &::placeholder{ color : $form-placeholder-txt;}
-        }
-        input:focus, input:active, input:focus-visible {
-            border: 1px solid $form-active-border; 
-        }
-        &.input-error{
-            & p,b,span,div{ color: $danger;}
-            & .pnt-input{ border: 1px solid $default-danger;}
-        }
-        &.form-must{
-            & p,b,span,div{color: $danger;}
-            & input{ border: 1px solid $brand;}
-        }
-        &.input-disable{
-            & .pnt-input{ background-color: $form-disable-bg;}
-            &::placeholder{color: $form-disable-txt;}
-        }
-    }
-    & .pnt-file--group input[type="file"]{
-        &::before{ background-color: $card-body-bg; }
-        &::after{ border: 1px solid $gray-500; }
-    }
-    //3. 셀렉트
-    & .pnt-select--group{
-        & .select__btn{
-            color: $form-txt;
-            background-color: $form-bg;
-            border: 1px solid $form-border;
-        }
-        & .select__options{
-            background-color: $form-bg;
-            border: 1px solid $form-border;
-            & li{
-                & a{
-                    border-top: 1px solid $form-border;
-                    color: $form-txt;
-                }
-                &:hover a{
-                    background-color: $table-hover-bg;
-                }
-                &.on a{
-                    background-color: $form-active-bg;
-                    color: $form-selected-txt;
-                }
-            }
-        }
-        &.on{
-            & .select__btn{ border: 1px solid $form-active-border; }
-            & .select__options li.on{
-                background-color: $form-active-bg;
-                & a{ color: $form-active-txt;}
-            }
-        }
-        &.form-must{
-            & span{color: $danger;}
-            & .select__btn{
-                border: 1px solid $brand;
-            }
-        }
-    }
-    //4. 체크박스
-    .pnt-checkbox{
-        & p{ color: $form-txt; }
-        & .checkbox-effect{
-            border: 1px solid $form-border;
-            background-color: $form-bg;
-            &::before,&::after{
-                background: white;
-            }
-        }
-        &.check-checked{
-            & .checkbox-effect{ background-color: $form-active-bg; }
-            & p{ color: $form-selected-txt; }
-        }
-    }
-    //5. 토글
-    .pnt-toggle{
-        & input:checked + .slider{
-            background-color: $success;
-        }
-        & .slider{
-            background-color: $toggle-bg;
-            &::before{
-                background-color: $toggle-bar-bg;
-            }
-        }
-        &.toggle-txt p{
-            &:nth-of-type(1){
-                color: $form-txt;
-            }
-            &:nth-of-type(2){
-                color: $form-active-txt;
-            }
-        }
-        &.toggle-icon div{
-            filter: invert(1);
-        }
-    }
-    //6. 라디오
-    & .pnt-radio{
-        & li{
-            border: 1px solid $form-border;
-            background-color: transparent;
-            & label{ color : $form-txt; }
-            &.checked{
-                background-color: $radio-checked-bg;
-                & label{ color: $form-selected-txt; }
-            }
-        }
-    }
-    //7. 네임플레이트
-    & .pnt-nameplate{
-        background-color: $nameplate-bg;
-        color: $nameplate-txt;
-        &::before{ background-color: $card-body-bg; }
-    }
-    //8. 텍스트
-    & .pnt-txt{
-        color: $form-txt;
-    }
-    //9. 보더
-    & .pnt-border{
-        background-color: $form-border;
-    }
-    //10. 라벨
-    & .pnt-label--group{
-        & .label-main{
-        &.label-dot::before{ background-color: $brand;}
-        &.label-must{ color: $brand; }
-        }
-    }
-    // 11_1. 페이지네이션
-    & .pagination{
-        & .now{ color: $brand; }
-        & .whole{ color: $form-txt; }
-    }
-    // 11_2. 테이블
-    & .pnt-table{
-        & .border-box {
-            border-top: 1.4px solid $table-border;
-            border-bottom: 1.4px solid $table-border;
-            & .th{
-                background-color: $table-thead-bg;
-                border-right: 1px solid $table-inner-border;
-                color: $table-th-txt;
-            }
-            & .tbody{
-                background-color: $table-tbody-bg;
-                & .tr{
-                    &:nth-child(2n) { background-color: $table-2row-bg; }
-                    & .td{
-                        color: $table-td-txt;
-                        border-bottom: 1px solid $table-inner-border;
-                        border-right: 1px solid $table-inner-border;
-                    }
-                }
-            }
-        }
-        &.table-clickable .border-box .tr{
+        //대메뉴 타이틀
+        & > .metismenu-link,
+        .last-custom-dashboard-link {
+          & span {
+            color: $menu-main-txt;
+            filter: none;
+          }
+          //편집버튼
+          & button {
+            border-color: $brand !important;
+            color: $brand;
             &:hover {
-                background-color: $table-hover-bg !important;
+              opacity: 0.7;
+              background-color: transparent;
             }
-            &.active{
-                background-color: $table-clicked-bg !important;
-                & .td{ color: $table-clicked-txt; }
+          }
+          &:hover {
+            background: $menu-active-bg;
+          }
+        }
+        //하위메뉴 부분
+        & > .metismenu-container {
+          &::before {
+            background-color: $menu-line-color;
+          }
+
+          & li {
+            & a > span {
+              color: $menu-sub-txt;
             }
-        }
-    }
-
-    //form 공통
-    & .form-disable{
-        //버튼
-        &.pnt-btn{
-            background-color: $form-disable-bg;
-            box-shadow: 0 0 0 1px $form-border inset;
-            color: $form-disable-txt;
-        }
-        //인풋
-        &.pnt-input--group .pnt-input{
-            background-color: $form-disable-bg;
-            color: $form-disable-txt;
-        }
-        //셀렉트
-        &.pnt-select--group{
-            & .select__btn{
-                background-color: $form-disable-bg;
-                & .cont-wrap{
-                    color: $form-disable-txt;
-                }
+            & svg > path {
+              color: $brand;
             }
+          }
+
+          //클릭 또는 호버부분
+          & li.on,
+          li:hover,
+          li > a.active,
+          li > a:hover,
+          .last-custom-dashboard-link:hover,
+          .last-custom-dashboard-link.active {
+            background-color: $menu-active-bg;
+            border-radius: 0.25rem;
+            & a {
+              color: $menu-active-txt;
+            }
+          }
         }
-        //체크박스
-        &.pnt-checkbox .checkbox-effect{ background-color: $form-disable-bg; }
+      }
     }
+  }
+  //for Html
+  & .app-sidebar {
+    background: $menu-body-bg;
+    &.nav-box__img-bg::before {
+      background: $menu-bg-overlay;
+    }
+    & .metismenu {
+      //대 메뉴 부분
+      & .metismenu-link {
+        //메뉴 아이콘
+        & div {
+          filter: $menu-icon-filter;
+        }
+        //대메뉴 타이틀
+        & .main__txt {
+          color: $menu-main-txt;
+        }
+        //접기버튼
+        & span {
+          filter: $menu-down-icon-filter;
+        }
+      }
+      //하위메뉴 부분
+      & .metismenu-container {
+        &::before {
+          background-color: $menu-line-color;
+        }
+        & .metismenu-item {
+          & a {
+            color: $menu-sub-txt;
+          }
+          //클릭 또는 호버부분
+          &.on,
+          &:hover {
+            background-color: $menu-active-bg;
+            & a {
+              color: $menu-active-txt;
+            }
+          }
+        }
+      }
+    }
+  }
+  /////////////////////////////////////////////////////////
+  //바디 영역
+  & .app-main__inner {
+    background: linear-gradient(
+      $whole-body-gradient-start,
+      $whole-body-gradient-end
+    );
+  }
+  & .app-page-title {
+    background: $body-title-bg;
+  }
+  & .app-footer {
+    background-color: $footer-bg;
+    color: $footer-txt;
+  }
+  //카드
+  & .card {
+    background-color: $card-body-bg;
+    & .card-header {
+      background-color: $card-header-bg;
+      border-bottom: 1px solid $form-border;
+    }
+    & .card-tab {
+      background-color: $card-tab;
+      & li {
+        background-color: $card-tab-li;
+        & a {
+          color: $card-tab-li-txt;
+        }
+        &.on {
+          background-color: $card-tab-li-active;
+          & a {
+            color: $card-tab-txt;
+          }
+        }
+      }
+    }
+    & .card-header__tab {
+      & li a {
+        color: $form-txt;
+        &::after {
+          background-color: $card-tab-2;
+        }
+      }
+      & li.on a {
+        color: $card-tab-2;
+      }
+    }
+    & .card-button {
+      border-top: 1px solid $form-border;
+      background-color: $card-button-body;
+    }
+  }
 
-    ///////////////
-    //스크롤바
-    *::-webkit-scrollbar-thumb {
-        background-color: $scrollbar-bg;
+  //모달
+  & .pnt-modal {
+    & .modal-header {
+      background-color: $card-header-bg;
+      border-bottom: 1px solid $form-border !important;
     }
-    *::-webkit-scrollbar-track {
-        background-color: $scrollbar-track-bg;
+    & .modal-body {
+      background-color: $card-body-bg;
     }
+    & .modal-footer {
+      background-color: $card-button-body;
+      border-top: 1px solid $form-border !important;
+    }
+  }
 
-    ///////////////////////////
-    //컬러들
-    .color-brand{
-        color: $brand !important;
+  /////////////////////////////////////////////////////////
+  //리액트 영역
+  //react-datePicker
+  & .pnt-datepicker-container {
+    & .form-control:focus {
+      outline: 0;
+      box-shadow: 0 0 0 1px $form-active-border;
     }
-    .color-secondary{
-        color: $secondary !important;
+    & .react-datepicker__input-container input {
+      background-color: $form-bg;
+      border: 1px solid $form-border;
     }
-    .color-success{
-        color: $success !important;
+    & .input-group-text {
+      background-color: $table-thead-bg;
+      border: 1px solid $form-border;
     }
-    .color-info{
-        color: $info !important;
+    & .react-datepicker {
+      border-radius: 0;
+      border: 1px solid $form-border;
+      *::-webkit-scrollbar-track {
+        background-color: $table-thead-bg;
+      }
+      *::-webkit-scrollbar-thumb {
+        background-color: $form-bg;
+      }
+      .react-datepicker__triangle {
+        border-bottom-color: $form-bg;
+        border-top-color: $form-bg;
+        &::before {
+          border-bottom-color: $form-border;
+          border-top-color: $form-border;
+        }
+      }
+      & .react-datepicker__month-container {
+        & .react-datepicker__header {
+          background-color: $table-thead-bg;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom: 1px solid $form-border;
+          & .react-datepicker__day-names {
+            background-color: $form-bg;
+            border-top: 1px solid $form-border;
+          }
+        }
+        & .react-datepicker__day {
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: $table-hover-bg;
+          }
+        }
+        background-color: $form-bg;
+      }
+      & .react-datepicker__time-container {
+        border-left: 1px solid $form-border;
+        & .react-datepicker__header {
+          background-color: $table-thead-bg;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom: 1px solid $form-border;
+        }
+        & .react-datepicker__time {
+          & .react-datepicker__time-list-item {
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: $table-hover-bg;
+            }
+          }
+          background-color: $form-bg;
+        }
+        background-color: $form-bg;
+      }
+      & .react-datepicker__input-time-container {
+        & .react-datepicker-time__input {
+          border-left: 1px solid $form-border;
+          & .react-datepicker__header {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            background-color: $table-thead-bg;
+            border-bottom: 1px solid $form-border;
+          }
+          & .time-label-box {
+            border-bottom: 1px solid $form-border;
+            div:last-child {
+              border-left: 1px solid $form-border;
+            }
+          }
+          & .list-wrap button {
+            color: $base-txt;
+            background-color: $form-bg;
+          }
+        }
+        & .time-label-box {
+          background-color: $form-bg;
+        }
+        background-color: $form-bg;
+      }
     }
-    .color-warning{
-        color: $warning !important;
+  }
+  //기본 리액트 셀렉트 컴포넌트
+  & .react-select {
+    &:hover {
+      -webkit-filter: brightness(0.98);
+      filter: brightness(0.98);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
     }
-    .color-danger{
-        color: $danger !important;
+    & .react-select__control {
+      cursor: pointer;
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+      box-shadow: none;
     }
-    .color-lightgray{
-        color: $light-gray !important;
+    & .react-select__control--menu-is-open {
+      box-shadow: 0 0 0 1px $form-active-border;
     }
-    .color-gray{
-        color: $gray !important;
+    & .react-select__multi-value {
+      & .react-select__multi-value__remove {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $table-hover-bg;
+        }
+      }
+      background-color: $table-thead-bg;
     }
-    .color-darkgray{
-        color: $dark-gray !important;
+    & .react-select__indicator-separator {
+      display: none;
     }
-    .color-white{
-        color: white !important;
+    & .select-dropdown-svg {
+      color: $form-bg;
     }
-    .color-black{
-        color: black !important;
+    & .react-select__indicator {
+      opacity: 0.5;
+      & svg {
+        height: 16px;
+        width: 18px;
+      }
     }
+    & .react-select__placeholder {
+      font-size: 0.8rem;
+    }
+  }
+  //option 클래스
+  & .react-select__menu {
+    & .react-select__menu-list {
+      padding: 0;
+      border-radius: 5px;
+      & .react-select__option {
+        cursor: pointer;
+        font-size: 0.8rem;
+        color: $form-txt;
+        border-bottom: 1px solid $table-thead-bg;
+        background-color: $form-bg;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $table-hover-bg;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    background-color: $form-bg;
+  }
+  //리액트 셀렉트(커스텀 컴포넌트)
+  & .select-dropdown {
+    & .styled-option {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $table-hover-bg;
+      }
+    }
+    & .select-control {
+      background-color: $form-bg;
+      box-shadow: none;
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+        border: 1px solid $form-active-border;
+      }
+    }
+    & .select-container {
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+      box-shadow: none;
+      &.container-open {
+        box-shadow: 0 0 0 1px $form-active-border;
+      }
+      &:hover {
+        -webkit-filter: brightness(0.98);
+        filter: brightness(0.98);
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+      }
+    }
+    & .select-menu {
+      background-color: $form-bg;
+    }
+    & .select-option {
+      > div {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $table-hover-bg;
+        }
+        background-color: $form-bg;
+        & .select-label {
+          color: $base-txt;
+        }
+      }
+    }
+    & .select-group-title {
+      border-bottom: 1px solid $base-txt;
+      padding: 4px 8px;
+      font-weight: bold;
+    }
+    & .rct-icon {
+      color: $base-txt;
+    }
+    & .tree-wrapper {
+      border: 1px solid $base-txt;
+      padding: 5px;
+    }
+    & .select-dropdown-svg {
+      opacity: 0.5;
+    }
+  }
 
-    .bg-brand{
-        background-color: $brand !important;
-        &.bg-light{ background-color: $brand-l3 !important; }
-        &.bg-dark{ background-color: $brand-d3 !important; }
-        &.bg-d-4{ background-color: $brand-d4 !important; }
-        &.bg-d-3{ background-color: $brand-d3 !important; }
-        &.bg-d-2{ background-color: $brand-d2 !important; }
-        &.bg-d-1{ background-color: $brand-d1 !important; }
-        &.bg-l-4{ background-color: $brand-l4 !important; }
-        &.bg-l-3{ background-color: $brand-l3 !important; }
-        &.bg-l-2{ background-color: $brand-l2 !important; }
-        &.bg-l-1{ background-color: $brand-l1 !important; }
+  /////////////////////////////////////////////////////////
+  //기본 폼
+  //1. 버튼
+  & .pnt-btn {
+    &.btn-brand {
+      background-color: $brand;
     }
-    .bg-secondary{
-        background-color: $secondary !important;
-        &.bg-light{ background-color: $secondary-l3 !important; }
-        &.bg-dark{ background-color: $secondary-d3 !important; }
-        &.bg-d-4{ background-color: $secondary-d4 !important; }
-        &.bg-d-3{ background-color: $secondary-d3 !important; }
-        &.bg-d-2{ background-color: $secondary-d2 !important; }
-        &.bg-d-1{ background-color: $secondary-d1 !important; }
-        &.bg-l-4{ background-color: $secondary-l4 !important; }
-        &.bg-l-3{ background-color: $secondary-l3 !important; }
-        &.bg-l-2{ background-color: $secondary-l2 !important; }
-        &.bg-l-1{ background-color: $secondary-l1 !important; }
+    &.btn-secondary {
+      background-color: $secondary;
     }
-    .bg-success{
-        background-color: $success !important;
-        &.bg-light{ background-color: $success-l3 !important; }
-        &.bg-dark{ background-color: $success-d3 !important; }
-        &.bg-d-4{ background-color: $success-d4 !important; }
-        &.bg-d-3{ background-color: $success-d3 !important; }
-        &.bg-d-2{ background-color: $success-d2 !important; }
-        &.bg-d-1{ background-color: $success-d1 !important; }
-        &.bg-l-4{ background-color: $success-l4 !important; }
-        &.bg-l-3{ background-color: $success-l3 !important; }
-        &.bg-l-2{ background-color: $success-l2 !important; }
-        &.bg-l-1{ background-color: $success-l1 !important; }
+    &.btn-success {
+      background-color: $success;
     }
-    .bg-info{
-        background-color: $info !important;
-        &.bg-light{ background-color: $info-l3 !important; }
-        &.bg-dark{ background-color: $info-d3 !important; }
-        &.bg-d-4{ background-color: $info-d4 !important; }
-        &.bg-d-3{ background-color: $info-d3 !important; }
-        &.bg-d-2{ background-color: $info-d2 !important; }
-        &.bg-d-1{ background-color: $info-d1 !important; }
-        &.bg-l-4{ background-color: $info-l4 !important; }
-        &.bg-l-3{ background-color: $info-l3 !important; }
-        &.bg-l-2{ background-color: $info-l2 !important; }
-        &.bg-l-1{ background-color: $info-l1 !important; }
+    &.btn-warning {
+      background-color: $warning;
     }
-    .bg-warning{
-        background-color: $warning !important;
-        &.bg-light{ background-color: $warning-l3 !important; }
-        &.bg-dark{ background-color: $warning-d3 !important; }
-        &.bg-d-4{ background-color: $warning-d4 !important; }
-        &.bg-d-3{ background-color: $warning-d3 !important; }
-        &.bg-d-2{ background-color: $warning-d2 !important; }
-        &.bg-d-1{ background-color: $warning-d1 !important; }
-        &.bg-l-4{ background-color: $warning-l4 !important; }
-        &.bg-l-3{ background-color: $warning-l3 !important; }
-        &.bg-l-2{ background-color: $warning-l2 !important; }
-        &.bg-l-1{ background-color: $warning-l1 !important; }
+    &.btn-danger {
+      background-color: $danger;
     }
-    .bg-danger{
-        background-color: $danger !important;
-        &.bg-light{ background-color: $danger-l3 !important; }
-        &.bg-dark{ background-color: $danger-d3 !important; }
-        &.bg-d-4{ background-color: $danger-d4 !important; }
-        &.bg-d-3{ background-color: $danger-d3 !important; }
-        &.bg-d-2{ background-color: $danger-d2 !important; }
-        &.bg-d-1{ background-color: $danger-d1 !important; }
-        &.bg-l-4{ background-color: $danger-l4 !important; }
-        &.bg-l-3{ background-color: $danger-l3 !important; }
-        &.bg-l-2{ background-color: $danger-l2 !important; }
-        &.bg-l-1{ background-color: $danger-l1 !important; }
+    &.btn-info {
+      background-color: $info;
     }
-    .bg-gray{
-        background-color: $gray !important;
-        &.bg-light{ background-color: $gray-l !important; }
-        &.bg-dark{ background-color: $gray-d !important; }
-        &.bg-d-4{ background-color: $gray-800 !important; }
-        &.bg-d-3{ background-color: $gray-700 !important; }
-        &.bg-d-2{ background-color: $gray-600 !important; }
-        &.bg-d-1{ background-color: $gray-500 !important; }
-        &.bg-l-4{ background-color: $gray-400 !important; }
-        &.bg-l-3{ background-color: $gray-300 !important; }
-        &.bg-l-2{ background-color: $gray-200 !important; }
-        &.bg-l-1{ background-color: $gray-100 !important; }
+    &.btn-lightgray {
+      background-color: $light-gray;
     }
-    .bg-lightgray{
-        background-color: $light-gray !important;
-        &.bg-light{ background-color: $light-gray-l !important; }
-        &.bg-dark{ background-color: $light-gray-d !important; }
+    &.btn-gray {
+      background-color: $gray;
     }
-    .bg-darkgray{
-        background-color: $dark-gray !important;
-        &.bg-light{ background-color: $dark-gray-l !important; }
-        &.bg-dark{ background-color: $dark-gray-d !important; }
+    &.btn-darkgray {
+      background-color: $dark-gray;
     }
+    &.btn-disable {
+      background-color: $light-gray-l;
+    }
+  }
+  //2. 인풋
+  & .pnt-input--group {
+    & input {
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+      &::placeholder {
+        color: $form-placeholder-txt;
+      }
+    }
+    input:focus,
+    input:active,
+    input:focus-visible {
+      border: 1px solid $form-active-border;
+    }
+    &.input-error {
+      & p,
+      b,
+      span,
+      div {
+        color: $danger;
+      }
+      & .pnt-input {
+        border: 1px solid $default-danger;
+      }
+    }
+    &.form-must {
+      & p,
+      b,
+      span,
+      div {
+        color: $danger;
+      }
+      & input {
+        border: 1px solid $brand;
+      }
+    }
+    &.input-disable {
+      & .pnt-input {
+        background-color: $form-disable-bg;
+      }
+      &::placeholder {
+        color: $form-disable-txt;
+      }
+    }
+  }
+  & .pnt-file--group input[type="file"] {
+    &::before {
+      background-color: $card-body-bg;
+    }
+    &::after {
+      border: 1px solid $gray-500;
+    }
+  }
+  //3. 셀렉트
+  & .pnt-select--group {
+    & .select__btn {
+      color: $form-txt;
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+    }
+    & .select__options {
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+      & li {
+        & a {
+          border-top: 1px solid $form-border;
+          color: $form-txt;
+        }
+        &:hover a {
+          background-color: $table-hover-bg;
+        }
+        &.on a {
+          background-color: $form-active-bg;
+          color: $form-selected-txt;
+        }
+      }
+    }
+    &.on {
+      & .select__btn {
+        border: 1px solid $form-active-border;
+      }
+      & .select__options li.on {
+        background-color: $form-active-bg;
+        & a {
+          color: $form-active-txt;
+        }
+      }
+    }
+    &.form-must {
+      & span {
+        color: $danger;
+      }
+      & .select__btn {
+        border: 1px solid $brand;
+      }
+    }
+  }
+  //4. 체크박스
+  .pnt-checkbox {
+    & p {
+      color: $form-txt;
+    }
+    & .checkbox-effect {
+      border: 1px solid $form-border;
+      background-color: $form-bg;
+      &::before,
+      &::after {
+        background: white;
+      }
+    }
+    &.check-checked {
+      & .checkbox-effect {
+        background-color: $form-active-bg;
+      }
+      & p {
+        color: $form-selected-txt;
+      }
+    }
+  }
+  //5. 토글
+  .pnt-toggle {
+    & input:checked + .slider {
+      background-color: $success;
+    }
+    & .slider {
+      background-color: $toggle-bg;
+      &::before {
+        background-color: $toggle-bar-bg;
+      }
+    }
+    &.toggle-txt p {
+      &:nth-of-type(1) {
+        color: $form-txt;
+      }
+      &:nth-of-type(2) {
+        color: $form-active-txt;
+      }
+    }
+    &.toggle-icon div {
+      filter: invert(1);
+    }
+  }
+  //6. 라디오
+  & .pnt-radio {
+    & li {
+      border: 1px solid $form-border;
+      background-color: transparent;
+      & label {
+        color: $form-txt;
+      }
+      &.checked {
+        background-color: $radio-checked-bg;
+        & label {
+          color: $form-selected-txt;
+        }
+      }
+    }
+  }
+  //7. 네임플레이트
+  & .pnt-nameplate {
+    background-color: $nameplate-bg;
+    color: $nameplate-txt;
+    &::before {
+      background-color: $card-body-bg;
+    }
+  }
+  //8. 텍스트
+  & .pnt-txt {
+    color: $form-txt;
+  }
+  //9. 보더
+  & .pnt-border {
+    background-color: $form-border;
+  }
+  //10. 라벨
+  & .pnt-label--group {
+    & .label-main {
+      &.label-dot::before {
+        background-color: $brand;
+      }
+      &.label-must {
+        color: $brand;
+      }
+    }
+  }
+  // 11_1. 페이지네이션
+  & .pagination {
+    & .now {
+      color: $brand;
+    }
+    & .whole {
+      color: $form-txt;
+    }
+  }
+  // 11_2. 테이블
+  & .pnt-table {
+    & .border-box {
+      border-top: 1.4px solid $table-border;
+      border-bottom: 1.4px solid $table-border;
+      & .th {
+        background-color: $table-thead-bg;
+        border-right: 1px solid $table-inner-border;
+        color: $table-th-txt;
+      }
+      & .tbody {
+        background-color: $table-tbody-bg;
+        & .tr {
+          &:nth-child(2n) {
+            background-color: $table-2row-bg;
+          }
+          & .td {
+            color: $table-td-txt;
+            border-bottom: 1px solid $table-inner-border;
+            border-right: 1px solid $table-inner-border;
+          }
+        }
+      }
+    }
+    &.table-clickable .border-box .tr {
+      &:hover {
+        background-color: $table-hover-bg !important;
+      }
+      &.active {
+        background-color: $table-clicked-bg !important;
+        & .td {
+          color: $table-clicked-txt;
+        }
+      }
+    }
+  }
+
+  //form 공통
+  & .form-disable {
+    //버튼
+    &.pnt-btn {
+      background-color: $form-disable-bg;
+      box-shadow: 0 0 0 1px $form-border inset;
+      color: $form-disable-txt;
+    }
+    //인풋
+    &.pnt-input--group .pnt-input {
+      background-color: $form-disable-bg;
+      color: $form-disable-txt;
+    }
+    //셀렉트
+    &.pnt-select--group {
+      & .select__btn {
+        background-color: $form-disable-bg;
+        & .cont-wrap {
+          color: $form-disable-txt;
+        }
+      }
+    }
+    //체크박스
+    &.pnt-checkbox .checkbox-effect {
+      background-color: $form-disable-bg;
+    }
+  }
+
+  ///////////////
+  //스크롤바
+  *::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-bg;
+  }
+  *::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-bg;
+  }
+
+  ///////////////////////////
+  //컬러들
+  .color-brand {
+    color: $brand !important;
+  }
+  .color-secondary {
+    color: $secondary !important;
+  }
+  .color-success {
+    color: $success !important;
+  }
+  .color-info {
+    color: $info !important;
+  }
+  .color-warning {
+    color: $warning !important;
+  }
+  .color-danger {
+    color: $danger !important;
+  }
+  .color-lightgray {
+    color: $light-gray !important;
+  }
+  .color-gray {
+    color: $gray !important;
+  }
+  .color-darkgray {
+    color: $dark-gray !important;
+  }
+  .color-white {
+    color: white !important;
+  }
+  .color-black {
+    color: black !important;
+  }
+
+  .bg-brand {
+    background-color: $brand !important;
+    &.bg-light {
+      background-color: $brand-l3 !important;
+    }
+    &.bg-dark {
+      background-color: $brand-d3 !important;
+    }
+    &.bg-d-4 {
+      background-color: $brand-d4 !important;
+    }
+    &.bg-d-3 {
+      background-color: $brand-d3 !important;
+    }
+    &.bg-d-2 {
+      background-color: $brand-d2 !important;
+    }
+    &.bg-d-1 {
+      background-color: $brand-d1 !important;
+    }
+    &.bg-l-4 {
+      background-color: $brand-l4 !important;
+    }
+    &.bg-l-3 {
+      background-color: $brand-l3 !important;
+    }
+    &.bg-l-2 {
+      background-color: $brand-l2 !important;
+    }
+    &.bg-l-1 {
+      background-color: $brand-l1 !important;
+    }
+  }
+  .bg-secondary {
+    background-color: $secondary !important;
+    &.bg-light {
+      background-color: $secondary-l3 !important;
+    }
+    &.bg-dark {
+      background-color: $secondary-d3 !important;
+    }
+    &.bg-d-4 {
+      background-color: $secondary-d4 !important;
+    }
+    &.bg-d-3 {
+      background-color: $secondary-d3 !important;
+    }
+    &.bg-d-2 {
+      background-color: $secondary-d2 !important;
+    }
+    &.bg-d-1 {
+      background-color: $secondary-d1 !important;
+    }
+    &.bg-l-4 {
+      background-color: $secondary-l4 !important;
+    }
+    &.bg-l-3 {
+      background-color: $secondary-l3 !important;
+    }
+    &.bg-l-2 {
+      background-color: $secondary-l2 !important;
+    }
+    &.bg-l-1 {
+      background-color: $secondary-l1 !important;
+    }
+  }
+  .bg-success {
+    background-color: $success !important;
+    &.bg-light {
+      background-color: $success-l3 !important;
+    }
+    &.bg-dark {
+      background-color: $success-d3 !important;
+    }
+    &.bg-d-4 {
+      background-color: $success-d4 !important;
+    }
+    &.bg-d-3 {
+      background-color: $success-d3 !important;
+    }
+    &.bg-d-2 {
+      background-color: $success-d2 !important;
+    }
+    &.bg-d-1 {
+      background-color: $success-d1 !important;
+    }
+    &.bg-l-4 {
+      background-color: $success-l4 !important;
+    }
+    &.bg-l-3 {
+      background-color: $success-l3 !important;
+    }
+    &.bg-l-2 {
+      background-color: $success-l2 !important;
+    }
+    &.bg-l-1 {
+      background-color: $success-l1 !important;
+    }
+  }
+  .bg-info {
+    background-color: $info !important;
+    &.bg-light {
+      background-color: $info-l3 !important;
+    }
+    &.bg-dark {
+      background-color: $info-d3 !important;
+    }
+    &.bg-d-4 {
+      background-color: $info-d4 !important;
+    }
+    &.bg-d-3 {
+      background-color: $info-d3 !important;
+    }
+    &.bg-d-2 {
+      background-color: $info-d2 !important;
+    }
+    &.bg-d-1 {
+      background-color: $info-d1 !important;
+    }
+    &.bg-l-4 {
+      background-color: $info-l4 !important;
+    }
+    &.bg-l-3 {
+      background-color: $info-l3 !important;
+    }
+    &.bg-l-2 {
+      background-color: $info-l2 !important;
+    }
+    &.bg-l-1 {
+      background-color: $info-l1 !important;
+    }
+  }
+  .bg-warning {
+    background-color: $warning !important;
+    &.bg-light {
+      background-color: $warning-l3 !important;
+    }
+    &.bg-dark {
+      background-color: $warning-d3 !important;
+    }
+    &.bg-d-4 {
+      background-color: $warning-d4 !important;
+    }
+    &.bg-d-3 {
+      background-color: $warning-d3 !important;
+    }
+    &.bg-d-2 {
+      background-color: $warning-d2 !important;
+    }
+    &.bg-d-1 {
+      background-color: $warning-d1 !important;
+    }
+    &.bg-l-4 {
+      background-color: $warning-l4 !important;
+    }
+    &.bg-l-3 {
+      background-color: $warning-l3 !important;
+    }
+    &.bg-l-2 {
+      background-color: $warning-l2 !important;
+    }
+    &.bg-l-1 {
+      background-color: $warning-l1 !important;
+    }
+  }
+  .bg-danger {
+    background-color: $danger !important;
+    &.bg-light {
+      background-color: $danger-l3 !important;
+    }
+    &.bg-dark {
+      background-color: $danger-d3 !important;
+    }
+    &.bg-d-4 {
+      background-color: $danger-d4 !important;
+    }
+    &.bg-d-3 {
+      background-color: $danger-d3 !important;
+    }
+    &.bg-d-2 {
+      background-color: $danger-d2 !important;
+    }
+    &.bg-d-1 {
+      background-color: $danger-d1 !important;
+    }
+    &.bg-l-4 {
+      background-color: $danger-l4 !important;
+    }
+    &.bg-l-3 {
+      background-color: $danger-l3 !important;
+    }
+    &.bg-l-2 {
+      background-color: $danger-l2 !important;
+    }
+    &.bg-l-1 {
+      background-color: $danger-l1 !important;
+    }
+  }
+  .bg-gray {
+    background-color: $gray !important;
+    &.bg-light {
+      background-color: $gray-l !important;
+    }
+    &.bg-dark {
+      background-color: $gray-d !important;
+    }
+    &.bg-d-4 {
+      background-color: $gray-800 !important;
+    }
+    &.bg-d-3 {
+      background-color: $gray-700 !important;
+    }
+    &.bg-d-2 {
+      background-color: $gray-600 !important;
+    }
+    &.bg-d-1 {
+      background-color: $gray-500 !important;
+    }
+    &.bg-l-4 {
+      background-color: $gray-400 !important;
+    }
+    &.bg-l-3 {
+      background-color: $gray-300 !important;
+    }
+    &.bg-l-2 {
+      background-color: $gray-200 !important;
+    }
+    &.bg-l-1 {
+      background-color: $gray-100 !important;
+    }
+  }
+  .bg-lightgray {
+    background-color: $light-gray !important;
+    &.bg-light {
+      background-color: $light-gray-l !important;
+    }
+    &.bg-dark {
+      background-color: $light-gray-d !important;
+    }
+  }
+  .bg-darkgray {
+    background-color: $dark-gray !important;
+    &.bg-light {
+      background-color: $dark-gray-l !important;
+    }
+    &.bg-dark {
+      background-color: $dark-gray-d !important;
+    }
+  }
 }
-

@@ -48,7 +48,7 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
 }
 @mixin icon-menu {
   @include icons();
-  background-size: calc((#{$icon} * 1) + (#{$icon-gap} * 0)); //가로 1줄
+  background-size: calc((#{$icon} * 2) + (#{$icon-gap} * 1)); //가로 1줄
   transform: scale(1.5) !important;
   background-image: url("../images/menu.svg");
 }
@@ -60,6 +60,7 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
   border-radius: 3px !important;
   background-size: 360px;
   background-image: url("../images/flag.JPG");
+  box-shadow: 0 0 0 1px rgb(222, 222, 222) inset;
 }
 @mixin icon-sns {
   @include icons();
@@ -215,15 +216,15 @@ span[class*="icon-off"] {
   @include bgp($p1, $p7);
   @include icon-direction();
 }
-.icon-back-arrow-circle {
+.icon-back-arrowCircle {
   @include bgp($p1, $p8);
   @include icon-direction();
 }
-.icon-next-arrow-circle {
+.icon-next-arrowCircle {
   @include bgp($p1, $p9);
   @include icon-direction();
 }
-.icon-up-arrow-circle {
+.icon-up-arrowCircle {
   @include bgp($p1, $p10);
   @include icon-direction();
 }
@@ -256,15 +257,15 @@ span[class*="icon-off"] {
   @include bgp($p2, $p7);
   @include icon-direction();
 }
-.icon-down-arrow-circle {
+.icon-down-arrowCircle {
   @include bgp($p2, $p8);
   @include icon-direction();
 }
-.icon-side-arrow-circle {
+.icon-side-arrowCircle {
   @include bgp($p2, $p9);
   @include icon-direction();
 }
-.icon-updown-arrow-circle {
+.icon-updown-arrowCircle {
   @include bgp($p2, $p10);
   @include icon-direction();
 }
@@ -297,6 +298,18 @@ span[class*="icon-off"] {
   @include bgp($p3, $p7);
   @include icon-direction();
 }
+.icon-back-arrowCircle-light {
+  @include bgp($p3, $p8);
+  @include icon-direction();
+}
+.icon-next-arrowCircle-light {
+  @include bgp($p3, $p9);
+  @include icon-direction();
+}
+.icon-up-arrowCircle-light {
+  @include bgp($p3, $p10);
+  @include icon-direction();
+}
 
 .icon-back-double-light {
   @include bgp($p4, $p1);
@@ -326,6 +339,18 @@ span[class*="icon-off"] {
   @include bgp($p4, $p7);
   @include icon-direction();
 }
+.icon-down-arrowCircle-light {
+  @include bgp($p3, $p8);
+  @include icon-direction();
+}
+.icon-side-arrowCircle-light {
+  @include bgp($p3, $p9);
+  @include icon-direction();
+}
+.icon-updown-arrowCircle-light {
+  @include bgp($p3, $p10);
+  @include icon-direction();
+}
 
 ////////////////////////////////////////
 //icon-util
@@ -353,11 +378,11 @@ span[class*="icon-off"] {
   @include bgp($p1, $p6);
   @include icon-util();
 }
-.icon-plus-circle {
+.icon-plusCircle {
   @include bgp($p1, $p7);
   @include icon-util();
 }
-.icon-minus-circle {
+.icon-minusCircle {
   @include bgp($p1, $p8);
   @include icon-util();
 }
@@ -398,7 +423,7 @@ span[class*="icon-off"] {
   @include bgp($p2, $p7);
   @include icon-util();
 }
-.icon-warning-balloon {
+.icon-warningBalloon {
   @include bgp($p2, $p8);
   @include icon-util();
 }
@@ -525,7 +550,7 @@ span[class*="icon-off"] {
   @include bgp($p5, $p8);
   @include icon-util();
 }
-.icon-add-board {
+.icon-addBoard {
   @include bgp($p5, $p9);
   @include icon-util();
 }
@@ -558,7 +583,7 @@ span[class*="icon-off"] {
   @include bgp($p6, $p6);
   @include icon-util();
 }
-.icon-movie-list {
+.icon-movieList {
   @include bgp($p6, $p7);
   @include icon-util();
 }
@@ -764,23 +789,65 @@ span[class*="icon-off"] {
 span[class*="icon-menu-"] {
   @include icon-menu();
 }
-.icon-menu-camera {
+.icon-menu-1 {
   @include bgp($p1, $p1);
 }
-.icon-menu-alert {
+.icon-menu-2 {
   @include bgp($p1, $p2);
 }
-.icon-menu-board {
+.icon-menu-3 {
   @include bgp($p1, $p3);
 }
-.icon-menu-track {
+.icon-menu-4 {
   @include bgp($p1, $p4);
 }
-.icon-menu-flag {
+.icon-menu-5 {
   @include bgp($p1, $p5);
 }
-.icon-menu-info {
+.icon-menu-6 {
   @include bgp($p1, $p6);
+}
+.icon-menu-7 {
+  @include bgp($p1, $p6);
+}
+.icon-menu-8 {
+  @include bgp($p1, $p6);
+}
+.icon-menu-9 {
+  @include bgp($p1, $p6);
+}
+.icon-menu-10 {
+  @include bgp($p1, $p6);
+}
+.icon-menu-11 {
+  @include bgp($p2, $p1);
+}
+.icon-menu-12 {
+  @include bgp($p2, $p2);
+}
+.icon-menu-13 {
+  @include bgp($p2, $p3);
+}
+.icon-menu-14 {
+  @include bgp($p2, $p4);
+}
+.icon-menu-15 {
+  @include bgp($p2, $p5);
+}
+.icon-menu-16 {
+  @include bgp($p2, $p6);
+}
+.icon-menu-17 {
+  @include bgp($p2, $p6);
+}
+.icon-menu-18 {
+  @include bgp($p2, $p6);
+}
+.icon-menu-19 {
+  @include bgp($p2, $p6);
+}
+.icon-menu-20 {
+  @include bgp($p2, $p6);
 }
 
 ///////////////////////////////////////
@@ -791,7 +858,15 @@ span[class*="icon-menu-"] {
 }
 .icon-eng {
   @include icon-flag();
-  background-position: calc((22.5px * -15) - 2px) calc((22.5px * -7) - 4px);
+  background-position: calc((22.5px * -6) - 2px) calc((22.5px * -14) - 4px);
+}
+.icon-jp {
+  @include icon-flag();
+  background-position: calc((22.5px * -14) - 2px) calc((22.5px * -6) - 4px);
+}
+.icon-cn {
+  @include icon-flag();
+  background-position: calc((22.5px * -9) - 2px) calc((22.5px * -2) - 4px);
 }
 
 ///////////////////////////////////////
