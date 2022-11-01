@@ -1,5 +1,9 @@
 //css link
-@import "_variables";
+
+/**************  중요  ****************/
+//각 프로젝트에 맞게, 해당 프로젝트의 variables 파일을 import 해주세요.//
+@import "../../product/designsystem/css/variables";
+
 
 //////////////////////////////////////////////////////
 /* 3. 자주 쓰는 문법  */

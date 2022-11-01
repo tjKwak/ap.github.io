@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/**************  중요  ****************/
 /* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
 /* 3. 자주 쓰는 문법  */
@@ -772,7 +773,7 @@
 }
 
 .mini-box {
-  border-radius: 0px;
+  border-radius: 5px;
   -webkit-box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
   padding: 1rem;
