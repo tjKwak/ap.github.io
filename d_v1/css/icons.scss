@@ -481,7 +481,8 @@ span[class*="icon-off"] {
   @include bgp($p4, $p1);
   @include icon-util();
 }
-.icon-refresh {
+//v.3 에선 icon-replay -> icon-refresh 로 명칭변경 해야함
+.icon-replay {
   @include bgp($p4, $p2);
   @include icon-util();
 }
@@ -647,6 +648,22 @@ span[class*="icon-off"] {
 }
 .icon-newtab {
   @include bgp($p8, $p2);
+  @include icon-util();
+}
+.icon-forder {
+  @include bgp($p8, $p3);
+  @include icon-util();
+}
+.icon-findFile {
+  @include bgp($p8, $p4);
+  @include icon-util();
+}
+.icon-findFile-fill {
+  @include bgp($p8, $p5);
+  @include icon-util();
+}
+.icon-customer {
+  @include bgp($p8, $p6);
   @include icon-util();
 }
 

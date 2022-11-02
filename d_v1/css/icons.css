@@ -1126,7 +1126,7 @@ span[class*="icon-off"]::after {
   background-image: url("../images/util.svg");
 }
 
-.icon-refresh {
+.icon-replay {
   background-position: calc((20px * -3) - (10px * 3)) calc((20px * -1) - (10px * 1));
   background-repeat: no-repeat;
   border: none;
@@ -1688,6 +1688,62 @@ span[class*="icon-off"]::after {
 
 .icon-newtab {
   background-position: calc((20px * -7) - (10px * 7)) calc((20px * -1) - (10px * 1));
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 8) + (10px * 7));
+  background-image: url("../images/util.svg");
+}
+
+.icon-forder {
+  background-position: calc((20px * -7) - (10px * 7)) calc((20px * -2) - (10px * 2));
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 8) + (10px * 7));
+  background-image: url("../images/util.svg");
+}
+
+.icon-findFile {
+  background-position: calc((20px * -7) - (10px * 7)) calc((20px * -3) - (10px * 3));
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 8) + (10px * 7));
+  background-image: url("../images/util.svg");
+}
+
+.icon-findFile-fill {
+  background-position: calc((20px * -7) - (10px * 7)) calc((20px * -4) - (10px * 4));
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 8) + (10px * 7));
+  background-image: url("../images/util.svg");
+}
+
+.icon-customer {
+  background-position: calc((20px * -7) - (10px * 7)) calc((20px * -5) - (10px * 5));
   background-repeat: no-repeat;
   border: none;
   font-size: 0;
