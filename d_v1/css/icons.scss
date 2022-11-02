@@ -46,12 +46,6 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
   background-size: calc((#{$icon} * 3) + (#{$icon-gap} * 2)); //가로 3줄
   background-image: url("../images/function.svg");
 }
-@mixin icon-menu {
-  @include icons();
-  background-size: calc((#{$icon} * 2) + (#{$icon-gap} * 1)); //가로 1줄
-  transform: scale(1.5) !important;
-  background-image: url("../images/menu.svg");
-}
 @mixin icon-flag {
   @include icons();
   width: 20px !important;
@@ -61,6 +55,7 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
   background-size: 360px;
   background-image: url("../images/flag.JPG");
   box-shadow: 0 0 0 1px rgb(222, 222, 222) inset;
+  filter: none !important;
 }
 @mixin icon-sns {
   @include icons();
@@ -481,8 +476,7 @@ span[class*="icon-off"] {
   @include bgp($p4, $p1);
   @include icon-util();
 }
-//v.3 에선 icon-replay -> icon-refresh 로 명칭변경 해야함
-.icon-replay {
+.icon-refresh {
   @include bgp($p4, $p2);
   @include icon-util();
 }
@@ -490,7 +484,8 @@ span[class*="icon-off"] {
   @include bgp($p4, $p3);
   @include icon-util();
 }
-.icon-reset {
+//v.3 에선 icon-replay -> icon-reset 로 명칭변경 해야함
+.icon-replay {
   @include bgp($p4, $p4);
   @include icon-util();
 }
@@ -799,72 +794,6 @@ span[class*="icon-off"] {
   &.logo-o-b {
     background-position: 0px -200px;
   }
-}
-
-///////////////////////////////////////
-//메뉴 아이콘
-span[class*="icon-menu-"] {
-  @include icon-menu();
-}
-.icon-menu-1 {
-  @include bgp($p1, $p1);
-}
-.icon-menu-2 {
-  @include bgp($p1, $p2);
-}
-.icon-menu-3 {
-  @include bgp($p1, $p3);
-}
-.icon-menu-4 {
-  @include bgp($p1, $p4);
-}
-.icon-menu-5 {
-  @include bgp($p1, $p5);
-}
-.icon-menu-6 {
-  @include bgp($p1, $p6);
-}
-.icon-menu-7 {
-  @include bgp($p1, $p6);
-}
-.icon-menu-8 {
-  @include bgp($p1, $p6);
-}
-.icon-menu-9 {
-  @include bgp($p1, $p6);
-}
-.icon-menu-10 {
-  @include bgp($p1, $p6);
-}
-.icon-menu-11 {
-  @include bgp($p2, $p1);
-}
-.icon-menu-12 {
-  @include bgp($p2, $p2);
-}
-.icon-menu-13 {
-  @include bgp($p2, $p3);
-}
-.icon-menu-14 {
-  @include bgp($p2, $p4);
-}
-.icon-menu-15 {
-  @include bgp($p2, $p5);
-}
-.icon-menu-16 {
-  @include bgp($p2, $p6);
-}
-.icon-menu-17 {
-  @include bgp($p2, $p6);
-}
-.icon-menu-18 {
-  @include bgp($p2, $p6);
-}
-.icon-menu-19 {
-  @include bgp($p2, $p6);
-}
-.icon-menu-20 {
-  @include bgp($p2, $p6);
 }
 
 ///////////////////////////////////////

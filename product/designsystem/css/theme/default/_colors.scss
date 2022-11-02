@@ -1,4 +1,3 @@
-
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
 // 해당 파일의 내용을 고쳐도 html엔 반영이 되지 않습니다.
@@ -8,16 +7,16 @@
 
 //--#{$color}
 
-$brand: orange;
-$secondary: blue;
-$success: green;
-$warning: yellow;
-$danger: red;
-$info: cyan;
+$brand: white;
+$secondary: white;
+$success: white;
+$warning: white;
+$danger: white;
+$info: white;
 
-$light-gray : lightgray;
-$gray: gray;
-$dark-gray : darkgray;
+$light-gray: white;
+$gray: white;
+$dark-gray: white;
 
 $brand-d4: mix($brand, black, 40%);
 $brand-d3: mix($brand, black, 55%);
@@ -76,7 +75,6 @@ $info-l4: mix($info, white, 75%);
 $info-l3: mix($info, white, 50%);
 $info-l2: mix($info, white, 30%);
 $info-l1: mix($info, white, 10%);
-
 
 $gray-d: mix($gray, black, 30%);
 $gray-l: mix($gray, white, 30%);
