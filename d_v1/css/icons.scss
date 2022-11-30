@@ -661,6 +661,18 @@ span[class*="icon-off"] {
   @include bgp($p8, $p6);
   @include icon-util();
 }
+.icon-disconnect {
+  @include bgp($p8, $p7);
+  @include icon-util();
+}
+.icon-star-line {
+  @include bgp($p8, $p8);
+  @include icon-util();
+}
+.icon-heart-line {
+  @include bgp($p8, $p9);
+  @include icon-util();
+}
 
 ////////////////////////////////////////
 // icon-function
