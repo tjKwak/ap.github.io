@@ -673,6 +673,10 @@ span[class*="icon-off"] {
   @include bgp($p8, $p9);
   @include icon-util();
 }
+.icon-alarm-line {
+  @include bgp($p8, $p10);
+  @include icon-util();
+}
 
 ////////////////////////////////////////
 // icon-function

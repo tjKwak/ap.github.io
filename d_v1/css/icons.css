@@ -1798,6 +1798,20 @@ span[class*="icon-off"]::after {
   background-image: url("../images/util.svg");
 }
 
+.icon-alarm-line {
+  background-position: calc((20px * -7) - (10px * 7)) calc((20px * -9) - (10px * 9));
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-size: calc((20px * 8) + (10px * 7));
+  background-image: url("../images/util.svg");
+}
+
 .icon-play-back-double {
   background-position: calc((20px * -0) - (10px * 0)) calc((20px * -0) - (10px * 0));
   background-repeat: no-repeat;
