@@ -22,7 +22,4 @@
 
 
 /* font */
-*, body,p,h1,h2,h3,h4,h5,h6,ul,a,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{
-    font-family: 'Noto Sans KR', sans-serif; color:black;
-}
-
+@import url('../../../d_v1/css/notosans.css');

@@ -1505,8 +1505,10 @@ $check-size: 22px;
 .pnt-table--paging__wrap span,
 .pnt-table .th,
 .pnt-table .td,
-.pnt-txt {
+.pnt-txt, .pnt-label--group .label-options {
   @include p4-n();
+  // font-weight: 500;
+  // font-size: 0.9rem;
   color: $f-b-3; //각 theme 폴더에 의해 덮여지고 있음
 }
 

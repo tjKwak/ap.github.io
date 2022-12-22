@@ -2011,7 +2011,7 @@ li.pnt-label-top .pnt-label--group {
 .pnt-table--paging__wrap span,
 .pnt-table .th,
 .pnt-table .td,
-.pnt-txt {
+.pnt-txt, .pnt-label--group .label-options {
   line-height: auto;
   font-size: 0.8rem;
   font-weight: 400;
@@ -2030,7 +2030,7 @@ li.pnt-label-top .pnt-label--group {
 .pnt-table--paging__wrap span,
 .pnt-table .th,
 .pnt-table .td,
-.pnt-txt {
+.pnt-txt, .pnt-label--group .label-options {
   line-height: auto;
   font-size: 0.8rem;
   font-weight: 400;
@@ -2049,7 +2049,7 @@ li.pnt-label-top .pnt-label--group {
 .pnt-table--paging__wrap span,
 .pnt-table .th,
 .pnt-table .td,
-.pnt-txt {
+.pnt-txt, .pnt-label--group .label-options {
   line-height: auto;
   font-size: 0.8rem;
   font-weight: 400;
@@ -2068,7 +2068,7 @@ li.pnt-label-top .pnt-label--group {
 .pnt-table--paging__wrap span,
 .pnt-table .th,
 .pnt-table .td,
-.pnt-txt {
+.pnt-txt, .pnt-label--group .label-options {
   line-height: auto;
   font-size: 0.8rem;
   font-weight: 400;
