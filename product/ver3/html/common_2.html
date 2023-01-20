@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ▒ Design Component ▒
+    </title>
+    <script>
+        var locale = "ko";
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../static/css/main.78c4a366.chunk.css">
+    <link rel="stylesheet" href="../static/css/7.ff67f704.chunk.css">
+    <link rel="stylesheet" href="../static/css/13.db0b29ae.chunk.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="jquery.slim.min.js"></script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/form.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container app-theme-pnt-navy">
+            <!-- 헤더 -->
+            <div class="app-header">
+                <div class="app-header__logo">
+                    <div class="logo-src">Smart Hospital</div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button class="pnt-btn btn-icon-only btn-trans">
+                                <span class="material-icons-round">menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="pnt-btn btn-icon-only btn-trans">
+                            <span class="material-icons-round">menu</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button" class="pnt-btn btn-icon-only btn-trans">
+                            <span class="material-icons-round">
+                                more_vert
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="app-header__content">
+                    <div class="app-header-left">
+                        <span class="menu-sub">공통 컴포넌트</span>
+                        <span class="material-icons-round md-18 color-secondary mr-1">navigate_next</span>
+                        <span class="menu-main">카드</span>
+                    </div>
+                    <div class="app-header-right">
+                        <!-- 알람 위젯 -->
+                        <div class="alarm-box">
+                            <button class="pnt-btn btn-icon-only btn-trans">
+                                <span class="material-icons-round">notifications</span>
+                            </button>
+                            <div class="alarm-num">12</div>
+                        </div>
+                        <!-- 전체화면 위젯 -->
+                        <div class="fullscreen-box">
+                            <button class="pnt-btn btn-icon-only btn-trans">
+                                <span class="material-icons-round">fullscreen</span>
+                            </button>
+                        </div>
+                        <div class="mini-divider"></div>
+                        <!-- 유저정보 위젯 -->
+                        <div class="user-box">
+                            <button class="user-btn">
+                                <span class="material-icons-round">person_outline</span>
+                                <div class="user-name">
+                                    <b>SH-admin(business)</b>
+                                </div>
+                                <span class="material-icons-round">arrow_drop_down</span>
+                            </button>
+                            <div class="user-options d-none">
+                                <div class="dropdown-menu-header">
+                                    <div class="widget-content-left">
+                                        <div class="profile-txt">
+                                            <span class="user-name">Smart Hospital admin</span>
+                                            <div class="unread-msg">
+                                                읽지않은 알림이 <b>0</b>개 있습니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <button class="pnt-btn btn-brand btn-shadow">로그아웃</button>
+                                    </div>
+                                </div>
+                                <div class="profile-setting">
+                                    <div class="no-gutters row">
+                                        <div class="setting-item col-sm">
+                                            <span class="material-icons-round">manage_accounts</span>
+                                            <div class="setting-name">프로필</div>
+                                        </div>
+                                        <div class="setting-item col-sm">
+                                            <span class="material-icons-round">app_settings_alt</span>
+                                            <div class="setting-name">개인 설정</div>
+                                        </div>
+                                        <!-- <div class="setting-item col-sm">
+                                            <span class="material-icons-round">translate</span>
+                                            <div class="setting-name">언어 설정</div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-main">
+                <!-- 사이드바 -->
+                <div class="app-sidebar">
+                    <div class="h-100">
+                        <div class="scrollbar-container ps">
+                            <div class="app-sidebar__inner">
+                                <div class="metismenu vertical-nav-menu">
+                                    <ul class="metismenu-container">
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item active">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">wysiwyg</div>
+                                                <span>공통 컴포넌트</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container visible">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="common_1.html">
+                                                        <span>필터</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link active" href="common_2.html">
+                                                        <span>카드</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">brush</div>
+                                                <span>입력 양식</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_1.html">
+                                                        <span>버튼</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_2.html">
+                                                        <span>인풋[텍스트]</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_3.html">
+                                                        <span>인풋[파일]</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_4.html">
+                                                        <span>인풋[날짜]</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_5.html">
+                                                        <span>셀렉트</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_6.html">
+                                                        <span>체크박스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_7.html">
+                                                        <span>토글</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_8.html">
+                                                        <span>라디오</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_9.html">
+                                                        <span>네임플레이트</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_10.html">
+                                                        <span>테이블</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">dashboard</div>
+                                                <span>대시보드</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="dashboard_1.html">
+                                                        <span>대시보드</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="dashboard_2.html">
+                                                        <span>전체현황</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">ondemand_video</div>
+                                                <span>모니터링</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_1.html">
+                                                        <span>수액 모니터링</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_2.html">
+                                                        <span>자산현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_3.html">
+                                                        <span>실시간 위치현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_4.html">
+                                                        <span>환자현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_5.html">
+                                                        <span>보호자현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_6.html">
+                                                        <span>센서현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_7.html">
+                                                        <span>수액모니터링</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_8.html">
+                                                        <span>냉장고센서</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_9.html">
+                                                        <span>활력징후 모니터링</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">pending_actions</div>
+                                                <span>리포트</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_1.html">
+                                                        <span>위치 데이터 수집 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_2.html">
+                                                        <span>위치 데이터 추출 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_3.html">
+                                                        <span>대상정보 변경 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_4.html">
+                                                        <span>IoT장치 할당/해제 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_5.html">
+                                                        <span>로그인 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_6.html">
+                                                        <span>스캐너 상태 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_7.html">
+                                                        <span>센서 데이터 수집 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_8.html">
+                                                        <span>구역 출입 이력</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pnt-sidebar-bottom app-sidebar__inner">
+                        <div class="metismenu vertical-nav-menu">
+                            <ul class="metismenu-container">
+                                <!-- 대메뉴 -->
+                                <!-- .menu-border-box삭제요청 -->
+                                <li class="metismenu-item">
+                                    <a class="metismenu-link" href="#">
+                                        <div class="metismenu-icon material-icons-round">settings</div>
+                                        <span>세팅</span>
+                                        <div class="material-icons-round">chevron_right</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 바디 -->
+                <div class="app-main__outer">
+                    <div class="app-main__inner">
+                        <!-- 대시보드 편집화면 -->
+                        <div class="app-page-title dashboard-edit-title d-none">
+                            <div class="page-title-wrapper">
+                                <div class="page-title-heading">
+                                    <div class="page-title-icon">
+                                        <span class="material-icons-round">edit</span>
+                                    </div>
+                                    <div>화면 편집
+                                        <div class="page-title-subheading">화면 에디터 페이지입니다.</div>
+                                    </div>
+                                </div>
+                                <div class="page-title-actions">
+                                    <button type="button" class="mr-2 btn-preview pnt-btn btn-secondary">미리보기</button>
+                                    <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">처음으로 되돌리기</button>
+                                    <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">취소</button>
+                                    <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">패널 추가</button>
+                                    <button type="button" class="pnt-btn btn-icon btn-danger">
+                                        <span class="material-icons-round">save</span>저장
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 본문 -->
+                        <div class="app-page-content">
+                            <div class="row">
+                                <div class="col-md-4 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">data_object</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">마크업</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- 코드설명 -->
+                                            <div class="colorscripter-code"style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table"style="margin:0;padding:0;border:none;background-color:#292938;border-radius:4px;"cellspacing="0"cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500"><b>"card"</b></span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"&nbsp;card-header"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"card-header__title"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"material-icons-round"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;widgets</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">span</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"title-wrap"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h3</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"title__main"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;카드타이틀</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"card-header__function"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"pnt-btn"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;버튼</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"card-body"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></div></td></tr></table></div>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [필수 클래스]
+                                                </div>
+                                                <ul>
+                                                    <li>card</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [하위 요소]
+                                                </div>
+                                                <ul>
+                                                    <li>card-header
+                                                    </li>
+                                                    <li>card-body
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [추가 요소]
+                                                </div>
+                                                <ul>
+                                                    <li>card-tab
+                                                    </li>
+                                                    <li>card-header__tab
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-12">
+                                    <div class="card">
+                                        <div class=" card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">grading</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">설명</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tag-set">
+                                                <div class="tag-title">
+                                                    카드
+                                                </div>
+                                                <div class="tag-content"
+                                                    style="grid-template-columns: repeat(1, 1fr); gap: 10px">
+                                                    <div style="height: 260px;">
+                                                        <div class="tag-item">
+                                                            <div class="card" style="width: 600px;">
+                                                                <div class="card-header">
+                                                                    <div class="card-header__title">
+                                                                        <span
+                                                                            class="material-icons-round">widgets</span>
+                                                                        <div class="title-wrap">
+                                                                            <h3 class="title__main">카드 타이틀</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-header__function">
+                                                                        <button
+                                                                            class="pnt-btn btn-secondary">버튼</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <div class="gray-box" style="height: 100px;"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>기본</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tag-set">
+                                                <div class="tag-title">
+                                                    카드헤더 사용예시 <span class="ml-2 info-txt"><span
+                                                            class="material-icons-round">info_outline</span> ver.3에선
+                                                        <b>title__sub</b>를 사용을 최대한 지양합니다.</span>
+                                                </div>
+                                                <div class="tag-content"
+                                                    style="grid-template-columns: repeat(3, 1fr); gap: 10px">
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="card w-100">
+                                                                <div class="card-header">
+                                                                    <div class="card-header__title">
+                                                                        <div class="title-wrap">
+                                                                            <h3 class="title__main">카드 타이틀</h3>
+                                                                            <p class="title__sub">서브 설명</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>서브설명과 함께 사용</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="card w-100">
+                                                                <div class="card-header">
+                                                                    <div class="card-header__title">
+                                                                        <span
+                                                                            class="material-icons-round">emergency</span>
+                                                                        <div class="title-wrap">
+                                                                            <h3 class="title__main">카드 타이틀</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>아이콘과 함께 사용</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="card w-100">
+                                                                <div class="card-header">
+                                                                    <div class="card-header__title">
+                                                                        <span
+                                                                            class="material-icons-round">emergency</span>
+                                                                        <div class="title-wrap">
+                                                                            <h3 class="title__main">카드 타이틀</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-header__function">
+                                                                        <button
+                                                                            class="pnt-btn btn-lightgray">취소</button>
+                                                                        <button
+                                                                            class="pnt-btn btn-secondary">확인</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>입력요소와 함께 사용</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tag-set">
+                                                <div class="tag-title">
+                                                    카드 탭
+                                                </div>
+                                                <div class="tag-content"
+                                                    style="grid-template-columns: repeat(2, 1fr); gap: 10px">
+                                                    <div style="height: 240px;">
+                                                        <div class="tag-item" style="align-items: flex-start;">
+                                                            <div class="card">
+                                                                <div class="card-tab tab-list1">
+                                                                    <ul>
+                                                                        <li class="on">
+                                                                            <a href="#">menu1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">menu2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">menu3</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="tab-body1">
+                                                                    <div class="card-body">
+                                                                        This is tab test 1 - Lorem ipsum dolor sit amet
+                                                                        consectetur
+                                                                        adipisicing
+                                                                        elit. Quasi incidunt molestiae aperiam magnam
+                                                                        rerum, sint
+                                                                        excepturi
+                                                                        placeat at eos amet aut ipsa numquam hic magni
+                                                                        non, quos
+                                                                        praesentium,
+                                                                        blanditiis dicta?
+                                                                    </div>
+                                                                    <div class="card-body d-none">
+                                                                        This is tab test 2 - Lorem ipsum dolor sit, amet
+                                                                        consectetur
+                                                                        adipisicing
+                                                                        elit.
+                                                                    </div>
+                                                                    <div class="card-body d-none">
+                                                                        This is tab test 3 - Lorem ipsum dolor, sit amet
+                                                                        consectetur
+                                                                        adipisicing
+                                                                        elit. Dolorem quas nihil at quo et omnis harum
+                                                                        necessitatibus
+                                                                        placeat
+                                                                        voluptas iusto voluptatibus!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>card-tab</p>
+                                                    </div>
+                                                    <div style="height: 240px;">
+                                                        <div class="tag-item" style="align-items: flex-start;">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="card-header__title">
+                                                                        <div class="title-wrap">
+                                                                            <h3 class="title__main">제목</h3>
+                                                                            <p class="title__sub"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-header__tab tab-list2">
+                                                                        <ul>
+                                                                            <li class="on">
+                                                                                <a href="#">menu1</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">menu2</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">menu3</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-body2">
+                                                                    <div class="card-body">
+                                                                        This is tab test 1 - Lorem ipsum dolor sit amet
+                                                                        consectetur
+                                                                        adipisicing
+                                                                        elit. Quasi incidunt molestiae aperiam magnam
+                                                                        rerum, sint
+                                                                        excepturi
+                                                                        placeat at eos amet aut ipsa numquam hic magni
+                                                                        non, quos
+                                                                        praesentium,
+                                                                        blanditiis dicta?
+                                                                    </div>
+                                                                    <div class="card-body d-none">
+                                                                        This is tab test 2 - Lorem ipsum dolor sit, amet
+                                                                        consectetur
+                                                                        adipisicing
+                                                                        elit.
+                                                                    </div>
+                                                                    <div class="card-body d-none">
+                                                                        This is tab test 3 - Lorem ipsum dolor, sit amet
+                                                                        consectetur
+                                                                        adipisicing
+                                                                        elit. Dolorem quas nihil at quo et omnis harum
+                                                                        necessitatibus
+                                                                        placeat
+                                                                        voluptas iusto voluptatibus!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>card-header__tab</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 푸터 -->
+                <div class="app-footer">
+                    <div class="footer-wrap">
+                        copyright © 2022. People and technology all right reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 탭1
+        var tabs1 = document.querySelectorAll('.tab-list1 ul li')
+        var tab_conts1 = document.querySelectorAll('.tab-body1 > div')
+
+        for (let i = 0; i < tabs1.length; i++) {
+            tabs1[i].addEventListener('click', function (e) {
+                //리셋
+                for (let i = 0; i < tabs1.length; i++) {
+                    tabs1[i].classList.remove('on');
+                    tab_conts1[i].classList.add('d-none');
+                }
+                //클릭 개체에만 on과 d-none 부과
+                e.target.parentNode.classList.add('on');
+                tab_conts1[i].classList.remove('d-none');
+            })
+        }
+        // 탭2
+        var tabs2 = document.querySelectorAll('.tab-list2 ul li')
+        var tab_conts2 = document.querySelectorAll('.tab-body2 > div')
+
+        for (let i = 0; i < tabs2.length; i++) {
+            tabs2[i].addEventListener('click', function (e) {
+                //리셋
+                for (let i = 0; i < tabs2.length; i++) {
+                    tabs2[i].classList.remove('on');
+                    tab_conts2[i].classList.add('d-none');
+                }
+                //클릭 개체에만 on과 d-none 부과
+                e.target.parentNode.classList.add('on');
+                tab_conts2[i].classList.remove('d-none');
+            })
+        }
+    </script>
+</body>
+
+</html>

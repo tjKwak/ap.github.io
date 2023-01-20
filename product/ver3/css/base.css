@@ -1,0 +1,54 @@
+/* css */
+@import url('login/login.css');
+@import url('layout.css');
+@import url('forms.css');
+@import url('commons.css');
+@import url('tools.css');
+/* component */
+@import url('filter/filter.css');
+@import url('modalForHtml.css');
+/* theme */
+@import url('theme/navy/navy.css');
+@import url('theme/dark/dark.css');
+/* font */
+@import url('pretendard.css');
+/* icons */
+@import url('../../../node_modules/@material-design-icons/font/index.css');
+
+
+
+/* 디자인 파일 전용 */
+/* 리액트엔 적용하지 말 것 */
+@import url('notForReact.css');
+@import url('content.css');
+
+
+
+/* Reset */
+*{-webkit-text-size-adjust:none; box-sizing: border-box;}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table,h1,h2,h3,h4,h5{font-size:.8rem;color:black;letter-spacing: -0.5px;}
+body{*word-break:break-word;-ms-word-break:break-word;overflow-y:scroll}
+img,fieldset,iframe{border:0 none}
+ul,ol,li{list-style:none; margin: 0; padding: 0;}
+input,select,button{vertical-align:middle}
+input[type='radio'],input[type='checkbox']{margin-right:10px; border:none;}
+img{vertical-align:middle}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+button{margin:0;padding:0}
+a{text-decoration:none !important; color:#4b4b4b}
+a:hover{text-decoration:none !important}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+button, button:focus, button:active{
+  border:none;
+  outline:none}
+/* input, input:focus, input:active {
+    border:none;
+    outline:none} */
+blockquote:before, blockquote:after,
+q:before, q:after{content: ''; content: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+
+.blind{display: inline-block; text-align: left; text-indent: -99999999px; font-size: 0;}

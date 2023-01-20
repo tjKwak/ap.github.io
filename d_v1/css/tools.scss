@@ -4,7 +4,6 @@
 //각 프로젝트에 맞게, 해당 프로젝트의 variables 파일을 import 해주세요.//
 @import "../../product/designsystem/css/variables";
 
-
 //////////////////////////////////////////////////////
 /* 3. 자주 쓰는 문법  */
 //컬러들
@@ -41,7 +40,6 @@
 .color-black {
   color: black !important;
 }
-
 
 .bg-brand {
   background-color: $default-brand;
@@ -96,8 +94,7 @@
   &.bg-light {
     background-color: $gray-700;
   }
-  & .bg-light{
-
+  & .bg-light {
   }
 }
 //////////////////////////////////////////////////////
@@ -568,7 +565,7 @@
     display: block !important;
   }
 }
-.show__over-mobile {
+.hide__under-mobile {
   display: block !important;
   @media (max-width: $breakpoint-mobile) {
     display: none !important;
@@ -590,4 +587,29 @@
 }
 .shadow-small {
   box-shadow: $form-shadow !important;
+}
+
+
+.material-icons-round {
+  &.md-18 {
+    font-size: 18px;
+  }
+  &.md-20 {
+    font-size: 20px;
+  }
+  &.md-22 {
+    font-size: 22px;
+  }
+  &.md-24 {
+    font-size: 24px;
+  }
+  &.md-30 {
+    font-size: 30px;
+  }
+  &.md-36 {
+    font-size: 36px;
+  }
+  &.md-48 {
+    font-size: 48px;
+  }
 }

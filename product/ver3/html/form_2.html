@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ▒ Design Component ▒
+    </title>
+    <script>
+        var locale = "ko";
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../static/css/main.78c4a366.chunk.css">
+    <link rel="stylesheet" href="../static/css/7.ff67f704.chunk.css">
+    <link rel="stylesheet" href="../static/css/13.db0b29ae.chunk.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="jquery.slim.min.js"></script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/form.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container app-theme-pnt-navy">
+            <!-- 헤더 -->
+            <div class="app-header">
+                <div class="app-header__logo">
+                    <div class="logo-src">Smart Hospital</div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button class="pnt-btn btn-icon-only btn-trans">
+                                <span class="material-icons-round">menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="pnt-btn btn-icon-only btn-trans">
+                            <span class="material-icons-round">menu</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button" class="pnt-btn btn-icon-only btn-trans">
+                            <span class="material-icons-round">
+                                more_vert
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="app-header__content">
+                    <div class="app-header-left">
+                        <span class="menu-sub">입력 양식</span>
+                        <span class="material-icons-round md-18 color-secondary mr-1">navigate_next</span>
+                        <span class="menu-main">인풋[텍스트]</span>
+                    </div>
+                    <div class="app-header-right">
+                        <!-- 알람 위젯 -->
+                        <div class="alarm-box">
+                            <button class="pnt-btn btn-icon-only btn-trans">
+                                <span class="material-icons-round">notifications</span>
+                            </button>
+                            <div class="alarm-num">12</div>
+                        </div>
+                        <!-- 전체화면 위젯 -->
+                        <div class="fullscreen-box">
+                            <button class="pnt-btn btn-icon-only btn-trans">
+                                <span class="material-icons-round">fullscreen</span>
+                            </button>
+                        </div>
+                        <div class="mini-divider"></div>
+                        <!-- 유저정보 위젯 -->
+                        <div class="user-box">
+                            <button class="user-btn">
+                                <span class="material-icons-round">person_outline</span>
+                                <div class="user-name">
+                                    <b>SH-admin(business)</b>
+                                </div>
+                                <span class="material-icons-round">arrow_drop_down</span>
+                            </button>
+                            <div class="user-options d-none">
+                                <div class="dropdown-menu-header">
+                                    <div class="widget-content-left">
+                                        <div class="profile-txt">
+                                            <span class="user-name">Smart Hospital admin</span>
+                                            <div class="unread-msg">
+                                                읽지않은 알림이 <b>0</b>개 있습니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content-right">
+                                        <button class="pnt-btn btn-brand btn-shadow">로그아웃</button>
+                                    </div>
+                                </div>
+                                <div class="profile-setting">
+                                    <div class="no-gutters row">
+                                        <div class="setting-item col-sm">
+                                            <span class="material-icons-round">manage_accounts</span>
+                                            <div class="setting-name">프로필</div>
+                                        </div>
+                                        <div class="setting-item col-sm">
+                                            <span class="material-icons-round">app_settings_alt</span>
+                                            <div class="setting-name">개인 설정</div>
+                                        </div>
+                                        <!-- <div class="setting-item col-sm">
+                                            <span class="material-icons-round">translate</span>
+                                            <div class="setting-name">언어 설정</div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-main">
+                <!-- 사이드바 -->
+                <div class="app-sidebar">
+                    <div class="h-100">
+                        <div class="scrollbar-container ps">
+                            <div class="app-sidebar__inner">
+                                <div class="metismenu vertical-nav-menu">
+                                    <ul class="metismenu-container">
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">wysiwyg</div>
+                                                <span>공통 컴포넌트</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="common_1.html">
+                                                        <span>필터</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="common_2.html">
+                                                        <span>카드</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item active">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">brush</div>
+                                                <span>입력 양식</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container visible">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_1.html">
+                                                        <span>버튼</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link active" href="form_2.html">
+                                                        <span>인풋[텍스트]</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_3.html">
+                                                        <span>인풋[파일]</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_4.html">
+                                                        <span>인풋[날짜]</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_5.html">
+                                                        <span>셀렉트</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_6.html">
+                                                        <span>체크박스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_7.html">
+                                                        <span>토글</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_8.html">
+                                                        <span>라디오</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_9.html">
+                                                        <span>네임플레이트</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_10.html">
+                                                        <span>테이블</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">dashboard</div>
+                                                <span>대시보드</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="dashboard_1.html">
+                                                        <span>대시보드</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="dashboard_2.html">
+                                                        <span>전체현황</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">ondemand_video</div>
+                                                <span>모니터링</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_1.html">
+                                                        <span>수액 모니터링</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_2.html">
+                                                        <span>자산현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_3.html">
+                                                        <span>실시간 위치현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_4.html">
+                                                        <span>환자현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_5.html">
+                                                        <span>보호자현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_6.html">
+                                                        <span>센서현황</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_7.html">
+                                                        <span>수액모니터링</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_8.html">
+                                                        <span>냉장고센서</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="monitor_9.html">
+                                                        <span>활력징후 모니터링</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- 대메뉴 -->
+                                        <li class="metismenu-item">
+                                            <a class="metismenu-link" href="#">
+                                                <div class="metismenu-icon material-icons-round">pending_actions</div>
+                                                <span>리포트</span>
+                                                <div class="material-icons-round">expand_more</div>
+                                            </a>
+                                            <!-- 소메뉴 -->
+                                            <ul class="metismenu-container">
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_1.html">
+                                                        <span>위치 데이터 수집 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_2.html">
+                                                        <span>위치 데이터 추출 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_3.html">
+                                                        <span>대상정보 변경 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_4.html">
+                                                        <span>IoT장치 할당/해제 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_5.html">
+                                                        <span>로그인 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_6.html">
+                                                        <span>스캐너 상태 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_7.html">
+                                                        <span>센서 데이터 수집 이력</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="report_8.html">
+                                                        <span>구역 출입 이력</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pnt-sidebar-bottom app-sidebar__inner">
+                        <div class="metismenu vertical-nav-menu">
+                            <ul class="metismenu-container">
+                                <!-- 대메뉴 -->
+                                <!-- .menu-border-box삭제요청 -->
+                                <li class="metismenu-item">
+                                    <a class="metismenu-link" href="#">
+                                        <div class="metismenu-icon material-icons-round">settings</div>
+                                        <span>세팅</span>
+                                        <div class="material-icons-round">chevron_right</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 바디 -->
+                <div class="app-main__outer">
+                    <div class="app-main__inner">
+                        <!-- 대시보드 편집화면 -->
+                        <div class="app-page-title dashboard-edit-title d-none">
+                            <div class="page-title-wrapper">
+                                <div class="page-title-heading">
+                                    <div class="page-title-icon">
+                                        <span class="material-icons-round">edit</span>
+                                    </div>
+                                    <div>화면 편집
+                                        <div class="page-title-subheading">화면 에디터 페이지입니다.</div>
+                                    </div>
+                                </div>
+                                <div class="page-title-actions">
+                                    <button type="button" class="mr-2 btn-preview pnt-btn btn-secondary">미리보기</button>
+                                    <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">처음으로 되돌리기</button>
+                                    <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">취소</button>
+                                    <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">패널 추가</button>
+                                    <button type="button" class="pnt-btn btn-icon btn-danger">
+                                        <span class="material-icons-round">save</span>저장
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 본문 -->
+                        <div class="app-page-content">
+                            <div class="row">
+                                <div class="col-md-4 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">data_object</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">마크업</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- 코드설명 -->
+                                            <div class="colorscripter-code"style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table"style="margin:0;padding:0;border:none;background-color:#292938;border-radius:4px;"cellspacing="0"cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500"><b>"pnt-input--group"</b></span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">input</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"pnt-input"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"text"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">placeholder</span>=<span style="color:#ffd500">"입력하세요"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"input-error-txt"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;에러문구&nbsp;입니다</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></div></td></tr></table></div>
+                                            <div class="info-box mb-3">
+                                                <span class="material-icons-round">campaign</span> 추가로 붙는 클래스들은, 필수클래스의
+                                                형제(sibling)로 추가합니다.
+                                            </div>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [필수 클래스]
+                                                </div>
+                                                <ul>
+                                                    <li>pnt-input--group</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [기본요소 클래스]
+                                                </div>
+                                                <ul>
+                                                    <li>상태
+                                                        <ul>
+                                                            <li>form-disable</li>
+                                                            <li>form-must</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>크기
+                                                        <ul>
+                                                            <li>form-h-small</li>
+                                                            <li>form-h-big</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [스타일 클래스]
+                                                </div>
+                                                <ul>
+                                                    <li>에러 발생시
+                                                        <ul>
+                                                            <li>input-error</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>버튼 사용시
+                                                        <ul>
+                                                            <li>btn-on-right</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">css</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">기본요소 클래스</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tag-set item-3">
+                                                <div class="tag-title">
+                                                    상태
+                                                </div>
+                                                <div class="tag-content">
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group">
+                                                                <input class="pnt-input" type="text"
+                                                                    placeholder="입력하세요">
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>기본</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group form-disable">
+                                                                <input class="pnt-input" type="text" placeholder="입력하세요"
+                                                                    disabled>
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>form-disable</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group form-must">
+                                                                <input class="pnt-input" type="text"
+                                                                    placeholder="입력하세요">
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>form-must</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tag-set item-3">
+                                                <div class="tag-title">
+                                                    크기
+                                                </div>
+                                                <div class="tag-content">
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group">
+                                                                <input class="pnt-input" type="text"
+                                                                    placeholder="입력하세요">
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>기본</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group form-h-small">
+                                                                <input class="pnt-input" type="text"
+                                                                    placeholder="입력하세요">
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>form-h-small</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group form-h-big">
+                                                                <input class="pnt-input" type="text"
+                                                                    placeholder="입력하세요">
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>form-h-big</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">css</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">스타일 클래스</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tag-set item-3">
+                                                <div class="tag-title">
+                                                    에러 발생시<span class="ml-2 info-txt"><span
+                                                            class="material-icons-round">info_outline</span> error 효과는
+                                                        input[text]에서만 사용합니다.</span>
+                                                </div>
+                                                <div class="tag-content">
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group input-error">
+                                                                <input class="pnt-input" type="text"
+                                                                    placeholder="입력하세요">
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>input-error</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tag-set item-3">
+                                                <div class="tag-title">
+                                                    기능버튼 사용
+                                                </div>
+                                                <div class="tag-content">
+                                                    <div>
+                                                        <div class="tag-item">
+                                                            <div class="pnt-input--group btn-on-right">
+                                                                <input class="pnt-input" type="text"
+                                                                    placeholder="입력하세요">
+                                                                <button class="pnt-btn btn-icon-only btn-trans"
+                                                                    tabindex="-1">
+                                                                    <span class="material-icons-round">lock</span>
+                                                                </button>
+                                                                <p class="input-error-txt">에러문구 입니다</p>
+                                                            </div>
+                                                        </div>
+                                                        <p>btn-on-right</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 푸터 -->
+                <div class="app-footer">
+                    <div class="footer-wrap">
+                        copyright © 2022. People and technology all right reserved
+                    </div>
+                </div>
+                <!-- 토스트메세지 -->
+                <div id="toast"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

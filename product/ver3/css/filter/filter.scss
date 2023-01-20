@@ -1,0 +1,148 @@
+//////////////////////////////
+/* Css link*/
+@import "../font";
+@import "../_variables";
+//////////////////////////////
+
+//////필터박스 - ver.4///////
+.filter_ver5 {
+  padding: 0 1rem;
+  background-color: white;
+  border: none !important;
+  & .filter-box {
+    border-top: 1px solid #dcd9e1;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    & .filter-list {
+      flex-wrap: wrap;
+    }
+  }
+  & .search-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 5px;
+  }
+  & .filter-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #86858a;
+    white-space: nowrap;
+    & span {
+      color: #86858a;
+    }
+  }
+  & .filter-list {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  & .filter-function {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  //자동갱신 위젯
+  & .autoreset-box {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: #86858a;
+    font-weight: 600;
+    & .pnt-select--group {
+      width: unset;
+    }
+  }
+
+  ///////////
+  //모바일 - 필터 카드
+  @media (max-width: $breakpoint-mobile) {
+    //라벨
+    & .filter-label {
+      padding: 0.3rem 0;
+    }
+    //필터박스
+    & .filter-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      & .autoreset-box {
+        display: none;
+      }
+      //옵션들
+      & .filter-list {
+        width: 100%;
+        transition: all 0.5s;
+        max-height: 20rem;
+        opacity: 1;
+        & > div {
+          width: 100%;
+          max-width: 100%;
+        }
+        //접혔을때
+        &.folded {
+          transition: all 0.5s;
+          opacity: 0.8;
+          max-height: $form-height;
+          padding: 0;
+          margin: 0;
+          border: transparent;
+          overflow: hidden;
+        }
+      }
+      //오른쪽 버튼들
+      & .filter-function {
+        position: absolute;
+        right: 1rem;
+      }
+    }
+    //검색박스
+    & .search-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      & .search-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        & button:first-child {
+          border-radius: $form-radius $form-radius 0 0;
+        }
+        & .pnt-input--group,
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+//서치랩 - 검색과 검색필터가 혼합된 형태
+.search-wrap {
+  border: 1px solid $default-secondary;
+  border-radius: $form-radius;
+  display: flex;
+  width: 33.5rem;
+  //내부 item 사이즈
+  & .input-wrap {
+    border-left: 1px solid $gray-400;
+    display: flex;
+    width: 100%;
+    & .pnt-input--group {
+      width: 100%;
+    }
+    & .pnt-btn{
+      min-width: 5rem;
+    }
+  }
+}

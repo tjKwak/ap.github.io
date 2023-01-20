@@ -1,0 +1,72 @@
+//////////////////////////////
+//※ 해당 파일은 리액트에 절대 머지하지 마세요.
+//////////////////////////////
+///
+/// //////////////////////////////
+
+//레이아웃
+@media (max-width: 991px) {
+  & .app-header__logo {
+    justify-content: center;
+    & .header__pane {
+      display: none;
+    }
+  }
+  & .sidebar-mobile-open {
+    & .app-sidebar {
+      transform: translateX(0px);
+    }
+    & .sidebar-mobile-overlay {
+      display: block;
+    }
+  }
+  & .app-header__menu,
+  & .app-header__mobile-menu {
+    padding: 1rem !important;
+  }
+}
+
+.app-container.sidebar-web-closed {
+  //헤더
+  & .app-header {
+    & .app-header__logo {
+      padding: 0 10px 0 0 !important;
+      justify-content: center;
+      & .header__pane {
+        margin-left: 0 !important;
+      }
+    }
+  }
+  //사이드바
+  .app-sidebar {
+    & .app-sidebar__inner {
+      //윗부분 전체
+      & .metismenu > ul.metismenu-container {
+        //메뉴 한세트
+        & > li {
+          //대 메뉴
+          & > a.metismenu-link {
+            justify-content: center;
+          }
+          //소메뉴 세트
+          & > ul.metismenu-container {
+            //소메뉴
+            & > li > a {
+            }
+            //오픈 되었을때
+            &.visible {
+              &::before {
+              }
+              & > li > a {
+                padding: 0;
+                display: none;
+              }
+            }
+            &::before {
+            }
+          }
+        }
+      }
+    }
+  }
+}

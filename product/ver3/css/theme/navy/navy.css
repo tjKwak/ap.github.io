@@ -1,0 +1,1111 @@
+@charset "UTF-8";
+/* Css link*/
+/* Css link*/
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+#root .app-container.app-theme-pnt-navy {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+#root .app-container.app-theme-pnt-navy .app-header__logo {
+  background-color: #292938;
+}
+
+#root .app-container.app-theme-pnt-navy .app-header__content {
+  background: white;
+}
+
+#root .app-container.app-theme-pnt-navy .app-header__content .app-header-left .menu-main {
+  color: black;
+}
+
+#root .app-container.app-theme-pnt-navy .app-header__content .app-header-left .menu-sub {
+  color: #6748e3;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar {
+  background: #292938;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.098);
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item.active > a.metismenu-link .material-icons-round {
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > a.metismenu-link:hover {
+  background-color: rgba(196, 181, 238, 0.2);
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > a.metismenu-link:hover .material-icons-round {
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > a.metismenu-link .metismenu-icon.material-icons-round {
+  color: #a7a2c4;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > a.metismenu-link span {
+  color: #a7a2c4;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > a.metismenu-link .material-icons-round {
+  color: #706966;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link {
+  background: transparent;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link:hover {
+  background-color: rgba(196, 181, 238, 0.2);
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link span {
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link.active {
+  background: rgba(196, 181, 238, 0.2);
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link.active span {
+  color: #bbaaff;
+}
+
+#root .app-container.app-theme-pnt-navy .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible::before {
+  background-color: #48455c;
+}
+
+#root .app-container.app-theme-pnt-navy .app-main__inner {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6f5fe), to(#e5e3f3));
+  background: linear-gradient(#f6f5fe, #e5e3f3);
+}
+
+#root .app-container.app-theme-pnt-navy .app-footer {
+  background-color: transparent;
+  color: black;
+}
+
+#root .app-container.app-theme-pnt-navy .card {
+  background-color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-header {
+  background-color: white;
+  border-bottom: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-tab {
+  background-color: #cacafc;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-tab li {
+  background-color: #e0e0ff;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-tab li a {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-tab li.on {
+  background-color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-tab li.on a {
+  color: black;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-header__tab li a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-header__tab li a::after {
+  background-color: #6748e3;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-header__tab li.on a {
+  color: #6748e3;
+}
+
+#root .app-container.app-theme-pnt-navy .card .card-button {
+  border-top: 1px solid #E6E5E8;
+  background-color: #fafafa;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-modal .modal-header {
+  background-color: white;
+  border-bottom: 1px solid #E6E5E8 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-modal .modal-body {
+  background-color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-modal .modal-footer {
+  background-color: #fafafa;
+  border-top: 1px solid #E6E5E8 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .form-control:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 1px #656467;
+          box-shadow: 0 0 0 1px #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker__input-container input {
+  background-color: #f7f6f8;
+  border: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .input-group-text {
+  background-color: #d2d2fd;
+  border: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker {
+  border-radius: 0;
+  border: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker *::-webkit-scrollbar-track {
+  background-color: #d2d2fd;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker *::-webkit-scrollbar-thumb {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__triangle {
+  border-bottom-color: #f7f6f8;
+  border-top-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__triangle::before {
+  border-bottom-color: #E6E5E8;
+  border-top-color: #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__month-container {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__header {
+  background-color: #d2d2fd;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
+  background-color: #f7f6f8;
+  border-top: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__day:hover, #root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__day:focus, #root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__day:active {
+  background-color: #d1cde9;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__time-container {
+  border-left: 1px solid #E6E5E8;
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__header {
+  background-color: #d2d2fd;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-list-item:hover, #root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-list-item:focus, #root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-list-item:active {
+  background-color: #d1cde9;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input {
+  border-left: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .react-datepicker__header {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #d2d2fd;
+  border-bottom: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .time-label-box {
+  border-bottom: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .time-label-box div:last-child {
+  border-left: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .list-wrap button {
+  color: rgba(0, 0, 0, 0.75);
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .time-label-box {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select:hover {
+  -webkit-filter: brightness(0.98);
+  filter: brightness(0.98);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__control {
+  cursor: pointer;
+  background-color: #f7f6f8;
+  border: 1px solid #E6E5E8;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__control--menu-is-open {
+  -webkit-box-shadow: 0 0 0 1px #656467;
+          box-shadow: 0 0 0 1px #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__multi-value {
+  background-color: #d2d2fd;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__multi-value .react-select__multi-value__remove:hover, #root .app-container.app-theme-pnt-navy .react-select .react-select__multi-value .react-select__multi-value__remove:focus, #root .app-container.app-theme-pnt-navy .react-select .react-select__multi-value .react-select__multi-value__remove:active {
+  background-color: #d1cde9;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__indicator-separator {
+  display: none;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .select-dropdown-svg {
+  color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__indicator {
+  opacity: 0.5;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__indicator svg {
+  height: 16px;
+  width: 18px;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select .react-select__placeholder {
+  font-size: 0.8rem;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select__menu {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select__menu .react-select__menu-list {
+  padding: 0;
+  border-radius: 5px;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select__menu .react-select__menu-list .react-select__option {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #d2d2fd;
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select__menu .react-select__menu-list .react-select__option:hover, #root .app-container.app-theme-pnt-navy .react-select__menu .react-select__menu-list .react-select__option:focus, #root .app-container.app-theme-pnt-navy .react-select__menu .react-select__menu-list .react-select__option:active {
+  background-color: #d1cde9;
+}
+
+#root .app-container.app-theme-pnt-navy .react-select__menu .react-select__menu-list .react-select__option:last-child {
+  border-bottom: none;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .styled-option:hover, #root .app-container.app-theme-pnt-navy .select-dropdown .styled-option:focus, #root .app-container.app-theme-pnt-navy .select-dropdown .styled-option:active {
+  background-color: #d1cde9;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-control {
+  background-color: #f7f6f8;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-control:hover, #root .app-container.app-theme-pnt-navy .select-dropdown .select-control:focus, #root .app-container.app-theme-pnt-navy .select-dropdown .select-control:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-container {
+  background-color: #f7f6f8;
+  border: 1px solid #E6E5E8;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-container.container-open {
+  -webkit-box-shadow: 0 0 0 1px #656467;
+          box-shadow: 0 0 0 1px #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-container:hover {
+  -webkit-filter: brightness(0.98);
+  filter: brightness(0.98);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-menu {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-option > div {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-option > div:hover, #root .app-container.app-theme-pnt-navy .select-dropdown .select-option > div:focus, #root .app-container.app-theme-pnt-navy .select-dropdown .select-option > div:active {
+  background-color: #d1cde9;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-option > div .select-label {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-group-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .rct-icon {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .tree-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  padding: 5px;
+}
+
+#root .app-container.app-theme-pnt-navy .select-dropdown .select-dropdown-svg {
+  opacity: 0.5;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-brand {
+  background-color: #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-secondary {
+  background-color: #6748e3;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-success {
+  background-color: #80d217;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-warning {
+  background-color: #ffce2e;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-danger {
+  background-color: #ff3358;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-info {
+  background-color: #77e4d2;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-lightgray {
+  background-color: #d1cee2;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-gray {
+  background-color: #716c94;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-darkgray {
+  background-color: #453e6f;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-disable {
+  background-color: #f1f0f6;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group input {
+  background-color: #f7f6f8;
+  border: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group input::-webkit-input-placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group input:-ms-input-placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group input::-ms-input-placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group input::placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group input:focus,
+#root .app-container.app-theme-pnt-navy .pnt-input--group input:active,
+#root .app-container.app-theme-pnt-navy .pnt-input--group input:focus-visible {
+  border: 1px solid #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-error p,
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-error b,
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-error span,
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-error div {
+  color: #ff3358;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-error .pnt-input {
+  border: 1px solid #ff3333;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.form-must p,
+#root .app-container.app-theme-pnt-navy .pnt-input--group.form-must b,
+#root .app-container.app-theme-pnt-navy .pnt-input--group.form-must span,
+#root .app-container.app-theme-pnt-navy .pnt-input--group.form-must div {
+  color: #ff3358;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.form-must input {
+  border: 1px solid #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-disable .pnt-input {
+  background-color: #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-disable::-webkit-input-placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-disable:-ms-input-placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-disable::-ms-input-placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-input--group.input-disable::placeholder {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-file--group input[type="file"] {
+  border: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-file--group input[type="file"]::before {
+  background-color: #f7f6f8;
+  border-left: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__btn {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #f7f6f8;
+  border: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options {
+  background-color: #f7f6f8;
+  border: 1px solid #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li a {
+  border-top: 1px solid #E6E5E8;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li:hover a {
+  background-color: #d1cde9;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li.on a {
+  background-color: #6748e3;
+  color: black;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__btn {
+  border: 1px solid #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li.on {
+  background-color: #6748e3;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li.on a {
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.form-must span {
+  color: #ff3358;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.form-must .select__btn {
+  border: 1px solid #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-checkbox p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-checkbox .checkbox-effect {
+  border: 1px solid #E6E5E8;
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-checkbox .checkbox-effect::before, #root .app-container.app-theme-pnt-navy .pnt-checkbox .checkbox-effect::after {
+  background: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-checkbox.check-checked .checkbox-effect {
+  background-color: #6748e3;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-checkbox.check-checked p {
+  color: black;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-toggle input:checked + .slider {
+  background-color: #80d217;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-toggle .slider {
+  background-color: lightgray;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-toggle .slider::before {
+  background-color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-toggle.toggle-txt p:nth-of-type(1) {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-toggle.toggle-txt p:nth-of-type(2) {
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-toggle.toggle-icon div {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio li {
+  border: 1px solid #E6E5E8;
+  background-color: transparent;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio li label {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio li.checked {
+  background-color: #434245;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio li.checked label {
+  color: black;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-nameplate {
+  background-color: #e8e4fb;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-nameplate::before {
+  background-color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-txt {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-border {
+  background-color: #E6E5E8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-label--group .label-main.label-dot::before {
+  background-color: #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-label--group .label-main.label-must {
+  color: #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pagination .now {
+  color: #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pagination .whole {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table .border-box {
+  border-top: 1.4px solid #6f6f81;
+  border-bottom: 1.4px solid #6f6f81;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table .border-box .th {
+  background-color: #d2d2fd;
+  border-right: 1px solid #eceaf2;
+  color: black;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table .border-box .tbody {
+  background-color: #ffffff;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table .border-box .tbody .tr:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table .border-box .tbody .tr .td {
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #eceaf2;
+  border-right: 1px solid #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table.table-clickable .border-box .tr:hover {
+  background-color: #d1cde9 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table.table-clickable .border-box .tr.active {
+  background-color: #6a5acd !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-table.table-clickable .border-box .tr.active .td {
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-btn {
+  background-color: #eceaf2;
+  -webkit-box-shadow: 0 0 0 1px #E6E5E8 inset;
+          box-shadow: 0 0 0 1px #E6E5E8 inset;
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-input--group .pnt-input {
+  background-color: #eceaf2;
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-select--group .select__btn {
+  background-color: #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-select--group .select__btn .cont-wrap {
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-checkbox .checkbox-effect {
+  background-color: #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy *::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#root .app-container.app-theme-pnt-navy *::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#root .app-container.app-theme-pnt-navy .color-brand {
+  color: #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-secondary {
+  color: #6748e3 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-success {
+  color: #80d217 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-info {
+  color: #77e4d2 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-warning {
+  color: #ffce2e !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-danger {
+  color: #ff3358 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-lightgray {
+  color: #d1cee2 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-gray {
+  color: #716c94 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-darkgray {
+  color: #453e6f !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-white {
+  color: white !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-black {
+  color: black !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand {
+  background-color: #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-light {
+  background-color: #ffbe73 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-dark {
+  background-color: #8c4b00 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-d-4 {
+  background-color: #663600 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-d-3 {
+  background-color: #8c4b00 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-d-2 {
+  background-color: #b35f00 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-d-1 {
+  background-color: #d47100 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-l-4 {
+  background-color: #ffa033 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-l-3 {
+  background-color: #ffbe73 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-l-2 {
+  background-color: #ffdbb3 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-brand.bg-l-1 {
+  background-color: #fff3e6 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary {
+  background-color: #6748e3 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-light {
+  background-color: #a491ee !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-dark {
+  background-color: #39287d !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-d-4 {
+  background-color: #291d5b !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-d-3 {
+  background-color: #39287d !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-d-2 {
+  background-color: #48329f !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-d-1 {
+  background-color: #553cbc !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-l-4 {
+  background-color: #8269e8 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-l-3 {
+  background-color: #a491ee !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-l-2 {
+  background-color: #cabff5 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-secondary.bg-l-1 {
+  background-color: #e8e4fb !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success {
+  background-color: #80d217 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-light {
+  background-color: #b3e474 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-dark {
+  background-color: #46740d !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-d-4 {
+  background-color: #335409 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-d-3 {
+  background-color: #46740d !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-d-2 {
+  background-color: #5a9310 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-d-1 {
+  background-color: #6aae13 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-l-4 {
+  background-color: #97da41 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-l-3 {
+  background-color: #b3e474 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-l-2 {
+  background-color: #d3efae !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-success.bg-l-1 {
+  background-color: #e8f7d5 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info {
+  background-color: #77e4d2 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-light {
+  background-color: #bbf2e9 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-dark {
+  background-color: #417d74 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-d-4 {
+  background-color: #305b54 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-d-3 {
+  background-color: #417d74 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-d-2 {
+  background-color: #53a093 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-d-1 {
+  background-color: #63bdae !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-l-4 {
+  background-color: #99ebdd !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-l-3 {
+  background-color: #bbf2e9 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-l-2 {
+  background-color: #d6f7f2 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-info.bg-l-1 {
+  background-color: #f1fcfb !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning {
+  background-color: #ffce2e !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-light {
+  background-color: #ffe48c !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-dark {
+  background-color: #94771b !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-d-4 {
+  background-color: #665212 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-d-3 {
+  background-color: #94771b !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-d-2 {
+  background-color: #bf9b23 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-d-1 {
+  background-color: #e6b929 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-l-4 {
+  background-color: #ffda62 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-l-3 {
+  background-color: #ffe48c !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-l-2 {
+  background-color: #ffeeb6 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-warning.bg-l-1 {
+  background-color: #fff5d5 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger {
+  background-color: #ff3358 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-light {
+  background-color: #ff99ac !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-dark {
+  background-color: #8c1c30 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-d-4 {
+  background-color: #661423 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-d-3 {
+  background-color: #8c1c30 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-d-2 {
+  background-color: #b3243e !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-d-1 {
+  background-color: #d42a49 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-l-4 {
+  background-color: #ff6682 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-l-3 {
+  background-color: #ff99ac !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-l-2 {
+  background-color: #ffc2cd !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-danger.bg-l-1 {
+  background-color: #ffebee !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray {
+  background-color: #716c94 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-light {
+  background-color: #d4d3df !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-dark {
+  background-color: #22202c !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-d-4 {
+  background-color: #434245 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-d-3 {
+  background-color: #656467 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-d-2 {
+  background-color: #86858a !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-d-1 {
+  background-color: #a8a7ac !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-l-4 {
+  background-color: #cac8cf !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-l-3 {
+  background-color: #dcd9e1 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-l-2 {
+  background-color: #eceaf2 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-gray.bg-l-1 {
+  background-color: #f6f6f9 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-lightgray {
+  background-color: #d1cee2 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-lightgray.bg-light {
+  background-color: #f1f0f6 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-lightgray.bg-dark {
+  background-color: #3f3e44 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-darkgray {
+  background-color: #453e6f !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-darkgray.bg-light {
+  background-color: #c7c5d4 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-darkgray.bg-dark {
+  background-color: #151321 !important;
+}

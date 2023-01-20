@@ -1,0 +1,17 @@
+.metismenu-icon {
+  transform: scale(1.4);
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.nav-child-active{
+  .metismenu-icon {
+    font-weight: bolder;
+    transform: scale(1.6);
+  }
+  & > .metismenu-link {
+    span {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -316,12 +316,3 @@
     width: 100%;
   }
 }
-
-.flx-row.row-space-around {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.app-theme-pnt-dark .app-page-title {
-  background: rgba(0, 0, 0, 0.15) !important;
-}

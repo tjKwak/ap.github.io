@@ -762,12 +762,12 @@
   }
 }
 
-.show__over-mobile {
+.hide__under-mobile {
   display: block !important;
 }
 
 @media (max-width: 570px) {
-  .show__over-mobile {
+  .hide__under-mobile {
     display: none !important;
   }
 }
@@ -793,4 +793,32 @@
 .shadow-small {
   -webkit-box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18) !important;
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18) !important;
+}
+
+.material-icons-round.md-18 {
+  font-size: 18px;
+}
+
+.material-icons-round.md-20 {
+  font-size: 20px;
+}
+
+.material-icons-round.md-22 {
+  font-size: 22px;
+}
+
+.material-icons-round.md-24 {
+  font-size: 24px;
+}
+
+.material-icons-round.md-30 {
+  font-size: 30px;
+}
+
+.material-icons-round.md-36 {
+  font-size: 36px;
+}
+
+.material-icons-round.md-48 {
+  font-size: 48px;
 }

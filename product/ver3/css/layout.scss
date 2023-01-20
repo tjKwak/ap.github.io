@@ -1,0 +1,613 @@
+//////////////////////////////
+//※ 해당 파일은 html 용으로 만들었습니다.
+//   React 템플릿을 사용할경우, merge 시 잘 살펴봐주세요.
+
+//////////////////////////////
+/* Css link*/
+@import "_variables";
+
+///////////////
+//about - 레이아웃
+body {
+  //overflow-y: overlay !important;
+  overflow: hidden !important;
+}
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  //대시보드 편집 모드일때
+  &.dashboard-edit-mode {
+    & .app-header .app-header__content {
+      background-color: #393986 !important;
+      & * {
+        display: none;
+      }
+    }
+    @media (max-width: $breakpoint-labtop) {
+      & .app-header {
+        background-color: #393986 !important;
+      }
+    }
+  }
+  //헤더
+  & .app-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: $app-header-height;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    z-index: 10;
+    transition: all 0.2s;
+    background-color: white;
+
+    //로고 접히는칸
+    & .app-header__logo {
+      width: $app-sidebar-width;
+      height: $app-header-height;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      transition: width 0.2s;
+
+      & .logo-src {
+        font-size: 18px;
+        background-image: none;
+        white-space: nowrap;
+        letter-spacing: -1px;
+        margin-top: -5px;
+        width: auto;
+        // color: $default-brand;
+        // font-weight: 600;
+        // color: #a799db;
+        font-weight: 900;
+        background: linear-gradient(90deg, #ff8800 0%, #ffd056 104.17%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      & .header__pane {
+        & button {
+          & .material-icons-round {
+            //font-size: 20px;
+            color: #706966;
+          }
+        }
+      }
+    }
+    //로고 외의 칸
+    & .app-header__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      flex: 1;
+      padding: 0 $layout-spacer-x;
+      height: $app-header-height;
+      & .app-header-left,
+      .app-header-right {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      & .app-header-left {
+        & .menu-sub {
+          color: $f-b-1;
+          font-size: 12px;
+          font-weight: 500;
+        }
+        & .menu-main {
+          color: $f-b-1;
+          font-size: 18px;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  & .app-main {
+    padding-top: $app-header-height;
+    z-index: 8;
+    position: relative;
+    background: #edebf3;
+    height: 100vh;
+    display: flex !important;
+    //네브, 사이드메뉴
+    & .app-sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      height: 100%;
+      width: $app-sidebar-width;
+      min-width: $app-sidebar-width;
+      margin: 0 !important;
+      padding: $app-header-height 0 0 0 !important;
+      z-index: 20;
+      overflow: hidden;
+      transition: all 0.2s;
+      background-color: #f2f2f7;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    //본문
+    & .app-main__outer {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1;
+      padding-left: $app-sidebar-width;
+      z-index: 12;
+
+      & .app-main__inner {
+        padding: 0 !important;
+        flex: 0 0 calc(100% - #{$app-footer-height});
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: #edebf3;
+        overflow: hidden;
+        //content 내 타이틀 화면
+        //웹(필수 아님), 모바일(활성화를 권장)
+        & .app-page-title {
+          display: flex;
+          flex-direction: column;
+          padding: 0 1rem;
+          height: 60px;
+          margin: 0;
+          //대시보드 에디터화면
+          &.dashboard-edit-title {
+            background-color: #393986;
+            height: 46px;
+            & .page-title-wrapper {
+              display: flex;
+              align-items: flex-start;
+              width: 100%;
+              height: 100%;
+              & .page-title-heading {
+                display: flex;
+                & .page-title-icon {
+                  padding: 0 !important;
+                  margin-right: 0.2rem !important;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  background: transparent;
+                  box-shadow: $card-shadow;
+                  border-radius: 0.25rem;
+                  width: 36px;
+                  height: 36px;
+                  & .material-icons-round {
+                    color: white;
+                  }
+                }
+                & .page-title-icon + div {
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  color: white;
+                  font-size: 1.2rem;
+                  & .page-title-subheading {
+                    padding: 0;
+                    font-size: 0.8rem;
+                    color: white;
+                    opacity: 0.6;
+                  }
+                }
+              }
+            }
+            @media (max-width: $breakpoint-labtop) {
+              height: 66px;
+              padding: 0.5rem;
+              & .page-title-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .page-title-heading {
+                  margin: 0;
+                  flex-direction: column;
+                  & .page-title-icon {
+                    display: none;
+                  }
+                  & .page-title-icon + div {
+                    font-size: 1rem;
+                    white-space: nowrap;
+                    & .page-title-subheading {
+                      display: none;
+                    }
+                  }
+                }
+                & .page-title-actions {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+        //찐 본문
+        & .app-page-content {
+          height: 100%;
+          padding: 1rem;
+          padding-bottom: 0rem;
+          box-sizing: border-box;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          overflow: auto;
+          border-top: 1px solid #dcd9e1;
+          @media (max-width: $breakpoint-mobile) {
+            padding: 15px;
+          }
+        }
+      }
+    }
+
+    //푸터
+    & .app-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      z-index: 12;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      height: $app-footer-height;
+      padding-right: 1rem;
+      & .footer-wrap {
+        font-size: 0.7rem;
+        color: $f-b-4;
+      }
+    }
+  }
+}
+
+///////////////
+//헤더 위젯
+.app-header-right {
+  & .material-icons-round {
+    color: #a8a7ac;
+    font-size: 24px !important;
+  }
+  //전체화면 위젯
+  & .fullscreen-box {
+    margin-left: 0.1rem;
+    & .material-icons-round {
+      transform: scale(1.2) translateY(-1px);
+    }
+  }
+  //알람박스 위젯
+  & .alarm-box {
+    position: relative;
+    & .alarm-num {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      padding: 0 3px;
+      min-width: 12px;
+      height: 12px;
+      border-radius: 50px;
+      background-color: red;
+      color: white;
+      font-size: 9px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  //유저박스 위젯
+  & .user-box {
+    position: relative;
+    //버튼
+    & .user-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      height: $form-height;
+      background-color: transparent;
+      &:hover {
+        & .material-icons-round {
+          color: black;
+        }
+        & .user-name {
+          opacity: 1;
+        }
+      }
+      & .user-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        opacity: 0.75;
+        & b {
+          font-size: 0.9rem;
+          font-weight: 800;
+          line-height: 12px;
+        }
+        & p {
+          margin: 0;
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
+      }
+    }
+    //클릭시 나오는 옵션메뉴
+    & .user-options {
+      position: absolute;
+      will-change: transform;
+      top: $app-header-height;
+      right: 0px;
+      width: 400px;
+      background-color: white;
+      box-shadow: $card-shadow;
+      & .dropdown-menu-header {
+        background-color: #553cbc;
+        border-bottom: 1px solid #eceaf2;
+        padding: 1rem 1.4rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .widget-content-left {
+          & .profile-txt {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            & .user-name {
+              color: white;
+              font-size: 1rem;
+              font-weight: 600;
+            }
+            & .unread-msg {
+              color: $f-w-4;
+              font-size: 0.8rem;
+              font-weight: 200;
+              & b {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      & .profile-setting {
+        & .no-gutters {
+          margin: 0;
+          padding: 0;
+        }
+        & .setting-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          margin: 0;
+          padding: 1rem;
+          cursor: pointer;
+          border-left: 1px solid #eceaf2;
+          background-color: transparent;
+          transition: all 0.2s;
+          &:hover {
+            background-color: #f3f2f6;
+            transition: all 0.2s;
+            & span {
+              color: black;
+              transition: all 0.2s;
+            }
+          }
+          & span {
+            border-radius: 0.2rem;
+            padding: 0.5rem;
+            transform: scale(1.1);
+            color: $gray-700;
+          }
+          & .setting-name {
+            color: gray;
+            font-size: 0.8rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+///////////////
+//네비게이션 - 닫았을 때
+.app-container.sidebar-web-closed {
+  //헤더
+  & .app-header {
+    & .app-header__logo {
+      width: $app-sidebar-width-collapsed;
+      transition: all 0.3s;
+      padding-left: 1.3rem;
+      & .logo-src {
+        font-size: 0;
+      }
+    }
+  }
+  & .app-main {
+    //네비게이션
+    & .app-sidebar {
+      width: $app-sidebar-width-collapsed;
+      min-width: $app-sidebar-width-collapsed;
+      flex: 0 0 $app-sidebar-width-collapsed;
+      transition: all 0.3s;
+      & * {
+        font-size: 0;
+      }
+      & .metismenu-icon {
+        font-size: inherit;
+      }
+      & span {
+        display: none;
+      }
+      & .material-icons-round {
+        display: none;
+      }
+      & .metismenu-icon {
+        display: block;
+      }
+      & li.on,
+      li:hover {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+    //본문
+    & .app-main__outer {
+      padding-left: $app-sidebar-width-collapsed;
+      transition: all 0.3s;
+    }
+  }
+}
+
+///////////////
+//네비게이션
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & .app-sidebar__inner {
+    display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    //윗부분 전체
+    & .metismenu > ul.metismenu-container {
+      padding: 0 !important;
+      //메뉴 한세트
+      & > li {
+        border-top: 1px solid #474456;
+        //선택된 대 메뉴
+        &.active {
+          & > a.metismenu-link {
+            & .metismenu-icon.material-icons-round {
+              transform: none;
+            }
+            & .material-icons-round {
+              transform: rotate(180deg);
+              transition: all 0.2s;
+              color: white;
+              width: $form-height;
+            }
+          }
+        }
+        //대 메뉴
+        & > a.metismenu-link {
+          border-radius: 0;
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          height: 38px;
+          line-height: 38px;
+          & .metismenu-icon.material-icons-round {
+            font-size: 20px;
+            color: #ff7800;
+          }
+          & span {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 900;
+            color: #ff7800;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+          }
+          & .material-icons-round {
+            transition: all 0.2s;
+            color: #706966;
+            width: $form-height;
+          }
+        }
+        //소메뉴 세트
+        & > ul.metismenu-container {
+          padding: 0;
+          margin: 0;
+          transition: padding 0.3s;
+          overflow: hidden;
+          opacity: 0;
+          //소메뉴
+          & > li > a.metismenu-link {
+            border-radius: 0;
+            padding: 0;
+            background-color: transparent;
+            & span {
+              font-size: 13px;
+              color: white;
+            }
+            //선택된 소메뉴
+            &.active span {
+              color: #a491ee;
+              font-weight: 600;
+            }
+          }
+          //오픈 되었을때
+          &.visible {
+            margin: 0.2rem 0;
+            padding: 0 1rem;
+            padding-left: 2.3rem;
+            position: relative;
+            transition: padding 0.3s;
+            opacity: 1;
+            &::before {
+              height: 100%;
+            }
+            & > li > a {
+              height: 34px;
+              line-height: 34px;
+              display: flex;
+              align-items: center;
+              padding: 0rem 1rem;
+            }
+          }
+          &::before {
+            content: "";
+            height: 100%;
+            opacity: 1;
+            width: 2px;
+            background: #e0f3ff;
+            position: absolute;
+            left: 1.7rem;
+            top: 0;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  //세팅
+  & .pnt-sidebar-bottom {
+    & .metismenu-link {
+      background: rgba(255, 255, 255, 0.05);
+      justify-content: flex-end;
+      & span {
+        width: auto !important;
+      }
+    }
+  }
+}
+
+///////////////
+//스크롤바
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 1px solid transparent; //pdding 대신 여백사용할때
+}
+*::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}

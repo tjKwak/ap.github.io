@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* Css link*/
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+.filter_ver5 {
+  padding: 0 1rem;
+  background-color: white;
+  border: none !important;
+}
+
+.filter_ver5 .filter-box {
+  border-top: 1px solid #dcd9e1;
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.filter_ver5 .filter-box .filter-list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filter_ver5 .search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding-bottom: 5px;
+}
+
+.filter_ver5 .filter-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #86858a;
+  white-space: nowrap;
+}
+
+.filter_ver5 .filter-label span {
+  color: #86858a;
+}
+
+.filter_ver5 .filter-list {
+  gap: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter_ver5 .filter-function {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.filter_ver5 .autoreset-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  color: #86858a;
+  font-weight: 600;
+}
+
+.filter_ver5 .autoreset-box .pnt-select--group {
+  width: unset;
+}
+
+@media (max-width: 570px) {
+  .filter_ver5 .filter-label {
+    padding: 0.3rem 0;
+  }
+  .filter_ver5 .filter-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .filter_ver5 .filter-box .autoreset-box {
+    display: none;
+  }
+  .filter_ver5 .filter-box .filter-list {
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    max-height: 20rem;
+    opacity: 1;
+  }
+  .filter_ver5 .filter-box .filter-list > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  .filter_ver5 .filter-box .filter-list.folded {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 0.8;
+    max-height: 28px;
+    padding: 0;
+    margin: 0;
+    border: transparent;
+    overflow: hidden;
+  }
+  .filter_ver5 .filter-box .filter-function {
+    position: absolute;
+    right: 1rem;
+  }
+  .filter_ver5 .search-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .filter_ver5 .search-box .search-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .filter_ver5 .search-box .search-wrap button:first-child {
+    border-radius: 0px 0px 0 0;
+  }
+  .filter_ver5 .search-box .search-wrap .pnt-input--group,
+  .filter_ver5 .search-box .search-wrap > div {
+    width: 100%;
+  }
+}
+
+.search-wrap {
+  border: 1px solid #3e66fb;
+  border-radius: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33.5rem;
+}
+
+.search-wrap .input-wrap {
+  border-left: 1px solid #cac8cf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.search-wrap .input-wrap .pnt-input--group {
+  width: 100%;
+}
+
+.search-wrap .input-wrap .pnt-btn {
+  min-width: 5rem;
+}
