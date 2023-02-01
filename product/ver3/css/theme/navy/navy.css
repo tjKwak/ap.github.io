@@ -532,33 +532,25 @@
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group .select__options {
   background-color: #f7f6f8;
-  border: 1px solid #E6E5E8;
+  border: 1px solid #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li a {
-  border-top: 1px solid #E6E5E8;
   color: rgba(0, 0, 0, 0.6);
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li:hover a {
-  background-color: #d1cde9;
+  background-color: #eceaf2;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li.on a {
-  background-color: #6748e3;
-  color: black;
+  border-top: 1px solid #E6E5E8;
+  background-color: #dcd9e1;
+  color: #6748e3;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__btn {
   border: 1px solid #656467;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li.on {
-  background-color: #6748e3;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li.on a {
-  color: white;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group.form-must span {
@@ -582,11 +574,11 @@
   background: white;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-checkbox.check-checked .checkbox-effect {
+#root .app-container.app-theme-pnt-navy .pnt-checkbox:has(input:checked) .checkbox-effect {
   background-color: #6748e3;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-checkbox.check-checked p {
+#root .app-container.app-theme-pnt-navy .pnt-checkbox:has(input:checked) p {
   color: black;
 }
 
@@ -602,34 +594,28 @@
   background-color: white;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-toggle.toggle-txt p:nth-of-type(1) {
+#root .app-container.app-theme-pnt-navy .pnt-toggle p:nth-of-type(1) {
   color: rgba(0, 0, 0, 0.6);
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-toggle.toggle-txt p:nth-of-type(2) {
-  color: white;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-toggle.toggle-icon div {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-radio li {
-  border: 1px solid #E6E5E8;
-  background-color: transparent;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-radio li label {
+#root .app-container.app-theme-pnt-navy .pnt-toggle p:nth-of-type(2) {
   color: rgba(0, 0, 0, 0.6);
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-radio li.checked {
-  background-color: #434245;
+#root .app-container.app-theme-pnt-navy .pnt-radio:has(input:checked) {
+  border: 1px solid #ff8800;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-radio li.checked label {
-  color: black;
+#root .app-container.app-theme-pnt-navy .pnt-radio:has(input:checked) input {
+  border: 0.45em solid #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio:has(input:disabled) {
+  background-color: #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio:has(input:disabled) p {
+  color: #a8a7ac;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-nameplate {
@@ -724,6 +710,18 @@
 
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-checkbox .checkbox-effect {
   background-color: #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-toggle input:checked + .slider {
+  background-color: #6aae13;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-toggle .slider {
+  background-color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-toggle .slider::before {
+  background-color: #cac8cf;
 }
 
 #root .app-container.app-theme-pnt-navy *::-webkit-scrollbar-thumb {

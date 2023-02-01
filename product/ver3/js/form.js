@@ -264,10 +264,10 @@ window.onload = function(){
 
 
     //클래스 복사 기능
-    var tag_items = document.querySelectorAll('.tag-set > .tag-content > div')
+    var tag_items = document.querySelectorAll('.tag-item p')
     for(let i=0; i<tag_items.length; i++){
         tag_items[i].addEventListener('click',function(e){
-            let text = e.target.children[1].innerText;
+            let text = e.target.innerText;
             navigator.clipboard.writeText(`${text}`);
             toast(`${text}이 복사되었습니다.`);
         })
@@ -286,6 +286,28 @@ window.onload = function(){
         toast.classList.add("reveal"),
             toast.innerText = string
     }
+    // var tag_items = document.querySelectorAll('.tag-set > .tag-content > div')
+    // for(let i=0; i<tag_items.length; i++){
+    //     tag_items[i].addEventListener('click',function(e){
+    //         let text = e.target.children[1].innerText;
+    //         navigator.clipboard.writeText(`${text}`);
+    //         toast(`${text}이 복사되었습니다.`);
+    //     })
+    // }
+
+    // let removeToast;
+    // function toast(string) {
+    //     const toast = document.getElementById("toast");
+    //     toast.classList.contains("reveal") ?
+    //         (clearTimeout(removeToast), removeToast = setTimeout(function () {
+    //             document.getElementById("toast").classList.remove("reveal")
+    //         }, 1000)) :
+    //         removeToast = setTimeout(function () {
+    //             document.getElementById("toast").classList.remove("reveal")
+    //         }, 1000)
+    //     toast.classList.add("reveal"),
+    //         toast.innerText = string
+    // }
 
 
     //모바일시 헤더 기능

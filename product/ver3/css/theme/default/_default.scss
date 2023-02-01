@@ -91,6 +91,9 @@ $form-selected-txt: white;
 $form-disable-bg: white;
 $form-disable-txt: white;
 $form-placeholder-txt: white;
+$form-hover-bg: white;
+$form-active-bg-light: white;
+$form-active-txt-light: white;
 
 // ---------------------------------------------------------
 // ---------------------------------------------------------
@@ -591,30 +594,24 @@ $form-placeholder-txt: white;
     }
     & .select__options {
       background-color: $form-bg;
-      border: 1px solid $form-border;
+      border: 1px solid $form-active-border;
       & li {
         & a {
-          border-top: 1px solid $form-border;
           color: $form-txt;
         }
         &:hover a {
-          background-color: $table-hover-bg;
+          background-color: $form-hover-bg;
         }
         &.on a {
-          background-color: $form-active-bg;
-          color: $form-selected-txt;
+          border-top: 1px solid $form-border;
+          background-color: $form-active-bg-light;
+          color: $form-active-txt-light;
         }
       }
     }
     &.on {
       & .select__btn {
         border: 1px solid $form-active-border;
-      }
-      & .select__options li.on {
-        background-color: $form-active-bg;
-        & a {
-          color: $form-active-txt;
-        }
       }
     }
     &.form-must {
@@ -639,7 +636,7 @@ $form-placeholder-txt: white;
         background: white;
       }
     }
-    &.check-checked {
+    &:has(input:checked){
       & .checkbox-effect {
         background-color: $form-active-bg;
       }
@@ -659,31 +656,29 @@ $form-placeholder-txt: white;
         background-color: $toggle-bar-bg;
       }
     }
-    &.toggle-txt p {
+    & p {
       &:nth-of-type(1) {
         color: $form-txt;
       }
       &:nth-of-type(2) {
-        color: $form-active-txt;
+        color: $form-txt;
       }
-    }
-    &.toggle-icon div {
-      filter: invert(1);
     }
   }
   //6. 라디오
   & .pnt-radio {
-    & li {
-      border: 1px solid $form-border;
-      background-color: transparent;
-      & label {
-        color: $form-txt;
+    //체크시
+    &:has(input:checked) {
+      border: 1px solid $brand;
+      & input {
+        border: 0.45em solid $brand !important;
       }
-      &.checked {
-        background-color: $radio-checked-bg;
-        & label {
-          color: $form-selected-txt;
-        }
+    }
+    //비활성화시
+    &:has(input:disabled) {
+      background-color: $form-disable-bg;
+      & p {
+        color: $form-disable-txt;
       }
     }
   }
@@ -785,6 +780,18 @@ $form-placeholder-txt: white;
     //체크박스
     &.pnt-checkbox .checkbox-effect {
       background-color: $form-disable-bg;
+    }
+    //토글
+    &.pnt-toggle {
+      & input:checked + .slider {
+        background-color: $success-d1;
+      }
+      & .slider {
+        background-color: $gray-500;
+        &::before {
+          background-color: $gray-400;
+        }
+      }
     }
   }
 

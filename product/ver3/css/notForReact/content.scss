@@ -1,0 +1,369 @@
+//////////////////////////////
+/* Css link*/
+@import "../font";
+@import "../_variables";
+//////////////////////////////
+
+::selection {
+  background-color: orange;
+}
+
+.box {
+  width: 100%;
+  height: 3.4rem;
+  position: relative;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  & span {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white !important;
+    padding: 0 5px;
+    @include p5-n();
+    overflow: hidden;
+  }
+}
+.ap-label {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  @include p3-b();
+  margin-bottom: 1rem;
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-color: black;
+  }
+}
+
+#root .app-container.app-theme-pnt-dark,
+#root .app-container.app-theme-pnt-plant {
+  & .ap-label {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $f-b-3;
+  }
+  & .bg-light,
+  .bg-l-1,
+  .bg-l-2,
+  .bg-l-3,
+  .bg-warning {
+    color: $f-b-4;
+    & * {
+      color: $f-b-4;
+    }
+  }
+}
+
+//맵
+.map-text {
+  text-align: center !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+.leaflet-container {
+  & .popup-open {
+    position: absolute;
+    z-index: 1000;
+    background-color: $white;
+    max-width: 100%;
+    height: 88%;
+    &.floorDetail {
+      max-width: 100%;
+      height: 370px;
+    }
+    &.filtering {
+      max-width: 100%;
+      height: 350px;
+    }
+    .header {
+      width: 25%;
+      text-align: center;
+    }
+  }
+  & .custom-control {
+    display: flex;
+  }
+  & .toast-body {
+    height: 280px;
+  }
+}
+.leaflet-control {
+  & .item-container {
+    display: inline-block;
+    color: $black;
+    font-weight: 500;
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 0.35rem;
+    background-color: $white;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid $gray-700;
+  }
+}
+.leaflet-control-layers-overlays span {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+.custom-tooltip {
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(204, 204, 204);
+  white-space: nowrap;
+}
+.custom-tooltip span {
+  text-align: center !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+//.leaflet-tile-container img {
+//  width: 256.8px !important;
+//  height: 256.8px !important;
+//}
+.custom-widget-search {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+//카드
+.card-height-100 {
+  height: calc(100vh - #{$card-header-height} - #{$app-footer-height} - 2rem);
+}
+
+//하이라이트
+.colorscripter-code {
+  color: #f0f0f0;
+  position: relative !important;
+  overflow: auto;
+  margin-bottom: 1rem;
+  & .colorscripter-code-table {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #353536;
+    border-radius: 4px;
+    min-height: 100px;
+    & td:nth-child(1) {
+      padding: 6px;
+      border-right: 2px solid #4f4f4f;
+      & div {
+        margin: 0;
+        padding: 0;
+        word-break: normal;
+        text-align: right;
+        color: #aaa;
+      }
+    }
+    & td:nth-child(2) {
+      width: 100%;
+      padding: 6px 10px;
+      text-align: left;
+      margin //일부러 이렇게 써야 정상작동 됌??
+      & > div {
+        margin: 0;
+        padding: 0;
+        color: #f0f0f0;
+        & > div {
+          padding: 0 6px;
+          white-space: pre;
+        }
+      }
+      & b {
+        padding: 0px 5px;
+        border-radius: 10px;
+        color: #ffd500;
+        background-color: rgba(255, 208, 0, 0.329);
+      }
+      & h5 {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 0px 5px;
+        border-radius: 10px;
+        color: #ffd500;
+        background-color: rgba(255, 99, 190, 0.511);
+      }
+    }
+  }
+}
+
+//태그 아이템
+.tag-item {
+  height: 100px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  transition: $form-transition;
+  text-align: center;
+  // 테스트중인 색상
+  background-color: transparent;
+  & > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  & > p {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #5f6368;
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0px 5px;
+    line-height: 12px;
+    border-radius: 100px;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(240, 240, 240);
+    &:hover {
+      //background-color: rgb(241, 241, 241);
+    }
+    cursor: pointer;
+  }
+}
+.tag-set {
+  margin-bottom: 1.5rem;
+  margin-top: -0.5rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  //태그 세트_1 - 안의 아이템이 인라인 스타일로 정렬됨
+  &.tag-inline {
+    & .tag-item {
+      display: inline-block;
+      & > div {
+        height: calc(100% - 28px);
+      }
+    }
+  }
+  //태그 세트_2 - 안의 아이템 너비가 자동 auto 됨
+  &.tag-flex {
+    grid-template-columns: repeat(auto-fill, 100px);
+    gap: 10px 0px;
+    -webkit-box-pack: justify;
+    align-content: start;
+    display: grid;
+    justify-content: space-around;
+    & .tag-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    &.item-2 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    &.item-3 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    &.item-4 {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+  }
+}
+
+//가이드 인포
+.tag-info {
+  margin-bottom: 1.5rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .tag-title {
+    color: $default-secondary;
+    font-weight: 500;
+    font-size: 1rem;
+    //padding-left: 1rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    // &::before {
+    //   content: "";
+    //   width: 5px;
+    //   height: 5px;
+    //   border-radius: 100px;
+    //   background-color: $default-secondary;
+    //   position: absolute;
+    //   top: calc(50% - 2.5px);
+    //   left: 5px;
+    // }
+  }
+  // & .tag-title {
+  //   padding: 0;
+  //   &::before {
+  //     display: none;
+  //   }
+  // }
+  & > ul > li {
+    list-style: disc;
+    & li {
+      list-style: circle;
+    }
+  }
+}
+
+.info-box {
+  background-color: $gray-200;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1rem;
+  color: gray;
+  font-weight: 500;
+  & * {
+    color: gray;
+  }
+}
+.info-txt {
+  font-size: 0.8rem;
+  color: $default-danger;
+  & * {
+    color: $default-danger;
+  }
+  & .material-icons-round {
+    font-size: 12px;
+    transform: translateY(2px);
+  }
+}
+.gray-box {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+}
+
+//토스트메세지
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  padding: 15px 20px;
+  transform: translate(-50%, 10px);
+  border-radius: 30px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  z-index: 10000;
+}
+
+#toast.reveal {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}

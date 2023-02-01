@@ -270,6 +270,12 @@ body {
   opacity: 0.6;
 }
 
+.app-container .app-main .app-main__outer .app-main__inner .app-page-title.dashboard-edit-title .page-title-wrapper .page-title-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 1024px) {
   .app-container .app-main .app-main__outer .app-main__inner .app-page-title.dashboard-edit-title {
     height: 66px;
@@ -311,7 +317,6 @@ body {
 .app-container .app-main .app-main__outer .app-main__inner .app-page-content {
   height: 100%;
   padding: 1rem;
-  padding-bottom: 0rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -323,6 +328,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: auto;
+  overflow-x: hidden;
   border-top: 1px solid #dcd9e1;
 }
 
@@ -759,6 +765,27 @@ body {
 
 .app-sidebar .pnt-sidebar-bottom .metismenu-link span {
   width: auto !important;
+}
+
+#root .app-container .app-page-content {
+  padding: 0.5rem;
+  padding-left: 1.3rem;
+  padding-right: .7rem;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row .col,
+.row > [class*="col-"] {
+  padding-left: 0rem;
+  padding-right: 0.5rem;
+}
+
+.card {
+  margin-bottom: 0.5rem !important;
 }
 
 *::-webkit-scrollbar {

@@ -199,6 +199,9 @@ body {
                   }
                 }
               }
+              & .page-title-actions {
+                display: flex;
+              }
             }
             @media (max-width: $breakpoint-labtop) {
               height: 66px;
@@ -232,12 +235,13 @@ body {
         & .app-page-content {
           height: 100%;
           padding: 1rem;
-          padding-bottom: 0rem;
+          //padding-bottom: 0rem;
           box-sizing: border-box;
           position: relative;
           display: flex;
           flex-direction: column;
           overflow: auto;
+          overflow-x: hidden;
           border-top: 1px solid #dcd9e1;
           @media (max-width: $breakpoint-mobile) {
             padding: 15px;
@@ -593,6 +597,27 @@ body {
       }
     }
   }
+}
+
+///////////////
+//카드 사이 간격
+$layout-padding: 0.5rem; //1.5rem -> 0.5rem
+#root .app-container .app-page-content {
+  padding: $layout-padding;
+  padding-left: 1.3rem;
+  padding-right: .7rem;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  & .col,
+  > [class*="col-"] {
+    padding-left: 0rem;
+    padding-right: 0.5rem;
+  }
+}
+.card {
+  margin-bottom: $layout-padding !important;
 }
 
 ///////////////

@@ -65,7 +65,7 @@
                 </div>
                 <div class="app-header__content">
                     <div class="app-header-left">
-                        <span class="menu-sub">입력 양식</span>
+                        <span class="menu-sub">form 컴포넌트</span>
                         <span class="material-icons-round md-18 color-secondary mr-1">navigate_next</span>
                         <span class="menu-main">인풋[텍스트]</span>
                     </div>
@@ -117,10 +117,10 @@
                                             <span class="material-icons-round">app_settings_alt</span>
                                             <div class="setting-name">개인 설정</div>
                                         </div>
-                                        <!-- <div class="setting-item col-sm">
-                                            <span class="material-icons-round">translate</span>
-                                            <div class="setting-name">언어 설정</div>
-                                        </div> -->
+                                        <div class="setting-item col-sm">
+                                            <span class="material-icons-round">color_lens</span>
+                                            <div class="setting-name">테마 설정</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
                                         <li class="metismenu-item active">
                                             <a class="metismenu-link" href="#">
                                                 <div class="metismenu-icon material-icons-round">brush</div>
-                                                <span>입력 양식</span>
+                                                <span>form 컴포넌트</span>
                                                 <div class="material-icons-round">expand_more</div>
                                             </a>
                                             <!-- 소메뉴 -->
@@ -213,6 +213,21 @@
                                                 </li>
                                                 <li class="metismenu-item">
                                                     <a class="metismenu-link" href="form_10.html">
+                                                        <span>텍스트</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_11.html">
+                                                        <span>라벨</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_12.html">
+                                                        <span>보더</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="form_13.html">
                                                         <span>테이블</span>
                                                     </a>
                                                 </li>
@@ -395,13 +410,13 @@
                         <!-- 본문 -->
                         <div class="app-page-content">
                             <div class="row">
-                                <div class="col-md-4 col-12">
+                                <div class="col-xl-4 col-lg-6 col-12">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
-                                                <span class="material-icons-round">data_object</span>
+                                                <span class="material-icons-round color-brand">data_object</span>
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">마크업</h3>
+                                                    <h3 class="title__main color-brand">가이드</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -422,7 +437,7 @@
                                             </div>
                                             <div class="tag-info">
                                                 <div class="tag-title">
-                                                    [기본요소 클래스]
+                                                    [상태/크기]
                                                 </div>
                                                 <ul>
                                                     <li>상태
@@ -441,7 +456,7 @@
                                             </div>
                                             <div class="tag-info">
                                                 <div class="tag-title">
-                                                    [스타일 클래스]
+                                                    [그 외]
                                                 </div>
                                                 <ul>
                                                     <li>에러 발생시
@@ -459,89 +474,47 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-8 col-12">
+                                <div class="col-xl-8 col-lg-6 col-12">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
-                                                <span class="material-icons-round">css</span>
+                                                <span class="material-icons-round">hide_source</span>
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">기본요소 클래스</h3>
+                                                    <h3 class="title__main">상태</h3>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            <div class="tag-set item-3">
-                                                <div class="tag-title">
-                                                    상태
+                                            <div class="tag-set tag-inline">
+                                                <div class="tag-item">
+                                                    <div>
+                                                        <div class="pnt-input--group">
+                                                            <input class="pnt-input" type="text"
+                                                                placeholder="입력하세요">
+                                                            <p class="input-error-txt">에러문구 입니다</p>
+                                                        </div>
+                                                    </div>
+                                                    <p>기본</p>
                                                 </div>
-                                                <div class="tag-content">
+                                                <div class="tag-item">
                                                     <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group">
-                                                                <input class="pnt-input" type="text"
-                                                                    placeholder="입력하세요">
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
+                                                        <div class="pnt-input--group form-disable">
+                                                            <input class="pnt-input" type="text" placeholder="입력하세요"
+                                                                disabled>
+                                                            <p class="input-error-txt">에러문구 입니다</p>
                                                         </div>
-                                                        <p>기본</p>
                                                     </div>
-                                                    <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group form-disable">
-                                                                <input class="pnt-input" type="text" placeholder="입력하세요"
-                                                                    disabled>
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
-                                                        </div>
-                                                        <p>form-disable</p>
-                                                    </div>
-                                                    <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group form-must">
-                                                                <input class="pnt-input" type="text"
-                                                                    placeholder="입력하세요">
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
-                                                        </div>
-                                                        <p>form-must</p>
-                                                    </div>
+                                                    <p>form-disable</p>
                                                 </div>
-                                            </div>
-                                            <div class="tag-set item-3">
-                                                <div class="tag-title">
-                                                    크기
-                                                </div>
-                                                <div class="tag-content">
+                                                <div class="tag-item">
                                                     <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group">
-                                                                <input class="pnt-input" type="text"
-                                                                    placeholder="입력하세요">
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
+                                                        <div class="pnt-input--group form-must">
+                                                            <input class="pnt-input" type="text"
+                                                                placeholder="입력하세요">
+                                                            <p class="input-error-txt">에러문구 입니다</p>
                                                         </div>
-                                                        <p>기본</p>
                                                     </div>
-                                                    <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group form-h-small">
-                                                                <input class="pnt-input" type="text"
-                                                                    placeholder="입력하세요">
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
-                                                        </div>
-                                                        <p>form-h-small</p>
-                                                    </div>
-                                                    <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group form-h-big">
-                                                                <input class="pnt-input" type="text"
-                                                                    placeholder="입력하세요">
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
-                                                        </div>
-                                                        <p>form-h-big</p>
-                                                    </div>
+                                                    <p>form-must</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -549,51 +522,81 @@
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
-                                                <span class="material-icons-round">css</span>
+                                                <span class="material-icons-round">straighten</span>
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">스타일 클래스</h3>
+                                                    <h3 class="title__main">크기</h3>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            <div class="tag-set item-3">
-                                                <div class="tag-title">
-                                                    에러 발생시<span class="ml-2 info-txt"><span
-                                                            class="material-icons-round">info_outline</span> error 효과는
-                                                        input[text]에서만 사용합니다.</span>
-                                                </div>
-                                                <div class="tag-content">
+                                            <div class="tag-set tag-inline">
+                                                <div class="tag-item">
                                                     <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group input-error">
-                                                                <input class="pnt-input" type="text"
-                                                                    placeholder="입력하세요">
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
+                                                        <div class="pnt-input--group">
+                                                            <input class="pnt-input" type="text"
+                                                                placeholder="입력하세요">
+                                                            <p class="input-error-txt">에러문구 입니다</p>
                                                         </div>
-                                                        <p>input-error</p>
                                                     </div>
+                                                    <p>기본</p>
+                                                </div>
+                                                <div class="tag-item">
+                                                    <div>
+                                                        <div class="pnt-input--group form-h-small">
+                                                            <input class="pnt-input" type="text"
+                                                                placeholder="입력하세요">
+                                                            <p class="input-error-txt">에러문구 입니다</p>
+                                                        </div>
+                                                    </div>
+                                                    <p>form-h-small</p>
+                                                </div>
+                                                <div class="tag-item">
+                                                    <div>
+                                                        <div class="pnt-input--group form-h-big">
+                                                            <input class="pnt-input" type="text"
+                                                                placeholder="입력하세요">
+                                                            <p class="input-error-txt">에러문구 입니다</p>
+                                                        </div>
+                                                    </div>
+                                                    <p>form-h-big</p>
                                                 </div>
                                             </div>
-                                            <div class="tag-set item-3">
-                                                <div class="tag-title">
-                                                    기능버튼 사용
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">auto_awesome</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">그 외</h3>
                                                 </div>
-                                                <div class="tag-content">
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tag-set tag-inline">
+                                                <div class="tag-item">
                                                     <div>
-                                                        <div class="tag-item">
-                                                            <div class="pnt-input--group btn-on-right">
-                                                                <input class="pnt-input" type="text"
-                                                                    placeholder="입력하세요">
-                                                                <button class="pnt-btn btn-icon-only btn-trans"
-                                                                    tabindex="-1">
-                                                                    <span class="material-icons-round">lock</span>
-                                                                </button>
-                                                                <p class="input-error-txt">에러문구 입니다</p>
-                                                            </div>
+                                                        <div class="pnt-input--group btn-on-right">
+                                                            <input class="pnt-input" type="text"
+                                                                placeholder="입력하세요">
+                                                            <button class="pnt-btn btn-icon-only btn-trans"
+                                                                tabindex="-1">
+                                                                <span class="material-icons-round">lock</span>
+                                                            </button>
+                                                            <p class="input-error-txt">에러문구 입니다</p>
                                                         </div>
-                                                        <p>btn-on-right</p>
                                                     </div>
+                                                    <p>btn-on-right</p>
+                                                </div>
+                                                <div class="tag-item">
+                                                    <div class="pt-2">
+                                                        <div class="pnt-input--group input-error">
+                                                            <input class="pnt-input" type="text"
+                                                                placeholder="입력하세요">
+                                                            <p class="input-error-txt">에러문구 입니다</p>
+                                                        </div>
+                                                    </div>
+                                                    <p>input-error</p>
                                                 </div>
                                             </div>
                                         </div>

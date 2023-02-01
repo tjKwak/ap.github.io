@@ -129,13 +129,13 @@
 
 //서치랩 - 검색과 검색필터가 혼합된 형태
 .search-wrap {
-  border: 1px solid $default-secondary;
+  //border: 1px solid $default-secondary;
   border-radius: $form-radius;
   display: flex;
   width: 33.5rem;
   //내부 item 사이즈
   & .input-wrap {
-    border-left: 1px solid $gray-400;
+    //border-left: 1px solid $gray-400;
     display: flex;
     width: 100%;
     & .pnt-input--group {

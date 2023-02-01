@@ -1,12 +1,12 @@
-/* css */
+/* login */
 @import url('login/login.css');
+/* css */
 @import url('layout.css');
 @import url('forms.css');
 @import url('commons.css');
 @import url('tools.css');
 /* component */
 @import url('filter/filter.css');
-@import url('modalForHtml.css');
 /* theme */
 @import url('theme/navy/navy.css');
 @import url('theme/dark/dark.css');
@@ -19,8 +19,9 @@
 
 /* 디자인 파일 전용 */
 /* 리액트엔 적용하지 말 것 */
-@import url('notForReact.css');
-@import url('content.css');
+@import url('notForReact/notForReact.css');
+@import url('notForReact/content.css');
+@import url('notForReact/modal.css');
 
 
 
