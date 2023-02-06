@@ -63,7 +63,7 @@ body {
         // color: $default-brand;
         // font-weight: 600;
         // color: #a799db;
-        font-weight: 900;
+        font-weight: 900 !important;
         background: linear-gradient(90deg, #ff8800 0%, #ffd056 104.17%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -73,8 +73,8 @@ body {
       & .header__pane {
         & button {
           & .material-icons-round {
-            //font-size: 20px;
-            color: #706966;
+            font-size: 20px;
+            color: #706966 !important;
           }
         }
       }
@@ -298,7 +298,7 @@ body {
       height: 12px;
       border-radius: 50px;
       background-color: red;
-      color: white;
+      color: white !important;
       font-size: 9px;
       font-weight: 500;
       display: flex;
@@ -340,6 +340,9 @@ body {
           font-weight: 400;
         }
       }
+      & .material-icons-round{
+        opacity: 0.5;
+      }
     }
     //클릭시 나오는 옵션메뉴
     & .user-options {
@@ -363,16 +366,16 @@ body {
             flex-direction: column;
             gap: 0.2rem;
             & .user-name {
-              color: white;
+              color: white !important;
               font-size: 1rem;
               font-weight: 600;
             }
             & .unread-msg {
-              color: $f-w-4;
+              color: $f-w-4 !important;
               font-size: 0.8rem;
               font-weight: 200;
               & b {
-                color: white;
+                color: white !important;
               }
             }
           }
@@ -382,6 +385,7 @@ body {
         & .no-gutters {
           margin: 0;
           padding: 0;
+          gap: 1px;
         }
         & .setting-item {
           display: flex;
@@ -392,14 +396,13 @@ body {
           margin: 0;
           padding: 1rem;
           cursor: pointer;
-          border-left: 1px solid #eceaf2;
           background-color: transparent;
           transition: all 0.2s;
           &:first-child{
             border: none;
           }
           &:hover {
-            background-color: #f3f2f6;
+            background-color: #c3bfcd;
             transition: all 0.2s;
             & span {
               color: black;
@@ -520,7 +523,7 @@ body {
           & span {
             text-transform: uppercase;
             font-size: 0.8rem;
-            font-weight: 900;
+            font-weight: 900 !important;
             color: #ff7800;
             white-space: nowrap;
             position: relative;

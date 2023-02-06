@@ -18,35 +18,35 @@
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-2 {
-  background-color: #fdfcfe !important;
+  background-color: #fcfbfd !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-3 {
-  background-color: #fcfcfd !important;
+  background-color: #f8f7fc !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-4 {
-  background-color: #fbfbfd !important;
+  background-color: #f5f4fa !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-5 {
-  background-color: #fbfafd !important;
+  background-color: #f1f0f8 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-6 {
-  background-color: #faf9fc !important;
+  background-color: #eeecf7 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-7 {
-  background-color: #f9f9fc !important;
+  background-color: #ebe8f5 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-8 {
-  background-color: #f9f8fc !important;
+  background-color: #e7e4f3 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-depth-9 {
-  background-color: #f8f7fb !important;
+  background-color: #e6e3f2 !important;
 }
 
 #root .app-container.app-theme-pnt-navy input,
@@ -81,7 +81,16 @@
 }
 
 #root .app-container.app-theme-pnt-navy .user-box .user-options {
-  background-color: #fbfbfd;
+  background-color: #e6e3f2;
+  border: 1px solid #e6e3f2;
+}
+
+#root .app-container.app-theme-pnt-navy .user-box .user-options .setting-item {
+  background-color: #f5f4fa;
+}
+
+#root .app-container.app-theme-pnt-navy .user-box .user-options .setting-item:hover {
+  background-color: #eeecf7;
 }
 
 #root .app-container.app-theme-pnt-navy .filter_ver5 {
@@ -89,13 +98,7 @@
 }
 
 #root .app-container.app-theme-pnt-navy .filter_ver5 .filter-box {
-  border-top: 1px solid #fbfafd;
-}
-
-#root .app-container.app-theme-pnt-navy .filter_ver5 .filter-label,
-#root .app-container.app-theme-pnt-navy .filter_ver5 .filter-label .material-icons-round,
-#root .app-container.app-theme-pnt-navy .filter_ver5 .autoreset-box {
-  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid #f1f0f8;
 }
 
 #root .app-container.app-theme-pnt-navy .app-sidebar {
@@ -216,7 +219,7 @@
 }
 
 #root .app-container.app-theme-pnt-navy .card .card-header__tab li a {
-  color: #434245;
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .card .card-header__tab li a::after {
@@ -418,7 +421,7 @@
 #root .app-container.app-theme-pnt-navy .react-select__menu .react-select__menu-list .react-select__option {
   cursor: pointer;
   font-size: 0.8rem;
-  color: #434245;
+  color: #656467;
   border-bottom: 1px solid #f6f4fb;
   background-color: #f7f6f8;
 }
@@ -502,7 +505,8 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-btn {
-  color: #434245;
+  background-color: #e1dff0;
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-brand {
@@ -532,6 +536,32 @@
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-darkgray {
   background-color: #453e6f;
   color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-line {
+  background-color: transparent;
+  border: 1px solid #86858a !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-line:hover {
+  color: #ff8800;
+  border: 1px solid #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-line:hover .material-icons-round {
+  color: #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-trans {
+  background-color: transparent;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-trans:hover {
+  color: #ff8800;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-trans:hover .material-icons-round {
+  color: #ff8800;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-disable {
@@ -611,11 +641,22 @@
 
 #root .app-container.app-theme-pnt-navy .pnt-file--group input[type="file"] {
   border: 1px solid #e6e5e8;
+  background-color: #f7f6f8;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-file--group input[type="file"]::before {
   background-color: #f7f6f8;
   border-left: 1px solid #e6e5e8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-file--group label {
+  background-color: #e6e3f2;
+  border: 1px solid #e6e5e8;
+  color: #6a55c0;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-file--group label .material-icons-round {
+  color: #6a55c0;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group .select__btn {
@@ -628,30 +669,31 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group .select__btn .material-icons-round {
-  color: #434245;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options {
-  background-color: #f7f6f8;
-  border: 1px solid #656467;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li a {
-  color: #434245;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li:hover a {
-  background-color: #eceaf2;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li.on a {
-  border-top: 1px solid #e6e5e8;
-  background-color: #dcd9e1;
-  color: #6a55c0;
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__btn {
   border: 1px solid #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options {
+  background-color: #f7f6f8;
+  border: 1px solid #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li a {
+  color: #656467;
+  border-top: 1px solid #e6e5e8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li:hover a {
+  background-color: #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li.on a {
+  border-top: 1px solid #e6e5e8;
+  background-color: #dcd9e1;
+  color: #6a55c0;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group.form-must span {
@@ -667,7 +709,7 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-checkbox p {
-  color: #434245;
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-checkbox .checkbox-effect {
@@ -704,15 +746,24 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-toggle p:nth-of-type(1) {
-  color: #434245;
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-toggle p:nth-of-type(2) {
-  color: #434245;
+  color: #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio {
+  border: 1px solid #e6e5e8;
+  background-color: #f7f6f8;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-radio p {
-  color: #434245;
+  color: #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio input::after {
+  border: 2px solid #f7f6f8 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-radio:has(input:checked) {
@@ -721,6 +772,10 @@
 
 #root .app-container.app-theme-pnt-navy .pnt-radio:has(input:checked) input {
   border: 0.45em solid #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-radio:has(input:checked) p {
+  color: #434245;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-radio:has(input:disabled) {
@@ -740,12 +795,23 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-txt {
+  color: #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-txt.txt-border {
+  border: 1px solid #e6e5e8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-txt.txt-bg {
+  background-color: #f7f6f8;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-label--group .label-main {
   color: #434245;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-label--group .label-main,
 #root .app-container.app-theme-pnt-navy .pnt-label--group .label-options {
-  color: #434245;
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-divider {
@@ -754,7 +820,7 @@
 
 #root .app-container.app-theme-pnt-navy .pagination .now,
 #root .app-container.app-theme-pnt-navy .pagination .whole {
-  color: #434245;
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-table .th,
@@ -813,6 +879,26 @@
   color: #a8a7ac;
 }
 
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-file--group input[type="file"] {
+  border: 1px solid #e6e5e8;
+  background-color: #eceaf2;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-file--group input[type="file"]::before {
+  background-color: #eceaf2;
+  border-left: 1px solid #e6e5e8;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-file--group label {
+  background-color: #e6e3f2;
+  border: 1px solid #e6e5e8;
+  color: #a8a7ac;
+}
+
+#root .app-container.app-theme-pnt-navy .form-disable.pnt-file--group label .material-icons-round {
+  color: #a8a7ac;
+}
+
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-select--group .select__btn {
   background-color: #eceaf2;
 }
@@ -826,15 +912,15 @@
 }
 
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-toggle input:checked + .slider {
-  background-color: #6aae13;
+  background-color: #5a9310;
 }
 
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-toggle .slider {
-  background-color: #a8a7ac;
+  background-color: #86858a;
 }
 
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-toggle .slider::before {
-  background-color: #cac8cf;
+  background-color: #a8a7ac;
 }
 
 #root .app-container.app-theme-pnt-navy *::-webkit-scrollbar-thumb {

@@ -72,7 +72,7 @@ body {
   letter-spacing: -1px;
   margin-top: -5px;
   width: auto;
-  font-weight: 900;
+  font-weight: 900 !important;
   background: -webkit-gradient(linear, left top, right top, from(#ff8800), color-stop(104.17%, #ffd056));
   background: linear-gradient(90deg, #ff8800 0%, #ffd056 104.17%);
   -webkit-background-clip: text;
@@ -82,7 +82,8 @@ body {
 }
 
 .app-container .app-header .app-header__logo .header__pane button .material-icons-round {
-  color: #706966;
+  font-size: 20px;
+  color: #706966 !important;
 }
 
 .app-container .app-header .app-header__content {
@@ -390,7 +391,7 @@ body {
   height: 12px;
   border-radius: 50px;
   background-color: red;
-  color: white;
+  color: white !important;
   font-size: 9px;
   font-weight: 500;
   display: -webkit-box;
@@ -454,6 +455,10 @@ body {
   font-weight: 400;
 }
 
+.app-header-right .user-box .user-btn .material-icons-round {
+  opacity: 0.5;
+}
+
 .app-header-right .user-box .user-options {
   position: absolute;
   will-change: transform;
@@ -492,24 +497,25 @@ body {
 }
 
 .app-header-right .user-box .user-options .dropdown-menu-header .widget-content-left .profile-txt .user-name {
-  color: white;
+  color: white !important;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .app-header-right .user-box .user-options .dropdown-menu-header .widget-content-left .profile-txt .unread-msg {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6) !important;
   font-size: 0.8rem;
   font-weight: 200;
 }
 
 .app-header-right .user-box .user-options .dropdown-menu-header .widget-content-left .profile-txt .unread-msg b {
-  color: white;
+  color: white !important;
 }
 
 .app-header-right .user-box .user-options .profile-setting .no-gutters {
   margin: 0;
   padding: 0;
+  gap: 1px;
 }
 
 .app-header-right .user-box .user-options .profile-setting .setting-item {
@@ -530,7 +536,6 @@ body {
   margin: 0;
   padding: 1rem;
   cursor: pointer;
-  border-left: 1px solid #eceaf2;
   background-color: transparent;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -541,7 +546,7 @@ body {
 }
 
 .app-header-right .user-box .user-options .profile-setting .setting-item:hover {
-  background-color: #f3f2f6;
+  background-color: #c3bfcd;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -681,7 +686,7 @@ body {
 .app-sidebar .app-sidebar__inner .metismenu > ul.metismenu-container > li > a.metismenu-link span {
   text-transform: uppercase;
   font-size: 0.8rem;
-  font-weight: 900;
+  font-weight: 900 !important;
   color: #ff7800;
   white-space: nowrap;
   position: relative;

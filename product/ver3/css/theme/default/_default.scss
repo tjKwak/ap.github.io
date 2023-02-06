@@ -74,7 +74,14 @@
     }
   }
   & .user-box .user-options {
-    background-color: $depth-4;
+    background-color: $depth-9;
+    border: 1px solid $depth-9;
+    & .setting-item {
+      background-color: $depth-4;
+      &:hover {
+        background-color: $depth-6;
+      }
+    }
   }
   /////////////////////////////////////////////////////////
   //필터
@@ -82,11 +89,6 @@
     background-color: $depth-1;
     & .filter-box {
       border-top: 1px solid $depth-5;
-    }
-    & .filter-label,
-    & .filter-label .material-icons-round,
-    & .autoreset-box {
-      color: $f-w-3;
     }
   }
   /////////////////////////////////////////////////////////
@@ -153,7 +155,10 @@
   /////////////////////////////////////////////////////////
   //바디 영역
   & .app-main__inner {
-    background: linear-gradient($whole-body-gradient-start, $whole-body-gradient-end);
+    background: linear-gradient(
+      $whole-body-gradient-start,
+      $whole-body-gradient-end
+    );
   }
   &.dashboard-edit-mode {
     & .app-header .app-header__content {
@@ -469,6 +474,7 @@
   //기본 폼
   //1. 버튼
   & .pnt-btn {
+    background-color: $light-gray;
     color: $form-txt;
     &.btn-brand {
       background-color: $brand;
@@ -493,6 +499,26 @@
       background-color: $dark-gray;
       color: white;
     }
+    &.btn-line {
+      background-color: transparent;
+      border: 1px solid $gray-600 !important;
+      &:hover {
+        color: $brand;
+        border: 1px solid $brand !important;
+        & .material-icons-round {
+          color: $brand;
+        }
+      }
+    }
+    &.btn-trans {
+      background-color: transparent;
+      &:hover {
+        color: $brand;
+        & .material-icons-round {
+          color: $brand;
+        }
+      }
+    }
     &.btn-disable {
       background-color: $light-gray-l;
       color: $form-disable-txt;
@@ -503,7 +529,7 @@
     & input {
       background-color: $form-bg;
       border: 1px solid $form-border;
-      color: $form-txt;
+      color: $form-active-txt;
       &::placeholder {
         color: $form-placeholder-txt;
       }
@@ -545,11 +571,22 @@
     }
   }
   //3. 인풋[파일]
-  & .pnt-file--group input[type="file"] {
-    border: 1px solid $form-border;
-    &::before {
+  & .pnt-file--group {
+    & input[type="file"] {
+      border: 1px solid $form-border;
       background-color: $form-bg;
-      border-left: 1px solid $form-border;
+      &::before {
+        background-color: $form-bg;
+        border-left: 1px solid $form-border;
+      }
+    }
+    & label {
+      background-color: $depth-9;
+      border: 1px solid $form-border;
+      color: $secondary;
+      & .material-icons-round {
+        color: $secondary;
+      }
     }
   }
   //4. 셀렉트
@@ -558,32 +595,34 @@
       background-color: $form-bg;
       border: 1px solid $form-border;
       & .cont-wrap {
-        color: $form-txt;
+        color: $form-active-txt;
       }
       & .material-icons-round {
         color: $form-txt;
       }
     }
-    & .select__options {
-      background-color: $form-bg;
-      border: 1px solid $form-active-border;
-      & li {
-        & a {
-          color: $form-txt;
-        }
-        &:hover a {
-          background-color: $form-hover-bg;
-        }
-        &.on a {
-          border-top: 1px solid $form-border;
-          background-color: $form-active-bg-light;
-          color: $form-active-txt-light;
-        }
-      }
-    }
+    //활성화 일때
     &.on {
       & .select__btn {
         border: 1px solid $form-active-border;
+      }
+      & .select__options {
+        background-color: $form-bg;
+        border: 1px solid $form-active-border;
+        & li {
+          & a {
+            color: $form-txt;
+            border-top: 1px solid $form-border;
+          }
+          &:hover a {
+            background-color: $form-hover-bg;
+          }
+          &.on a {
+            border-top: 1px solid $form-border;
+            background-color: $form-active-bg-light;
+            color: $form-active-txt-light;
+          }
+        }
       }
     }
     &.form-must {
@@ -616,7 +655,7 @@
         background-color: $form-active-bg;
       }
       & p {
-        color: $form-txt;
+        color: $form-active-txt;
       }
     }
     &.form-disable p {
@@ -645,14 +684,24 @@
   }
   //7. 라디오
   & .pnt-radio {
+    border: 1px solid $form-border;
+    background-color: $form-bg;
     & p {
       color: $form-txt;
+    }
+    & input{
+      &::after{
+        border: 2px solid $form-bg !important;
+      }
     }
     //체크시
     &:has(input:checked) {
       border: 1px solid $brand;
       & input {
         border: 0.45em solid $brand !important;
+      }
+      & p{
+        color: $form-active-txt;
       }
     }
     //비활성화시
@@ -673,10 +722,18 @@
   //9. 텍스트
   & .pnt-txt {
     color: $form-txt;
+    &.txt-border{
+      border: 1px solid $form-border;
+    }
+    &.txt-bg{
+      background-color: $form-bg;
+    }
   }
   //10. 라벨
   & .pnt-label--group {
-    & .label-main,
+    & .label-main{
+      color: $form-active-txt;
+    }
     & .label-options {
       color: $form-txt;
     }
@@ -755,6 +812,25 @@
       background-color: $form-disable-bg;
       color: $form-disable-txt;
     }
+    //인풋[파일]
+    &.pnt-file--group {
+      & input[type="file"] {
+        border: 1px solid $form-border;
+        background-color: $form-disable-bg;
+        &::before {
+          background-color: $form-disable-bg;
+          border-left: 1px solid $form-border;
+        }
+      }
+      & label {
+        background-color: $depth-9;
+        border: 1px solid $form-border;
+        color: $form-disable-txt;
+        & .material-icons-round {
+          color: $form-disable-txt;
+        }
+      }
+    }
     //셀렉트
     &.pnt-select--group {
       & .select__btn {
@@ -771,12 +847,12 @@
     //토글
     &.pnt-toggle {
       & input:checked + .slider {
-        background-color: $success-d1;
+        background-color: $success-d2;
       }
       & .slider {
-        background-color: $gray-500;
+        background-color: $gray-600;
         &::before {
-          background-color: $gray-400;
+          background-color: $gray-500;
         }
       }
     }

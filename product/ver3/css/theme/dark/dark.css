@@ -6,47 +6,51 @@
 /* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
 /* 2. 값 세팅 - form, layout, commons, content에 사용  */
 #root .app-container.app-theme-pnt-dark {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#root .app-container.app-theme-pnt-dark * {
+  font-weight: 400;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-base {
-  background-color: #171618 !important;
+  background-color: #292938 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-1 {
-  background-color: #212023 !important;
+  background-color: #343442 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-2 {
-  background-color: #252427 !important;
+  background-color: #383846 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-3 {
-  background-color: #29282b !important;
+  background-color: #3c3c4a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-4 {
-  background-color: #2d2b30 !important;
+  background-color: #41414e !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-5 {
-  background-color: #312f34 !important;
+  background-color: #454552 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-6 {
-  background-color: #353338 !important;
+  background-color: #494956 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-7 {
-  background-color: #39373c !important;
+  background-color: #4d4d5a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-8 {
-  background-color: #3d3b41 !important;
+  background-color: #676772 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-9 {
-  background-color: #413f45 !important;
+  background-color: #5f5f6a !important;
 }
 
 #root .app-container.app-theme-pnt-dark input,
@@ -61,15 +65,15 @@
 #root .app-container.app-theme-pnt-dark p,
 #root .app-container.app-theme-pnt-dark span,
 #root .app-container.app-theme-pnt-dark div {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #root .app-container.app-theme-pnt-dark .app-header__logo {
-  background-color: #312f34;
+  background-color: #292938;
 }
 
 #root .app-container.app-theme-pnt-dark .app-header__content {
-  background-color: #212023;
+  background-color: #343442;
 }
 
 #root .app-container.app-theme-pnt-dark .app-header__content .app-header-left .menu-main {
@@ -81,25 +85,28 @@
 }
 
 #root .app-container.app-theme-pnt-dark .user-box .user-options {
-  background-color: #2d2b30;
+  background-color: #5f5f6a;
+  border: 1px solid #5f5f6a;
+}
+
+#root .app-container.app-theme-pnt-dark .user-box .user-options .setting-item {
+  background-color: #41414e;
+}
+
+#root .app-container.app-theme-pnt-dark .user-box .user-options .setting-item:hover {
+  background-color: #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .filter_ver5 {
-  background-color: #212023;
+  background-color: #343442;
 }
 
 #root .app-container.app-theme-pnt-dark .filter_ver5 .filter-box {
-  border-top: 1px solid #312f34;
-}
-
-#root .app-container.app-theme-pnt-dark .filter_ver5 .filter-label,
-#root .app-container.app-theme-pnt-dark .filter_ver5 .filter-label .material-icons-round,
-#root .app-container.app-theme-pnt-dark .filter_ver5 .autoreset-box {
-  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid #454552;
 }
 
 #root .app-container.app-theme-pnt-dark .app-sidebar {
-  background: #312f34;
+  background: #292938;
 }
 
 #root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item {
@@ -123,7 +130,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > a.metismenu-link span {
-  color: white;
+  color: #a7a2c4;
 }
 
 #root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > a.metismenu-link .material-icons-round {
@@ -139,38 +146,38 @@
 }
 
 #root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link span {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-#root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link.active {
-  background: #6054aa;
-}
-
-#root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link.active span {
   color: white;
 }
 
+#root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link.active {
+  background: rgba(196, 181, 238, 0.2);
+}
+
+#root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible > li > a.metismenu-link.active span {
+  color: #bbaaff;
+}
+
 #root .app-container.app-theme-pnt-dark .app-sidebar .vertical-nav-menu > .metismenu-container > .metismenu-item > ul.metismenu-container.visible::before {
-  background-color: orange;
+  background-color: #48455c;
 }
 
 #root .app-container.app-theme-pnt-dark .app-main__inner {
-  background: -webkit-gradient(linear, left top, left bottom, from(#171618), to(#171618));
-  background: linear-gradient(#171618, #171618);
+  background: -webkit-gradient(linear, left top, left bottom, from(#252532), to(#252532));
+  background: linear-gradient(#252532, #252532);
 }
 
 #root .app-container.app-theme-pnt-dark.dashboard-edit-mode .app-header .app-header__content {
-  background-color: #291d5b;
+  background-color: #282843;
 }
 
 @media (max-width: 1024px) {
   #root .app-container.app-theme-pnt-dark.dashboard-edit-mode .app-header {
-    background-color: #291d5b;
+    background-color: #282843;
   }
 }
 
 #root .app-container.app-theme-pnt-dark.dashboard-edit-mode .dashboard-edit-title {
-  background-color: #291d5b;
+  background-color: #282843;
 }
 
 #root .app-container.app-theme-pnt-dark .app-page-title {
@@ -187,11 +194,11 @@
 }
 
 #root .app-container.app-theme-pnt-dark .card {
-  background-color: #212023;
+  background-color: #343442;
 }
 
 #root .app-container.app-theme-pnt-dark .card .card-header {
-  background-color: #212023;
+  background-color: #343442;
   border-bottom: 1px solid transparent;
 }
 
@@ -216,145 +223,145 @@
 }
 
 #root .app-container.app-theme-pnt-dark .card .card-header__tab li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .card .card-header__tab li a::after {
-  background-color: #cabff5;
+  background-color: #dbd6e7;
 }
 
 #root .app-container.app-theme-pnt-dark .card .card-header__tab li.on a {
-  color: #cabff5;
+  color: #dbd6e7;
 }
 
 #root .app-container.app-theme-pnt-dark .card .card-button {
-  border-top: 1px solid #656467;
-  background-color: #201f22;
+  border-top: 1px solid #494956;
+  background-color: #333341;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-modal .modal-header {
-  background-color: #212023;
-  border-bottom: 1px solid #656467 !important;
+  background-color: #343442;
+  border-bottom: 1px solid #494956 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-modal .modal-body {
-  background-color: #212023;
+  background-color: #343442;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-modal .modal-footer {
-  background-color: #201f22;
-  border-top: 1px solid #656467 !important;
+  background-color: #333341;
+  border-top: 1px solid #494956 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .form-control:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 1px white;
-          box-shadow: 0 0 0 1px white;
+  -webkit-box-shadow: 0 0 0 1px #86858a;
+          box-shadow: 0 0 0 1px #86858a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker__input-container input {
-  background-color: #464646;
-  border: 1px solid #656467;
+  background-color: #4d4d5a;
+  border: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .input-group-text {
-  background-color: transparent;
-  border: 1px solid #656467;
+  background-color: #3c3c4a;
+  border: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker {
   border-radius: 0;
-  border: 1px solid #656467;
+  border: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker *::-webkit-scrollbar-track {
-  background-color: #6f6f8170;
+  background-color: #3c3c4a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker *::-webkit-scrollbar-thumb {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__triangle {
-  border-bottom-color: #464646;
-  border-top-color: #464646;
+  border-bottom-color: #4d4d5a;
+  border-top-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__triangle::before {
-  border-bottom-color: #656467;
-  border-top-color: #656467;
+  border-bottom-color: #494956;
+  border-top-color: #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__month-container {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__header {
-  background-color: #6f6f8170;
+  background-color: #3c3c4a;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom: 1px solid #656467;
+  border-bottom: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
-  background-color: #464646;
-  border-top: 1px solid #656467;
+  background-color: #4d4d5a;
+  border-top: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__day:hover, #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__day:focus, #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__month-container .react-datepicker__day:active {
-  background-color: #424242;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__time-container {
-  border-left: 1px solid #656467;
-  background-color: #464646;
+  border-left: 1px solid #494956;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__header {
-  background-color: #6f6f8170;
+  background-color: #3c3c4a;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom: 1px solid #656467;
+  border-bottom: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-list-item:hover, #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-list-item:focus, #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-list-item:active {
-  background-color: #424242;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input {
-  border-left: 1px solid #656467;
+  border-left: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .react-datepicker__header {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: #6f6f8170;
-  border-bottom: 1px solid #656467;
+  background-color: #3c3c4a;
+  border-bottom: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .time-label-box {
-  border-bottom: 1px solid #656467;
+  border-bottom: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .time-label-box div:last-child {
-  border-left: 1px solid #656467;
+  border-left: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .react-datepicker-time__input .list-wrap button {
-  color: white;
-  background-color: #464646;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .react-datepicker .react-datepicker__input-time-container .time-label-box {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select:hover {
@@ -366,23 +373,23 @@
 
 #root .app-container.app-theme-pnt-dark .react-select .react-select__control {
   cursor: pointer;
-  background-color: #464646;
-  border: 1px solid #656467;
+  background-color: #4d4d5a;
+  border: 1px solid #494956;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select .react-select__control--menu-is-open {
-  -webkit-box-shadow: 0 0 0 1px white;
-          box-shadow: 0 0 0 1px white;
+  -webkit-box-shadow: 0 0 0 1px #86858a;
+          box-shadow: 0 0 0 1px #86858a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select .react-select__multi-value {
-  background-color: #6f6f8170;
+  background-color: #3c3c4a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select .react-select__multi-value .react-select__multi-value__remove:hover, #root .app-container.app-theme-pnt-dark .react-select .react-select__multi-value .react-select__multi-value__remove:focus, #root .app-container.app-theme-pnt-dark .react-select .react-select__multi-value .react-select__multi-value__remove:active {
-  background-color: #424242;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select .react-select__indicator-separator {
@@ -390,7 +397,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .react-select .select-dropdown-svg {
-  color: #464646;
+  color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select .react-select__indicator {
@@ -407,7 +414,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .react-select__menu {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select__menu .react-select__menu-list {
@@ -418,13 +425,13 @@
 #root .app-container.app-theme-pnt-dark .react-select__menu .react-select__menu-list .react-select__option {
   cursor: pointer;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid #6f6f8170;
-  background-color: #464646;
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid #3c3c4a;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select__menu .react-select__menu-list .react-select__option:hover, #root .app-container.app-theme-pnt-dark .react-select__menu .react-select__menu-list .react-select__option:focus, #root .app-container.app-theme-pnt-dark .react-select__menu .react-select__menu-list .react-select__option:active {
-  background-color: #424242;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .react-select__menu .react-select__menu-list .react-select__option:last-child {
@@ -432,11 +439,11 @@
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .styled-option:hover, #root .app-container.app-theme-pnt-dark .select-dropdown .styled-option:focus, #root .app-container.app-theme-pnt-dark .select-dropdown .styled-option:active {
-  background-color: #424242;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-control {
-  background-color: #464646;
+  background-color: #4d4d5a;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -444,19 +451,19 @@
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-control:hover, #root .app-container.app-theme-pnt-dark .select-dropdown .select-control:focus, #root .app-container.app-theme-pnt-dark .select-dropdown .select-control:active {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid white;
+  border: 1px solid #86858a;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-container {
-  background-color: #464646;
-  border: 1px solid #656467;
+  background-color: #4d4d5a;
+  border: 1px solid #494956;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-container.container-open {
-  -webkit-box-shadow: 0 0 0 1px white;
-          box-shadow: 0 0 0 1px white;
+  -webkit-box-shadow: 0 0 0 1px #86858a;
+          box-shadow: 0 0 0 1px #86858a;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-container:hover {
@@ -467,33 +474,33 @@
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-menu {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-option > div {
-  background-color: #464646;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-option > div:hover, #root .app-container.app-theme-pnt-dark .select-dropdown .select-option > div:focus, #root .app-container.app-theme-pnt-dark .select-dropdown .select-option > div:active {
-  background-color: #424242;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-option > div .select-label {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .select-group-title {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
   padding: 4px 8px;
   font-weight: bold;
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .rct-icon {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #root .app-container.app-theme-pnt-dark .select-dropdown .tree-wrapper {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.85);
   padding: 5px;
 }
 
@@ -502,76 +509,103 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn {
-  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(225, 223, 240, 0.1);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-brand {
-  background-color: #ff8800;
+  background-color: #e5891f;
   color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-secondary {
-  background-color: #6748e3;
+  background-color: #7764d4;
   color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-danger {
-  background-color: #ff3358;
+  background-color: #d83957;
   color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-lightgray {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(225, 223, 240, 0.1);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-gray {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(225, 223, 240, 0.25);
   color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-darkgray {
-  background-color: #656467;
+  background-color: rgba(225, 223, 240, 0.4);
   color: white;
 }
 
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-line {
+  background-color: transparent;
+  border: 1px solid #86858a !important;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-line:hover {
+  color: #e5891f;
+  border: 1px solid #e5891f !important;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-line:hover .material-icons-round {
+  color: #e5891f;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-trans {
+  background-color: transparent;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-trans:hover {
+  color: #e5891f;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-trans:hover .material-icons-round {
+  color: #e5891f;
+}
+
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-disable {
-  background-color: rgba(255, 255, 255, 0.76);
-  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(254, 254, 255, 0.73);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group input {
-  background-color: #464646;
-  border: 1px solid #656467;
-  color: rgba(255, 255, 255, 0.6);
+  background-color: #4d4d5a;
+  border: 1px solid #494956;
+  color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group input:focus,
 #root .app-container.app-theme-pnt-dark .pnt-input--group input:active,
 #root .app-container.app-theme-pnt-dark .pnt-input--group input:focus-visible {
-  border: 1px solid white;
+  border: 1px solid #86858a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-error p,
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-error b,
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-error span,
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-error div {
-  color: #ff3358;
+  color: #d83957;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-error .pnt-input {
@@ -582,97 +616,109 @@
 #root .app-container.app-theme-pnt-dark .pnt-input--group.form-must b,
 #root .app-container.app-theme-pnt-dark .pnt-input--group.form-must span,
 #root .app-container.app-theme-pnt-dark .pnt-input--group.form-must div {
-  color: #ff3358;
+  color: #d83957;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.form-must input {
-  border: 1px solid #ff8800;
+  border: 1px solid #e5891f;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-disable .pnt-input {
-  background-color: transparent;
+  background-color: #3c3c4a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-disable::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-disable:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-disable::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group.input-disable::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-file--group input[type="file"] {
-  border: 1px solid #656467;
+  border: 1px solid #494956;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-file--group input[type="file"]::before {
-  background-color: #464646;
-  border-left: 1px solid #656467;
+  background-color: #4d4d5a;
+  border-left: 1px solid #494956;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-file--group label {
+  background-color: #5f5f6a;
+  border: 1px solid #494956;
+  color: #7764d4;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-file--group label .material-icons-round {
+  color: #7764d4;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-select--group .select__btn {
-  background-color: #464646;
-  border: 1px solid #656467;
+  background-color: #4d4d5a;
+  border: 1px solid #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-select--group .select__btn .cont-wrap {
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-select--group .select__btn .material-icons-round {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-#root .app-container.app-theme-pnt-dark .pnt-select--group .select__options {
-  background-color: #464646;
-  border: 1px solid white;
-}
-
-#root .app-container.app-theme-pnt-dark .pnt-select--group .select__options li a {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-#root .app-container.app-theme-pnt-dark .pnt-select--group .select__options li:hover a {
-  background-color: #eceaf2;
-}
-
-#root .app-container.app-theme-pnt-dark .pnt-select--group .select__options li.on a {
-  border-top: 1px solid #656467;
-  background-color: #dcd9e1;
-  color: #6748e3;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__btn {
-  border: 1px solid white;
+  border: 1px solid #86858a;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__options {
+  background-color: #4d4d5a;
+  border: 1px solid #86858a;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__options li a {
+  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid #494956;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__options li:hover a {
+  background-color: #5f5f6a;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__options li.on a {
+  border-top: 1px solid #494956;
+  background-color: #656467;
+  color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-select--group.form-must span {
-  color: #ff3358;
+  color: #d83957;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-select--group.form-must .select__btn {
-  border: 1px solid #ff8800;
+  border: 1px solid #e5891f;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-select--group.form-disable .cont-wrap {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-checkbox p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-checkbox .checkbox-effect {
-  border: 1px solid #656467;
-  background-color: #464646;
+  border: 1px solid #494956;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-checkbox .checkbox-effect::before, #root .app-container.app-theme-pnt-dark .pnt-checkbox .checkbox-effect::after {
@@ -680,19 +726,19 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-checkbox:has(input:checked) .checkbox-effect {
-  background-color: #6748e3;
+  background-color: #7764d4;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-checkbox:has(input:checked) p {
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-checkbox.form-disable p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-toggle input:checked + .slider {
-  background-color: #80d217;
+  background-color: #81be30;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-toggle .slider {
@@ -704,35 +750,48 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-toggle p:nth-of-type(1) {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-toggle p:nth-of-type(2) {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-radio {
+  border: 1px solid #494956;
+  background-color: #4d4d5a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-radio p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-radio input::after {
+  border: 2px solid #4d4d5a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-radio:has(input:checked) {
-  border: 1px solid #ff8800;
+  border: 1px solid #e5891f;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-radio:has(input:checked) input {
-  border: 0.45em solid #ff8800 !important;
+  border: 0.45em solid #e5891f !important;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-radio:has(input:checked) p {
+  color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-radio:has(input:disabled) {
-  background-color: transparent;
+  background-color: #3c3c4a;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-radio:has(input:disabled) p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-nameplate {
-  background-color: #656467;
+  background-color: #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-nameplate .cont-wrap {
@@ -740,57 +799,68 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-txt {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
-#root .app-container.app-theme-pnt-dark .pnt-label--group .label-main,
+#root .app-container.app-theme-pnt-dark .pnt-txt.txt-border {
+  border: 1px solid #494956;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-txt.txt-bg {
+  background-color: #4d4d5a;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-label--group .label-main {
+  color: white;
+}
+
 #root .app-container.app-theme-pnt-dark .pnt-label--group .label-options {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-divider {
-  background-color: #656467;
+  background-color: #494956;
 }
 
 #root .app-container.app-theme-pnt-dark .pagination .now,
 #root .app-container.app-theme-pnt-dark .pagination .whole {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .th,
 #root .app-container.app-theme-pnt-dark .pnt-table .td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box {
-  border-top: 1.4px solid #6f6f81;
-  border-bottom: 1.4px solid #6f6f81;
+  border-top: 1.4px solid #212122;
+  border-bottom: 1.4px solid #212122;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .thead .tr {
-  border-bottom: 1px solid #cac8cf;
+  border-bottom: 1px solid #212122;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .thead .th {
-  background-color: #6f6f8170;
+  background-color: #3c3c4a;
   color: white;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody {
-  background-color: #2c2d30;
+  background-color: #454552;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr:nth-child(2n) {
-  background-color: #36373a;
+  background-color: #454552;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr:hover {
-  background-color: #424242 !important;
+  background-color: #4d4d5a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr.active {
-  background-color: #6748e3 !important;
+  background-color: #434245 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr.active .td {
@@ -802,39 +872,59 @@
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-btn {
-  background-color: transparent;
-  -webkit-box-shadow: 0 0 0 1px #656467 inset;
-          box-shadow: 0 0 0 1px #656467 inset;
-  color: rgba(255, 255, 255, 0.6);
+  background-color: #3c3c4a;
+  -webkit-box-shadow: 0 0 0 1px #494956 inset;
+          box-shadow: 0 0 0 1px #494956 inset;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-input--group .pnt-input {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  background-color: #3c3c4a;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+#root .app-container.app-theme-pnt-dark .form-disable.pnt-file--group input[type="file"] {
+  border: 1px solid #494956;
+  background-color: #3c3c4a;
+}
+
+#root .app-container.app-theme-pnt-dark .form-disable.pnt-file--group input[type="file"]::before {
+  background-color: #3c3c4a;
+  border-left: 1px solid #494956;
+}
+
+#root .app-container.app-theme-pnt-dark .form-disable.pnt-file--group label {
+  background-color: #5f5f6a;
+  border: 1px solid #494956;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+#root .app-container.app-theme-pnt-dark .form-disable.pnt-file--group label .material-icons-round {
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-select--group .select__btn {
-  background-color: transparent;
+  background-color: #3c3c4a;
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-select--group .select__btn .cont-wrap {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-checkbox .checkbox-effect {
-  background-color: transparent;
+  background-color: #3c3c4a;
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-toggle input:checked + .slider {
-  background-color: #6aae13;
+  background-color: #5a8522;
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-toggle .slider {
-  background-color: #a8a7ac;
+  background-color: #86858a;
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-toggle .slider::before {
-  background-color: #cac8cf;
+  background-color: #a8a7ac;
 }
 
 #root .app-container.app-theme-pnt-dark *::-webkit-scrollbar-thumb {
@@ -846,39 +936,39 @@
 }
 
 #root .app-container.app-theme-pnt-dark .color-brand {
-  color: #ff8800 !important;
+  color: #e5891f !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-secondary {
-  color: #6748e3 !important;
+  color: #7764d4 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-success {
-  color: #80d217 !important;
+  color: #81be30 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-info {
-  color: #77e4d2 !important;
+  color: #5ab1a3 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-warning {
-  color: #ffce2e !important;
+  color: #e8bb28 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-danger {
-  color: #ff3358 !important;
+  color: #d83957 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-lightgray {
-  color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(225, 223, 240, 0.1) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-gray {
-  color: rgba(255, 255, 255, 0.4) !important;
+  color: rgba(225, 223, 240, 0.25) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-darkgray {
-  color: #656467 !important;
+  color: rgba(225, 223, 240, 0.4) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .color-white {
@@ -890,279 +980,279 @@
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand {
-  background-color: #ff8800 !important;
+  background-color: #e5891f !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-light {
-  background-color: #ffbe73 !important;
+  background-color: #f1be84 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-dark {
-  background-color: #8c4b00 !important;
+  background-color: #7e4b11 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-d-4 {
-  background-color: #663600 !important;
+  background-color: #5c370c !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-d-3 {
-  background-color: #8c4b00 !important;
+  background-color: #7e4b11 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-d-2 {
-  background-color: #b35f00 !important;
+  background-color: #a06016 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-d-1 {
-  background-color: #d47100 !important;
+  background-color: #be721a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-l-4 {
-  background-color: #ffa033 !important;
+  background-color: #eaa14c !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-l-3 {
-  background-color: #ffbe73 !important;
+  background-color: #f1be84 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-l-2 {
-  background-color: #ffdbb3 !important;
+  background-color: #f7dcbc !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-brand.bg-l-1 {
-  background-color: #fff3e6 !important;
+  background-color: #fcf3e9 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary {
-  background-color: #6748e3 !important;
+  background-color: #7764d4 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-light {
-  background-color: #a491ee !important;
+  background-color: #c5c1d9 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-dark {
-  background-color: #39287d !important;
+  background-color: #373062 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-d-4 {
-  background-color: #291d5b !important;
+  background-color: #282843 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-d-3 {
-  background-color: #39287d !important;
+  background-color: #373062 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-d-2 {
-  background-color: #48329f !important;
+  background-color: #4d4386 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-d-1 {
-  background-color: #553cbc !important;
+  background-color: #7169a6 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-l-4 {
-  background-color: #8269e8 !important;
+  background-color: #958fbd !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-l-3 {
-  background-color: #a491ee !important;
+  background-color: #c5c1d9 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-l-2 {
-  background-color: #cabff5 !important;
+  background-color: #dbd6e7 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-secondary.bg-l-1 {
-  background-color: #e8e4fb !important;
+  background-color: #eceaf4 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success {
-  background-color: #80d217 !important;
+  background-color: #81be30 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-light {
-  background-color: #b3e474 !important;
+  background-color: #b3d883 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-dark {
-  background-color: #46740d !important;
+  background-color: #47691a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-d-4 {
-  background-color: #335409 !important;
+  background-color: #344c13 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-d-3 {
-  background-color: #46740d !important;
+  background-color: #47691a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-d-2 {
-  background-color: #5a9310 !important;
+  background-color: #5a8522 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-d-1 {
-  background-color: #6aae13 !important;
+  background-color: #6b9e28 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-l-4 {
-  background-color: #97da41 !important;
+  background-color: #98ca55 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-l-3 {
-  background-color: #b3e474 !important;
+  background-color: #b3d883 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-l-2 {
-  background-color: #d3efae !important;
+  background-color: #d3e8b7 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-success.bg-l-1 {
-  background-color: #e8f7d5 !important;
+  background-color: #e8f3da !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info {
-  background-color: #77e4d2 !important;
+  background-color: #5ab1a3 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-light {
-  background-color: #bbf2e9 !important;
+  background-color: #add8d1 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-dark {
-  background-color: #417d74 !important;
+  background-color: #32615a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-d-4 {
-  background-color: #305b54 !important;
+  background-color: #244741 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-d-3 {
-  background-color: #417d74 !important;
+  background-color: #32615a !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-d-2 {
-  background-color: #53a093 !important;
+  background-color: #3f7c72 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-d-1 {
-  background-color: #63bdae !important;
+  background-color: #4b9387 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-l-4 {
-  background-color: #99ebdd !important;
+  background-color: #83c5ba !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-l-3 {
-  background-color: #bbf2e9 !important;
+  background-color: #add8d1 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-l-2 {
-  background-color: #d6f7f2 !important;
+  background-color: #cee8e3 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-info.bg-l-1 {
-  background-color: #f1fcfb !important;
+  background-color: #eff7f6 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning {
-  background-color: #ffce2e !important;
+  background-color: #e8bb28 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-light {
-  background-color: #ffe48c !important;
+  background-color: #f2da89 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-dark {
-  background-color: #94771b !important;
+  background-color: #876c17 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-d-4 {
-  background-color: #665212 !important;
+  background-color: #5d4b10 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-d-3 {
-  background-color: #94771b !important;
+  background-color: #876c17 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-d-2 {
-  background-color: #bf9b23 !important;
+  background-color: #ae8c1e !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-d-1 {
-  background-color: #e6b929 !important;
+  background-color: #d1a824 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-l-4 {
-  background-color: #ffda62 !important;
+  background-color: #eecc5e !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-l-3 {
-  background-color: #ffe48c !important;
+  background-color: #f2da89 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-l-2 {
-  background-color: #ffeeb6 !important;
+  background-color: #f7e7b4 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-warning.bg-l-1 {
-  background-color: #fff5d5 !important;
+  background-color: #faf1d4 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger {
-  background-color: #ff3358 !important;
+  background-color: #d83957 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-light {
-  background-color: #ff99ac !important;
+  background-color: #ec9cab !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-dark {
-  background-color: #8c1c30 !important;
+  background-color: #771f30 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-d-4 {
-  background-color: #661423 !important;
+  background-color: #561723 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-d-3 {
-  background-color: #8c1c30 !important;
+  background-color: #771f30 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-d-2 {
-  background-color: #b3243e !important;
+  background-color: #97283d !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-d-1 {
-  background-color: #d42a49 !important;
+  background-color: #b32f48 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-l-4 {
-  background-color: #ff6682 !important;
+  background-color: #e26b81 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-l-3 {
-  background-color: #ff99ac !important;
+  background-color: #ec9cab !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-l-2 {
-  background-color: #ffc2cd !important;
+  background-color: #f3c4cd !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-danger.bg-l-1 {
-  background-color: #ffebee !important;
+  background-color: #fbebee !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-gray {
-  background-color: rgba(255, 255, 255, 0.4) !important;
+  background-color: rgba(225, 223, 240, 0.25) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-gray.bg-light {
-  background-color: rgba(255, 255, 255, 0.82) !important;
+  background-color: rgba(253, 253, 254, 0.775) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-gray.bg-dark {
-  background-color: rgba(25, 25, 25, 0.82) !important;
+  background-color: rgba(13, 13, 14, 0.775) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-gray.bg-d-4 {
@@ -1198,25 +1288,25 @@
 }
 
 #root .app-container.app-theme-pnt-dark .bg-lightgray {
-  background-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(225, 223, 240, 0.1) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-lightgray.bg-light {
-  background-color: rgba(255, 255, 255, 0.76) !important;
+  background-color: rgba(254, 254, 255, 0.73) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-lightgray.bg-dark {
-  background-color: rgba(12, 12, 12, 0.76) !important;
+  background-color: rgba(5, 5, 5, 0.73) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-darkgray {
-  background-color: #656467 !important;
+  background-color: rgba(225, 223, 240, 0.4) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-darkgray.bg-light {
-  background-color: #d1d1d1 !important;
+  background-color: rgba(252, 252, 254, 0.82) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-darkgray.bg-dark {
-  background-color: #1e1e1f !important;
+  background-color: rgba(22, 22, 23, 0.82) !important;
 }

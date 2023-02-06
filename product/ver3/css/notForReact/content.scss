@@ -339,6 +339,15 @@
     color: gray;
   }
 }
+#root .app-container.app-theme-pnt-dark {
+  & .tag-item > p{
+    background-color: $gray-800;
+    border: 1px solid $gray-700;
+  }
+  .info-box {
+    background-color: $gray-800;
+  }
+}
 .info-txt {
   font-size: 0.8rem;
   color: $default-danger;
@@ -353,7 +362,6 @@
 .gray-box {
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: rgb(240, 240, 240);
 }
 
 //토스트메세지

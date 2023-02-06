@@ -388,6 +388,15 @@ margin
   color: gray;
 }
 
+#root .app-container.app-theme-pnt-dark .tag-item > p {
+  background-color: #434245;
+  border: 1px solid #656467;
+}
+
+#root .app-container.app-theme-pnt-dark .info-box {
+  background-color: #434245;
+}
+
 .info-txt {
   font-size: 0.8rem;
   color: #ff3333;
@@ -406,7 +415,6 @@ margin
 .gray-box {
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: #f0f0f0;
 }
 
 #toast {

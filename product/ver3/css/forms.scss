@@ -44,7 +44,7 @@
   padding-left: $form-left-padding;
   padding-right: $form-left-padding;
   border-radius: $form-radius;
-  background-color: $gray-300;
+  background-color: transparent;
   border: none !important;
 
   text-align: center;
@@ -53,12 +53,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   font-weight: 400 !important;
-
-  filter: brightness(1);
   transition: $form-transition;
-
   &:hover {
-    filter: brightness(0.95);
+    color: $default-brand;
+    & .material-icons-round {
+      color: $default-brand;
+    }
   }
   &.btn-shadow {
     box-shadow: 0px 5px 10px rgba($gray-500, 0.3);
@@ -153,16 +153,6 @@
     &:hover {
       color: $default-brand;
       border: 1px solid $default-brand !important;
-    }
-  }
-  &.btn-trans {
-    background-color: transparent;
-    border: none !important;
-    &:hover {
-      color: $default-brand;
-      & .material-icons-round {
-        color: $default-brand;
-      }
     }
   }
 }
@@ -377,12 +367,11 @@ input:-webkit-autofill {
   & .select__options {
     z-index: 10;
     position: absolute;
-    top: calc(100% + 2px);
+    top: calc(100% - 1px);
     left: 0px;
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: white;
     border: 1px solid transparent;
     border-radius: $form-radius;
     overflow: hidden;
@@ -393,7 +382,6 @@ input:-webkit-autofill {
         display: flex;
         align-items: center;
         padding: 0;
-        color: $black;
         line-height: 0;
         border-radius: $form-radius;
         border: none;
@@ -409,14 +397,6 @@ input:-webkit-autofill {
           margin-right: 7px;
         }
       }
-      &:hover a {
-        background-color: $gray-100;
-        transition: $form-transition;
-      }
-      &.on a {
-        background-color: $gray-300;
-        color: $default-secondary;
-      }
     }
   }
   //활성화 일때
@@ -431,9 +411,21 @@ input:-webkit-autofill {
     & .select__options {
       opacity: 1;
       transition: padding 0.2s;
-      & li a {
-        padding: 1rem 0.5rem;
-        border-top: 1px solid $form-border-color;
+      background-color: white;
+      & li {
+        & a{
+          color: $black;
+          padding: 1rem 0.5rem;
+          border-top: 1px solid $form-border-color;
+        }
+        &:hover a {
+          background-color: $gray-100;
+          transition: $form-transition;
+        }
+        &.on a {
+          background-color: $gray-300;
+          color: $default-secondary;
+        }
       }
     }
   }
@@ -474,6 +466,9 @@ input:-webkit-autofill {
     }
     &.select-icon-only {
       width: 60px;
+    }
+    & .select__options li a{
+      padding: 1.5rem .5rem;
     }
   }
 }
@@ -717,7 +712,7 @@ input:-webkit-autofill {
   justify-content: space-between;
   height: $form-height;
   min-width: 6rem;
-  background-color: white;
+  background-color: transparent;
   border: 1px solid $form-border-color;
   padding: 0 $form-left-padding;
   & p {
@@ -847,7 +842,6 @@ input:-webkit-autofill {
     padding: 0 0.5rem;
     border-radius: $form-radius;
     margin: 0;
-    background-color: white;
     white-space: nowrap;
     display: inline-block;
   }

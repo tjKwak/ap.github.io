@@ -10,16 +10,16 @@
 // 위 9개 종류는 고정입니다.
 // ---------------------------------------------------------
 
-$brand: #ff8800;
-$secondary: #6748e3;
-$success: #80d217;
-$warning: #ffce2e;
-$danger: #ff3358;
-$info: #77e4d2;
+$brand: #e5891f;
+$secondary: #7764d4;
+$success: #81be30;
+$warning: #e8bb28;
+$danger: #d83957;
+$info: #5ab1a3;
 
-$light-gray: rgba(255, 255, 255, 0.2);
-$gray: rgba(255, 255, 255, 0.4);
-$dark-gray: $gray-700;
+$light-gray: rgba(225, 223, 240, 0.1);
+$gray: rgba(225, 223, 240, 0.25);
+$dark-gray: rgba(225, 223, 240, 0.4);
 
 //-------------------------------------------------------------
 // ※----------------------------------------------------------
@@ -35,14 +35,14 @@ $brand-l3: mix($brand, white, 55%);
 $brand-l2: mix($brand, white, 30%);
 $brand-l1: mix($brand, white, 10%);
 
-$secondary-d4: mix($secondary, black, 40%);
-$secondary-d3: mix($secondary, black, 55%);
-$secondary-d2: mix($secondary, black, 70%);
-$secondary-d1: mix($secondary, black, 83%);
-$secondary-l4: mix($secondary, white, 82%);
-$secondary-l3: mix($secondary, white, 60%);
-$secondary-l2: mix($secondary, white, 35%);
-$secondary-l1: mix($secondary, white, 15%);
+$secondary-d4: #282843;
+$secondary-d3: #373062;
+$secondary-d2: #4d4386;
+$secondary-d1: #7169a6;
+$secondary-l4: #958fbd;
+$secondary-l3: #c5c1d9;
+$secondary-l2: #dbd6e7;
+$secondary-l1: #eceaf4;
 
 $success-d4: mix($success, black, 40%);
 $success-d3: mix($success, black, 55%);
@@ -87,22 +87,16 @@ $light-gray-l: mix($light-gray, white, 30%);
 $dark-gray-d: mix($dark-gray, black, 30%);
 $dark-gray-l: mix($dark-gray, white, 30%);
 
-$depth-base: #171618;
-$depth-1: mix($depth-base, #ddd9ee, 95%);
-$depth-2: mix($depth-base, #ddd9ee, 93%);
-$depth-3: mix($depth-base, #ddd9ee, 91%);
-$depth-4: mix($depth-base, #ddd9ee, 89%);
-$depth-5: mix($depth-base, #ddd9ee, 87%);
-$depth-6: mix($depth-base, #ddd9ee, 85%);
-$depth-7: mix($depth-base, #ddd9ee, 83%);
-$depth-8: mix($depth-base, #ddd9ee, 81%);
-$depth-9: mix($depth-base, #ddd9ee, 79%);
-
-// $depth-1: mix($depth-base, white, 91%);
-// $depth-2: mix($depth-base, white, 87%);
-// $depth-3: mix($depth-base, white, 84%);
-// $depth-4: mix($depth-base, white, 80%);
-// $depth-5: mix($depth-base, white, 76%);
+$depth-base: #292938;
+$depth-1: mix($depth-base, #ffffff, 95%);
+$depth-2: mix($depth-base, #ffffff, 93%);
+$depth-3: mix($depth-base, #ffffff, 91%);
+$depth-4: mix($depth-base, #ffffff, 89%);
+$depth-5: mix($depth-base, #ffffff, 87%);
+$depth-6: mix($depth-base, #ffffff, 85%);
+$depth-7: mix($depth-base, #ffffff, 83%);
+$depth-8: mix($depth-base, #ffffff, 71%);
+$depth-9: mix($depth-base, #ffffff, 75%);
 
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
@@ -112,12 +106,12 @@ $depth-9: mix($depth-base, #ddd9ee, 79%);
 // ---------------------------------------------------------
 
 //웹 - 공통txt
-$base-txt: $f-w-1;
+$base-txt: $f-w-2;
 
 //웹 - 바디
 //(그라디언트만 있습니다. solid로 바꾸고 싶으면, gradient 둘다에 동일색을 넣으세요.)
-$whole-body-gradient-start: $depth-base;
-$whole-body-gradient-end: $depth-base;
+$whole-body-gradient-start: mix($depth-base, #000000, 90%);
+$whole-body-gradient-end: mix($depth-base, #000000, 90%);
 $body-title-bg: transparent;
 
 //대시보드 편집 배경
@@ -130,15 +124,15 @@ $header-menu-text1: $f-w-1;
 $header-menu-text2: $f-w-5;
 
 //웹 - 사이드바
-$menu-body-bg: $depth-5;
+$menu-body-bg: #292938;
 $menu-hover-bg: rgba(196, 181, 238, 0.2);
-$menu-active-bg: #6054aa;
-$menu-line-color: orange;
+$menu-active-bg: rgba(196, 181, 238, 0.2);
+$menu-line-color: #48455c;
 $menu-icon-color: #a7a2c4;
 $menu-down-icon-color: #706966;
-$menu-main-txt: $f-w-1;
-$menu-sub-txt: $f-w-4;
-$menu-active-txt: $f-w-1;
+$menu-main-txt: #a7a2c4;
+$menu-sub-txt: $f-w-1;
+$menu-active-txt: rgb(187, 170, 255);
 
 //웹 - 푸터
 $footer-bg: #424242;
@@ -160,14 +154,14 @@ $card-tab-2: $secondary-l2;
 $card-button-body: mix($card-body-bg, black, 98%);
 
 //테이블
-$table-border: #6f6f81;
-$table-inner-border: rgba(255, 255, 255, 0.1);
-$table-header-border: $gray-400;
-$table-2row-bg: #36373a;
-$table-thead-bg: #6f6f8170;
-$table-tbody-bg: #2c2d30;
-$table-hover-bg: #424242;
-$table-clicked-bg: $secondary;
+$table-border: $gray-900;
+$table-inner-border: rgba(0,0,0, 0.1);
+$table-header-border: $gray-900;
+$table-2row-bg: $depth-5;
+$table-thead-bg: $depth-3;
+$table-tbody-bg: $depth-5;
+$table-hover-bg: $depth-7;
+$table-clicked-bg: $gray-800;
 $table-clicked-txt: white;
 $table-th-txt: $f-w-1;
 $table-td-txt: $f-w-4;
@@ -180,7 +174,7 @@ $toggle-bg: rgba(255, 255, 255, 0.3);
 $toggle-bar-bg: white;
 
 //네임플레이트
-$nameplate-bg: $gray-700;
+$nameplate-bg: $depth-6;
 $nameplate-txt: $f-w-2;
 
 //스크롤바
@@ -188,24 +182,27 @@ $scrollbar-bg: rgba(255, 255, 255, 0.2);
 $scrollbar-track-bg: rgba(255, 255, 255, 0.1);
 
 //form 기본
-$form-bg: rgb(70, 70, 70);
-$form-border: $gray-700;
-$form-txt: $f-w-4;
+$form-bg: $depth-7;
+$form-border: $depth-6;
+$form-txt: $f-w-3;
 $form-active-bg: $secondary;
-$form-active-border: white;
+$form-active-border: $gray-600;
 $form-active-txt: $f-w-1;
 $form-selected-txt: $f-w-1;
-$form-disable-bg: transparent;
-$form-disable-txt: $f-w-4;
-$form-placeholder-txt: $f-w-5;
-$form-hover-bg: $gray-200;
-$form-active-bg-light: $gray-300;
-$form-active-txt-light: $secondary;
+$form-disable-bg: $depth-3;
+$form-disable-txt: $f-w-7;
+$form-placeholder-txt: $f-w-7;
+$form-hover-bg: $depth-9;
+$form-active-bg-light: $gray-700;
+$form-active-txt-light: $f-w-1;
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 
 //적용
 #root .app-container.app-theme-pnt-dark {
+  *{
+    font-weight: 400;
+  }
   @include theme-default();
 }
