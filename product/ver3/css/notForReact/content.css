@@ -217,16 +217,18 @@ margin
   border-radius: 10px;
   color: #ffd500;
   background-color: rgba(255, 208, 0, 0.329);
+  display: inline;
 }
 
 .colorscripter-code .colorscripter-code-table td:nth-child(2) h5 {
-  display: inline-block;
+  display: inline;
   font-size: 13px;
   font-weight: bold;
   padding: 0px 5px;
   border-radius: 10px;
   color: #ffd500;
   background-color: rgba(255, 99, 190, 0.511);
+  margin: 0;
 }
 
 .tag-item {
@@ -335,6 +337,14 @@ margin
   gap: 10px;
 }
 
+.tag-set.tag-flex.full-item .tag-item > div {
+  width: 100%;
+}
+
+.tag-set.tag-flex.full-item .tag-item > div > div {
+  width: 100%;
+}
+
 .tag-info {
   margin-bottom: 1.5rem;
 }
@@ -425,4 +435,10 @@ margin
   visibility: visible;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }

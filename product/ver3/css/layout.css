@@ -19,7 +19,7 @@ body {
 }
 
 .app-container.dashboard-edit-mode .app-header .app-header__content {
-  background-color: #393986 !important;
+  background-color: #393986;
 }
 
 .app-container.dashboard-edit-mode .app-header .app-header__content * {
@@ -28,7 +28,7 @@ body {
 
 @media (max-width: 1024px) {
   .app-container.dashboard-edit-mode .app-header {
-    background-color: #393986 !important;
+    background-color: #393986;
   }
 }
 
@@ -467,7 +467,6 @@ body {
 
 .app-header-right .user-box .user-options .dropdown-menu-header {
   background-color: #553cbc;
-  border-bottom: 1px solid #eceaf2;
   padding: 1rem 1.4rem;
   margin: 0;
   display: -webkit-box;
@@ -537,6 +536,10 @@ body {
   transition: all 0.2s;
 }
 
+.app-header-right .user-box .user-options .profile-setting .setting-item:first-child {
+  border: none;
+}
+
 .app-header-right .user-box .user-options .profile-setting .setting-item:hover {
   background-color: #f3f2f6;
   -webkit-transition: all 0.2s;
@@ -567,7 +570,7 @@ body {
   width: 70px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  padding-left: 1.3rem;
+  padding: 0;
 }
 
 .app-container.sidebar-web-closed .app-header .app-header__logo .logo-src {
@@ -654,7 +657,6 @@ body {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   color: white;
-  width: 28px;
 }
 
 .app-sidebar .app-sidebar__inner .metismenu > ul.metismenu-container > li > a.metismenu-link {
@@ -690,7 +692,6 @@ body {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   color: #706966;
-  width: 28px;
 }
 
 .app-sidebar .app-sidebar__inner .metismenu > ul.metismenu-container > li > ul.metismenu-container {
@@ -770,7 +771,7 @@ body {
 #root .app-container .app-page-content {
   padding: 0.5rem;
   padding-left: 1.3rem;
-  padding-right: .7rem;
+  padding-right: 0.7rem;
 }
 
 .row {

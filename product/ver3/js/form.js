@@ -98,7 +98,7 @@ window.onload = function(){
 
 
     //테이블 클릭 기능
-    var table_btns = document.querySelectorAll('.table-clickable .tr')
+    var table_btns = document.querySelectorAll('.pnt-table .tr')
     for(let i=0; i<table_btns.length; i++){
         table_btns[i].addEventListener('click', function(e){
             for(let i=0; i<table_btns.length; i++){
@@ -156,6 +156,20 @@ window.onload = function(){
         userBox_box.classList.toggle('d-none');
     })
 
+    //테마컬러 기능
+    var theme_container = document.querySelector('.app-container');
+    var theme_btn = document.querySelector('.profile-setting .setting-item:last-child');
+
+    theme_btn.addEventListener('click',function(){
+        if(theme_container.classList.contains('app-theme-pnt-navy')){
+            theme_container.classList.remove('app-theme-pnt-navy')
+            theme_container.classList.add('app-theme-pnt-dark')
+        }
+        else if(theme_container.classList.contains('app-theme-pnt-dark')){
+            theme_container.classList.remove('app-theme-pnt-dark')
+            theme_container.classList.add('app-theme-pnt-navy')
+        }
+    })
     //테마컬러 기능
     // var theme_container = document.querySelector('.app-container');
     // var theme_sidebar = document.querySelector('.nav-box__main');

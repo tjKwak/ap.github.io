@@ -1,6 +1,5 @@
 //////////////////////////////
 /* Css link*/
-@import "../default/_colors";
 @import "../default/_default";
 @import "../../variables";
 
@@ -12,14 +11,16 @@
 // ---------------------------------------------------------
 
 $brand: #ff8800;
-$secondary: #6748e3;
+// $secondary: #6748e3;
+$secondary: #6a55c0;
 $success: #80d217;
 $warning: #ffce2e;
 $danger: #ff3358;
 $info: #77e4d2;
 
-$light-gray: rgb(209, 206, 226);
-$gray: #716c94;
+$light-gray: rgb(225, 223, 240);
+// $gray: #716c94;
+$gray: #a8a7ac;
 $dark-gray: #453e6f;
 
 //-------------------------------------------------------------
@@ -36,14 +37,22 @@ $brand-l3: mix($brand, white, 55%);
 $brand-l2: mix($brand, white, 30%);
 $brand-l1: mix($brand, white, 10%);
 
-$secondary-d4: mix($secondary, black, 40%);
-$secondary-d3: mix($secondary, black, 55%);
-$secondary-d2: mix($secondary, black, 70%);
-$secondary-d1: mix($secondary, black, 83%);
-$secondary-l4: mix($secondary, white, 82%);
-$secondary-l3: mix($secondary, white, 60%);
-$secondary-l2: mix($secondary, white, 35%);
-$secondary-l1: mix($secondary, white, 15%);
+// $secondary-d4: mix($secondary, black, 40%);
+// $secondary-d3: mix($secondary, black, 55%);
+// $secondary-d2: mix($secondary, black, 70%);
+// $secondary-d1: mix($secondary, black, 83%);
+// $secondary-l4: mix($secondary, white, 82%);
+// $secondary-l3: mix($secondary, white, 60%);
+// $secondary-l2: mix($secondary, white, 35%);
+// $secondary-l1: mix($secondary, white, 15%);
+$secondary-d4: #282843;
+$secondary-d3: #373062;
+$secondary-d2: #4d4386;
+$secondary-d1: #7169a6;
+$secondary-l4: #958fbd;
+$secondary-l3: #c5c1d9;
+$secondary-l2: #dbd6e7;
+$secondary-l1: #eceaf4;
 
 $success-d4: mix($success, black, 40%);
 $success-d3: mix($success, black, 55%);
@@ -81,12 +90,23 @@ $info-l3: mix($info, white, 50%);
 $info-l2: mix($info, white, 30%);
 $info-l1: mix($info, white, 10%);
 
-$gray-d: mix($gray, black, 30%);
+$gray-d: mix($gray, black, 50%);
 $gray-l: mix($gray, white, 30%);
-$light-gray-d: mix($light-gray, black, 30%);
+$light-gray-d: mix($light-gray, black, 50%);
 $light-gray-l: mix($light-gray, white, 30%);
-$dark-gray-d: mix($dark-gray, black, 30%);
+$dark-gray-d: mix($dark-gray, black, 50%);
 $dark-gray-l: mix($dark-gray, white, 30%);
+
+$depth-base: white;
+$depth-1: mix($depth-base, #ddd9ee, 95%);
+$depth-2: mix($depth-base, #ddd9ee, 93%);
+$depth-3: mix($depth-base, #ddd9ee, 91%);
+$depth-4: mix($depth-base, #ddd9ee, 89%);
+$depth-5: mix($depth-base, #ddd9ee, 87%);
+$depth-6: mix($depth-base, #ddd9ee, 85%);
+$depth-7: mix($depth-base, #ddd9ee, 83%);
+$depth-8: mix($depth-base, #ddd9ee, 81%);
+$depth-9: mix($depth-base, #ddd9ee, 79%);
 
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
@@ -102,7 +122,10 @@ $base-txt: $f-b-3;
 //(그라디언트만 있습니다. solid로 바꾸고 싶으면, gradient 둘다에 동일색을 넣으세요.)
 $whole-body-gradient-start: #f6f5fe;
 $whole-body-gradient-end: #e5e3f3;
-$body-title-bg: #e7e3f3;
+$body-title-bg: #393986;
+
+//대시보드 편집 배경
+$dashboard-edit-bg: #393986;
 
 //웹 - 헤더
 $header-bg: white;
@@ -132,6 +155,7 @@ $app-header-bg: #f5f5fa;
 //카드
 $card-body-bg: white;
 $card-header-bg: white;
+$card-header-border: $gray-200;
 $card-tab: #cacafc;
 $card-tab-li: #e0e0ff;
 $card-tab-li-active: white;
@@ -142,15 +166,16 @@ $card-button-body: mix($card-body-bg, black, 98%);
 
 //테이블
 $table-border: #6f6f81;
-$table-inner-border: $gray-200;
-$table-2row-bg: rgba(0, 0, 0, 0.03);
-$table-thead-bg: #d2d2fd;
+$table-inner-border: #eceaf2;
+$table-header-border: $gray-400;
+$table-2row-bg: #fdfdff;
+$table-thead-bg: #f6f4fb;
 $table-tbody-bg: #ffffff;
-$table-hover-bg: #d1cde9;
-$table-clicked-bg: #6a5acd;
-$table-clicked-txt: white;
-$table-th-txt: $f-b-1;
-$table-td-txt: $f-b-4;
+$table-hover-bg: #eceaf2;
+$table-clicked-bg: #d1d1e8;
+$table-clicked-txt: $gray-900;
+$table-th-txt: $gray-800;
+$table-td-txt: $gray-700;
 
 //라디오
 $radio-checked-bg: $gray-800;
@@ -160,8 +185,8 @@ $toggle-bg: lightgray;
 $toggle-bar-bg: white;
 
 //네임플레이트
-$nameplate-bg: $secondary-l1;
-$nameplate-txt: $f-b-3;
+$nameplate-bg: $gray-200;
+$nameplate-txt: $gray-700;
 
 //스크롤바
 $scrollbar-bg: rgba(0, 0, 0, 0.2);
@@ -169,8 +194,8 @@ $scrollbar-track-bg: rgba(0, 0, 0, 0.1);
 
 //form 기본
 $form-bg: #f7f6f8;
-$form-border: #E6E5E8;
-$form-txt: $f-b-4;
+$form-border: #e6e5e8;
+$form-txt: $gray-800;
 $form-active-bg: $secondary;
 $form-active-border: $gray-700;
 $form-active-txt: white;
@@ -178,9 +203,9 @@ $form-selected-txt: $f-b-1;
 $form-disable-bg: $gray-200;
 $form-disable-txt: $gray-500;
 $form-placeholder-txt: $gray-500;
-$form-hover-bg : $gray-200;
-$form-active-bg-light : $gray-300;
-$form-active-txt-light : $secondary;
+$form-hover-bg: $gray-200;
+$form-active-bg-light: $gray-300;
+$form-active-txt-light: $secondary;
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////

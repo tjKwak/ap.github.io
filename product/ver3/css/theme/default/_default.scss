@@ -1,99 +1,6 @@
 //////////////////////////////
 /* Css link*/
-@import "_colors";
 @import "../../_variables";
-
-// ---------------------------------------------------------
-// ※-------------------------------------------------------
-// 이 파일의 하단 내용이 각 theme 폴더의 내용과 동일해야 합니다.
-// 이곳의 $변수 값을 각 theme 폴더에서 덮어쓰고 있습니다.-----
-// ---------------------------------------------------------
-
-//웹 - 공통txt
-$base-txt: white;
-
-//////////////////////////////
-//웹 - 바디
-//(그라디언트만 있습니다. solid로 바꾸고 싶으면, gradient 둘다에 동일색을 넣으세요.)
-$whole-body-gradient-start: white;
-$whole-body-gradient-end: white;
-$body-title-bg: white;
-
-//웹 - 헤더
-$header-bg: white;
-$header-logobox: white;
-$header-menu-text1: white;
-$header-menu-text2: white;
-
-//웹 - 사이드바
-$menu-body-bg: white;
-$menu-active-bg: white;
-$menu-line-color: white;
-$menu-icon-color: white;
-$menu-down-icon-color: white;
-$menu-main-txt: white;
-$menu-sub-txt: white;
-$menu-active-txt: white;
-
-//웹 - 푸터
-$footer-bg: white;
-$footer-txt: white;
-
-//모바일
-$app-header-bg: white;
-
-//카드
-$card-body-bg: white;
-$card-header-bg: white;
-$card-tab: white;
-$card-tab-li: white;
-$card-tab-li-active: white;
-$card-tab-txt: white;
-$card-tab-li-txt: white;
-$card-tab-2: white;
-$card-button-body: white;
-
-//테이블
-$table-border: white;
-$table-inner-border: white;
-$table-2row-bg: white;
-$table-thead-bg: white;
-$table-tbody-bg: white;
-$table-hover-bg: white;
-$table-clicked-bg: white;
-$table-clicked-txt: white;
-$table-th-txt: white;
-$table-td-txt: white;
-
-//라디오
-$radio-checked-bg: white;
-
-//토글
-$toggle-bg: white;
-$toggle-bar-bg: white;
-
-//네임플레이트
-$nameplate-bg: white;
-$nameplate-txt: white;
-
-//스크롤바
-$scrollbar-bg: white;
-$scrollbar-track-bg: white;
-
-//form 기본
-$form-bg: white;
-$form-border: white;
-$form-txt: white;
-$form-active-bg: white;
-$form-active-border: white;
-$form-active-txt: white;
-$form-selected-txt: white;
-$form-disable-bg: white;
-$form-disable-txt: white;
-$form-placeholder-txt: white;
-$form-hover-bg: white;
-$form-active-bg-light: white;
-$form-active-txt-light: white;
 
 // ---------------------------------------------------------
 // ---------------------------------------------------------
@@ -102,6 +9,37 @@ $form-active-txt-light: white;
 // ---------------------------------------------------------
 
 @mixin theme-default {
+  .bg-depth-base {
+    background-color: $depth-base !important;
+  }
+  .bg-depth-1 {
+    background-color: $depth-1 !important;
+  }
+  .bg-depth-2 {
+    background-color: $depth-2 !important;
+  }
+  .bg-depth-3 {
+    background-color: $depth-3 !important;
+  }
+  .bg-depth-4 {
+    background-color: $depth-4 !important;
+  }
+  .bg-depth-5 {
+    background-color: $depth-5 !important;
+  }
+  .bg-depth-6 {
+    background-color: $depth-6 !important;
+  }
+  .bg-depth-7 {
+    background-color: $depth-7 !important;
+  }
+  .bg-depth-8 {
+    background-color: $depth-8 !important;
+  }
+  .bg-depth-9 {
+    background-color: $depth-9 !important;
+  }
+
   /////////////////////////////////////////////////////////
   //공통 글자
   color: $base-txt;
@@ -117,15 +55,15 @@ $form-active-txt-light: white;
   p,
   span,
   div {
-    //color: $base-txt;
+    color: $base-txt;
   }
   /////////////////////////////////////////////////////////
   //헤더 영역
   & .app-header__logo {
-    background-color: $header-logobox;
+    background-color: $menu-body-bg; //사이드바와 같은 색상
   }
   & .app-header__content {
-    background: $header-bg;
+    background-color: $depth-1;
     & .app-header-left {
       & .menu-main {
         color: $header-menu-text1;
@@ -133,6 +71,22 @@ $form-active-txt-light: white;
       & .menu-sub {
         color: $header-menu-text2;
       }
+    }
+  }
+  & .user-box .user-options {
+    background-color: $depth-4;
+  }
+  /////////////////////////////////////////////////////////
+  //필터
+  & .filter_ver5 {
+    background-color: $depth-1;
+    & .filter-box {
+      border-top: 1px solid $depth-5;
+    }
+    & .filter-label,
+    & .filter-label .material-icons-round,
+    & .autoreset-box {
+      color: $f-w-3;
     }
   }
   /////////////////////////////////////////////////////////
@@ -199,13 +153,26 @@ $form-active-txt-light: white;
   /////////////////////////////////////////////////////////
   //바디 영역
   & .app-main__inner {
-    background: linear-gradient(
-      $whole-body-gradient-start,
-      $whole-body-gradient-end
-    );
+    background: linear-gradient($whole-body-gradient-start, $whole-body-gradient-end);
+  }
+  &.dashboard-edit-mode {
+    & .app-header .app-header__content {
+      background-color: $dashboard-edit-bg;
+    }
+    @media (max-width: $breakpoint-labtop) {
+      & .app-header {
+        background-color: $dashboard-edit-bg;
+      }
+    }
+    & .dashboard-edit-title {
+      background-color: $dashboard-edit-bg;
+    }
   }
   & .app-page-title {
-    //background: $body-title-bg;
+    background: $body-title-bg;
+  }
+  & .app-page-content {
+    border-top: 1px solid $card-header-border;
   }
   & .app-footer {
     background-color: $footer-bg;
@@ -216,7 +183,7 @@ $form-active-txt-light: white;
     background-color: $card-body-bg;
     & .card-header {
       background-color: $card-header-bg;
-      border-bottom: 1px solid $form-border;
+      border-bottom: 1px solid $card-header-border;
     }
     & .card-tab {
       background-color: $card-tab;
@@ -278,7 +245,7 @@ $form-active-txt-light: white;
       border: 1px solid $form-border;
     }
     & .input-group-text {
-      background-color: $table-thead-bg;
+      background-color: $form-disable-bg;
       border: 1px solid $form-border;
     }
     & .react-datepicker {
@@ -502,42 +469,41 @@ $form-active-txt-light: white;
   //기본 폼
   //1. 버튼
   & .pnt-btn {
+    color: $form-txt;
     &.btn-brand {
       background-color: $brand;
+      color: white;
     }
     &.btn-secondary {
       background-color: $secondary;
-    }
-    &.btn-success {
-      background-color: $success;
-    }
-    &.btn-warning {
-      background-color: $warning;
+      color: white;
     }
     &.btn-danger {
       background-color: $danger;
-    }
-    &.btn-info {
-      background-color: $info;
+      color: white;
     }
     &.btn-lightgray {
       background-color: $light-gray;
     }
     &.btn-gray {
       background-color: $gray;
+      color: white;
     }
     &.btn-darkgray {
       background-color: $dark-gray;
+      color: white;
     }
     &.btn-disable {
       background-color: $light-gray-l;
+      color: $form-disable-txt;
     }
   }
-  //2. 인풋
+  //2. 인풋[텍스트]
   & .pnt-input--group {
     & input {
       background-color: $form-bg;
       border: 1px solid $form-border;
+      color: $form-txt;
       &::placeholder {
         color: $form-placeholder-txt;
       }
@@ -578,6 +544,7 @@ $form-active-txt-light: white;
       }
     }
   }
+  //3. 인풋[파일]
   & .pnt-file--group input[type="file"] {
     border: 1px solid $form-border;
     &::before {
@@ -585,12 +552,17 @@ $form-active-txt-light: white;
       border-left: 1px solid $form-border;
     }
   }
-  //3. 셀렉트
+  //4. 셀렉트
   & .pnt-select--group {
     & .select__btn {
-      color: $form-txt;
       background-color: $form-bg;
       border: 1px solid $form-border;
+      & .cont-wrap {
+        color: $form-txt;
+      }
+      & .material-icons-round {
+        color: $form-txt;
+      }
     }
     & .select__options {
       background-color: $form-bg;
@@ -622,8 +594,11 @@ $form-active-txt-light: white;
         border: 1px solid $brand;
       }
     }
+    &.form-disable .cont-wrap {
+      color: $form-disable-txt;
+    }
   }
-  //4. 체크박스
+  //5. 체크박스
   .pnt-checkbox {
     & p {
       color: $form-txt;
@@ -636,16 +611,19 @@ $form-active-txt-light: white;
         background: white;
       }
     }
-    &:has(input:checked){
+    &:has(input:checked) {
       & .checkbox-effect {
         background-color: $form-active-bg;
       }
       & p {
-        color: $form-selected-txt;
+        color: $form-txt;
       }
     }
+    &.form-disable p {
+      color: $form-disable-txt;
+    }
   }
-  //5. 토글
+  //6. 토글
   .pnt-toggle {
     & input:checked + .slider {
       background-color: $success;
@@ -665,8 +643,11 @@ $form-active-txt-light: white;
       }
     }
   }
-  //6. 라디오
+  //7. 라디오
   & .pnt-radio {
+    & p {
+      color: $form-txt;
+    }
     //체크시
     &:has(input:checked) {
       border: 1px solid $brand;
@@ -682,51 +663,61 @@ $form-active-txt-light: white;
       }
     }
   }
-  //7. 네임플레이트
+  //8. 네임플레이트
   & .pnt-nameplate {
     background-color: $nameplate-bg;
-    color: $nameplate-txt;
-    &::before {
-      background-color: $card-body-bg;
+    & .cont-wrap {
+      color: $nameplate-txt;
     }
   }
-  //8. 텍스트
+  //9. 텍스트
   & .pnt-txt {
     color: $form-txt;
   }
-  //9. 보더
-  & .pnt-border {
-    background-color: $form-border;
-  }
   //10. 라벨
   & .pnt-label--group {
-    & .label-main {
-      &.label-dot::before {
-        background-color: $brand;
-      }
-      &.label-must {
-        color: $brand;
-      }
+    & .label-main,
+    & .label-options {
+      color: $form-txt;
     }
   }
-  // 11_1. 페이지네이션
+  //11. 디바이더
+  & .pnt-divider {
+    background-color: $form-border;
+  }
+  //12_1. 테이블[페이지네이션]
   & .pagination {
-    & .now {
-      color: $brand;
+    & button:nth-of-type(2),
+    button:nth-of-type(3) {
+      //background-color: $gray-700;
     }
+    & button:nth-of-type(1),
+    button:nth-of-type(4) {
+      //background-color: $gray-200;
+    }
+    & .now,
     & .whole {
       color: $form-txt;
     }
   }
-  // 11_2. 테이블
+  //12_2. 테이블
   & .pnt-table {
+    & .th,
+    & .td {
+      border-bottom: 1px solid $table-inner-border;
+      border-right: 1px solid $table-inner-border;
+    }
     & .border-box {
       border-top: 1.4px solid $table-border;
       border-bottom: 1.4px solid $table-border;
-      & .th {
-        background-color: $table-thead-bg;
-        border-right: 1px solid $table-inner-border;
-        color: $table-th-txt;
+      & .thead {
+        & .tr {
+          border-bottom: 1px solid $table-header-border;
+        }
+        & .th {
+          background-color: $table-thead-bg;
+          color: $table-th-txt;
+        }
       }
       & .tbody {
         background-color: $table-tbody-bg;
@@ -734,22 +725,18 @@ $form-active-txt-light: white;
           &:nth-child(2n) {
             background-color: $table-2row-bg;
           }
+          &:hover {
+            background-color: $table-hover-bg !important;
+          }
+          &.active {
+            background-color: $table-clicked-bg !important;
+            & .td {
+              color: $table-clicked-txt;
+            }
+          }
           & .td {
             color: $table-td-txt;
-            border-bottom: 1px solid $table-inner-border;
-            border-right: 1px solid $table-inner-border;
           }
-        }
-      }
-    }
-    &.table-clickable .border-box .tr {
-      &:hover {
-        background-color: $table-hover-bg !important;
-      }
-      &.active {
-        background-color: $table-clicked-bg !important;
-        & .td {
-          color: $table-clicked-txt;
         }
       }
     }

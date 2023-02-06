@@ -38,62 +38,43 @@
   color: black !important;
 }
 
-.bg-brand {
-  background-color: $default-brand;
+@mixin brightness($color) {
+  background-color: $color;
   &.bg-light {
-    background-color: $default-brand-l;
+    background-color: mix($color, black, 83%) !important;
   }
+  &.bg-dark {
+    background-color: mix($color, white, 80%) !important;
+  }
+}
+.bg-brand {
+  @include brightness($default-brand);
 }
 .bg-secondary {
-  background-color: $default-secondary;
-  &.bg-light {
-    background-color: $default-secondary-l;
-  }
+  @include brightness($default-secondary);
 }
 .bg-success {
-  background-color: $default-success;
-  &.bg-light {
-    background-color: $default-success-l;
-  }
+  @include brightness($default-success);
 }
 .bg-info {
-  background-color: $default-info;
-  &.bg-light {
-    background-color: $default-info-l;
-  }
+  @include brightness($default-info);
 }
 .bg-warning {
-  background-color: $default-warning;
-  &.bg-light {
-    background-color: $default-warning-l;
-  }
+  @include brightness($default-warning);
 }
 .bg-danger {
-  background-color: $default-danger;
-  &.bg-light {
-    background-color: $default-danger-l;
-  }
+  @include brightness($default-danger);
 }
 .bg-gray {
-  background-color: $gray-500;
-  &.bg-light {
-    background-color: $gray-400;
-  }
+  @include brightness($gray-500);
 }
-.bg-lightgray {
-  background-color: $gray-300;
-  &.bg-light {
-    background-color: $gray-200;
-  }
+.bg-white {
+  background-color: white !important;
 }
-.bg-darkgray {
-  background-color: $gray-800;
-  &.bg-light {
-    background-color: $gray-700;
-  }
-  & .bg-light {
-  }
+.bg-black {
+  background-color: black !important;
 }
+
 //////////////////////////////////////////////////////
 /* 3. 자주 쓰는 문법  */
 

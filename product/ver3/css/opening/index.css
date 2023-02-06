@@ -52,7 +52,11 @@
 }
 
 .bg-brand.bg-light {
-  background-color: #fde3d3;
+  background-color: #ca5f1b !important;
+}
+
+.bg-brand.bg-dark {
+  background-color: #f58f4d !important;
 }
 
 .bg-secondary {
@@ -60,7 +64,11 @@
 }
 
 .bg-secondary.bg-light {
-  background-color: #d8e0fe;
+  background-color: #3355d0 !important;
+}
+
+.bg-secondary.bg-dark {
+  background-color: #6585fc !important;
 }
 
 .bg-success {
@@ -68,7 +76,11 @@
 }
 
 .bg-success.bg-light {
-  background-color: #d8f2e0;
+  background-color: #309f51 !important;
+}
+
+.bg-success.bg-dark {
+  background-color: #61cd81 !important;
 }
 
 .bg-info {
@@ -76,7 +88,11 @@
 }
 
 .bg-info.bg-light {
-  background-color: #d8f3ff;
+  background-color: #31a0d4 !important;
+}
+
+.bg-info.bg-dark {
+  background-color: #62cdff !important;
 }
 
 .bg-warning {
@@ -84,7 +100,11 @@
 }
 
 .bg-warning.bg-light {
-  background-color: #fff3cd;
+  background-color: #d4a006 !important;
+}
+
+.bg-warning.bg-dark {
+  background-color: #ffcd39 !important;
 }
 
 .bg-danger {
@@ -92,7 +112,11 @@
 }
 
 .bg-danger.bg-light {
-  background-color: #ffd6d6;
+  background-color: #d42a2a !important;
+}
+
+.bg-danger.bg-dark {
+  background-color: #ff5c5c !important;
 }
 
 .bg-gray {
@@ -100,23 +124,19 @@
 }
 
 .bg-gray.bg-light {
-  background-color: #cac8cf;
+  background-color: #8b8b8f !important;
 }
 
-.bg-lightgray {
-  background-color: #dcd9e1;
+.bg-gray.bg-dark {
+  background-color: #b9b9bd !important;
 }
 
-.bg-lightgray.bg-light {
-  background-color: #eceaf2;
+.bg-white {
+  background-color: white !important;
 }
 
-.bg-darkgray {
-  background-color: #434245;
-}
-
-.bg-darkgray.bg-light {
-  background-color: #656467;
+.bg-black {
+  background-color: black !important;
 }
 
 /* 3. 자주 쓰는 문법  */

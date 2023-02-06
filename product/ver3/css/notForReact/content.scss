@@ -181,15 +181,17 @@
         border-radius: 10px;
         color: #ffd500;
         background-color: rgba(255, 208, 0, 0.329);
+        display: inline;
       }
       & h5 {
-        display: inline-block;
+        display: inline;
         font-size: 13px;
         font-weight: bold;
         padding: 0px 5px;
         border-radius: 10px;
         color: #ffd500;
         background-color: rgba(255, 99, 190, 0.511);
+        margin: 0;
       }
     }
   }
@@ -272,6 +274,16 @@
     &.item-4 {
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
+    }
+    &.full-item{
+      & .tag-item{
+        & > div{
+          width: 100%;
+          & > div{
+            width: 100%;;
+          }
+        }
+      }
     }
   }
 }
@@ -366,4 +378,10 @@
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, 0);
+}
+
+.box{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }

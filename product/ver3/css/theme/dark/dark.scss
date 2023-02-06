@@ -1,6 +1,5 @@
 //////////////////////////////
 /* Css link*/
-@import "../default/_colors";
 @import "../default/_default";
 @import "../../_variables";
 
@@ -88,6 +87,23 @@ $light-gray-l: mix($light-gray, white, 30%);
 $dark-gray-d: mix($dark-gray, black, 30%);
 $dark-gray-l: mix($dark-gray, white, 30%);
 
+$depth-base: #171618;
+$depth-1: mix($depth-base, #ddd9ee, 95%);
+$depth-2: mix($depth-base, #ddd9ee, 93%);
+$depth-3: mix($depth-base, #ddd9ee, 91%);
+$depth-4: mix($depth-base, #ddd9ee, 89%);
+$depth-5: mix($depth-base, #ddd9ee, 87%);
+$depth-6: mix($depth-base, #ddd9ee, 85%);
+$depth-7: mix($depth-base, #ddd9ee, 83%);
+$depth-8: mix($depth-base, #ddd9ee, 81%);
+$depth-9: mix($depth-base, #ddd9ee, 79%);
+
+// $depth-1: mix($depth-base, white, 91%);
+// $depth-2: mix($depth-base, white, 87%);
+// $depth-3: mix($depth-base, white, 84%);
+// $depth-4: mix($depth-base, white, 80%);
+// $depth-5: mix($depth-base, white, 76%);
+
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
 // 하단의 내용은 수정할 수 있지만, 변수를 추가, 제거할 순 없습니다.
@@ -100,31 +116,29 @@ $base-txt: $f-w-1;
 
 //웹 - 바디
 //(그라디언트만 있습니다. solid로 바꾸고 싶으면, gradient 둘다에 동일색을 넣으세요.)
-$whole-body-gradient-start: #3b3b3b;
-$whole-body-gradient-end: #4c4952;
+$whole-body-gradient-start: $depth-base;
+$whole-body-gradient-end: $depth-base;
 $body-title-bg: transparent;
+
+//대시보드 편집 배경
+$dashboard-edit-bg: $secondary-d4;
 
 //웹 - 헤더
 $header-bg: linear-gradient(45deg, rgb(31, 29, 29), rgb(43, 40, 46));
-$header-logobox: rgb(44, 42, 42);
-$header-menu-box: rgba(255, 255, 255, 0.1);
+$header-logobox: $depth-5;
 $header-menu-text1: $f-w-1;
 $header-menu-text2: $f-w-5;
-$header-menu-icon-next: invert(1) saturate(0);
-$header-hamburger-btn: invert(1);
 
 //웹 - 사이드바
-$menu-body-bg: linear-gradient(180deg, rgb(22, 21, 21), rgb(45, 44, 48));
+$menu-body-bg: $depth-5;
+$menu-hover-bg: rgba(196, 181, 238, 0.2);
 $menu-active-bg: #6054aa;
 $menu-line-color: orange;
-$menu-icon-filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
-  brightness(105%) contrast(103%);
-$menu-down-icon-filter: opacity(1) invert(1);
+$menu-icon-color: #a7a2c4;
+$menu-down-icon-color: #706966;
 $menu-main-txt: $f-w-1;
 $menu-sub-txt: $f-w-4;
 $menu-active-txt: $f-w-1;
-//(옵션: 배경 이미지 있을시에만 수정)
-$menu-bg-overlay: linear-gradient(rgba(0, 0, 0, 0.9), rgba(93, 89, 100, 0.8));
 
 //웹 - 푸터
 $footer-bg: #424242;
@@ -134,8 +148,9 @@ $footer-txt: $f-w-5;
 $app-header-bg: #f5f5fa;
 
 //카드
-$card-body-bg: #2c2c30;
-$card-header-bg: #29292d;
+$card-body-bg: $depth-1;
+$card-header-bg: $depth-1;
+$card-header-border: transparent;
 $card-tab: #1e1e20;
 $card-tab-li: #46484b;
 $card-tab-li-active: #2c2c30;
@@ -147,6 +162,7 @@ $card-button-body: mix($card-body-bg, black, 98%);
 //테이블
 $table-border: #6f6f81;
 $table-inner-border: rgba(255, 255, 255, 0.1);
+$table-header-border: $gray-400;
 $table-2row-bg: #36373a;
 $table-thead-bg: #6f6f8170;
 $table-tbody-bg: #2c2d30;
@@ -182,6 +198,9 @@ $form-selected-txt: $f-w-1;
 $form-disable-bg: transparent;
 $form-disable-txt: $f-w-4;
 $form-placeholder-txt: $f-w-5;
+$form-hover-bg: $gray-200;
+$form-active-bg-light: $gray-300;
+$form-active-txt-light: $secondary;
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////

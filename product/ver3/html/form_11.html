@@ -30,6 +30,18 @@
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/form.js"></script>
     <script src="js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .tag-item {
+            height: auto;
+        }
+
+        .tag-item>div {
+            background-color: rgb(243, 243, 243);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,7 +79,7 @@
                     <div class="app-header-left">
                         <span class="menu-sub">form 컴포넌트</span>
                         <span class="material-icons-round md-18 color-secondary mr-1">navigate_next</span>
-                        <span class="menu-main">셀렉트</span>
+                        <span class="menu-main">라벨</span>
                     </div>
                     <div class="app-header-right">
                         <!-- 알람 위젯 -->
@@ -192,7 +204,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="metismenu-item">
-                                                    <a class="metismenu-link active" href="form_5.html">
+                                                    <a class="metismenu-link" href="form_5.html">
                                                         <span>셀렉트</span>
                                                     </a>
                                                 </li>
@@ -222,7 +234,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="metismenu-item">
-                                                    <a class="metismenu-link" href="form_11.html">
+                                                    <a class="metismenu-link active" href="form_11.html">
                                                         <span>라벨</span>
                                                     </a>
                                                 </li>
@@ -415,7 +427,7 @@
                         <!-- 본문 -->
                         <div class="app-page-content">
                             <div class="row">
-                                <div class="col-xl-4 col-lg-6 col-12">
+                                <div class="col-xl-5 col-lg-6 col-12">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
@@ -427,51 +439,33 @@
                                         </div>
                                         <div class="card-body">
                                             <!-- 코드설명 -->
-                                            <div class="colorscripter-code"style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table"style="margin:0;padding:0;border:none;background-color:#292938;border-radius:4px;"cellspacing="0"cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"<b>pnt-select--group</b><h5>on</h5>"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"select__btn"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"cont-wrap"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;리스트1</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"material-icons-round"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;arrow_drop_down</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">span</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">ul</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"select__options"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500"><h5>"on"</h5></span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#a8ff58">href=</span><span style="color:#ffd500">"#"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;리스트1</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">a</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#a8ff58">href=</span><span style="color:#ffd500">"#"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;리스트2</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">a</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#a8ff58">href=</span><span style="color:#ffd500">"#"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;리스트3</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">a</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">ul</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></div></td></tr></table></div>
+                                            <div class="colorscripter-code"style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table"style="margin:0;padding:0;border:none;background-color:#292938;border-radius:4px;"cellspacing="0"cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500"><h5>"label-flx-col"</h5></span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500"><b>"pnt-label--group"</b></span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"label-main"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;label</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"label-options"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;place&nbsp;options&nbsp;here</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></div></td></tr></table></div>
                                             <div class="info-box mb-3">
-                                                <span class="material-icons-round">campaign</span> 추가로 붙는 클래스들은, 필수클래스의
-                                                형제(sibling)로 추가합니다.
+                                                <span class="material-icons-round">campaign</span> 라벨은 대부분 단일로 사용되지
+                                                않습니다.<br>따라서 추가로 붙는 클래스들은 필수클래스의
+                                                부모(parent)에 추가합니다.<br>부모의 태그는 div, ul, li 중에 사용해주세요.
                                             </div>
                                             <div class="tag-info">
                                                 <div class="tag-title">
                                                     [필수 클래스]
                                                 </div>
                                                 <ul>
-                                                    <li>pnt-select--group</li>
+                                                    <li>pnt-label--group</li>
                                                 </ul>
                                             </div>
                                             <div class="tag-info">
                                                 <div class="tag-title">
-                                                    [활성화]
+                                                    [정렬]
                                                 </div>
                                                 <ul>
-                                                    <li>셀렉트박스 활성화 시
+                                                    <li>좌우 정렬
                                                         <ul>
-                                                            <li>on</li>
+                                                            <li>label-flx-start</li>
                                                         </ul>
                                                     </li>
-                                                    <li>옵션박스의 리스트 선택 시
+                                                    <li>정렬 방식
                                                         <ul>
-                                                            <li>on</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="tag-info">
-                                                <div class="tag-title">
-                                                    [상태/크기]
-                                                </div>
-                                                <ul>
-                                                    <li>상태
-                                                        <ul>
-                                                            <li>form-disable</li>
-                                                            <li>form-must</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>크기
-                                                        <ul>
-                                                            <li>form-h-small</li>
-                                                            <li>form-h-big</li>
+                                                            <li>label-flx-col</li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -481,10 +475,18 @@
                                                     [그 외]
                                                 </div>
                                                 <ul>
-                                                    <li>아이콘 사용
+                                                    <li>메인 라벨 길이
                                                         <ul>
-                                                            <li>icon-on-left</li>
-                                                            <li>select-icon-only</li>
+                                                            <li>pnt-label-1</li>
+                                                            <li>pnt-label-2</li>
+                                                            <li>pnt-label-3</li>
+                                                            <li>pnt-label-4</li>
+                                                            <li>pnt-label-5</li>
+                                                            <li>pnt-label-6</li>
+                                                            <li>pnt-label-7</li>
+                                                            <li>pnt-label-8</li>
+                                                            <li>pnt-label-9</li>
+                                                            <li>pnt-label-10</li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -492,78 +494,39 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-8 col-lg-6 col-12">
+                                <div class="col-xl-7 col-lg-6 col-12">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
-                                                <span class="material-icons-round">hide_source</span>
+                                                <span class="material-icons-round">align_vertical_center</span>
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">상태</h3>
-                                                    <p class="title__sub">오직 input[text], select만 form-must를 사용합니다. </p>
+                                                    <h3 class="title__main">좌우 정렬</h3>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body overflow-visible">
+                                        <div class="card-body">
                                             <div class="tag-set tag-inline">
-                                                <div class="tag-item">
+                                                <div class="tag-item ">
                                                     <div>
-                                                        <div class="pnt-select--group">
-                                                            <button class="select__btn">
-                                                                <div class="cont-wrap">
-                                                                    리스트1
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
+                                                        <div class="pnt-label--group">
+                                                            <div class="label-main">label</div>
+                                                            <div class="label-options">place options here<br>place
+                                                                options here<br>place options here</div>
                                                         </div>
                                                     </div>
                                                     <p>기본</p>
                                                 </div>
                                                 <div class="tag-item">
                                                     <div>
-                                                        <div class="pnt-select--group form-disable">
-                                                            <button class="select__btn" disabled>
-                                                                <div class="cont-wrap">
-                                                                    리스트1
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
+                                                        <div class="label-flx-start">
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here<br>place
+                                                                    options here<br>place options here</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <p>form-disable</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="pnt-select--group form-must">
-                                                            <button class="select__btn">
-                                                                <div class="cont-wrap">
-                                                                    리스트1
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <p>form-must</p>
+                                                    <p>label-flx-start</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -571,73 +534,33 @@
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
-                                                <span class="material-icons-round">straighten</span>
+                                                <span class="material-icons-round">align_horizontal_left</span>
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">크기</h3>
+                                                    <h3 class="title__main">정렬 방식</h3>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body overflow-visible">
+                                        <div class="card-body">
                                             <div class="tag-set tag-inline">
-                                                <div class="tag-item">
+                                                <div class="tag-item ">
                                                     <div>
-                                                        <div class="pnt-select--group">
-                                                            <button class="select__btn">
-                                                                <div class="cont-wrap">
-                                                                    리스트1
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
+                                                        <div class="pnt-label--group">
+                                                            <div class="label-main">label</div>
+                                                            <div class="label-options">place options here</div>
                                                         </div>
                                                     </div>
                                                     <p>기본</p>
                                                 </div>
                                                 <div class="tag-item">
                                                     <div>
-                                                        <div class="pnt-select--group form-h-small">
-                                                            <button class="select__btn">
-                                                                <div class="cont-wrap">
-                                                                    리스트1
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
+                                                        <div class="label-flx-col">
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <p>form-h-small</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="pnt-select--group form-h-big">
-                                                            <button class="select__btn">
-                                                                <div class="cont-wrap">
-                                                                    리스트1
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <p>form-h-big</p>
+                                                    <p>label-flx-col</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -645,54 +568,51 @@
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
-                                                <span class="material-icons-round">sentiment_satisfied_alt</span>
+                                                <span class="material-icons-round">start</span>
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">아이콘 사용</h3>
+                                                    <h3 class="title__main">좌우 정렬시 라벨 길이</h3>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body overflow-visible">
+                                        <div class="card-body">
                                             <div class="tag-set tag-inline">
-                                                <div class="tag-item">
+                                                <div class="tag-item ">
                                                     <div>
-                                                        <div class="pnt-select--group icon-on-left">
-                                                            <button class="select__btn">
-                                                                <div class="cont-wrap">
-                                                                    <span class="material-icons-round">language</span>
-                                                                    리스트1
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
+                                                        <div class="pnt-label-1">
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here</div>
+                                                            </div>
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here</div>
+                                                            </div>
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <p>icon-on-left</p>
+                                                    <p>pnt-label-1</p>
                                                 </div>
                                                 <div class="tag-item">
                                                     <div>
-                                                        <div class="pnt-select--group select-icon-only">
-                                                            <button class="select__btn">
-                                                                <div class="cont-wrap">
-                                                                    <span class="material-icons-round">language</span>
-                                                                </div>
-                                                                <span class="material-icons-round">
-                                                                    arrow_drop_down
-                                                                </span>
-                                                            </button>
-                                                            <ul class="select__options">
-                                                                <li class="on"><a href="#">리스트1</a></li>
-                                                                <li><a href="#">리스트2</a></li>
-                                                                <li><a href="#">리스트3</a></li>
-                                                            </ul>
+                                                        <div class="pnt-label-10">
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here</div>
+                                                            </div>
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here</div>
+                                                            </div>
+                                                            <div class="pnt-label--group">
+                                                                <div class="label-main">label</div>
+                                                                <div class="label-options">place options here</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <p>select-icon-only</p>
+                                                    <p>pnt-label-10</p>
                                                 </div>
                                             </div>
                                         </div>

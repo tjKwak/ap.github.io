@@ -20,14 +20,14 @@ body {
   //대시보드 편집 모드일때
   &.dashboard-edit-mode {
     & .app-header .app-header__content {
-      background-color: #393986 !important;
+      background-color: #393986;
       & * {
         display: none;
       }
     }
     @media (max-width: $breakpoint-labtop) {
       & .app-header {
-        background-color: #393986 !important;
+        background-color: #393986;
       }
     }
   }
@@ -352,7 +352,6 @@ body {
       box-shadow: $card-shadow;
       & .dropdown-menu-header {
         background-color: #553cbc;
-        border-bottom: 1px solid #eceaf2;
         padding: 1rem 1.4rem;
         margin: 0;
         display: flex;
@@ -396,6 +395,9 @@ body {
           border-left: 1px solid #eceaf2;
           background-color: transparent;
           transition: all 0.2s;
+          &:first-child{
+            border: none;
+          }
           &:hover {
             background-color: #f3f2f6;
             transition: all 0.2s;
@@ -429,7 +431,7 @@ body {
     & .app-header__logo {
       width: $app-sidebar-width-collapsed;
       transition: all 0.3s;
-      padding-left: 1.3rem;
+      padding: 0;
       & .logo-src {
         font-size: 0;
       }
@@ -498,7 +500,7 @@ body {
               transform: rotate(180deg);
               transition: all 0.2s;
               color: white;
-              width: $form-height;
+              //width: $form-height;
             }
           }
         }
@@ -527,7 +529,7 @@ body {
           & .material-icons-round {
             transition: all 0.2s;
             color: #706966;
-            width: $form-height;
+            //width: $form-height;
           }
         }
         //소메뉴 세트
@@ -605,7 +607,7 @@ $layout-padding: 0.5rem; //1.5rem -> 0.5rem
 #root .app-container .app-page-content {
   padding: $layout-padding;
   padding-left: 1.3rem;
-  padding-right: .7rem;
+  padding-right: 0.7rem;
 }
 .row {
   margin-right: 0;
