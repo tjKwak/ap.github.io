@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* Css link*/
+/* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
+/* 2. 값 세팅 - form, layout, commons, content에 사용  */
+.widget-item-nums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.widget-item-nums .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #ECEAF2;
+  border-radius: 10px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.widget-item-nums .col * {
+  color: #807894 !important;
+}
+
+.widget-item-nums .col b {
+  font-size: 32px;
+  font-weight: 900 !important;
+}
+
+.widget-item-nums .col:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+.widget-item-nums .col.active {
+  background-color: white;
+  border: 1px solid #3e66fb;
+  -webkit-box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+          box-shadow: 0rem 0.47rem 2.19rem rgba(8, 10, 37, 0.03), 0rem 0.94rem 1.41rem rgba(8, 10, 37, 0.03), 0rem 0.25rem 0.53rem rgba(8, 10, 37, 0.05), 0rem 0.13rem 0.19rem rgba(8, 10, 37, 0.03);
+}
+
+.widget-item-nums .col.active * {
+  color: #3e66fb !important;
+}
+
+.widget-item-nums .col.active:hover {
+  -webkit-filter: none;
+          filter: none;
+}

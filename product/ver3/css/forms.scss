@@ -40,7 +40,7 @@
   justify-content: center;
   gap: 0.5rem;
   position: relative;
-  min-width: 3.5rem; //한글 두글자, 영어 4단어 까지 가능
+  min-width: 4rem; //한글 두글자, 영어 4단어 까지 가능
   padding-left: $form-left-padding;
   padding-right: $form-left-padding;
   border-radius: $form-radius;
@@ -164,7 +164,7 @@ input:-webkit-autofill {
 .pnt-input--group {
   position: relative;
   min-width: 8rem;
-  width: 12rem;
+  width: 18rem;
   & .pnt-input {
     width: 100%;
     height: 100%;
@@ -174,7 +174,8 @@ input:-webkit-autofill {
     padding: 0 $form-left-padding;
     box-sizing: border-box;
     transition: $form-transition;
-    font-weight: 600;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
     &::placeholder {
       white-space: nowrap;
       font-weight: 400;
@@ -835,7 +836,7 @@ input:-webkit-autofill {
     font-weight: 300;
   }
   &.txt-bold {
-    font-weight: 800;
+    font-weight: 700;
   }
   &.txt-border {
     border: 1px solid $form-border-color;

@@ -1,0 +1,46 @@
+//////////////////////////////
+//※ 해당 파일은 html 용으로 만들었습니다.
+//   React 템플릿을 사용할경우, merge 시 잘 살펴봐주세요.
+
+//////////////////////////////
+/* Css link*/
+@import "_variables";
+
+.widget-item-nums{
+    display: flex;
+    gap: 8px;
+    & .col{
+        flex : 1;
+        background-color: #ECEAF2;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        transition: $form-transition;
+        & * {
+            color: #807894 !important;
+        }
+        & b{
+            font-size: 32px;
+            font-weight: 900 !important;
+        }
+        &:hover{
+            transition: $form-transition;
+            filter: brightness(95%);
+        }
+        &.active{
+            background-color: white;
+            border: 1px solid $default-secondary;
+            box-shadow: $card-shadow;
+            & *{
+                color: $default-secondary !important;
+            }
+            &:hover{
+                filter: none;
+            }
+        }
+    }
+}

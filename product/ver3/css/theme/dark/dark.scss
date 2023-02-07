@@ -87,7 +87,7 @@ $light-gray-l: mix($light-gray, white, 30%);
 $dark-gray-d: mix($dark-gray, black, 30%);
 $dark-gray-l: mix($dark-gray, white, 30%);
 
-$depth-base: #292938;
+$depth-base: #1f1f27;
 $depth-1: mix($depth-base, #ffffff, 95%);
 $depth-2: mix($depth-base, #ffffff, 93%);
 $depth-3: mix($depth-base, #ffffff, 91%);
@@ -95,8 +95,8 @@ $depth-4: mix($depth-base, #ffffff, 89%);
 $depth-5: mix($depth-base, #ffffff, 87%);
 $depth-6: mix($depth-base, #ffffff, 85%);
 $depth-7: mix($depth-base, #ffffff, 83%);
-$depth-8: mix($depth-base, #ffffff, 71%);
-$depth-9: mix($depth-base, #ffffff, 75%);
+$depth-8: mix($depth-base, #ffffff, 78%);
+$depth-9: mix($depth-base, #ffffff, 73%);
 
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
@@ -115,16 +115,17 @@ $whole-body-gradient-end: mix($depth-base, #000000, 90%);
 $body-title-bg: transparent;
 
 //대시보드 편집 배경
-$dashboard-edit-bg: $secondary-d4;
+$dashboard-edit-bg: rgb(80, 76, 87);
 
 //웹 - 헤더
-$header-bg: linear-gradient(45deg, rgb(31, 29, 29), rgb(43, 40, 46));
-$header-logobox: $depth-5;
+$header-bg: $depth-1;
+$header-logobox: $depth-5; //사이드바와 같은 색상
 $header-menu-text1: $f-w-1;
 $header-menu-text2: $f-w-5;
+$header-widget-icon: gray;
 
 //웹 - 사이드바
-$menu-body-bg: #292938;
+$menu-body-bg: $depth-5;
 $menu-hover-bg: rgba(196, 181, 238, 0.2);
 $menu-active-bg: rgba(196, 181, 238, 0.2);
 $menu-line-color: #48455c;
@@ -135,8 +136,8 @@ $menu-sub-txt: $f-w-1;
 $menu-active-txt: rgb(187, 170, 255);
 
 //웹 - 푸터
-$footer-bg: #424242;
-$footer-txt: $f-w-5;
+$footer-bg: $depth-base;
+$footer-txt: $f-w-6;
 
 //모바일
 $app-header-bg: #f5f5fa;
@@ -145,23 +146,25 @@ $app-header-bg: #f5f5fa;
 $card-body-bg: $depth-1;
 $card-header-bg: $depth-1;
 $card-header-border: transparent;
-$card-tab: #1e1e20;
-$card-tab-li: #46484b;
-$card-tab-li-active: #2c2c30;
+$card-icon-color : $brand;
+$card-title-color : $brand;
+$card-tab: mix($depth-base, #000000, 80%);
+$card-tab-li: $depth-base;
+$card-tab-li-active: $depth-1;
 $card-tab-txt: $f-w-1;
 $card-tab-li-txt: $f-w-6;
-$card-tab-2: $secondary-l2;
-$card-button-body: mix($card-body-bg, black, 98%);
+$card-tab-2: $secondary;
+$card-button-body: $depth-3;
 
 //테이블
 $table-border: $gray-900;
-$table-inner-border: rgba(0,0,0, 0.1);
-$table-header-border: $gray-900;
+$table-inner-border: rgba(0, 0, 0, 0.1);
+$table-header-border: transparent;
 $table-2row-bg: $depth-5;
 $table-thead-bg: $depth-3;
 $table-tbody-bg: $depth-5;
 $table-hover-bg: $depth-7;
-$table-clicked-bg: $gray-800;
+$table-clicked-bg: $depth-8;
 $table-clicked-txt: white;
 $table-th-txt: $f-w-1;
 $table-td-txt: $f-w-4;
@@ -185,23 +188,36 @@ $scrollbar-track-bg: rgba(255, 255, 255, 0.1);
 $form-bg: $depth-7;
 $form-border: $depth-6;
 $form-txt: $f-w-3;
+
 $form-active-bg: $secondary;
 $form-active-border: $gray-600;
 $form-active-txt: $f-w-1;
-$form-selected-txt: $f-w-1;
-$form-disable-bg: $depth-3;
-$form-disable-txt: $f-w-7;
-$form-placeholder-txt: $f-w-7;
-$form-hover-bg: $depth-9;
+
 $form-active-bg-light: $gray-700;
 $form-active-txt-light: $f-w-1;
+
+$form-disable-bg: $depth-3;
+$form-disable-txt: $f-w-7;
+
+$form-placeholder-txt: $f-w-7;
+$form-hover-bg: $depth-9;
+
+//인풋
+$input-bg : $depth-6;
+$input-border : $form-border;
+
+//위젯
+$widget-active-bg: $depth-9;
+$widget-active-border: white;
+$widget-active-txt: white;
+
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 
 //적용
 #root .app-container.app-theme-pnt-dark {
-  *{
+  * {
     font-weight: 400;
   }
   @include theme-default();

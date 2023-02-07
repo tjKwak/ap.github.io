@@ -139,9 +139,6 @@
       gap: 0.58rem;
       overflow: hidden;
       padding-left: 1rem;
-      & span {
-        opacity: 0.5;
-      }
       //아이콘이 있을때의 title-wrap 길이
       & span + .title-wrap {
         width: calc(100% - 1rem);
@@ -155,20 +152,21 @@
         width: calc(100% - 1rem);
         & * {
           margin: 0;
+          padding: 0;
+        }
+        & .title__main {
+          font-size: 0.95rem;
+          font-weight: 700;
+          opacity: 1;
+          margin-right: 10px;
           text-transform: capitalize;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
           text-align: left;
         }
-        & .title__main {
-          font-size: 0.9rem;
-          font-weight: 600;
-          opacity: 1;
-          margin-right: 10px;
-        }
         & .title__sub {
-          font-size: 11.5px;
+          font-size: 12px;
           font-weight: 400;
           line-height: 10px;
           opacity: 0.9;

@@ -227,6 +227,10 @@ body {
   display: flex;
 }
 
+.app-container .app-main .app-main__outer .app-main__inner .app-page-title.dashboard-edit-title .page-title-wrapper .page-title-heading * {
+  color: white !important;
+}
+
 .app-container .app-main .app-main__outer .app-main__inner .app-page-title.dashboard-edit-title .page-title-wrapper .page-title-heading .page-title-icon {
   padding: 0 !important;
   margin-right: 0.2rem !important;
@@ -453,10 +457,6 @@ body {
   margin: 0;
   font-size: 0.8rem;
   font-weight: 400;
-}
-
-.app-header-right .user-box .user-btn .material-icons-round {
-  opacity: 0.5;
 }
 
 .app-header-right .user-box .user-options {

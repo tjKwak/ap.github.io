@@ -63,13 +63,18 @@
     background-color: $menu-body-bg; //사이드바와 같은 색상
   }
   & .app-header__content {
-    background-color: $depth-1;
+    background-color: $header-bg;
     & .app-header-left {
       & .menu-main {
         color: $header-menu-text1;
       }
       & .menu-sub {
         color: $header-menu-text2;
+      }
+    }
+    & .app-header-right {
+      & .material-icons-round {
+        color: $header-widget-icon;
       }
     }
   }
@@ -181,7 +186,9 @@
   }
   & .app-footer {
     background-color: $footer-bg;
-    color: $footer-txt;
+    & .footer-wrap {
+      color: $footer-txt;
+    }
   }
   //카드
   & .card {
@@ -189,6 +196,14 @@
     & .card-header {
       background-color: $card-header-bg;
       border-bottom: 1px solid $card-header-border;
+      & .card-header__title {
+        & .material-icons-round {
+          color: $card-icon-color;
+        }
+        & .title__main {
+          color: $card-title-color;
+        }
+      }
     }
     & .card-tab {
       background-color: $card-tab;
@@ -238,235 +253,20 @@
   }
 
   /////////////////////////////////////////////////////////
-  //리액트 영역
-  //react-datePicker
-  & .pnt-datepicker-container {
-    & .form-control:focus {
-      outline: 0;
-      box-shadow: 0 0 0 1px $form-active-border;
-    }
-    & .react-datepicker__input-container input {
-      background-color: $form-bg;
-      border: 1px solid $form-border;
-    }
-    & .input-group-text {
-      background-color: $form-disable-bg;
-      border: 1px solid $form-border;
-    }
-    & .react-datepicker {
-      border-radius: 0;
-      border: 1px solid $form-border;
-      *::-webkit-scrollbar-track {
-        background-color: $table-thead-bg;
+  //위젯
+  & .widget-item-nums {
+    & .col {
+      background-color: $depth-5;
+      & * {
+        color: $form-txt !important;
       }
-      *::-webkit-scrollbar-thumb {
-        background-color: $form-bg;
-      }
-      .react-datepicker__triangle {
-        border-bottom-color: $form-bg;
-        border-top-color: $form-bg;
-        &::before {
-          border-bottom-color: $form-border;
-          border-top-color: $form-border;
+      &.active {
+        background-color: $widget-active-bg;
+        border: 1px solid $widget-active-border;
+        & * {
+          color: $widget-active-txt !important;
         }
       }
-      & .react-datepicker__month-container {
-        & .react-datepicker__header {
-          background-color: $table-thead-bg;
-          border-top-left-radius: 0;
-          border-top-right-radius: 0;
-          border-bottom: 1px solid $form-border;
-          & .react-datepicker__day-names {
-            background-color: $form-bg;
-            border-top: 1px solid $form-border;
-          }
-        }
-        & .react-datepicker__day {
-          &:hover,
-          &:focus,
-          &:active {
-            background-color: $table-hover-bg;
-          }
-        }
-        background-color: $form-bg;
-      }
-      & .react-datepicker__time-container {
-        border-left: 1px solid $form-border;
-        & .react-datepicker__header {
-          background-color: $table-thead-bg;
-          border-top-left-radius: 0;
-          border-top-right-radius: 0;
-          border-bottom: 1px solid $form-border;
-        }
-        & .react-datepicker__time {
-          & .react-datepicker__time-list-item {
-            &:hover,
-            &:focus,
-            &:active {
-              background-color: $table-hover-bg;
-            }
-          }
-          background-color: $form-bg;
-        }
-        background-color: $form-bg;
-      }
-      & .react-datepicker__input-time-container {
-        & .react-datepicker-time__input {
-          border-left: 1px solid $form-border;
-          & .react-datepicker__header {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            background-color: $table-thead-bg;
-            border-bottom: 1px solid $form-border;
-          }
-          & .time-label-box {
-            border-bottom: 1px solid $form-border;
-            div:last-child {
-              border-left: 1px solid $form-border;
-            }
-          }
-          & .list-wrap button {
-            color: $base-txt;
-            background-color: $form-bg;
-          }
-        }
-        & .time-label-box {
-          background-color: $form-bg;
-        }
-        background-color: $form-bg;
-      }
-    }
-  }
-  //기본 리액트 셀렉트 컴포넌트
-  & .react-select {
-    &:hover {
-      -webkit-filter: brightness(0.98);
-      filter: brightness(0.98);
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s;
-    }
-    & .react-select__control {
-      cursor: pointer;
-      background-color: $form-bg;
-      border: 1px solid $form-border;
-      box-shadow: none;
-    }
-    & .react-select__control--menu-is-open {
-      box-shadow: 0 0 0 1px $form-active-border;
-    }
-    & .react-select__multi-value {
-      & .react-select__multi-value__remove {
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: $table-hover-bg;
-        }
-      }
-      background-color: $table-thead-bg;
-    }
-    & .react-select__indicator-separator {
-      display: none;
-    }
-    & .select-dropdown-svg {
-      color: $form-bg;
-    }
-    & .react-select__indicator {
-      opacity: 0.5;
-      & svg {
-        height: 16px;
-        width: 18px;
-      }
-    }
-    & .react-select__placeholder {
-      font-size: 0.8rem;
-    }
-  }
-  //option 클래스
-  & .react-select__menu {
-    & .react-select__menu-list {
-      padding: 0;
-      border-radius: 5px;
-      & .react-select__option {
-        cursor: pointer;
-        font-size: 0.8rem;
-        color: $form-txt;
-        border-bottom: 1px solid $table-thead-bg;
-        background-color: $form-bg;
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: $table-hover-bg;
-        }
-        &:last-child {
-          border-bottom: none;
-        }
-      }
-    }
-    background-color: $form-bg;
-  }
-  //리액트 셀렉트(커스텀 컴포넌트)
-  & .select-dropdown {
-    & .styled-option {
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $table-hover-bg;
-      }
-    }
-    & .select-control {
-      background-color: $form-bg;
-      box-shadow: none;
-      &:hover,
-      &:focus,
-      &:active {
-        box-shadow: none;
-        border: 1px solid $form-active-border;
-      }
-    }
-    & .select-container {
-      background-color: $form-bg;
-      border: 1px solid $form-border;
-      box-shadow: none;
-      &.container-open {
-        box-shadow: 0 0 0 1px $form-active-border;
-      }
-      &:hover {
-        -webkit-filter: brightness(0.98);
-        filter: brightness(0.98);
-        -webkit-transition: all 0.2s;
-        transition: all 0.2s;
-      }
-    }
-    & .select-menu {
-      background-color: $form-bg;
-    }
-    & .select-option {
-      > div {
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: $table-hover-bg;
-        }
-        background-color: $form-bg;
-        & .select-label {
-          color: $base-txt;
-        }
-      }
-    }
-    & .select-group-title {
-      border-bottom: 1px solid $base-txt;
-      padding: 4px 8px;
-      font-weight: bold;
-    }
-    & .rct-icon {
-      color: $base-txt;
-    }
-    & .tree-wrapper {
-      border: 1px solid $base-txt;
-      padding: 5px;
-    }
-    & .select-dropdown-svg {
-      opacity: 0.5;
     }
   }
 
@@ -474,7 +274,7 @@
   //기본 폼
   //1. 버튼
   & .pnt-btn {
-    background-color: $light-gray;
+    background-color: $gray-300;
     color: $form-txt;
     &.btn-brand {
       background-color: $brand;
@@ -527,8 +327,8 @@
   //2. 인풋[텍스트]
   & .pnt-input--group {
     & input {
-      background-color: $form-bg;
-      border: 1px solid $form-border;
+      background-color: $input-bg;
+      border: 1px solid $input-border;
       color: $form-active-txt;
       &::placeholder {
         color: $form-placeholder-txt;
@@ -689,8 +489,8 @@
     & p {
       color: $form-txt;
     }
-    & input{
-      &::after{
+    & input {
+      &::after {
         border: 2px solid $form-bg !important;
       }
     }
@@ -700,7 +500,7 @@
       & input {
         border: 0.45em solid $brand !important;
       }
-      & p{
+      & p {
         color: $form-active-txt;
       }
     }
@@ -722,16 +522,16 @@
   //9. 텍스트
   & .pnt-txt {
     color: $form-txt;
-    &.txt-border{
+    &.txt-border {
       border: 1px solid $form-border;
     }
-    &.txt-bg{
+    &.txt-bg {
       background-color: $form-bg;
     }
   }
   //10. 라벨
   & .pnt-label--group {
-    & .label-main{
+    & .label-main {
       color: $form-active-txt;
     }
     & .label-options {
@@ -1150,6 +950,239 @@
     }
     &.bg-dark {
       background-color: $dark-gray-d !important;
+    }
+  }
+
+  /////////////////////////////////////////////////////////
+  //리액트 영역 - 프론트에서 수정할 부분이 있으면 하위에 추가해주세요.
+  //react-datePicker
+  & .pnt-datepicker-container {
+    & .form-control:focus {
+      outline: 0;
+      box-shadow: 0 0 0 1px $form-active-border;
+    }
+    & .react-datepicker__input-container input {
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+    }
+    & .input-group-text {
+      background-color: $form-disable-bg;
+      border: 1px solid $form-border;
+    }
+    & .react-datepicker {
+      border-radius: 0;
+      border: 1px solid $form-border;
+      *::-webkit-scrollbar-track {
+        background-color: $table-thead-bg;
+      }
+      *::-webkit-scrollbar-thumb {
+        background-color: $form-bg;
+      }
+      .react-datepicker__triangle {
+        border-bottom-color: $form-bg;
+        border-top-color: $form-bg;
+        &::before {
+          border-bottom-color: $form-border;
+          border-top-color: $form-border;
+        }
+      }
+      & .react-datepicker__month-container {
+        & .react-datepicker__header {
+          background-color: $table-thead-bg;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom: 1px solid $form-border;
+          & .react-datepicker__day-names {
+            background-color: $form-bg;
+            border-top: 1px solid $form-border;
+          }
+        }
+        & .react-datepicker__day {
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: $table-hover-bg;
+          }
+        }
+        background-color: $form-bg;
+      }
+      & .react-datepicker__time-container {
+        border-left: 1px solid $form-border;
+        & .react-datepicker__header {
+          background-color: $table-thead-bg;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom: 1px solid $form-border;
+        }
+        & .react-datepicker__time {
+          & .react-datepicker__time-list-item {
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: $table-hover-bg;
+            }
+          }
+          background-color: $form-bg;
+        }
+        background-color: $form-bg;
+      }
+      & .react-datepicker__input-time-container {
+        & .react-datepicker-time__input {
+          border-left: 1px solid $form-border;
+          & .react-datepicker__header {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            background-color: $table-thead-bg;
+            border-bottom: 1px solid $form-border;
+          }
+          & .time-label-box {
+            border-bottom: 1px solid $form-border;
+            div:last-child {
+              border-left: 1px solid $form-border;
+            }
+          }
+          & .list-wrap button {
+            color: $base-txt;
+            background-color: $form-bg;
+          }
+        }
+        & .time-label-box {
+          background-color: $form-bg;
+        }
+        background-color: $form-bg;
+      }
+    }
+  }
+  //기본 리액트 셀렉트 컴포넌트
+  & .react-select {
+    &:hover {
+      -webkit-filter: brightness(0.98);
+      filter: brightness(0.98);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+    & .react-select__control {
+      cursor: pointer;
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+      box-shadow: none;
+    }
+    & .react-select__control--menu-is-open {
+      box-shadow: 0 0 0 1px $form-active-border;
+    }
+    & .react-select__multi-value {
+      & .react-select__multi-value__remove {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $table-hover-bg;
+        }
+      }
+      background-color: $table-thead-bg;
+    }
+    & .react-select__indicator-separator {
+      display: none;
+    }
+    & .select-dropdown-svg {
+      color: $form-bg;
+    }
+    & .react-select__indicator {
+      opacity: 0.5;
+      & svg {
+        height: 16px;
+        width: 18px;
+      }
+    }
+    & .react-select__placeholder {
+      font-size: 0.8rem;
+    }
+  }
+  //option 클래스
+  & .react-select__menu {
+    & .react-select__menu-list {
+      padding: 0;
+      border-radius: 5px;
+      & .react-select__option {
+        cursor: pointer;
+        font-size: 0.8rem;
+        color: $form-txt;
+        border-bottom: 1px solid $table-thead-bg;
+        background-color: $form-bg;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $table-hover-bg;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    background-color: $form-bg;
+  }
+  //리액트 셀렉트(커스텀 컴포넌트)
+  & .select-dropdown {
+    & .styled-option {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $table-hover-bg;
+      }
+    }
+    & .select-control {
+      background-color: $form-bg;
+      box-shadow: none;
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+        border: 1px solid $form-active-border;
+      }
+    }
+    & .select-container {
+      background-color: $form-bg;
+      border: 1px solid $form-border;
+      box-shadow: none;
+      &.container-open {
+        box-shadow: 0 0 0 1px $form-active-border;
+      }
+      &:hover {
+        -webkit-filter: brightness(0.98);
+        filter: brightness(0.98);
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+      }
+    }
+    & .select-menu {
+      background-color: $form-bg;
+    }
+    & .select-option {
+      > div {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $table-hover-bg;
+        }
+        background-color: $form-bg;
+        & .select-label {
+          color: $base-txt;
+        }
+      }
+    }
+    & .select-group-title {
+      border-bottom: 1px solid $base-txt;
+      padding: 4px 8px;
+      font-weight: bold;
+    }
+    & .rct-icon {
+      color: $base-txt;
+    }
+    & .tree-wrapper {
+      border: 1px solid $base-txt;
+      padding: 5px;
+    }
+    & .select-dropdown-svg {
+      opacity: 0.5;
     }
   }
 }

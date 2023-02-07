@@ -169,6 +169,9 @@ body {
               height: 100%;
               & .page-title-heading {
                 display: flex;
+                & *{
+                  color: white !important;
+                }
                 & .page-title-icon {
                   padding: 0 !important;
                   margin-right: 0.2rem !important;
@@ -339,9 +342,6 @@ body {
           font-size: 0.8rem;
           font-weight: 400;
         }
-      }
-      & .material-icons-round{
-        opacity: 0.5;
       }
     }
     //클릭시 나오는 옵션메뉴

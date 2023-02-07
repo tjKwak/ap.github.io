@@ -14,7 +14,7 @@
           justify-content: center;
   gap: 0.5rem;
   position: relative;
-  min-width: 3.5rem;
+  min-width: 4rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-radius: 0px;
@@ -229,7 +229,7 @@ input:-webkit-autofill {
 .pnt-input--group {
   position: relative;
   min-width: 8rem;
-  width: 12rem;
+  width: 18rem;
 }
 
 .pnt-input--group .pnt-input {
@@ -243,7 +243,8 @@ input:-webkit-autofill {
           box-sizing: border-box;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  font-weight: 600;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
 }
 
 .pnt-input--group .pnt-input::-webkit-input-placeholder {
@@ -1088,7 +1089,7 @@ input:-webkit-autofill {
 }
 
 .pnt-txt.txt-bold {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .pnt-txt.txt-border {
