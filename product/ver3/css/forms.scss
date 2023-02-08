@@ -423,7 +423,7 @@ input:-webkit-autofill {
       transition: padding 0.2s;
       background-color: white;
       & li {
-        & a{
+        & a {
           color: $black;
           padding: 1rem 0.5rem;
           border-top: 1px solid $form-border-color;
@@ -477,8 +477,8 @@ input:-webkit-autofill {
     &.select-icon-only {
       width: 60px;
     }
-    & .select__options li a{
-      padding: 1.5rem .5rem;
+    & .select__options li a {
+      padding: 1.5rem 0.5rem;
     }
   }
 }
@@ -724,6 +724,7 @@ input:-webkit-autofill {
   min-width: 6rem;
   background-color: transparent;
   border: 1px solid $form-border-color;
+  border-radius: $form-radius;
   padding: 0 $form-left-padding;
   & p {
     margin: 0;
@@ -812,34 +813,34 @@ input:-webkit-autofill {
   margin: 0;
   padding: 0;
   &.s-10 {
-    @include p5-n();
+    @include p5-n(8px);
   }
   &.s-9 {
-    @include p4-n();
+    @include p4-n(10px);
   }
   &.s-8 {
-    @include p3-n();
+    @include p3-n(12px);
   }
   &.s-7 {
-    @include p2-n();
+    @include p2-n(14px);
   }
   &.s-6 {
-    @include p1-n();
+    @include p1-n(16px);
   }
   &.s-5 {
-    @include h5-n();
+    @include h5-n(16px);
   }
   &.s-4 {
-    @include h4-n();
+    @include h4-n(16px);
   }
   &.s-3 {
-    @include h3-n();
+    @include h3-n(18px);
   }
   &.s-2 {
-    @include h2-n();
+    @include h2-n(20px);
   }
   &.s-1 {
-    @include h1-n();
+    @include h1-n(22px);
   }
   &.txt-light {
     font-weight: 300;
@@ -1081,16 +1082,19 @@ $table-height: 30px;
   display: flex;
   flex-direction: column;
   height: 300px;
-  & .th, & .td{
+  & .th,
+  & .td {
     display: flex;
     flex: 1 1 1%;
     align-items: center;
+    align-content: center;
     justify-content: flex-start;
     text-align: left;
     padding: 5px 10px;
     border-right: 1px solid $gray-100;
     border-bottom: 1px solid $gray-100;
     line-height: 14px;
+
     &:last-child {
       border-right: none;
     }
@@ -1103,13 +1107,14 @@ $table-height: 30px;
     & .thead {
       overflow: visible;
       & .tr {
-        height: $table-height;
+        min-height: $table-height;
         display: flex;
         padding: 0;
         border-bottom: 1px solid black;
         & .th {
           background-color: #d2d2fd;
           font-weight: bold;
+
         }
       }
     }
@@ -1230,9 +1235,6 @@ $table-height: 30px;
   }
 }
 
-
-
-
 ///////////////////////////////////////////////
 // form 기능 모음
 ///////////////////////////////////////////////
@@ -1276,6 +1278,7 @@ $table-height: 30px;
     & input[type="file"] {
       background-color: $form-bg-color;
       border: 1px solid $form-border-color;
+      color: $form-disable-txt !important;
       &::before {
         background-color: $form-bg-color;
         border-left: 1px solid $form-border-color;
@@ -1359,8 +1362,8 @@ $table-height: 30px;
   }
 }
 
-$form-default-font: 0.9rem;
-$form-small-font: 0.75rem;
+$form-default-font: 0.8rem;
+$form-small-font: 0.7rem;
 $form-big-font: 1.15rem;
 
 // 3. form의 폰트 설정
@@ -1368,19 +1371,21 @@ $form-big-font: 1.15rem;
 .pnt-input--group input::placeholder,
 .pnt-select--group .cont-wrap,
 .pnt-select--group a,
-.pnt-btn,
 .pnt-checkbox p,
 .pnt-nameplate .cont-wrap,
+.pnt-btn,
 .pnt-radio p,
 .pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
 .pnt-txt,
 .pnt-label--group .label-options {
   font-size: $form-default-font;
   font-weight: 500;
   color: $gray-800; //각 theme폴더에 의해 덮여지고 있음
+}
+.pnt-table--paging__wrap span,
+.pnt-table .th,
+.pnt-table .td{
+  font-size: 0.9rem; //테이블만 특별하게 조금 큰 폰트 사용
 }
 .pnt-btn.form-h-small,
 .pnt-input--group.form-h-small input,
@@ -1434,7 +1439,7 @@ $check-size: 22px;
     & input:checked + .slider::before {
       transform: translateX(2rem) translateY(-50%);
     }
-    & .slider::before{
+    & .slider::before {
       width: 10px;
       height: 10px;
     }

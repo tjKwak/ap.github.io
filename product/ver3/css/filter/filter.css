@@ -158,7 +158,7 @@
     width: 100%;
   }
   .filter_ver5 .search-box .search-wrap button:first-child {
-    border-radius: 0px 0px 0 0;
+    border-radius: 2px 2px 0 0;
   }
   .filter_ver5 .search-box .search-wrap .pnt-input--group,
   .filter_ver5 .search-box .search-wrap > div {
@@ -167,7 +167,7 @@
 }
 
 .search-wrap {
-  border-radius: 0px;
+  border-radius: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

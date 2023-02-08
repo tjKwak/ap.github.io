@@ -169,7 +169,7 @@
   position: relative !important;
   overflow: auto;
   margin-bottom: 1rem;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .colorscripter-code table {
@@ -185,7 +185,7 @@
   padding: 0;
   border: none;
   background-color: #353536;
-  border-radius: 4px;
+  border-radius: 2px;
   min-height: 100px;
 }
 
@@ -223,7 +223,7 @@ margin
 
 .colorscripter-code .colorscripter-code-table td:nth-child(2) b {
   padding: 0px 5px;
-  border-radius: 10px;
+  border-radius: 2px;
   color: #ffd500 !important;
   background-color: rgba(255, 208, 0, 0.329);
   display: inline;
@@ -234,7 +234,7 @@ margin
   font-size: 13px;
   font-weight: bold;
   padding: 0px 5px;
-  border-radius: 10px;
+  border-radius: 2px;
   color: #ffd500 !important;
   background-color: rgba(255, 99, 190, 0.511);
   margin: 0;
@@ -380,7 +380,7 @@ margin
 
 .info-box {
   background-color: #eceaf2;
-  border-radius: 10px;
+  border-radius: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,10 +414,10 @@ margin
 
 .gray-box {
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
-#toast {
+#toast, #fullScreenMsg {
   position: fixed;
   bottom: 30px;
   left: 50%;
@@ -433,12 +433,12 @@ margin
   transition: opacity 0.5s, visibility 0.5s, -webkit-transform 0.5s;
   transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
   transition: opacity 0.5s, visibility 0.5s, transform 0.5s, -webkit-transform 0.5s;
-  background: rgba(0, 0, 0, 0.35);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff !important;
   z-index: 10000;
 }
 
-#toast.reveal {
+#toast.reveal, #fullScreenMsg.reveal {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(-50%, 0);
@@ -448,7 +448,7 @@ margin
 .box {
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 #root .app-page-content .row {

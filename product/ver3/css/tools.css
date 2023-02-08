@@ -832,7 +832,7 @@
 }
 
 .mini-box {
-  border-radius: 0px;
+  border-radius: 2px;
   -webkit-box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
   padding: 1rem;

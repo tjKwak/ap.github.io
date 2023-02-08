@@ -162,7 +162,7 @@
   }
   /////////////////////////////////////////////////////////
   //바디 영역
-  & .app-main__inner {
+  & .app-main__inner, & .app-main__outer {
     background: linear-gradient(
       $whole-body-gradient-start,
       $whole-body-gradient-end
@@ -203,7 +203,7 @@
         & .material-icons-round {
           color: $card-icon-color;
         }
-        & span[class*="widget_img-"]{
+        & span[class*="widget_img-"] {
           filter: $card-icon-filter;
         }
         & .title__main {
@@ -309,31 +309,51 @@
   /////////////////////////////////////////////////////////
   //기본 폼
   //1. 버튼
+
   & .pnt-btn {
     background-color: $gray-300;
     color: $form-txt;
     &.btn-brand {
       background-color: $brand;
       color: white;
+      & .material-icons-round {
+        color: white;
+      }
     }
     &.btn-secondary {
       background-color: $secondary;
       color: white;
+      & .material-icons-round {
+        color: white;
+      }
     }
     &.btn-danger {
       background-color: $danger;
       color: white;
+      & .material-icons-round {
+        color: white;
+      }
     }
     &.btn-lightgray {
       background-color: $light-gray;
+      color: $form-txt;
+      & .material-icons-round {
+        color: $form-txt;
+      }
     }
     &.btn-gray {
       background-color: $gray;
       color: white;
+      & .material-icons-round {
+        color: white;
+      }
     }
     &.btn-darkgray {
       background-color: $dark-gray;
       color: white;
+      & .material-icons-round {
+        color: white;
+      }
     }
     &.btn-line {
       background-color: transparent;
@@ -354,10 +374,6 @@
           color: $brand !important;
         }
       }
-    }
-    &.btn-disable {
-      background-color: $light-gray-l;
-      color: $form-disable-txt;
     }
   }
   //2. 인풋[텍스트]
@@ -635,13 +651,14 @@
     }
   }
 
+  ////////////////////////////////
   //form 공통
   & .form-disable {
     //버튼
     &.pnt-btn {
-      background-color: $form-disable-bg;
+      background-color: $form-disable-bg !important;
       box-shadow: 0 0 0 1px $form-border inset;
-      color: $form-disable-txt;
+      color: $form-disable-txt !important;
     }
     //인풋
     &.pnt-input--group .pnt-input {
@@ -653,6 +670,7 @@
       & input[type="file"] {
         border: 1px solid $form-border;
         background-color: $form-disable-bg;
+        color: $form-disable-txt !important;
         &::before {
           background-color: $form-disable-bg;
           border-left: 1px solid $form-border;

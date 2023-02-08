@@ -833,7 +833,7 @@
 }
 
 .mini-box {
-  border-radius: 0px;
+  border-radius: 2px;
   -webkit-box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
   padding: 1rem;
@@ -1387,7 +1387,7 @@
   height: 100%;
   border: 1px solid transparent !important;
   background-color: rgba(255, 255, 255, 0.2) !important;
-  border-radius: 0px;
+  border-radius: 2px;
   padding: 0 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1533,7 +1533,7 @@
   height: 100%;
   border: 1px solid transparent !important;
   background-color: rgba(255, 255, 255, 0.2) !important;
-  border-radius: 0px;
+  border-radius: 2px;
   padding: 0 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

@@ -624,6 +624,37 @@ $layout-padding: 0.5rem; //1.5rem -> 0.5rem
   margin-bottom: $layout-padding !important;
 }
 
+$app-header-closed-height: 0;
+$app-sidebar-closed-width: 0;
+
+///////////////
+//전체화면
+#root .app-container{
+  &.full-screen-viewer{
+    & .app-header, & .filter_ver5, & .app-sidebar{
+      display: none;
+    }
+    & .app-main {
+      padding-top: $app-header-closed-height;
+      & .app-sidebar {
+        width: $app-sidebar-closed-width;
+        min-width: $app-sidebar-closed-width;
+        padding: $app-header-closed-height 0 0 0 !important;
+      }
+      & .app-main__outer {
+        padding-left: $app-sidebar-closed-width;
+      }
+      & .app-footer {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+
 ///////////////
 //스크롤바
 *::-webkit-scrollbar {

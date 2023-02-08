@@ -199,6 +199,35 @@ window.onload = function(){
     //     theme_sidebar.classList.add('nav-box__img-bg')
     // })
 
+    //전체화면 기능
+    var full_btn = document.querySelector('.app-header-right .fullscreen-box button');
+    full_btn.addEventListener('click',function(){
+        theme_container.classList.add('full-screen-viewer')
+        fullScreenmsg();
+    })
+    document.addEventListener('keydown', evt => {
+        if (evt.key === 'Escape') {
+            theme_container.classList.remove('full-screen-viewer')
+            
+        }
+    });
+
+    let removeMsg;
+    let deleteMsg;
+    function fullScreenmsg() {
+        let msgBox = document.createElement("div");
+        msgBox.setAttribute('id','fullScreenMsg')
+        document.querySelector('.app-main').appendChild(msgBox);
+        removeMsg = setTimeout(function () {
+            document.getElementById("fullScreenMsg").classList.remove("reveal")
+        }, 1500)
+        deleteMsg = setTimeout(function () {
+            document.querySelector('.app-main').removeChild(msgBox);
+        }, 3000)
+        msgBox.classList.add("reveal");
+        msgBox.innerText = '종료하시려면 ESC를 눌러주세요';
+    }
+
 
     //네비게이션 기능
     //사이드바 접고펴기
@@ -336,24 +365,6 @@ window.onload = function(){
         mobileMenu_box.classList.toggle('header-mobile-open');
     })
 
-
-    //모달
-    var modalWrap = document.querySelector('.modal-test-class')
-    var modalbox = modalWrap.querySelector('.modal');
-    var modalbg = modalWrap.querySelector('.modal-backdrop');
-    var modalOpenBtn = document.querySelector('.btn-open-modal');
-    var modalCloseBtn = document.querySelector('.btn-close-modal');
-
-    modalOpenBtn.addEventListener('click', function(){
-        modalWrap.classList.remove('d-none')
-        modalbox.classList.add('show')
-        modalbg.classList.add('show')
-    })
-    modalCloseBtn.addEventListener('click', function(){
-        modalWrap.classList.add('d-none')
-        modalbox.classList.remove('show')
-        modalbg.classList.remove('show')
-    })
 
     //필터박스
     //필터접기 버튼

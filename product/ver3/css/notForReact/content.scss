@@ -144,7 +144,7 @@
   position: relative !important;
   overflow: auto;
   margin-bottom: 1rem;
-  border-radius: 5px;
+  border-radius: $form-radius;
   & table {
     background-color: #2b2b3f !important;
     & td:first-child {
@@ -158,7 +158,7 @@
     padding: 0;
     border: none;
     background-color: #353536;
-    border-radius: 4px;
+    border-radius: $form-radius;
     min-height: 100px;
     & td:nth-child(1) {
       padding: 6px;
@@ -187,7 +187,7 @@
       }
       & b {
         padding: 0px 5px;
-        border-radius: 10px;
+        border-radius: $form-radius;
         color: #ffd500 !important;
         background-color: rgba(255, 208, 0, 0.329);
         display: inline;
@@ -197,7 +197,7 @@
         font-size: 13px;
         font-weight: bold;
         padding: 0px 5px;
-        border-radius: 10px;
+        border-radius: $form-radius;
         color: #ffd500 !important;
         background-color: rgba(255, 99, 190, 0.511);
         margin: 0;
@@ -337,7 +337,7 @@
 
 .info-box {
   background-color: $gray-200;
-  border-radius: 10px;
+  border-radius: $form-radius;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -361,11 +361,11 @@
 }
 .gray-box {
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: $form-radius;
 }
 
 //토스트메세지
-#toast {
+#toast, #fullScreenMsg{
   position: fixed;
   bottom: 30px;
   left: 50%;
@@ -377,21 +377,20 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
-  background: rgba(0, 0, 0, 0.35);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff !important;
   z-index: 10000;
-}
-
-#toast.reveal {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, 0);
+  &.reveal{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
 }
 
 .box {
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: $form-radius;
 }
 
 #root .app-page-content {

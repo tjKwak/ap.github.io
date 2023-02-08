@@ -17,7 +17,7 @@
   min-width: 4.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  border-radius: 0px;
+  border-radius: 2px;
   background-color: transparent;
   border: none !important;
   text-align: center;
@@ -248,7 +248,7 @@ input:-webkit-autofill {
   height: 100%;
   border: 1px solid #ebeaed;
   background-color: #f7f6f8;
-  border-radius: 0px;
+  border-radius: 2px;
   padding: 0 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -469,7 +469,7 @@ input:-webkit-autofill {
   padding-left: 0.5rem;
   background-color: #f7f6f8;
   border: 1px solid #ebeaed;
-  border-radius: 0px;
+  border-radius: 2px;
   position: relative;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -508,7 +508,7 @@ input:-webkit-autofill {
   padding: 0;
   margin: 0;
   border: 1px solid transparent;
-  border-radius: 0px;
+  border-radius: 2px;
   overflow: hidden;
   -webkit-transition: padding 0.2s;
   transition: padding 0.2s;
@@ -524,7 +524,7 @@ input:-webkit-autofill {
           align-items: center;
   padding: 0;
   line-height: 0;
-  border-radius: 0px;
+  border-radius: 2px;
   border: none;
   background-color: transparent;
   text-transform: capitalize;
@@ -627,7 +627,7 @@ input:-webkit-autofill {
 }
 
 .pnt-select--group.form-h-big .select__options li a {
-  padding: 1.5rem .5rem;
+  padding: 1.5rem 0.5rem;
 }
 
 .pnt-checkbox {
@@ -663,7 +663,7 @@ input:-webkit-autofill {
   position: relative;
   background-color: transparent;
   border: 1px solid #ebeaed;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 
 .pnt-checkbox .checkbox-effect::before, .pnt-checkbox .checkbox-effect::after {
@@ -750,7 +750,7 @@ input:-webkit-autofill {
 
 .pnt-toggle .slider {
   background-color: #dcd9e1;
-  border-radius: 0px;
+  border-radius: 2px;
   position: absolute;
   top: 0;
   left: 0;
@@ -928,6 +928,7 @@ input:-webkit-autofill {
   min-width: 6rem;
   background-color: transparent;
   border: 1px solid #ebeaed;
+  border-radius: 2px;
   padding: 0 0.5rem;
 }
 
@@ -1013,7 +1014,7 @@ input:-webkit-autofill {
           align-items: center;
   gap: 6px;
   padding: 0 0.5rem;
-  border-radius: 0px;
+  border-radius: 2px;
   background-color: #eceaf2;
   color: black;
   max-width: 8rem;
@@ -1036,61 +1037,61 @@ input:-webkit-autofill {
 }
 
 .pnt-txt.s-10 {
-  line-height: auto;
+  line-height: 8px;
   font-size: 0.7rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-9 {
-  line-height: auto;
+  line-height: 10px;
   font-size: 0.8rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-8 {
-  line-height: auto;
+  line-height: 12px;
   font-size: 0.9rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-7 {
-  line-height: auto;
+  line-height: 14px;
   font-size: 1rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-6 {
-  line-height: auto;
+  line-height: 16px;
   font-size: 1.1rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-5 {
-  line-height: auto;
+  line-height: 16px;
   font-size: 1.2rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-4 {
-  line-height: auto;
+  line-height: 16px;
   font-size: 1.3rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-3 {
-  line-height: auto;
+  line-height: 18px;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-2 {
-  line-height: auto;
+  line-height: 20px;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
 .pnt-txt.s-1 {
-  line-height: auto;
+  line-height: 22px;
   font-size: 2rem;
   font-weight: 400;
 }
@@ -1106,7 +1107,7 @@ input:-webkit-autofill {
 .pnt-txt.txt-border {
   border: 1px solid #ebeaed;
   padding: 0 0.5rem;
-  border-radius: 0px;
+  border-radius: 2px;
   margin: 0;
   white-space: nowrap;
   display: inline-block;
@@ -1130,7 +1131,7 @@ input:-webkit-autofill {
 
 .pnt-txt.txt-bg {
   padding: 0.1rem 0.5rem;
-  border-radius: 0px;
+  border-radius: 2px;
   margin: 0;
   background-color: #f6f6f9;
 }
@@ -1423,7 +1424,8 @@ li.label-flx-col .pnt-label--group .label-main {
   height: 300px;
 }
 
-.pnt-table .th, .pnt-table .td {
+.pnt-table .th,
+.pnt-table .td {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1433,6 +1435,8 @@ li.label-flx-col .pnt-label--group .label-main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1443,7 +1447,8 @@ li.label-flx-col .pnt-label--group .label-main {
   line-height: 14px;
 }
 
-.pnt-table .th:last-child, .pnt-table .td:last-child {
+.pnt-table .th:last-child,
+.pnt-table .td:last-child {
   border-right: none;
 }
 
@@ -1459,7 +1464,7 @@ li.label-flx-col .pnt-label--group .label-main {
 }
 
 .pnt-table .border-box .thead .tr {
-  height: 30px;
+  min-height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1674,6 +1679,7 @@ li.label-flx-col .pnt-label--group .label-main {
 .form-disable.pnt-file--group input[type="file"] {
   background-color: #f7f6f8;
   border: 1px solid #ebeaed;
+  color: rgba(0, 0, 0, 0.45) !important;
 }
 
 .form-disable.pnt-file--group input[type="file"]::before {
@@ -1767,17 +1773,14 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-input--group input::-webkit-input-placeholder,
 .pnt-select--group .cont-wrap,
 .pnt-select--group a,
-.pnt-btn,
 .pnt-checkbox p,
 .pnt-nameplate .cont-wrap,
+.pnt-btn,
 .pnt-radio p,
 .pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
 .pnt-txt,
 .pnt-label--group .label-options {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #434245;
 }
@@ -1786,17 +1789,14 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-input--group input:-ms-input-placeholder,
 .pnt-select--group .cont-wrap,
 .pnt-select--group a,
-.pnt-btn,
 .pnt-checkbox p,
 .pnt-nameplate .cont-wrap,
+.pnt-btn,
 .pnt-radio p,
 .pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
 .pnt-txt,
 .pnt-label--group .label-options {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #434245;
 }
@@ -1805,17 +1805,14 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-input--group input::-ms-input-placeholder,
 .pnt-select--group .cont-wrap,
 .pnt-select--group a,
-.pnt-btn,
 .pnt-checkbox p,
 .pnt-nameplate .cont-wrap,
+.pnt-btn,
 .pnt-radio p,
 .pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
 .pnt-txt,
 .pnt-label--group .label-options {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #434245;
 }
@@ -1824,19 +1821,22 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-input--group input::placeholder,
 .pnt-select--group .cont-wrap,
 .pnt-select--group a,
-.pnt-btn,
 .pnt-checkbox p,
 .pnt-nameplate .cont-wrap,
+.pnt-btn,
 .pnt-radio p,
 .pnt-toggle p,
-.pnt-table--paging__wrap span,
-.pnt-table .th,
-.pnt-table .td,
 .pnt-txt,
 .pnt-label--group .label-options {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #434245;
+}
+
+.pnt-table--paging__wrap span,
+.pnt-table .th,
+.pnt-table .td {
+  font-size: 0.9rem;
 }
 
 .pnt-btn.form-h-small,
@@ -1847,7 +1847,7 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-checkbox.form-h-small p,
 .pnt-radio.form-h-small p,
 .pnt-nameplate.form-h-small .cont-wrap {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .pnt-btn.form-h-small,
@@ -1858,7 +1858,7 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-checkbox.form-h-small p,
 .pnt-radio.form-h-small p,
 .pnt-nameplate.form-h-small .cont-wrap {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .pnt-btn.form-h-small,
@@ -1869,7 +1869,7 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-checkbox.form-h-small p,
 .pnt-radio.form-h-small p,
 .pnt-nameplate.form-h-small .cont-wrap {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .pnt-btn.form-h-small,
@@ -1880,7 +1880,7 @@ li.label-flx-col .pnt-label--group .label-main {
 .pnt-checkbox.form-h-small p,
 .pnt-radio.form-h-small p,
 .pnt-nameplate.form-h-small .cont-wrap {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .pnt-btn.form-h-big,
@@ -1966,7 +1966,7 @@ li.label-flx-col .pnt-label--group .label-main {
 }
 
 .pnt-toggle.form-h-small p {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .pnt-toggle.form-h-small input:checked + .slider::before {

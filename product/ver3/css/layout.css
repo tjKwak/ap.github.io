@@ -793,6 +793,28 @@ body {
   margin-bottom: 0.5rem !important;
 }
 
+#root .app-container.full-screen-viewer .app-header, #root .app-container.full-screen-viewer .filter_ver5, #root .app-container.full-screen-viewer .app-sidebar {
+  display: none;
+}
+
+#root .app-container.full-screen-viewer .app-main {
+  padding-top: 0;
+}
+
+#root .app-container.full-screen-viewer .app-main .app-sidebar {
+  width: 0;
+  min-width: 0;
+  padding: 0 0 0 0 !important;
+}
+
+#root .app-container.full-screen-viewer .app-main .app-main__outer {
+  padding-left: 0;
+}
+
+#root .app-container.full-screen-viewer .app-main .app-footer {
+  display: none;
+}
+
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;

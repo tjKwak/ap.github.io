@@ -13,7 +13,7 @@
   gap: 8px;
   & .col {
     flex: 1;
-    border-radius: 10px;
+    border-radius: $form-radius;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -65,12 +65,14 @@
 .widget-sensor-img {
   width: 72px;
   height: 72px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: gray;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   & > span {
     filter: invert(1);
-    transform: scale(0.9) translate(-5%, -5%);
   }
   & .status {
     position: absolute;
@@ -83,6 +85,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    display: none;
     & span {
       font-size: 14px;
       color: white !important;

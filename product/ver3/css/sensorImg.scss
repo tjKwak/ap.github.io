@@ -1,8 +1,8 @@
 ////////////////////////////////////////
 //아이콘 세팅
 
-$icon: 80px;
-$icon-gap: -20px;
+$icon: 40px;
+$icon-gap: 20px;
 $small-icon: 30px;
 $small-icon-gap: 30px;
 
@@ -39,7 +39,6 @@ $p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
   height: $small-icon;
   background-size: calc((#{$small-icon} * 10) + (#{$small-icon-gap} * 9)); //가로 10줄
   background-image: url("../images/sh_widget_icon.svg");
-  
 }
 
 span[class*="sensor_img-"] {

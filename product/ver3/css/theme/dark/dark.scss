@@ -145,7 +145,7 @@ $app-header-bg: #f5f5fa;
 
 //카드
 $card-body-bg: $depth-1;
-$card-header-bg: $depth-1;
+$card-header-bg: transparent;
 $card-header-border: transparent;
 $card-icon-color: $brand;
 $card-icon-filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
@@ -220,6 +220,7 @@ $widget-active-bg: $depth-9;
 $widget-active-border: white;
 $widget-active-txt: white;
 
+
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 
@@ -235,6 +236,9 @@ $widget-active-txt: white;
   .color-warning,
   .color-danger {
     font-weight: 700 !important;
+  }
+  & span[class*="sensor_img-"], & span[class*="widget_img-"]{
+    filter: invert(1);
   }
   @include theme-default();
 }

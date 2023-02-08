@@ -22,6 +22,11 @@
   font-weight: 700 !important;
 }
 
+#root .app-container.app-theme-pnt-dark span[class*="sensor_img-"], #root .app-container.app-theme-pnt-dark span[class*="widget_img-"] {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 #root .app-container.app-theme-pnt-dark .bg-depth-base {
   background-color: #1f1f27 !important;
 }
@@ -178,7 +183,7 @@
   background-color: #48455c;
 }
 
-#root .app-container.app-theme-pnt-dark .app-main__inner {
+#root .app-container.app-theme-pnt-dark .app-main__inner, #root .app-container.app-theme-pnt-dark .app-main__outer {
   background: -webkit-gradient(linear, left top, left bottom, from(#19191f), to(#19191f));
   background: linear-gradient(#19191f, #19191f);
 }
@@ -218,7 +223,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .card .card-header {
-  background-color: #23232b;
+  background-color: transparent;
   border-bottom: 1px solid transparent;
 }
 
@@ -291,7 +296,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-modal .modal-header {
-  background-color: #23232b;
+  background-color: transparent;
   border-bottom: 1px solid #414147 !important;
 }
 
@@ -344,8 +349,16 @@
   color: white;
 }
 
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-brand .material-icons-round {
+  color: white;
+}
+
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-secondary {
   background-color: #9482ec;
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-secondary .material-icons-round {
   color: white;
 }
 
@@ -354,8 +367,17 @@
   color: white;
 }
 
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-danger .material-icons-round {
+  color: white;
+}
+
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-lightgray {
   background-color: rgba(225, 223, 240, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-lightgray .material-icons-round {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-gray {
@@ -363,8 +385,16 @@
   color: white;
 }
 
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-gray .material-icons-round {
+  color: white;
+}
+
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-darkgray {
   background-color: rgba(225, 223, 240, 0.4);
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-dark .pnt-btn.btn-darkgray .material-icons-round {
   color: white;
 }
 
@@ -392,11 +422,6 @@
 
 #root .app-container.app-theme-pnt-dark .pnt-btn.btn-trans:hover .material-icons-round {
   color: #e5891f !important;
-}
-
-#root .app-container.app-theme-pnt-dark .pnt-btn.btn-disable {
-  background-color: rgba(254, 254, 255, 0.73);
-  color: rgba(255, 255, 255, 0.25);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-input--group input {
@@ -698,10 +723,10 @@
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-btn {
-  background-color: #313138;
+  background-color: #313138 !important;
   -webkit-box-shadow: 0 0 0 1px #414147 inset;
           box-shadow: 0 0 0 1px #414147 inset;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.25) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-input--group .pnt-input {
@@ -712,6 +737,7 @@
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-file--group input[type="file"] {
   border: 1px solid #414147;
   background-color: #313138;
+  color: rgba(255, 255, 255, 0.25) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-file--group input[type="file"]::before {

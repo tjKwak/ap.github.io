@@ -165,7 +165,7 @@
   background-color: #48455c;
 }
 
-#root .app-container.app-theme-pnt-navy .app-main__inner {
+#root .app-container.app-theme-pnt-navy .app-main__inner, #root .app-container.app-theme-pnt-navy .app-main__outer {
   background: -webkit-gradient(linear, left top, left bottom, from(#f3f2f6), to(#e8e6ef));
   background: linear-gradient(#f3f2f6, #e8e6ef);
 }
@@ -205,7 +205,7 @@
 }
 
 #root .app-container.app-theme-pnt-navy .card .card-header {
-  background-color: white;
+  background-color: transparent;
   border-bottom: 1px solid #eceaf2;
 }
 
@@ -278,7 +278,7 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-modal .modal-header {
-  background-color: white;
+  background-color: transparent;
   border-bottom: 1px solid #e8e6ef !important;
 }
 
@@ -331,8 +331,16 @@
   color: white;
 }
 
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-brand .material-icons-round {
+  color: white;
+}
+
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-secondary {
   background-color: #6a55c0;
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-secondary .material-icons-round {
   color: white;
 }
 
@@ -341,8 +349,17 @@
   color: white;
 }
 
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-danger .material-icons-round {
+  color: white;
+}
+
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-lightgray {
   background-color: #e5e4ee;
+  color: #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-lightgray .material-icons-round {
+  color: #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-gray {
@@ -350,8 +367,16 @@
   color: white;
 }
 
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-gray .material-icons-round {
+  color: white;
+}
+
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-darkgray {
   background-color: #453e6f;
+  color: white;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-btn.btn-darkgray .material-icons-round {
   color: white;
 }
 
@@ -379,11 +404,6 @@
 
 #root .app-container.app-theme-pnt-navy .pnt-btn.btn-trans:hover .material-icons-round {
   color: #ff8800 !important;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-btn.btn-disable {
-  background-color: #f7f7fa;
-  color: #a8a7ac;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-input--group input {
@@ -685,10 +705,10 @@
 }
 
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-btn {
-  background-color: #e8e6ef;
+  background-color: #e8e6ef !important;
   -webkit-box-shadow: 0 0 0 1px #e8e6ef inset;
           box-shadow: 0 0 0 1px #e8e6ef inset;
-  color: #a8a7ac;
+  color: #a8a7ac !important;
 }
 
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-input--group .pnt-input {
@@ -699,6 +719,7 @@
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-file--group input[type="file"] {
   border: 1px solid #e8e6ef;
   background-color: #e8e6ef;
+  color: #a8a7ac !important;
 }
 
 #root .app-container.app-theme-pnt-navy .form-disable.pnt-file--group input[type="file"]::before {

@@ -321,7 +321,7 @@
                                     <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">처음으로 되돌리기</button>
                                     <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">취소</button>
                                     <button type="button" class="mr-2 btn-edit pnt-btn btn-secondary">패널 추가</button>
-                                    <button type="button" class="pnt-btn btn-icon btn-danger">
+                                    <button type="button" class="pnt-btn btn-icon btn-brand">
                                         <span class="material-icons-round">save</span>저장
                                     </button>
                                 </div>
@@ -432,8 +432,1284 @@
                         <!-- 본문 -->
                         <div class="app-page-content">
                             <div class="row">
+                                <div class="col-xxl-8 col-xl-12">
+                                    <!-- 혼잡도 -->
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="widget_img-1"></span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">혼잡도</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- 지도 -->
+                                            <div style="height: 200px; overflow: hidden;">
+                                                <img src="../images/test/test-map.png" alt="" style="width:100%">
+                                            </div>
+                                            <!-- 서브타이틀 -->
+                                            <p class="pnt-txt txt-bold mt-4 mb-2">선택한 조건별 요약</p>
+                                            <!-- 숫자 위젯 -->
+                                            <div class="widget-item-nums mb-2">
+                                                <div class="col view">
+                                                    <b>0<span>/</span>0</b>
+                                                    <div class="flx-row">총 진입 횟수
+                                                    </div>
+                                                </div>
+                                                <div class="col view">
+                                                    <b>0<span>s</span></b>
+                                                    <div class="flx-row">고유 진입 횟수
+                                                    </div>
+                                                </div>
+                                                <div class="col view">
+                                                    <b>0<span>s</span></b>
+                                                    <div class="flx-row">총 진입별 평균 체류 시간
+                                                    </div>
+                                                </div>
+                                                <div class="col view">
+                                                    <b>0<span>s</span></b>
+                                                    <div class="flx-row">고유 진입별 평균 체류 시간
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 검색 -->
+                                            <div class="flx-row mt-4">
+                                                <div class="pnt-input--group">
+                                                    <input class="pnt-input" type="text"
+                                                        placeholder="자산의 이름 또는 아이디를 검색하세요">
+                                                    <p class="input-error-txt">에러문구 입니다</p>
+                                                </div>
+                                                <button class="pnt-btn btn-darkgray mr-2">검색</button>
+                                                <button class="pnt-btn btn-icon-only btn-lightgray"><span
+                                                        class="material-icons-round">refresh</span> </button>
+                                            </div>
+                                            <!-- 테이블 -->
+                                            <div class="flx-col" style="margin-top: -1rem;">
+                                                <div class="pagination">
+                                                    <div class="flx-row gap-1">
+                                                        <div class="ml-2 mr-2">
+                                                            <span class="now">1-20</span>
+                                                            <span class="whole">/ 38</span>
+                                                        </div>
+                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
+                                                            <div class="material-icons-round">keyboard_double_arrow_left
+                                                            </div>
+                                                        </button>
+                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
+                                                            <div class="material-icons-round">keyboard_arrow_left
+                                                            </div>
+                                                        </button>
+                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
+                                                            <div class="material-icons-round">keyboard_arrow_right
+                                                            </div>
+                                                        </button>
+                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
+                                                            <div class="material-icons-round">
+                                                                keyboard_double_arrow_right</div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div role="table" class="pnt-table">
+                                                    <div class="border-box">
+                                                        <div class="thead">
+                                                            <div role="row" class="tr">
+                                                                <div colspan="1" role="columnheader" class="th">지오펜스 이름
+                                                                </div>
+                                                                <div colspan="1" role="columnheader" class="th">진입 횟수
+                                                                </div>
+                                                                <div colspan="1" role="columnheader" class="th">고유 횟수
+                                                                </div>
+                                                                <div colspan="1" role="columnheader" class="th">진입별 평균
+                                                                    체류
+                                                                </div>
+                                                                <div colspan="1" role="columnheader" class="th">고유별 평균
+                                                                    체류
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="rowgroup" class="tbody">
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                        <div role="row" class="tr">
+                                                                            <div role="cell" class="td" title="">테스트
+                                                                                지오펜스
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">5
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">7
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">31
+                                                                            </div>
+                                                                            <div role="cell" class="td" title="">35
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-6">
+                                    <!-- 스캐너 현황 -->
+                                    <div class="card" style="height:unset;">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="widget_img-1"></span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">스캐너 현황</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- 그래프 -->
+                                            <div style="height: 300px; overflow: hidden;" class="tc">
+                                                <img src="../images/test/test-pie-graph.png" alt="" style="height:100%">
+                                            </div>
+                                            <!-- 단일 테이블 -->
+                                            <div role="table" class="pnt-table" style="height:60px">
+                                                <div class="border-box">
+                                                    <div class="thead">
+                                                        <div role="row" class="tr">
+                                                            <div colspan="1" role="columnheader" class="th">전체 스캐너
+                                                            </div>
+                                                            <div colspan="1" role="columnheader" class="th">온라인
+                                                            </div>
+                                                            <div colspan="1" role="columnheader" class="th">오프라인
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div role="rowgroup" class="tbody">
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <div role="row" class="tr">
+                                                                        <div role="cell" class="td" title="">8
+                                                                        </div>
+                                                                        <div role="cell" class="td" title="">3
+                                                                        </div>
+                                                                        <div role="cell" class="td" title="">5
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 col-xl-12">
+                                    <!-- 냉장고 센서 -->
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="widget_img-1"></span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">냉장고 센서</h3>
+                                                </div>
+                                            </div>
+                                            <div class="card-header__function">
+                                                <button class="pnt-btn btn-line">일간 대장</button>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- 그리드 시스템 -->
+                                            <div class="grid-container item-grid-250">
+                                                <!-- 이너 아이템 -->
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status">
+                                                                        <span class="material-icons-round">done</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">9.20</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img bg-danger">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status bg-danger bg-dark">
+                                                                        <span class="material-icons-round">close</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">-9.20</span>
+                                                                        <span class="pnt-txt color-danger s-7">위험</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img bg-brand">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status bg-brand bg-dark">
+                                                                        <span
+                                                                            class="material-icons-round">priority_high</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">-9.20</span>
+                                                                        <span class="pnt-txt color-brand s-7">경고</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img bg-secondary">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status bg-secondary bg-dark">
+                                                                        <span
+                                                                            class="material-icons-round">question_mark</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">-9.20</span>
+                                                                        <span
+                                                                            class="pnt-txt color-secondary s-7">이탈</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img bg-info">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status bg-info bg-dark">
+                                                                        <span class="material-icons-round">remove</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">-9.20</span>
+                                                                        <span class="pnt-txt color-info s-7">없음</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status">
+                                                                        <span class="material-icons-round">done</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">9.20</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status">
+                                                                        <span class="material-icons-round">done</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">9.20</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브 타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__function">
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">trending_up</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">event_note</span>
+                                                            </button>
+                                                            <button class="pnt-btn btn-trans btn-icon-only">
+                                                                <span
+                                                                    class="material-icons-round color-gray">star</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img">
+                                                                    <span class="sensor_img-1"></span>
+                                                                    <div class="status">
+                                                                        <span class="material-icons-round">done</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">온도(℃)</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">9.20</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="p-2 bg-lightgray w-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flx-row flx-sb opacity-8 mt-1">
+                                                                <div class="flx-row gap-1">
+                                                                    <span
+                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
+                                                                    <p class="pnt-txt s-10">30%</p>
+                                                                </div>
+                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 col-xl-12">
+                                    <!-- 실시간 센서 모니터링 -->
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="widget_img-1"></span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">실시간 센서 모니터링</h3>
+                                                    <p class="title__sub">고정형 & 이동형</p>
+                                                </div>
+                                            </div>
+                                            <div class="card-header__function">
+                                                <button class="pnt-btn btn-darkgray">검색 조건</button>
+                                                <button class="pnt-btn btn-lightgray btn-icon-only"><span
+                                                        class="material-icons-round">refresh</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- 그리드 시스템 -->
+                                            <div class="grid-container item-grid-200">
+                                                <!-- 이너 아이템 -->
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-xxl-10 col-xl-12">
-                                    <!-- 정신병동 -->
+                                    <!-- 초기 기록지 -->
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
@@ -1572,1006 +2848,6 @@
                                                         </div>
                                                     </li>
                                                 </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-8 col-xl-12">
-                                    <!-- 혼잡도 -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <span class="widget_img-1"></span>
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">혼잡도</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <!-- 지도 -->
-                                            <div style="height: 200px; overflow: hidden;">
-                                                <img src="../images/test/test-map.png" alt="" style="width:100%">
-                                            </div>
-                                            <!-- 서브타이틀 -->
-                                            <p class="pnt-txt txt-bold mt-4 mb-2">선택한 조건별 요약</p>
-                                            <!-- 숫자 위젯 -->
-                                            <div class="widget-item-nums mb-2">
-                                                <div class="col view">
-                                                    <b>0<span>/</span>0</b>
-                                                    <div class="flx-row">총 진입 횟수
-                                                    </div>
-                                                </div>
-                                                <div class="col view">
-                                                    <b>0<span>s</span></b>
-                                                    <div class="flx-row">고유 진입 횟수
-                                                    </div>
-                                                </div>
-                                                <div class="col view">
-                                                    <b>0<span>s</span></b>
-                                                    <div class="flx-row">총 진입별 평균 체류 시간
-                                                    </div>
-                                                </div>
-                                                <div class="col view">
-                                                    <b>0<span>s</span></b>
-                                                    <div class="flx-row">고유 진입별 평균 체류 시간
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- 검색 -->
-                                            <div class="flx-row mt-4">
-                                                <div class="pnt-input--group">
-                                                    <input class="pnt-input" type="text"
-                                                        placeholder="자산의 이름 또는 아이디를 검색하세요">
-                                                    <p class="input-error-txt">에러문구 입니다</p>
-                                                </div>
-                                                <button class="pnt-btn btn-darkgray mr-2">검색</button>
-                                                <button class="pnt-btn btn-icon-only btn-lightgray"><span
-                                                        class="material-icons-round">refresh</span> </button>
-                                            </div>
-                                            <!-- 테이블 -->
-                                            <div class="flx-col" style="margin-top: -1rem;">
-                                                <div class="pagination">
-                                                    <div class="flx-row gap-1">
-                                                        <div class="ml-2 mr-2">
-                                                            <span class="now">1-20</span>
-                                                            <span class="whole">/ 38</span>
-                                                        </div>
-                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
-                                                            <div class="material-icons-round">keyboard_double_arrow_left
-                                                            </div>
-                                                        </button>
-                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
-                                                            <div class="material-icons-round">keyboard_arrow_left
-                                                            </div>
-                                                        </button>
-                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
-                                                            <div class="material-icons-round">keyboard_arrow_right
-                                                            </div>
-                                                        </button>
-                                                        <button class="pnt-btn btn-icon-only form-h-small btn-trans">
-                                                            <div class="material-icons-round">
-                                                                keyboard_double_arrow_right</div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div role="table" class="pnt-table">
-                                                    <div class="border-box">
-                                                        <div class="thead">
-                                                            <div role="row" class="tr">
-                                                                <div colspan="1" role="columnheader" class="th">지오펜스 이름
-                                                                </div>
-                                                                <div colspan="1" role="columnheader" class="th">진입 횟수
-                                                                </div>
-                                                                <div colspan="1" role="columnheader" class="th">고유 횟수
-                                                                </div>
-                                                                <div colspan="1" role="columnheader" class="th">진입별 평균
-                                                                    체류
-                                                                </div>
-                                                                <div colspan="1" role="columnheader" class="th">고유별 평균
-                                                                    체류
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div role="rowgroup" class="tbody">
-                                                            <div>
-                                                                <div>
-                                                                    <div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                        <div role="row" class="tr">
-                                                                            <div role="cell" class="td" title="">테스트
-                                                                                지오펜스
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">5
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">7
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">31
-                                                                            </div>
-                                                                            <div role="cell" class="td" title="">35
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-xl-12">
-                                    <!-- 냉장고 센서 -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <span class="widget_img-1"></span>
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">냉장고 센서</h3>
-                                                </div>
-                                            </div>
-                                            <div class="card-header__function">
-                                                <button class="pnt-btn btn-line">일간 대장</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <!-- 그리드 시스템 -->
-                                            <div class="grid-container item-grid-250">
-                                                <!-- 이너 아이템 -->
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status">
-                                                                        <span class="material-icons-round">done</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">9.20</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img bg-danger">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status bg-danger bg-dark">
-                                                                        <span class="material-icons-round">close</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">-9.20</span>
-                                                                        <span class="pnt-txt color-danger s-7">위험</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img bg-brand">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status bg-brand bg-dark">
-                                                                        <span
-                                                                            class="material-icons-round">priority_high</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">-9.20</span>
-                                                                        <span class="pnt-txt color-brand s-7">경고</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img bg-secondary">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status bg-secondary bg-dark">
-                                                                        <span
-                                                                            class="material-icons-round">question_mark</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">-9.20</span>
-                                                                        <span
-                                                                            class="pnt-txt color-secondary s-7">이탈</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img bg-info">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status bg-info bg-dark">
-                                                                        <span class="material-icons-round">remove</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">-9.20</span>
-                                                                        <span class="pnt-txt color-info s-7">없음</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status">
-                                                                        <span class="material-icons-round">done</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">9.20</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status">
-                                                                        <span class="material-icons-round">done</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">9.20</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>서브 타이틀</p>
-                                                            <h3>타이틀</h3>
-                                                        </div>
-                                                        <div class="item-header__function">
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">trending_up</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">event_note</span>
-                                                            </button>
-                                                            <button class="pnt-btn btn-trans btn-icon-only">
-                                                                <span
-                                                                    class="material-icons-round color-gray">star</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-1"></span>
-                                                                    <div class="status">
-                                                                        <span class="material-icons-round">done</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">온도(℃)</div>
-                                                                    <div class="flx-row flx-sb">
-                                                                        <span class="pnt-txt txt-bold s-3">9.20</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                    <div class="p-2 bg-lightgray">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="flx-row flx-sb opacity-8 mt-1">
-                                                                <div class="flx-row gap-1">
-                                                                    <span
-                                                                        class="material-icons-round rotate-2">battery_3_bar</span>
-                                                                    <p class="pnt-txt s-10">30%</p>
-                                                                </div>
-                                                                <p class="pnt-txt s-10">2022-11-10 ( 10:33:14 )</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-xl-12">
-                                    <!-- 실시간 센서 모니터링 -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <span class="widget_img-1"></span>
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">실시간 센서 모니터링</h3>
-                                                    <p class="title__sub">고정형 & 이동형</p>
-                                                </div>
-                                            </div>
-                                            <div class="card-header__function">
-                                                <button class="pnt-btn btn-darkgray">검색 조건</button>
-                                                <button class="pnt-btn btn-lightgray btn-icon-only"><span
-                                                        class="material-icons-round">refresh</span></button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <!-- 그리드 시스템 -->
-                                            <div class="grid-container item-grid-200">
-                                                <!-- 이너 아이템 -->
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">282.70
-                                                                            ml</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">282.70
-                                                                            ml</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="inner-item">
-                                                    <div class="item-header">
-                                                        <div class="item-header__title">
-                                                            <p>수액환자</p>
-                                                            <h3>진짜수액</h3>
-                                                        </div>
-                                                        <div class="item-header__funtion">
-                                                            <button class="pnt-btn btn-icon-only btn-trans">
-                                                                <span
-                                                                    class="material-icons-round color-gray">location_on</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item-body">
-                                                        <div class="">
-                                                            <div class="flx-row">
-                                                                <div class="widget-sensor-img">
-                                                                    <span class="sensor_img-2"></span>
-                                                                </div>
-                                                                <div class="ml-3 w-100">
-                                                                    <div class="pnt-txt s-9">배터리</div>
-                                                                    <div class="flx-col gap-0">
-                                                                        <span class="pnt-txt txt-bold s-3">100%</span>
-                                                                        <span class="pnt-txt s-7">정상</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

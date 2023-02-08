@@ -13,7 +13,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border-radius: 10px;
+  border-radius: 2px;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,16 +82,23 @@
 .widget-sensor-img {
   width: 72px;
   height: 72px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: gray;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .widget-sensor-img > span {
   -webkit-filter: invert(1);
           filter: invert(1);
-  -webkit-transform: scale(0.9) translate(-5%, -5%);
-          transform: scale(0.9) translate(-5%, -5%);
 }
 
 .widget-sensor-img .status {
@@ -111,6 +118,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
 }
 
 .widget-sensor-img .status span {
