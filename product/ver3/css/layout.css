@@ -775,8 +775,7 @@ body {
 
 #root .app-container .app-page-content {
   padding: 0.5rem;
-  padding-left: 1.3rem;
-  padding-right: 0.7rem;
+  padding-right: 1rem;
 }
 
 .row {

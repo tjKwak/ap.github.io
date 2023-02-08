@@ -39,6 +39,9 @@
   .bg-depth-9 {
     background-color: $depth-9 !important;
   }
+  .bg-depth-10 {
+    background-color: $depth-10 !important;
+  }
 
   /////////////////////////////////////////////////////////
   //공통 글자
@@ -79,8 +82,8 @@
     }
   }
   & .user-box .user-options {
-    background-color: $depth-9;
-    border: 1px solid $depth-9;
+    background-color: $depth-8;
+    border: 1px solid $depth-8;
     & .setting-item {
       background-color: $depth-4;
       &:hover {
@@ -200,6 +203,9 @@
         & .material-icons-round {
           color: $card-icon-color;
         }
+        & span[class*="widget_img-"]{
+          filter: $card-icon-filter;
+        }
         & .title__main {
           color: $card-title-color;
         }
@@ -237,6 +243,24 @@
     }
   }
 
+  //이너카드
+  & .inner-item {
+    background-color: $depth-2;
+    border: 1px solid $form-border;
+    & .item-header {
+      background-color: $depth-3;
+      border-bottom: 1px solid $form-border;
+      & .item-header__title {
+        & p {
+          color: $secondary !important;
+        }
+        & h3 {
+          color: $form-active-txt !important;
+        }
+      }
+    }
+  }
+
   //모달
   & .pnt-modal {
     & .modal-header {
@@ -254,18 +278,30 @@
 
   /////////////////////////////////////////////////////////
   //위젯
+  //1. 센서 이미지
+  & .widget-sensor-img {
+    background-color: $depth-9;
+  }
+  //2. 전체 현황 숫자
   & .widget-item-nums {
     & .col {
       background-color: $depth-5;
       & * {
         color: $form-txt !important;
       }
-      &.active {
+      &.selected {
         background-color: $widget-active-bg;
         border: 1px solid $widget-active-border;
         & * {
           color: $widget-active-txt !important;
         }
+      }
+      &.nonSelected {
+        background-color: $depth-5;
+      }
+      &.view {
+        background-color: $depth-3;
+        border: 1px solid $form-border;
       }
     }
   }
@@ -313,9 +349,9 @@
     &.btn-trans {
       background-color: transparent;
       &:hover {
-        color: $brand;
+        color: $brand !important;
         & .material-icons-round {
-          color: $brand;
+          color: $brand !important;
         }
       }
     }
@@ -381,7 +417,7 @@
       }
     }
     & label {
-      background-color: $depth-9;
+      background-color: $depth-8;
       border: 1px solid $form-border;
       color: $secondary;
       & .material-icons-round {
@@ -561,7 +597,7 @@
   & .pnt-table {
     & .th,
     & .td {
-      border-bottom: 1px solid $table-inner-border;
+      border-bottom: 1px solid $table-inner-bottom-border;
       border-right: 1px solid $table-inner-border;
     }
     & .border-box {
@@ -623,7 +659,7 @@
         }
       }
       & label {
-        background-color: $depth-9;
+        background-color: $depth-8;
         border: 1px solid $form-border;
         color: $form-disable-txt;
         & .material-icons-round {
@@ -706,10 +742,10 @@
   .bg-brand {
     background-color: $brand !important;
     &.bg-light {
-      background-color: $brand-l3 !important;
+      background-color: $brand-l2 !important;
     }
     &.bg-dark {
-      background-color: $brand-d3 !important;
+      background-color: $brand-d2 !important;
     }
     &.bg-d-4 {
       background-color: $brand-d4 !important;
@@ -739,10 +775,10 @@
   .bg-secondary {
     background-color: $secondary !important;
     &.bg-light {
-      background-color: $secondary-l3 !important;
+      background-color: $secondary-l2 !important;
     }
     &.bg-dark {
-      background-color: $secondary-d3 !important;
+      background-color: $secondary-d2 !important;
     }
     &.bg-d-4 {
       background-color: $secondary-d4 !important;
@@ -772,10 +808,10 @@
   .bg-success {
     background-color: $success !important;
     &.bg-light {
-      background-color: $success-l3 !important;
+      background-color: $success-l2 !important;
     }
     &.bg-dark {
-      background-color: $success-d3 !important;
+      background-color: $success-d2 !important;
     }
     &.bg-d-4 {
       background-color: $success-d4 !important;
@@ -874,7 +910,7 @@
       background-color: $danger-l3 !important;
     }
     &.bg-dark {
-      background-color: $danger-d3 !important;
+      background-color: $danger-d2 !important;
     }
     &.bg-d-4 {
       background-color: $danger-d4 !important;

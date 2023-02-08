@@ -4,7 +4,7 @@
 @import "_variables";
 
 //////////////////////////////
-
+//카드
 .card {
   border: 1px solid rgba(32, 39, 140, 0.125);
   border-radius: $form-radius !important;
@@ -57,7 +57,7 @@
           text-align: center;
           white-space: nowrap;
           color: $f-w-1;
-          font-size: .9rem;
+          font-size: 0.9rem;
           font-weight: 600;
         }
       }
@@ -92,7 +92,7 @@
           white-space: nowrap;
 
           color: $f-b-2;
-          font-size: .8rem;
+          font-size: 0.8rem;
           font-weight: 600;
           text-transform: initial;
           &::after {
@@ -142,6 +142,10 @@
       //아이콘이 있을때의 title-wrap 길이
       & span + .title-wrap {
         width: calc(100% - 1rem);
+      }
+      & span[class*="widget_img-"] {
+        transform: scale(0.7) translateX(-8px);
+        margin-right: -8px;
       }
       & .title-wrap {
         width: 100%;
@@ -304,195 +308,67 @@
   }
 }
 
-//트리 박스
-.tree-box {
-  border: 1px solid lightgray;
-  & .tree-box__btn-box {
-    padding: 0.5rem;
-    border-bottom: 1px solid lightgray;
-    margin-bottom: 0.5rem;
-    text-align: right;
-  }
-}
-
-//컬러박스
-.color-box {
-  position: absolute;
-  display: inline-block;
-  top: 10px;
-  right: 5px;
-  width: 20px;
-  height: 20px;
-  //background-color: #3e66fb;
-  margin-right: 0.5rem;
-  &::after {
-    content: "";
-    position: absolute;
-    right: 30px;
-    width: 1px;
-    height: 100%;
-    background-color: $gray-400;
-  }
-}
-
-//권한 박스
-.move-box--group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  & .move-box {
-    border: 1px solid $form-border-color;
-    border-radius: $form-radius;
-    width: 50%;
-    height: 13.8rem;
-    overflow: auto;
-    & .move-box__title {
-      padding: 0.3rem 0.5rem;
-      border-bottom: 1px solid $form-border-color;
-      background-color: $gray-100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    & .move-box__list {
-      margin: 0;
-      padding: 1rem 0.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: $form-gap;
-    }
-    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-      & .name {
-        max-width: 5rem;
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
-        vertical-align: middle;
-        text-overflow: ellipsis;
-      }
-    }
-  }
-  @media (max-width: $breakpoint-mobile) {
-    flex-direction: column;
-    & .move-box {
-      width: 100%;
-    }
-    & > span {
-      transform: rotate(90deg);
-      margin-top: 0.5rem;
-    }
-  }
-}
-
-//맵박스
-.pnt-map-box {
-  background-color: #818aaf;
-  width: 100%;
-  height: 100%;
+//카드 안의 아이템
+.inner-item {
+  background-color: white;
+  border: 1px solid rgba(32, 39, 140, 0.125);
+  border-radius: $form-radius;
   position: relative;
-  //overflow: hidden;
-  & .map__function {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.5rem;
-    & .map__function--top {
+  word-wrap: break-word;
+  transition: $form-transition;
+  opacity: 1;
+  //아이템 헤더
+  & .item-header {
+    height: 44px;
+    min-height: $card-header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: pink;
+    border-bottom: 1px solid red;
+    border-radius: $form-radius $form-radius 0 0;
+    padding: 0 0.5rem;
+
+    & .item-header__title {
+      flex: 1;
       display: flex;
-      gap: $form-gap;
-      & > div {
-        padding: 0.3rem;
-        background-color: white !important;
-        color: black !important;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(32, 39, 140, 0.125);
-        border-radius: 0.25rem;
-        margin-bottom: 1rem;
-        align-items: center;
-        @include p4-n();
-      }
-    }
-    & .map__function--bottom {
-      display: inline-flex;
+      align-items: flex-start;
+      text-align: left;
       flex-direction: column;
-      position: absolute;
-      bottom: 0.5rem;
-      right: 0.5rem;
-      & button {
-        background-color: white !important;
-        &:hover {
-          filter: none !important;
-          background-color: $gray-100 !important;
-        }
+      gap: 3px;
+      & * {
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
       }
+      & h3 {
+        order: 2;
+        font-size: 14px;
+        font-weight: 700;
+        color: $gray-700;
+      }
+      & p {
+        order: 1;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 10px;
+        color: blue;
+      }
+    }
+    & .item-header__function {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      justify-content: flex-end;
+      gap: $form-gap;
     }
   }
-  & .map__pin {
-    position: absolute;
-    //이곳의 위치를 조종
-    // top: 100px;
-    // left: 100px;
-    & .map__pin--balloon {
-      display: none;
-      z-index: 10;
-      background-color: white;
-      box-shadow: $form-shadow;
-      border-radius: $form-radius;
-      padding: 0.5rem;
-      position: absolute;
-      top: -170px;
-      width: 150px;
-      transition: all 0.3s;
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -15px;
-        left: 20px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        //border-horiz: 15px 10px 0 10px;
-        border-color: #ffffff transparent transparent transparent;
-      }
-      & .btn-view {
-        width: 100%;
-        min-height: 1rem;
-        padding: 0.5rem;
-      }
-    }
-    & .icon-gps-fill {
-      margin: 1.2rem 0 0 20px;
-      transform: scale(2);
-    }
-    &.on {
-      & .icon-gps {
-        background-color: #ffc107;
-        box-shadow: 0px 0px 20px #ffc107;
-        border-radius: 100px;
-        transition: all 0.3s;
-      }
-    }
-    &.active {
-      transition: all 0.3s;
-      & .icon-gps {
-        background-color: #ff7800;
-        box-shadow: 0px 0px 20px #ff7800;
-        border-radius: 100px;
-      }
-      & .map__pin--balloon {
-        display: block;
-      }
-    }
-  }
-  & .map__img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    & img {
-      width: 100%;
-    }
+
+  //아이템 바디
+  & .item-body {
+    padding: 0.5rem;
+    overflow: auto;
   }
 }

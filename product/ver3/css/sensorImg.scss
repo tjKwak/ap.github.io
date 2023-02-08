@@ -1,0 +1,180 @@
+////////////////////////////////////////
+//아이콘 세팅
+
+$icon: 80px;
+$icon-gap: -20px;
+$small-icon: 30px;
+$small-icon-gap: 30px;
+
+$p1: calc((#{$icon} * -0) - (#{$icon-gap} * 0));
+$p2: calc((#{$icon} * -1) - (#{$icon-gap} * 1));
+$p3: calc((#{$icon} * -2) - (#{$icon-gap} * 2));
+$p4: calc((#{$icon} * -3) - (#{$icon-gap} * 3)); 
+$p5: calc((#{$icon} * -4) - (#{$icon-gap} * 4));
+$p6: calc((#{$icon} * -5) - (#{$icon-gap} * 5));
+$p7: calc((#{$icon} * -6) - (#{$icon-gap} * 6));
+$p8: calc((#{$icon} * -7) - (#{$icon-gap} * 7));
+$p9: calc((#{$icon} * -8) - (#{$icon-gap} * 8));
+$p10: calc((#{$icon} * -9) - (#{$icon-gap} * 9));
+
+@mixin bgp($x, $y) {
+  background-position: $x $y;
+}
+@mixin icons {
+  display: block;
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 0;
+}
+@mixin icon-sensor {
+  @include icons();
+  width: $icon;
+  height: $icon;
+  background-size: calc((#{$icon} * 10) + (#{$icon-gap} * 9)); //가로 10줄
+  background-image: url("../images/sensorIcon.svg");
+}
+@mixin widget_imgs {
+  @include icons();
+  width: $small-icon;
+  height: $small-icon;
+  background-size: calc((#{$small-icon} * 10) + (#{$small-icon-gap} * 9)); //가로 10줄
+  background-image: url("../images/sh_widget_icon.svg");
+  
+}
+
+span[class*="sensor_img-"] {
+  @include icon-sensor();
+}
+span[class*="widget_img-"] {
+  @include widget_imgs();
+}
+
+
+////////////////////////////////////////
+//widget_img
+.widget_img-1 { @include bgp($p1, $p1); }
+.widget_img-2 { @include bgp($p2, $p1); }
+.widget_img-3 { @include bgp($p3, $p1); }
+.widget_img-4 { @include bgp($p4, $p1); }
+.widget_img-5 { @include bgp($p5, $p1); }
+.widget_img-6 { @include bgp($p6, $p1); }
+.widget_img-7 { @include bgp($p7, $p1); }
+.widget_img-8 { @include bgp($p8, $p1); }
+.widget_img-9 { @include bgp($p9, $p1); }
+.widget_img-10 { @include bgp($p10, $p1); }
+
+.widget_img-11 { @include bgp($p1, $p2); }
+.widget_img-12 { @include bgp($p2, $p2); }
+.widget_img-13 { @include bgp($p3, $p2); }
+.widget_img-14 { @include bgp($p4, $p2); }
+.widget_img-15 { @include bgp($p5, $p2); }
+.widget_img-16 { @include bgp($p6, $p2); }
+.widget_img-17 { @include bgp($p7, $p2); }
+.widget_img-18 { @include bgp($p8, $p2); }
+.widget_img-19 { @include bgp($p9, $p2); }
+.widget_img-20 { @include bgp($p10, $p2); }
+
+
+
+
+
+
+//sensor-img
+.sensor_img-1 { @include bgp($p1, $p1); }
+.sensor_img-2 { @include bgp($p2, $p1); }
+.sensor_img-3 { @include bgp($p3, $p1); }
+.sensor_img-4 { @include bgp($p4, $p1); }
+.sensor_img-5 { @include bgp($p5, $p1); }
+.sensor_img-6 { @include bgp($p6, $p1); }
+.sensor_img-7 { @include bgp($p7, $p1); }
+.sensor_img-8 { @include bgp($p8, $p1); }
+.sensor_img-9 { @include bgp($p9, $p1); }
+.sensor_img-10 { @include bgp($p10, $p1); }
+
+.sensor_img-11 { @include bgp($p1, $p2); }
+.sensor_img-12 { @include bgp($p2, $p2); }
+.sensor_img-13 { @include bgp($p3, $p2); }
+.sensor_img-14 { @include bgp($p4, $p2); }
+.sensor_img-15 { @include bgp($p5, $p2); }
+.sensor_img-16 { @include bgp($p6, $p2); }
+.sensor_img-17 { @include bgp($p7, $p2); }
+.sensor_img-18 { @include bgp($p8, $p2); }
+.sensor_img-19 { @include bgp($p9, $p2); }
+.sensor_img-20 { @include bgp($p10, $p2); }
+
+.sensor_img-21 { @include bgp($p1, $p3); }
+.sensor_img-22 { @include bgp($p2, $p3); }
+.sensor_img-23 { @include bgp($p3, $p3); }
+.sensor_img-24 { @include bgp($p4, $p3); }
+.sensor_img-25 { @include bgp($p5, $p3); }
+.sensor_img-26 { @include bgp($p6, $p3); }
+.sensor_img-27 { @include bgp($p7, $p3); }
+.sensor_img-28 { @include bgp($p8, $p3); }
+.sensor_img-29 { @include bgp($p9, $p3); }
+.sensor_img-20 { @include bgp($p10, $p3); }
+
+.sensor_img-31 { @include bgp($p1, $p4); }
+.sensor_img-32 { @include bgp($p2, $p4); }
+.sensor_img-33 { @include bgp($p3, $p4); }
+.sensor_img-34 { @include bgp($p4, $p4); }
+.sensor_img-35 { @include bgp($p5, $p4); }
+.sensor_img-36 { @include bgp($p6, $p4); }
+.sensor_img-37 { @include bgp($p7, $p4); }
+.sensor_img-38 { @include bgp($p8, $p4); }
+.sensor_img-39 { @include bgp($p9, $p4); }
+.sensor_img-40 { @include bgp($p10, $p4); }
+
+.sensor_img-41 { @include bgp($p1, $p5); }
+.sensor_img-42 { @include bgp($p2, $p5); }
+.sensor_img-43 { @include bgp($p3, $p5); }
+.sensor_img-44 { @include bgp($p4, $p5); }
+.sensor_img-45 { @include bgp($p5, $p5); }
+.sensor_img-46 { @include bgp($p6, $p5); }
+.sensor_img-47 { @include bgp($p7, $p5); }
+.sensor_img-48 { @include bgp($p8, $p5); }
+.sensor_img-49 { @include bgp($p9, $p5); }
+.sensor_img-50 { @include bgp($p10, $p5); }
+
+.sensor_img-51 { @include bgp($p1, $p6); }
+.sensor_img-52 { @include bgp($p2, $p6); }
+.sensor_img-53 { @include bgp($p3, $p6); }
+.sensor_img-54 { @include bgp($p4, $p6); }
+.sensor_img-55 { @include bgp($p5, $p6); }
+.sensor_img-56 { @include bgp($p6, $p6); }
+.sensor_img-57 { @include bgp($p7, $p6); }
+.sensor_img-58 { @include bgp($p8, $p6); }
+.sensor_img-59 { @include bgp($p9, $p6); }
+.sensor_img-60 { @include bgp($p10, $p6); }
+
+.sensor_img-61 { @include bgp($p1, $p7); }
+.sensor_img-62 { @include bgp($p2, $p7); }
+.sensor_img-63 { @include bgp($p3, $p7); }
+.sensor_img-64 { @include bgp($p4, $p7); }
+.sensor_img-65 { @include bgp($p5, $p7); }
+.sensor_img-66 { @include bgp($p6, $p7); }
+.sensor_img-67 { @include bgp($p7, $p7); }
+.sensor_img-68 { @include bgp($p8, $p7); }
+.sensor_img-69 { @include bgp($p9, $p7); }
+.sensor_img-70 { @include bgp($p10, $p7); }
+
+.sensor_img-71 { @include bgp($p1, $p8); }
+.sensor_img-72 { @include bgp($p2, $p8); }
+.sensor_img-73 { @include bgp($p3, $p8); }
+.sensor_img-74 { @include bgp($p4, $p8); }
+.sensor_img-75 { @include bgp($p5, $p8); }
+.sensor_img-76 { @include bgp($p6, $p8); }
+.sensor_img-77 { @include bgp($p7, $p8); }
+.sensor_img-78 { @include bgp($p8, $p8); }
+.sensor_img-79 { @include bgp($p9, $p8); }
+.sensor_img-80 { @include bgp($p10, $p8); }
+
+.sensor_img-81 { @include bgp($p1, $p9); }
+.sensor_img-82 { @include bgp($p2, $p9); }
+.sensor_img-83 { @include bgp($p3, $p9); }
+.sensor_img-84 { @include bgp($p4, $p9); }
+.sensor_img-85 { @include bgp($p5, $p9); }
+.sensor_img-86 { @include bgp($p6, $p9); }
+.sensor_img-87 { @include bgp($p7, $p9); }
+.sensor_img-88 { @include bgp($p8, $p9); }
+.sensor_img-89 { @include bgp($p9, $p9); }
+.sensor_img-90 { @include bgp($p10, $p9); }

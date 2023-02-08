@@ -14,7 +14,7 @@
           justify-content: center;
   gap: 0.5rem;
   position: relative;
-  min-width: 4rem;
+  min-width: 4.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-radius: 0px;
@@ -210,6 +210,7 @@
 .pnt-btn.btn-line {
   background-color: transparent;
   border: 1px solid black !important;
+  font-weight: 700 !important;
 }
 
 .pnt-btn.btn-line.btn-shadow {
@@ -220,6 +221,16 @@
 .pnt-btn.btn-line:hover {
   color: #f37321;
   border: 1px solid #f37321 !important;
+}
+
+.pnt-btn.btn-trans {
+  background-color: transparent;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+.pnt-btn.btn-trans:hover {
+  color: #f37321;
 }
 
 input:-webkit-autofill {
@@ -1426,9 +1437,10 @@ li.label-flx-col .pnt-label--group .label-main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   text-align: left;
-  padding: 5px;
+  padding: 5px 10px;
   border-right: 1px solid #f6f6f9;
   border-bottom: 1px solid #f6f6f9;
+  line-height: 14px;
 }
 
 .pnt-table .th:last-child, .pnt-table .td:last-child {
@@ -1509,7 +1521,6 @@ li.label-flx-col .pnt-label--group .label-main {
 
 .pnt-table .border-box .tbody > div > div > div .tr .td {
   font-weight: 400 !important;
-  line-height: 14px;
 }
 
 .pnt-table .border-box .tbody > div > div > div .tr:nth-child(2n) {
@@ -1956,6 +1967,16 @@ li.label-flx-col .pnt-label--group .label-main {
 
 .pnt-toggle.form-h-small p {
   font-size: 0.75rem;
+}
+
+.pnt-toggle.form-h-small input:checked + .slider::before {
+  -webkit-transform: translateX(2rem) translateY(-50%);
+          transform: translateX(2rem) translateY(-50%);
+}
+
+.pnt-toggle.form-h-small .slider::before {
+  width: 10px;
+  height: 10px;
 }
 
 .pnt-toggle.form-h-big {

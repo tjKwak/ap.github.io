@@ -88,15 +88,16 @@ $dark-gray-d: mix($dark-gray, black, 50%);
 $dark-gray-l: mix($dark-gray, white, 30%);
 
 $depth-base: white;
-$depth-1: mix($depth-base, #e4e2ec, 90%);
-$depth-2: mix($depth-base, #e4e2ec, 80%);
-$depth-3: mix($depth-base, #e4e2ec, 70%);
-$depth-4: mix($depth-base, #e4e2ec, 60%);
-$depth-5: mix($depth-base, #e4e2ec, 50%);
-$depth-6: mix($depth-base, #e4e2ec, 40%);
+$depth-1: mix($depth-base, #e4e2ec, 95%);
+$depth-2: mix($depth-base, #e4e2ec, 85%);
+$depth-3: mix($depth-base, #e4e2ec, 75%);
+$depth-4: mix($depth-base, #e4e2ec, 65%);
+$depth-5: mix($depth-base, #e4e2ec, 55%);
+$depth-6: mix($depth-base, #e4e2ec, 45%);
 $depth-7: mix($depth-base, #e4e2ec, 30%);
 $depth-8: mix($depth-base, #e4e2ec, 15%);
-$depth-9: mix($depth-base, #e4e2ec, 0%);
+$depth-9: mix(#1f1f27, #e4e2ec, 10%);
+$depth-10: mix(#1f1f27, #e4e2ec, 50%);
 
 // ---------------------------------------------------------
 // ※-------------------------------------------------------
@@ -122,7 +123,7 @@ $header-bg: $depth-base;
 $header-logobox: #292938; //사이드바와 같은 색상
 $header-menu-text1: $f-b-1;
 $header-menu-text2: $secondary;
-$header-widget-icon : gray;
+$header-widget-icon: gray;
 
 //웹 - 사이드바
 $menu-body-bg: #292938;
@@ -146,8 +147,9 @@ $app-header-bg: $depth-base;
 $card-body-bg: $depth-base;
 $card-header-bg: $depth-base;
 $card-header-border: $gray-200;
-$card-icon-color : $gray-500;
-$card-title-color : $gray-900;
+$card-icon-color: $secondary-l4;
+$card-icon-filter: invert(0.4);
+$card-title-color: $gray-900;
 $card-tab: $depth-6;
 $card-tab-li: $depth-4;
 $card-tab-li-active: $depth-base;
@@ -156,9 +158,15 @@ $card-tab-li-txt: $f-b-6;
 $card-tab-2: $secondary;
 $card-button-body: $depth-3;
 
+//이너카드
+$inner-card-body-bg: $depth-base;
+$inner-card-header-bg: $depth-base;
+$inner-card-border: $depth-base;
+
 //테이블
 $table-border: $gray-300;
-$table-inner-border: rgba(0,0,0, 0.06);
+$table-inner-border: rgba(0, 0, 0, 0.1);
+$table-inner-bottom-border: rgba(0, 0, 0, 0.05);
 $table-header-border: transparent;
 $table-2row-bg: $depth-1;
 $table-thead-bg: $depth-4;
@@ -203,8 +211,8 @@ $form-placeholder-txt: $gray-400;
 $form-hover-bg: $gray-200;
 
 //인풋
-$input-bg : $form-bg;
-$input-border : $form-border;
+$input-bg: $form-bg;
+$input-border: $form-border;
 
 //위젯
 $widget-active-bg: $depth-base;

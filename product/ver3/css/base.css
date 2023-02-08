@@ -13,6 +13,8 @@
 @import url('theme/dark/dark.css');
 /* font */
 @import url('pretendard.css');
+/* imgs */
+@import url('sensorImg.css');
 /* icons */
 @import url('../../../install/@material-design-icons/font/index.css');
 

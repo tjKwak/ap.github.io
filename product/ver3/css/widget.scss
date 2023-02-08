@@ -6,41 +6,86 @@
 /* Css link*/
 @import "_variables";
 
-.widget-item-nums{
+
+//전체 현황
+.widget-item-nums {
+  display: flex;
+  gap: 8px;
+  & .col {
+    flex: 1;
+    border-radius: 10px;
+    padding: 20px;
     display: flex;
-    gap: 8px;
-    & .col{
-        flex : 1;
-        background-color: #ECEAF2;
-        border-radius: 10px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        cursor: pointer;
-        transition: $form-transition;
-        & * {
-            color: #807894 !important;
-        }
-        & b{
-            font-size: 32px;
-            font-weight: 900 !important;
-        }
-        &:hover{
-            transition: $form-transition;
-            filter: brightness(95%);
-        }
-        &.active{
-            background-color: white;
-            border: 1px solid $default-secondary;
-            box-shadow: $card-shadow;
-            & *{
-                color: $default-secondary !important;
-            }
-            &:hover{
-                filter: none;
-            }
-        }
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & b {
+      font-size: 26px;
+      font-weight: 900 !important;
+      & span {
+        font-size: 20px;
+        margin: 0 5px;
+        font-weight: 500;
+        opacity: 0.7;
+      }
     }
+
+    //선택된
+    &.selected {
+      background-color: white;
+      border: 1px solid $default-secondary;
+      box-shadow: $card-shadow;
+      transition: $form-transition;
+      cursor: pointer;
+      & * {
+        color: $default-secondary !important;
+      }
+      &:hover {
+        filter: none;
+      }
+    }
+    //선택되지 않은
+    &.nonSelected {
+      background-color: #eceaf2;
+      transition: $form-transition;
+      cursor: pointer;
+      &:hover {
+        transition: $form-transition;
+        filter: brightness(95%);
+      }
+    }
+    //단순 뷰용
+    &.view {
+      background-color: rgb(240, 243, 244);
+    }
+  }
+}
+
+//센서 아이템 이미지
+.widget-sensor-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  background-color: gray;
+  position: relative;
+  & > span {
+    filter: invert(1);
+    transform: scale(0.9) translate(-5%, -5%);
+  }
+  & .status {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & span {
+      font-size: 14px;
+      color: white !important;
+    }
+  }
 }

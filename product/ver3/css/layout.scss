@@ -609,8 +609,7 @@ body {
 $layout-padding: 0.5rem; //1.5rem -> 0.5rem
 #root .app-container .app-page-content {
   padding: $layout-padding;
-  padding-left: 1.3rem;
-  padding-right: 0.7rem;
+  padding-right: 1rem;
 }
 .row {
   margin-right: 0;
@@ -618,7 +617,7 @@ $layout-padding: 0.5rem; //1.5rem -> 0.5rem
   & .col,
   > [class*="col-"] {
     padding-left: 0rem;
-    padding-right: 0.5rem;
+    padding-right: $layout-padding;
   }
 }
 .card {
