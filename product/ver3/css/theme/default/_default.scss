@@ -162,7 +162,8 @@
   }
   /////////////////////////////////////////////////////////
   //바디 영역
-  & .app-main__inner, & .app-main__outer {
+  & .app-main__inner,
+  & .app-main__outer {
     background: linear-gradient(
       $whole-body-gradient-start,
       $whole-body-gradient-end
@@ -1005,6 +1006,34 @@
     &.bg-dark {
       background-color: $dark-gray-d !important;
     }
+  }
+
+  .border-brand {
+    border: 1px solid $brand !important;
+  }
+  .border-secondary {
+    border: 1px solid $secondary !important;
+  }
+  .border-success {
+    border: 1px solid $success !important;
+  }
+  .border-info {
+    border: 1px solid $info !important;
+  }
+  .border-warning {
+    border: 1px solid $warning !important;
+  }
+  .border-danger {
+    border: 1px solid $danger !important;
+  }
+  .border-gray {
+    border: 1px solid $gray !important;
+  }
+  .border-lightgray {
+    border: 1px solid $lightgray !important;
+  }
+  .border-darkgray {
+    border: 1px solid $darkgray !important;
   }
 
   /////////////////////////////////////////////////////////

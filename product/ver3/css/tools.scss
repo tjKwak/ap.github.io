@@ -82,6 +82,41 @@
 .ws-none {
   white-space: nowrap;
 }
+//필터
+.img-filter-brand {
+  filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
+    brightness(105%) contrast(103%) !important;
+}
+.img-filter-secondary {
+  filter: invert(34%) sepia(83%) saturate(801%) hue-rotate(220deg)
+    brightness(87%) contrast(85%) !important;
+}
+.img-filter-success {
+  filter: invert(62%) sepia(62%) saturate(549%) hue-rotate(44deg)
+    brightness(100%) contrast(98%) !important;
+}
+.img-filter-warning {
+  filter: invert(95%) sepia(8%) saturate(6878%) hue-rotate(330deg)
+    brightness(104%) contrast(105%) !important;
+}
+.img-filter-danger {
+  filter: invert(20%) sepia(100%) saturate(3000%) hue-rotate(359deg)
+    brightness(94%) contrast(100%) !important;
+}
+.img-filter-info {
+  filter: invert(69%) sepia(41%) saturate(212%) hue-rotate(122deg)
+    brightness(88%) contrast(89%) !important;
+}
+.img-filter-gray {
+  filter: invert(76%) sepia(0%) saturate(1126%) hue-rotate(106deg)
+    brightness(92%) contrast(83%) !important;
+}
+.img-filter-white {
+  filter: invert(1) !important;
+}
+.img-filter-black {
+  filter: none !important;
+}
 
 //rotete
 .rotate-1 {

@@ -558,7 +558,6 @@ input:-webkit-autofill {
   position: relative;
   display: inline-block;
   width: 3rem;
-  min-width: 3rem;
   margin: 0;
   user-select: none;
   & p,
@@ -1427,17 +1426,18 @@ $form-big-font: 1.15rem;
 
 //토글과 체크박스는 다른 높이 설정을 가짐
 //하지만 사용하는 class이름은 동일함(form-h-small, form-h-big)
-$check-size-small: 14px;
-$check-size: 22px;
+$check-size-small: 16px;
+$check-size: 20px;
 .pnt-toggle {
   height: $check-size;
   &.form-h-small {
     height: $check-size-small;
+    width: 2rem;
     & p {
       font-size: $form-small-font;
     }
     & input:checked + .slider::before {
-      transform: translateX(2rem) translateY(-50%);
+      transform: translateX(1rem) translateY(-50%);
     }
     & .slider::before {
       width: 10px;

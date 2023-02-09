@@ -782,7 +782,7 @@
 }
 
 #root .app-container.app-theme-pnt-navy .color-info {
-  color: #77e4d2 !important;
+  color: #7fafa8 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .color-warning {
@@ -946,47 +946,47 @@
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info {
-  background-color: #77e4d2 !important;
+  background-color: #7fafa8 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-light {
-  background-color: #bbf2e9 !important;
+  background-color: #bfd7d4 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-dark {
-  background-color: #417d74 !important;
+  background-color: #46605c !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-d-4 {
-  background-color: #305b54 !important;
+  background-color: #334643 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-d-3 {
-  background-color: #417d74 !important;
+  background-color: #46605c !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-d-2 {
-  background-color: #53a093 !important;
+  background-color: #597b76 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-d-1 {
-  background-color: #63bdae !important;
+  background-color: #69918b !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-l-4 {
-  background-color: #99ebdd !important;
+  background-color: #9fc3be !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-l-3 {
-  background-color: #bbf2e9 !important;
+  background-color: #bfd7d4 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-l-2 {
-  background-color: #d6f7f2 !important;
+  background-color: #d9e7e5 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-info.bg-l-1 {
-  background-color: #f1fcfb !important;
+  background-color: #f2f7f6 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .bg-warning {
@@ -1143,6 +1143,50 @@
 
 #root .app-container.app-theme-pnt-navy .bg-darkgray.bg-dark {
   background-color: #231f38 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-brand {
+  border: 1px solid #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-secondary {
+  border: 1px solid #6a55c0 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-success {
+  border: 1px solid #80d217 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-info {
+  border: 1px solid #7fafa8 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-warning {
+  border: 1px solid #ffce2e !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-danger {
+  border: 1px solid #ff3358 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-gray {
+  border: 1px solid #a8a7ac !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-brand {
+  border: 1px solid #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-brand {
+  border: 1px solid #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-brand {
+  border: 1px solid #ff8800 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .border-brand {
+  border: 1px solid #ff8800 !important;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-datepicker-container .form-control:focus {

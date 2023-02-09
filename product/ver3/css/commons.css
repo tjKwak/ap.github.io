@@ -160,6 +160,7 @@
   border-bottom: 1px solid #eceaf2;
   border-radius: 2px 2px 0 0;
   padding: 0;
+  text-transform: inherit;
 }
 
 .card .card-header .card-header__title {

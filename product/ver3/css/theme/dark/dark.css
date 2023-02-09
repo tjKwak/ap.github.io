@@ -1163,6 +1163,50 @@
   background-color: rgba(22, 22, 23, 0.82) !important;
 }
 
+#root .app-container.app-theme-pnt-dark .border-brand {
+  border: 1px solid #e5891f !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-secondary {
+  border: 1px solid #9482ec !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-success {
+  border: 1px solid #81be30 !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-info {
+  border: 1px solid #5ab1a3 !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-warning {
+  border: 1px solid #e8bb28 !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-danger {
+  border: 1px solid #f14665 !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-gray {
+  border: 1px solid rgba(225, 223, 240, 0.25) !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-brand {
+  border: 1px solid #e5891f !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-brand {
+  border: 1px solid #e5891f !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-brand {
+  border: 1px solid #e5891f !important;
+}
+
+#root .app-container.app-theme-pnt-dark .border-brand {
+  border: 1px solid #e5891f !important;
+}
+
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .form-control:focus {
   outline: 0;
   -webkit-box-shadow: 0 0 0 1px #86858a;

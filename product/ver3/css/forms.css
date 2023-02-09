@@ -720,7 +720,6 @@ input:-webkit-autofill {
   position: relative;
   display: inline-block;
   width: 3rem;
-  min-width: 3rem;
   margin: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1958,11 +1957,12 @@ li.label-flx-col .pnt-label--group .label-main {
 }
 
 .pnt-toggle {
-  height: 22px;
+  height: 20px;
 }
 
 .pnt-toggle.form-h-small {
-  height: 14px;
+  height: 16px;
+  width: 2rem;
 }
 
 .pnt-toggle.form-h-small p {
@@ -1970,8 +1970,8 @@ li.label-flx-col .pnt-label--group .label-main {
 }
 
 .pnt-toggle.form-h-small input:checked + .slider::before {
-  -webkit-transform: translateX(2rem) translateY(-50%);
-          transform: translateX(2rem) translateY(-50%);
+  -webkit-transform: translateX(1rem) translateY(-50%);
+          transform: translateX(1rem) translateY(-50%);
 }
 
 .pnt-toggle.form-h-small .slider::before {
@@ -2007,13 +2007,13 @@ li.label-flx-col .pnt-label--group .label-main {
 }
 
 .pnt-checkbox .checkbox-effect {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .pnt-checkbox.form-h-small .checkbox-effect {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 .pnt-checkbox.form-h-small .checkbox-effect::before {

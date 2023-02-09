@@ -130,6 +130,7 @@
     border-bottom: 1px solid $gray-200;
     border-radius: $form-radius $form-radius 0 0;
     padding: 0; //chunk때문에 사용
+    text-transform: inherit;
 
     & .card-header__title {
       min-height: $card-header-height;
