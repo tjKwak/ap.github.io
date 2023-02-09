@@ -1081,6 +1081,16 @@ $table-height: 30px;
   display: flex;
   flex-direction: column;
   height: 300px;
+  //클릭 못하는 단순 뷰용 테이블
+  &.table-for-viewer {
+    & .border-box .tbody .tr:hover {
+      cursor: unset !important;
+    }
+  }
+  //콜룸 하나짜리 테이블
+  &.table-one-column {
+    height: calc(#{$table-height} * 2);
+  }
   & .th,
   & .td {
     display: flex;
@@ -1113,7 +1123,6 @@ $table-height: 30px;
         & .th {
           background-color: #d2d2fd;
           font-weight: bold;
-
         }
       }
     }
@@ -1383,7 +1392,7 @@ $form-big-font: 1.15rem;
 }
 .pnt-table--paging__wrap span,
 .pnt-table .th,
-.pnt-table .td{
+.pnt-table .td {
   font-size: 0.9rem; //테이블만 특별하게 조금 큰 폰트 사용
 }
 .pnt-btn.form-h-small,

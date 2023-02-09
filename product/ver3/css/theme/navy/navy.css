@@ -165,7 +165,8 @@
   background-color: #48455c;
 }
 
-#root .app-container.app-theme-pnt-navy .app-main__inner, #root .app-container.app-theme-pnt-navy .app-main__outer {
+#root .app-container.app-theme-pnt-navy .app-main__inner,
+#root .app-container.app-theme-pnt-navy .app-main__outer {
   background: -webkit-gradient(linear, left top, left bottom, from(#f3f2f6), to(#e8e6ef));
   background: linear-gradient(#f3f2f6, #e8e6ef);
 }
@@ -660,6 +661,10 @@
   color: #656467;
 }
 
+#root .app-container.app-theme-pnt-navy .pnt-table.table-for-viewer .border-box .tbody .tr:hover {
+  background-color: white !important;
+}
+
 #root .app-container.app-theme-pnt-navy .pnt-table .th,
 #root .app-container.app-theme-pnt-navy .pnt-table .td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -689,11 +694,11 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-table .border-box .tbody .tr:hover {
-  background-color: #f3f2f6 !important;
+  background-color: #f3f2f6;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-table .border-box .tbody .tr.active {
-  background-color: #d0cfd8 !important;
+  background-color: #d0cfd8;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-table .border-box .tbody .tr.active .td {
@@ -1173,20 +1178,12 @@
   border: 1px solid #a8a7ac !important;
 }
 
-#root .app-container.app-theme-pnt-navy .border-brand {
-  border: 1px solid #ff8800 !important;
+#root .app-container.app-theme-pnt-navy .border-lightgray {
+  border: 1px solid #e5e4ee !important;
 }
 
-#root .app-container.app-theme-pnt-navy .border-brand {
-  border: 1px solid #ff8800 !important;
-}
-
-#root .app-container.app-theme-pnt-navy .border-brand {
-  border: 1px solid #ff8800 !important;
-}
-
-#root .app-container.app-theme-pnt-navy .border-brand {
-  border: 1px solid #ff8800 !important;
+#root .app-container.app-theme-pnt-navy .border-darkgray {
+  border: 1px solid #453e6f !important;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-datepicker-container .form-control:focus {

@@ -612,6 +612,11 @@
   }
   //12_2. 테이블
   & .pnt-table {
+    &.table-for-viewer {
+      & .border-box .tbody .tr:hover {
+        background-color: $table-tbody-bg !important;
+      }
+    }
     & .th,
     & .td {
       border-bottom: 1px solid $table-inner-bottom-border;
@@ -636,10 +641,10 @@
             background-color: $table-2row-bg;
           }
           &:hover {
-            background-color: $table-hover-bg !important;
+            background-color: $table-hover-bg;
           }
           &.active {
-            background-color: $table-clicked-bg !important;
+            background-color: $table-clicked-bg;
             & .td {
               color: $table-clicked-txt;
             }
@@ -1030,10 +1035,10 @@
     border: 1px solid $gray !important;
   }
   .border-lightgray {
-    border: 1px solid $lightgray !important;
+    border: 1px solid $light-gray !important;
   }
   .border-darkgray {
-    border: 1px solid $darkgray !important;
+    border: 1px solid $dark-gray !important;
   }
 
   /////////////////////////////////////////////////////////

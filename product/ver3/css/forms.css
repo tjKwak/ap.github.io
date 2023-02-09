@@ -1423,6 +1423,14 @@ li.label-flx-col .pnt-label--group .label-main {
   height: 300px;
 }
 
+.pnt-table.table-for-viewer .border-box .tbody .tr:hover {
+  cursor: unset !important;
+}
+
+.pnt-table.table-one-column {
+  height: calc(30px * 2);
+}
+
 .pnt-table .th,
 .pnt-table .td {
   display: -webkit-box;

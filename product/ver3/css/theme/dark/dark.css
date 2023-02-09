@@ -183,7 +183,8 @@
   background-color: #48455c;
 }
 
-#root .app-container.app-theme-pnt-dark .app-main__inner, #root .app-container.app-theme-pnt-dark .app-main__outer {
+#root .app-container.app-theme-pnt-dark .app-main__inner,
+#root .app-container.app-theme-pnt-dark .app-main__outer {
   background: -webkit-gradient(linear, left top, left bottom, from(#19191f), to(#19191f));
   background: linear-gradient(#19191f, #19191f);
 }
@@ -678,6 +679,10 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+#root .app-container.app-theme-pnt-dark .pnt-table.table-for-viewer .border-box .tbody .tr:hover {
+  background-color: #3c3c43 !important;
+}
+
 #root .app-container.app-theme-pnt-dark .pnt-table .th,
 #root .app-container.app-theme-pnt-dark .pnt-table .td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -707,11 +712,11 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr:hover {
-  background-color: #45454c !important;
+  background-color: #45454c;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr.active {
-  background-color: #505057 !important;
+  background-color: #505057;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr.active .td {
@@ -1191,20 +1196,12 @@
   border: 1px solid rgba(225, 223, 240, 0.25) !important;
 }
 
-#root .app-container.app-theme-pnt-dark .border-brand {
-  border: 1px solid #e5891f !important;
+#root .app-container.app-theme-pnt-dark .border-lightgray {
+  border: 1px solid rgba(225, 223, 240, 0.1) !important;
 }
 
-#root .app-container.app-theme-pnt-dark .border-brand {
-  border: 1px solid #e5891f !important;
-}
-
-#root .app-container.app-theme-pnt-dark .border-brand {
-  border: 1px solid #e5891f !important;
-}
-
-#root .app-container.app-theme-pnt-dark .border-brand {
-  border: 1px solid #e5891f !important;
+#root .app-container.app-theme-pnt-dark .border-darkgray {
+  border: 1px solid rgba(225, 223, 240, 0.4) !important;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-datepicker-container .form-control:focus {
