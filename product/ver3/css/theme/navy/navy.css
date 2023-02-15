@@ -510,28 +510,27 @@
   color: #656467;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__btn {
-  border: 1px solid #656467;
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options {
+  background-color: #f8f8fa;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options {
-  background-color: #f6f5f8;
-  border: 1px solid #656467;
-}
-
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li a {
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options a {
   color: #656467;
   border-top: 1px solid #e8e6ef;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li:hover a {
-  background-color: #eceaf2;
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options a:hover {
+  background-color: #f0eff5;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options li.on a {
+#root .app-container.app-theme-pnt-navy .pnt-select--group .select__options li.on a {
   border-top: 1px solid #e8e6ef;
   background-color: #dcd9e1;
   color: #6a55c0;
+}
+
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__btn, #root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options {
+  border: 1px solid #656467;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-select--group.form-must span {
@@ -551,8 +550,8 @@
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-checkbox .checkbox-effect {
-  border: 1px solid #e8e6ef;
-  background-color: #f6f5f8;
+  border: 1px solid #d0cfd8;
+  background-color: #f0eff5;
 }
 
 #root .app-container.app-theme-pnt-navy .pnt-checkbox .checkbox-effect::before, #root .app-container.app-theme-pnt-navy .pnt-checkbox .checkbox-effect::after {
@@ -815,6 +814,10 @@
 }
 
 #root .app-container.app-theme-pnt-navy .color-black {
+  color: black !important;
+}
+
+#root .app-container.app-theme-pnt-navy .color-trans-black {
   color: black !important;
 }
 
@@ -1148,6 +1151,10 @@
 
 #root .app-container.app-theme-pnt-navy .bg-darkgray.bg-dark {
   background-color: #231f38 !important;
+}
+
+#root .app-container.app-theme-pnt-navy .bg-trans-black {
+  background-color: black;
 }
 
 #root .app-container.app-theme-pnt-navy .border-brand {

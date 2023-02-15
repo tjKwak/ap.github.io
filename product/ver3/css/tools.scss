@@ -653,6 +653,7 @@
 }
 
 .grid-container {
+  width: 100%;
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(30%, auto));

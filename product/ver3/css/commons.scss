@@ -320,8 +320,7 @@
   opacity: 1;
   //아이템 헤더
   & .item-header {
-    height: 44px;
-    min-height: $card-header-height;
+    max-height: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -329,7 +328,7 @@
     background-color: pink;
     border-bottom: 1px solid red;
     border-radius: $form-radius $form-radius 0 0;
-    padding: 0 0.5rem;
+    padding: 6px 0.5rem;
 
     & .item-header__title {
       flex: 1;

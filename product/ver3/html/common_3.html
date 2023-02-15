@@ -30,6 +30,22 @@
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/form.js"></script>
     <script src="js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .tag-item {
+            height: auto;
+        }
+
+        .tag-item>div {
+            background-color: rgb(243, 243, 243);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+
+        #root .app-container.app-theme-pnt-dark .tag-item>div {
+            background-color: rgba(128, 128, 128, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -67,7 +83,7 @@
                     <div class="app-header-left">
                         <span class="menu-sub">공통 컴포넌트</span>
                         <span class="material-icons-round md-18 color-secondary mr-1">navigate_next</span>
-                        <span class="menu-main">색상</span>
+                        <span class="menu-main">이너 아이템</span>
                     </div>
                     <div class="app-header-right">
                         <!-- 알람 위젯 -->
@@ -157,6 +173,11 @@
                                                 </li>
                                                 <li class="metismenu-item">
                                                     <a class="metismenu-link active" href="common_3.html">
+                                                        <span>이너 아이템</span>
+                                                    </a>
+                                                </li>
+                                                <li class="metismenu-item">
+                                                    <a class="metismenu-link" href="common_4.html">
                                                         <span>색상</span>
                                                     </a>
                                                 </li>
@@ -172,7 +193,7 @@
                                             <!-- 소메뉴 -->
                                             <ul class="metismenu-container">
                                                 <li class="metismenu-item">
-                                                    <a class="metismenu-link active" href="form_1.html">
+                                                    <a class="metismenu-link" href="form_1.html">
                                                         <span>버튼</span>
                                                     </a>
                                                 </li>
@@ -324,796 +345,508 @@
                         <!-- 본문 -->
                         <div class="app-page-content">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-xl-4 col-lg-6 col-12">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="card-header__title">
-                                                <span class="material-icons-round">layers</span>
+                                                <span class="material-icons-round">data_object</span>
                                                 <div class="title-wrap">
-                                                    <h3 class="title__main">레이아웃 컬러</h3>
+                                                    <h3 class="title__main">가이드</h3>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-base"></div>
-                                                    </div>
-                                                    <p>bg-depth-base</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-1"></div>
-                                                    </div>
-                                                    <p>bg-depth-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-2"></div>
-                                                    </div>
-                                                    <p>bg-depth-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-3"></div>
-                                                    </div>
-                                                    <p>bg-depth-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-4"></div>
-                                                    </div>
-                                                    <p>bg-depth-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-5"></div>
-                                                    </div>
-                                                    <p>bg-depth-5</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-6"></div>
-                                                    </div>
-                                                    <p>bg-depth-6</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-7"></div>
-                                                    </div>
-                                                    <p>bg-depth-7</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-8"></div>
-                                                    </div>
-                                                    <p>bg-depth-8</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-9"></div>
-                                                    </div>
-                                                    <p>bg-depth-9</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-depth-10"></div>
-                                                    </div>
-                                                    <p>bg-depth-10</p>
-                                                </div>
+                                            <!-- 코드설명 -->
+                                            <div class="colorscripter-code"style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table"style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;"cellspacing="0"cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"<h5>grid-container</h5>&nbsp;item-grid-300 "</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500"><b>"inner-item"</b></span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"item-header"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"item-header__title"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;서브&nbsp;타이틀</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;타이틀</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"item-header__function"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;버튼</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class=</span><span style="color:#ffd500">"item-body"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></div></td></tr></table></div>
+                                            <div class="info-box mb-3">
+                                                <span class="material-icons-round">campaign</span>
+                                                card 안에서 단일 아이템용 디자인 입니다.
+                                                복수로 사용될때는 'grid-container' 안에서 사용합니다.
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <span class="material-icons-round">image</span>
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">이미지 컬러</h3>
-                                                    <p class="title__sub">jpg, png, svg 이미지에만 적용 가능합니다.</p>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [필수 클래스]
                                                 </div>
+                                                <ul>
+                                                    <li>inner-item</li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <span class="sensor_img-1 img-filter-brand"></span>
-                                                    </div>
-                                                    <p>img-filter-brand</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <span class="sensor_img-1 img-filter-secondary"></span>
-                                                    </div>
-                                                    <p>img-filter-secondary</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <span class="sensor_img-1 img-filter-success"></span>
-                                                    </div>
-                                                    <p>img-filter-success</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <span class="sensor_img-1 img-filter-warning"></span>
-                                                    </div>
-                                                    <p>img-filter-warning</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <span class="sensor_img-1 img-filter-danger"></span>
-                                                    </div>
-                                                    <p>img-filter-danger</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <span class="sensor_img-1 img-filter-info"></span>
-                                                    </div>
-                                                    <p>img-filter-info</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <span class="sensor_img-1 img-filter-gray"></span>
-                                                    </div>
-                                                    <p>img-filter-gray</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div class="gray-box p-1 bg-depth-9">
-                                                        <span class="sensor_img-1 img-filter-white"></span>
-                                                    </div>
-                                                    <p>img-filter-white</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div class="gray-box p-1 bg-depth-9">
-                                                        <span class="sensor_img-1 img-filter-black"></span>
-                                                    </div>
-                                                    <p>img-filter-black</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <span class="material-icons-round">format_color_text</span>
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">폰트 컬러</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="color-brand">TEXT</div>
-                                                    </div>
-                                                    <p>color-brand</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="color-secondary">TEXT</div>
-                                                    </div>
-                                                    <p>color-secondary</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="color-success">TEXT</div>
-                                                    </div>
-                                                    <p>color-success</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="color-warning">TEXT</div>
-                                                    </div>
-                                                    <p>color-warning</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="color-danger">TEXT</div>
-                                                    </div>
-                                                    <p>color-danger</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="color-info">TEXT</div>
-                                                    </div>
-                                                    <p>color-info</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="color-gray">TEXT</div>
-                                                    </div>
-                                                    <p>color-gray</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div class="gray-box p-1 bg-depth-9">
-                                                        <div class="color-white">TEXT</div>
-                                                    </div>
-                                                    <p>color-white</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div class="gray-box p-1 bg-depth-9">
-                                                        <div class="color-black">TEXT</div>
-                                                    </div>
-                                                    <p>color-black</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <span class="material-icons-round">format_color_fill</span>
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">백그라운드 컬러</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand"></div>
-                                                    </div>
-                                                    <p>bg-brand</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary"></div>
-                                                    </div>
-                                                    <p>bg-secondary</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success"></div>
-                                                    </div>
-                                                    <p>bg-success</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning"></div>
-                                                    </div>
-                                                    <p>bg-warning</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger"></div>
-                                                    </div>
-                                                    <p>bg-danger</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info"></div>
-                                                    </div>
-                                                    <p>bg-info</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray"></div>
-                                                    </div>
-                                                    <p>bg-gray</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-white"></div>
-                                                    </div>
-                                                    <p>bg-white</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-black"></div>
-                                                    </div>
-                                                    <p>bg-black</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="card-header__title">
-                                                <span class="material-icons-round">format_color_fill</span>
-                                                <div class="title-wrap">
-                                                    <h3 class="title__main">백그라운드 컬러 바리언츠</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand"></div>
-                                                    </div>
-                                                    <p>bg-brand</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-light"></div>
-                                                    </div>
-                                                    <p>bg-light</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-dark"></div>
-                                                    </div>
-                                                    <p>bg-dark</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-l-1"></div>
-                                                    </div>
-                                                    <p>bg-l-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-l-2"></div>
-                                                    </div>
-                                                    <p>bg-l-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-l-3"></div>
-                                                    </div>
-                                                    <p>bg-l-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-l-4"></div>
-                                                    </div>
-                                                    <p>bg-l-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-d-1"></div>
-                                                    </div>
-                                                    <p>bg-d-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-d-2"></div>
-                                                    </div>
-                                                    <p>bg-d-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-d-3"></div>
-                                                    </div>
-                                                    <p>bg-d-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-brand bg-d-4"></div>
-                                                    </div>
-                                                    <p>bg-d-4</p>
-                                                </div>
-                                            </div>
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary"></div>
-                                                    </div>
-                                                    <p>bg-secondary</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-light"></div>
-                                                    </div>
-                                                    <p>bg-light</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-dark"></div>
-                                                    </div>
-                                                    <p>bg-dark</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-l-1"></div>
-                                                    </div>
-                                                    <p>bg-l-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-l-2"></div>
-                                                    </div>
-                                                    <p>bg-l-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-l-3"></div>
-                                                    </div>
-                                                    <p>bg-l-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-l-4"></div>
-                                                    </div>
-                                                    <p>bg-l-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-d-1"></div>
-                                                    </div>
-                                                    <p>bg-d-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-d-2"></div>
-                                                    </div>
-                                                    <p>bg-d-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-d-3"></div>
-                                                    </div>
-                                                    <p>bg-d-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-secondary bg-d-4"></div>
-                                                    </div>
-                                                    <p>bg-d-4</p>
-                                                </div>
-                                            </div>
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success"></div>
-                                                    </div>
-                                                    <p>bg-success</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-light"></div>
-                                                    </div>
-                                                    <p>bg-light</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-dark"></div>
-                                                    </div>
-                                                    <p>bg-dark</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-l-1"></div>
-                                                    </div>
-                                                    <p>bg-l-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-l-2"></div>
-                                                    </div>
-                                                    <p>bg-l-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-l-3"></div>
-                                                    </div>
-                                                    <p>bg-l-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-l-4"></div>
-                                                    </div>
-                                                    <p>bg-l-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-d-1"></div>
-                                                    </div>
-                                                    <p>bg-d-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-d-2"></div>
-                                                    </div>
-                                                    <p>bg-d-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-d-3"></div>
-                                                    </div>
-                                                    <p>bg-d-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-success bg-d-4"></div>
-                                                    </div>
-                                                    <p>bg-d-4</p>
-                                                </div>
-                                            </div>
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning"></div>
-                                                    </div>
-                                                    <p>bg-warning</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-light"></div>
-                                                    </div>
-                                                    <p>bg-light</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-dark"></div>
-                                                    </div>
-                                                    <p>bg-dark</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-l-1"></div>
-                                                    </div>
-                                                    <p>bg-l-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-l-2"></div>
-                                                    </div>
-                                                    <p>bg-l-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-l-3"></div>
-                                                    </div>
-                                                    <p>bg-l-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-l-4"></div>
-                                                    </div>
-                                                    <p>bg-l-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-d-1"></div>
-                                                    </div>
-                                                    <p>bg-d-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-d-2"></div>
-                                                    </div>
-                                                    <p>bg-d-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-d-3"></div>
-                                                    </div>
-                                                    <p>bg-d-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-warning bg-d-4"></div>
-                                                    </div>
-                                                    <p>bg-d-4</p>
-                                                </div>
-                                            </div>
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger"></div>
-                                                    </div>
-                                                    <p>bg-danger</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-light"></div>
-                                                    </div>
-                                                    <p>bg-light</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-dark"></div>
-                                                    </div>
-                                                    <p>bg-dark</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-l-1"></div>
-                                                    </div>
-                                                    <p>bg-l-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-l-2"></div>
-                                                    </div>
-                                                    <p>bg-l-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-l-3"></div>
-                                                    </div>
-                                                    <p>bg-l-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-l-4"></div>
-                                                    </div>
-                                                    <p>bg-l-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-d-1"></div>
-                                                    </div>
-                                                    <p>bg-d-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-d-2"></div>
-                                                    </div>
-                                                    <p>bg-d-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-d-3"></div>
-                                                    </div>
-                                                    <p>bg-d-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-danger bg-d-4"></div>
-                                                    </div>
-                                                    <p>bg-d-4</p>
-                                                </div>
-                                            </div>
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info"></div>
-                                                    </div>
-                                                    <p>bg-info</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-light"></div>
-                                                    </div>
-                                                    <p>bg-light</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-dark"></div>
-                                                    </div>
-                                                    <p>bg-dark</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-l-1"></div>
-                                                    </div>
-                                                    <p>bg-l-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-l-2"></div>
-                                                    </div>
-                                                    <p>bg-l-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-l-3"></div>
-                                                    </div>
-                                                    <p>bg-l-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-l-4"></div>
-                                                    </div>
-                                                    <p>bg-l-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-d-1"></div>
-                                                    </div>
-                                                    <p>bg-d-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-d-2"></div>
-                                                    </div>
-                                                    <p>bg-d-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-d-3"></div>
-                                                    </div>
-                                                    <p>bg-d-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-info bg-d-4"></div>
-                                                    </div>
-                                                    <p>bg-d-4</p>
-                                                </div>
-                                            </div>
-                                            <div class="tag-set tag-flex">
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray"></div>
-                                                    </div>
-                                                    <p>bg-gray</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-light"></div>
-                                                    </div>
-                                                    <p>bg-light</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-dark"></div>
-                                                    </div>
-                                                    <p>bg-dark</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-l-1"></div>
-                                                    </div>
-                                                    <p>bg-l-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-l-2"></div>
-                                                    </div>
-                                                    <p>bg-l-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-l-3"></div>
-                                                    </div>
-                                                    <p>bg-l-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-l-4"></div>
-                                                    </div>
-                                                    <p>bg-l-4</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-d-1"></div>
-                                                    </div>
-                                                    <p>bg-d-1</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-d-2"></div>
-                                                    </div>
-                                                    <p>bg-d-2</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-d-3"></div>
-                                                    </div>
-                                                    <p>bg-d-3</p>
-                                                </div>
-                                                <div class="tag-item">
-                                                    <div>
-                                                        <div class="box bg-gray bg-d-4"></div>
-                                                    </div>
-                                                    <p>bg-d-4</p>
-                                                </div>
+                                            <div class="tag-info">
+                                                <div class="tag-title">
+                                                    [하위 요소]
+                                                </div>
+                                                <ul>
+                                                    <li>item-header
+                                                        <ul>
+                                                            <li>item-header__title
+                                                                <ul>
+                                                                    <li>p</li>
+                                                                    <li>h3</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>item-header__function</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>item-body
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-xl-8 col-lg-6 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">done</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">기본</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tag-set tag-inline">
+                                                <div class="tag-item">
+                                                    <div>
+                                                        <div class="inner-item" style="width: 400px">
+                                                            <div class="item-header">
+                                                                <div class="item-header__title">
+                                                                    <p>서브 타이틀</p>
+                                                                    <h3>타이틀</h3>
+                                                                </div>
+                                                                <div class="item-header__function">
+                                                                    <button class="pnt-btn btn-trans btn-icon-only">
+                                                                        <span
+                                                                            class="material-icons-round color-gray">location_on</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="gray-box bg-depth-5" style="height: 100px;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p>기본</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="material-icons-round">apps</span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">그리드 컨테이너 사용법</h3>
+                                                    <p class="title__sub">아이템 그리드는 50 단위로 100 ~ 500사이에서 사용 가능합니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tag-set tag-inline">
+                                                <div class="tag-item w-100">
+                                                    <div>
+                                                        <!-- 그리드 시스템 -->
+                                                        <div class="grid-container item-grid-100">
+                                                            <!-- 이너 아이템 -->
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p>item-grid-100</p>
+                                                </div>
+                                                <div class="tag-item w-100">
+                                                    <div>
+                                                        <!-- 그리드 시스템 -->
+                                                        <div class="grid-container item-grid-150">
+                                                            <!-- 이너 아이템 -->
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p>item-grid-150</p>
+                                                </div>
+                                                <div class="tag-item w-100">
+                                                    <div>
+                                                        <!-- 그리드 시스템 -->
+                                                        <div class="grid-container item-grid-300">
+                                                            <!-- 이너 아이템 -->
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                            <div class="inner-item">
+                                                                <div class="item-header">
+                                                                    <div class="item-header__title">
+                                                                        <h3>이너 아이템</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-body">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p>item-grid-300</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-header__title">
+                                                <span class="widget_img-1"></span>
+                                                <div class="title-wrap">
+                                                    <h3 class="title__main">이너 아이템 사용 예시</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- 그리드 시스템 -->
+                                            <div class="grid-container item-grid-250">
+                                                <!-- 이너 아이템 -->
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7 opacity-2">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7 opacity-2">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7 opacity-2">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7 opacity-2">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7 opacity-2">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7 opacity-2">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inner-item">
+                                                    <div class="item-header">
+                                                        <div class="item-header__title">
+                                                            <p>서브타이틀</p>
+                                                            <h3>타이틀</h3>
+                                                        </div>
+                                                        <div class="item-header__funtion">
+                                                            <button class="pnt-btn btn-icon-only btn-trans">
+                                                                <span
+                                                                    class="material-icons-round color-gray">location_on</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-body">
+                                                        <div>
+                                                            <div class="flx-row">
+                                                                <div class="widget-sensor-img"
+                                                                    style="width: 60px; height: 60px;">
+                                                                    <span class="sensor_img-2"></span>
+                                                                </div>
+                                                                <div class="ml-3 flx-1 flx-col flx-sb align-start">
+                                                                    <div class="pnt-txt s-9">배터리</div>
+                                                                    <div class="flx-row flx-sb w-100">
+                                                                        <span class="pnt-txt txt-bold s-4">100%</span>
+                                                                        <span class="pnt-txt s-7 opacity-2">정상</span>
+                                                                    </div>
+                                                                    <div class="mt-2 pnt-txt s-10 opacity-7">2023-02-01
+                                                                        ( 18:55:58 )</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 푸터 -->
+                                    <div class="app-footer">
+                                        <div class="footer-wrap">
+                                            copyright © 2022. People and technology all right reserved
+                                        </div>
+                                    </div>
+                                    <!-- 토스트메세지 -->
+                                    <div id="toast"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- 푸터 -->
-                <div class="app-footer">
-                    <div class="footer-wrap">
-                        copyright © 2022. People and technology all right reserved
-                    </div>
-                </div>
-                <!-- 토스트메세지 -->
-                <div id="toast"></div>
-            </div>
-        </div>
-    </div>
+                        <script>
+                            // 탭1
+                            var tabs1 = document.querySelectorAll('.tab-list1 ul li')
+                            var tab_conts1 = document.querySelectorAll('.tab-body1 > div')
+
+                            for (let i = 0; i < tabs1.length; i++) {
+                                tabs1[i].addEventListener('click', function (e) {
+                                    //리셋
+                                    for (let i = 0; i < tabs1.length; i++) {
+                                        tabs1[i].classList.remove('on');
+                                        tab_conts1[i].classList.add('d-none');
+                                    }
+                                    //클릭 개체에만 on과 d-none 부과
+                                    e.target.parentNode.classList.add('on');
+                                    tab_conts1[i].classList.remove('d-none');
+                                })
+                            }
+                            // 탭2
+                            var tabs2 = document.querySelectorAll('.tab-list2 ul li')
+                            var tab_conts2 = document.querySelectorAll('.tab-body2 > div')
+
+                            for (let i = 0; i < tabs2.length; i++) {
+                                tabs2[i].addEventListener('click', function (e) {
+                                    //리셋
+                                    for (let i = 0; i < tabs2.length; i++) {
+                                        tabs2[i].classList.remove('on');
+                                        tab_conts2[i].classList.add('d-none');
+                                    }
+                                    //클릭 개체에만 on과 d-none 부과
+                                    e.target.parentNode.classList.add('on');
+                                    tab_conts2[i].classList.remove('d-none');
+                                })
+                            }
+                        </script>
 </body>
 
 </html>

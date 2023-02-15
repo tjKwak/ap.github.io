@@ -149,7 +149,7 @@ $card-header-bg: transparent;
 $card-header-border: transparent;
 $card-icon-color: $brand;
 $card-icon-filter: invert(49%) sepia(82%) saturate(2656%) hue-rotate(1deg)
-brightness(105%) contrast(103%);
+  brightness(105%) contrast(103%);
 $card-title-color: $brand;
 $card-tab: mix($depth-base, #000000, 80%);
 $card-tab-li: $depth-base;
@@ -159,7 +159,7 @@ $card-tab-li-txt: $f-w-6;
 $card-tab-2: $secondary;
 $card-button-body: $depth-3;
 
-//이너카드
+//이너 아이템
 $inner-card-body-bg: $depth-base;
 $inner-card-header-bg: $depth-base;
 $inner-card-border: $depth-base;
@@ -220,6 +220,8 @@ $widget-active-bg: $depth-9;
 $widget-active-border: white;
 $widget-active-txt: white;
 
+//블랙화이트
+$trans-black : white;
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
@@ -237,7 +239,8 @@ $widget-active-txt: white;
   .color-danger {
     font-weight: 700 !important;
   }
-  & span[class*="sensor_img-"], & span[class*="widget_img-"]{
+  & span[class*="sensor_img-"],
+  & span[class*="widget_img-"] {
     filter: invert(1);
   }
   @include theme-default();

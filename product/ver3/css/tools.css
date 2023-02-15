@@ -928,6 +928,7 @@
 }
 
 .grid-container {
+  width: 100%;
   display: -ms-grid;
   display: grid;
   gap: 5px;

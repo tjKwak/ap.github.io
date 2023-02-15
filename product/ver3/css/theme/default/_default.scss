@@ -244,7 +244,7 @@
     }
   }
 
-  //이너카드
+  //이너 아이템
   & .inner-item {
     background-color: $depth-2;
     border: 1px solid $form-border;
@@ -454,28 +454,27 @@
         color: $form-txt;
       }
     }
+    & .select__options {
+      background-color: $depth-3;
+      & a {
+        color: $form-txt;
+        border-top: 1px solid $form-border;
+        &:hover {
+          background-color: $depth-6;
+        }
+      }
+      & li {
+        &.on a {
+          border-top: 1px solid $form-border;
+          background-color: $form-active-bg-light;
+          color: $form-active-txt-light;
+        }
+      }
+    }
     //활성화 일때
     &.on {
-      & .select__btn {
+      & .select__btn, & .select__options {
         border: 1px solid $form-active-border;
-      }
-      & .select__options {
-        background-color: $form-bg;
-        border: 1px solid $form-active-border;
-        & li {
-          & a {
-            color: $form-txt;
-            border-top: 1px solid $form-border;
-          }
-          &:hover a {
-            background-color: $form-hover-bg;
-          }
-          &.on a {
-            border-top: 1px solid $form-border;
-            background-color: $form-active-bg-light;
-            color: $form-active-txt-light;
-          }
-        }
       }
     }
     &.form-must {
@@ -496,8 +495,8 @@
       color: $form-txt;
     }
     & .checkbox-effect {
-      border: 1px solid $form-border;
-      background-color: $form-bg;
+      border: 1px solid $depth-9;
+      background-color: $depth-6;
       &::before,
       &::after {
         background: white;
@@ -762,6 +761,9 @@
   .color-black {
     color: black !important;
   }
+  .color-trans-black{
+    color: $trans-black !important;
+  }
 
   .bg-brand {
     background-color: $brand !important;
@@ -1011,6 +1013,9 @@
     &.bg-dark {
       background-color: $dark-gray-d !important;
     }
+  }
+  .bg-trans-black{
+    background-color: $trans-black;
   }
 
   .border-brand {

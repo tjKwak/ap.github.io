@@ -384,27 +384,38 @@ input:-webkit-autofill {
     margin: 0;
     border: 1px solid transparent;
     border-radius: $form-radius;
+    box-shadow: $form-shadow;
     overflow: hidden;
+    background-color: white;
     transition: padding 0.2s;
     opacity: 0;
+    & ul{
+      margin: 0;
+      padding: 0;
+    }
     & li {
       & a {
+        min-height: $form-height;
         display: flex;
         align-items: center;
         padding: 0;
         line-height: 0;
         border-radius: $form-radius;
-        border: none;
+        border-top: 1px solid $form-border-color;
         background-color: transparent;
+        color: $black;
         text-transform: capitalize;
         transition: $form-transition;
         &:last-child {
           border: none;
         }
-        & span {
-          transform: scale(0.7);
-          margin-left: -5px;
-          margin-right: 7px;
+        &:hover a {
+          background-color: $gray-100;
+          transition: $form-transition;
+        }
+        &.on a {
+          background-color: $gray-300;
+          color: $default-secondary;
         }
       }
     }
@@ -420,22 +431,11 @@ input:-webkit-autofill {
     }
     & .select__options {
       opacity: 1;
+      max-height: 300px;
+      overflow-y: auto;
       transition: padding 0.2s;
-      background-color: white;
-      & li {
-        & a {
-          color: $black;
-          padding: 1rem 0.5rem;
-          border-top: 1px solid $form-border-color;
-        }
-        &:hover a {
-          background-color: $gray-100;
-          transition: $form-transition;
-        }
-        &.on a {
-          background-color: $gray-300;
-          color: $default-secondary;
-        }
+      & li a{
+        padding: 0.4rem 0.5rem;
       }
     }
   }
@@ -490,7 +490,7 @@ input:-webkit-autofill {
   cursor: pointer;
   position: relative;
   margin: 0;
-  margin-right: 0.5rem;
+  margin-right: 5px;
   & p {
     margin: 0 0 0 0.5rem;
     padding: 0;
