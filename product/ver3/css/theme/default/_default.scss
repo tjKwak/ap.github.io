@@ -306,6 +306,40 @@
       }
     }
   }
+  //3. 활력징후 테이블
+  & .vital-sign-table {
+    border-right: 1px solid $form-border;
+    border-top: 1px solid $form-border;
+    background-color: $depth-2;
+    & > div:nth-child(1) {
+      background-color: $depth-7;
+    }
+    & > div {
+      border-left: 1px solid $form-border;
+      border-bottom: 1px solid $form-border;
+    }
+    & div {
+      color: $form-txt;
+    }
+  }
+
+  //4. 수액 모니터링 테이블
+  .sap-table {
+    border-right: 1px solid $form-border;
+    background-color: $depth-2;
+    & .flx-row {
+      &:first-child {
+        background-color: $depth-7;
+      }
+      & div {
+        border-left: 1px solid $form-border;
+        border-bottom: 1px solid $form-border;
+      }
+    }
+    & div {
+      color: $form-txt;
+    }
+  }
 
   /////////////////////////////////////////////////////////
   //기본 폼
@@ -473,7 +507,8 @@
     }
     //활성화 일때
     &.on {
-      & .select__btn, & .select__options {
+      & .select__btn,
+      & .select__options {
         border: 1px solid $form-active-border;
       }
     }
@@ -761,7 +796,7 @@
   .color-black {
     color: black !important;
   }
-  .color-trans-black{
+  .color-trans-black {
     color: $trans-black !important;
   }
 
@@ -1014,7 +1049,7 @@
       background-color: $dark-gray-d !important;
     }
   }
-  .bg-trans-black{
+  .bg-trans-black {
     background-color: $trans-black;
   }
 

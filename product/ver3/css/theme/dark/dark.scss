@@ -95,8 +95,8 @@ $depth-4: mix($depth-base, #ffffff, 89%);
 $depth-5: mix($depth-base, #ffffff, 87%);
 $depth-6: mix($depth-base, #ffffff, 85%);
 $depth-7: mix($depth-base, #ffffff, 83%);
-$depth-8: mix($depth-base, #ffffff, 78%);
-$depth-9: mix($depth-base, #ffffff, 80%);
+$depth-8: mix($depth-base, #ffffff, 80%);
+$depth-9: mix($depth-base, #ffffff, 70%);
 $depth-10: mix($depth-base, #ffffff, 20%);
 
 // ---------------------------------------------------------
@@ -231,13 +231,17 @@ $trans-black : white;
   * {
     font-weight: 400;
   }
+  .pnt-txt{
+    font-weight: 400;
+  }
   .color-brand,
   .color-secondary,
   .color-success,
   .color-info,
   .color-warning,
-  .color-danger {
-    font-weight: 700 !important;
+  .color-danger,
+  .txt-bold{
+    font-weight: 600 !important;
   }
   & span[class*="sensor_img-"],
   & span[class*="widget_img-"] {

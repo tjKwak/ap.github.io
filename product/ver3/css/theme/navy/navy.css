@@ -322,6 +322,43 @@
   border: 1px solid #e8e6ef;
 }
 
+#root .app-container.app-theme-pnt-navy .vital-sign-table {
+  border-right: 1px solid #e8e6ef;
+  border-top: 1px solid #e8e6ef;
+  background-color: #fbfbfc;
+}
+
+#root .app-container.app-theme-pnt-navy .vital-sign-table > div:nth-child(1) {
+  background-color: #ecebf2;
+}
+
+#root .app-container.app-theme-pnt-navy .vital-sign-table > div {
+  border-left: 1px solid #e8e6ef;
+  border-bottom: 1px solid #e8e6ef;
+}
+
+#root .app-container.app-theme-pnt-navy .vital-sign-table div {
+  color: #656467;
+}
+
+#root .app-container.app-theme-pnt-navy .sap-table {
+  border-right: 1px solid #e8e6ef;
+  background-color: #fbfbfc;
+}
+
+#root .app-container.app-theme-pnt-navy .sap-table .flx-row:first-child {
+  background-color: #ecebf2;
+}
+
+#root .app-container.app-theme-pnt-navy .sap-table .flx-row div {
+  border-left: 1px solid #e8e6ef;
+  border-bottom: 1px solid #e8e6ef;
+}
+
+#root .app-container.app-theme-pnt-navy .sap-table div {
+  color: #656467;
+}
+
 #root .app-container.app-theme-pnt-navy .pnt-btn {
   background-color: #dcd9e1;
   color: #656467;
@@ -529,7 +566,8 @@
   color: #6a55c0;
 }
 
-#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__btn, #root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options {
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__btn,
+#root .app-container.app-theme-pnt-navy .pnt-select--group.on .select__options {
   border: 1px solid #656467;
 }
 

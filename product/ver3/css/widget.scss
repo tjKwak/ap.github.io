@@ -6,7 +6,6 @@
 /* Css link*/
 @import "_variables";
 
-
 //전체 현황
 .widget-item-nums {
   display: flex;
@@ -85,11 +84,100 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     //display: none;
     & span {
       font-size: 14px;
       color: white !important;
     }
+  }
+}
+
+//활력징후 테이블
+.vital-sign-table {
+  display: grid;
+  grid-template-columns: 2fr 1fr 4fr;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  & > div:nth-child(1) {
+    background-color: rgb(214, 214, 214);
+    grid-column: 1 / 7;
+    grid-row: 1 / 1;
+    justify-content: space-between;
+    height: $form-height;
+  }
+  & > div:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  & > div:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+  }
+  & > div:nth-child(4) {
+    grid-column: 3 / 7;
+    grid-row: 2 / 2;
+    justify-content: space-between;
+  }
+  & > div:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 3;
+  }
+  & > div:nth-child(6) {
+    grid-column: 3 / 7;
+    grid-row: 3 / 3;
+    justify-content: space-between;
+  }
+  & > div:nth-child(7) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 4;
+  }
+  & > div:nth-child(8) {
+    grid-column: 3 / 7;
+    grid-row: 4 / 4;
+    justify-content: space-between;
+  }
+  & > div {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & b,
+  p {
+    margin: 0;
+  }
+  & div {
+    font-size: 0.8rem;
+  }
+}
+
+//수액 모니터링 테이블
+.sap-table {
+  border-right: 1px solid black;
+  & .flx-row {
+    &:first-child {
+      background-color: gray;
+    }
+    & div {
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 0.3rem 0.5rem;
+      display: flex;
+      align-items: center;
+      height: $form-height;
+    }
+  }
+  & b,
+  p {
+    margin: 0;
+  }
+  & div {
+    font-size: 0.8rem;
   }
 }

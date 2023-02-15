@@ -13,13 +13,18 @@
   font-weight: 400;
 }
 
+#root .app-container.app-theme-pnt-dark .pnt-txt {
+  font-weight: 400;
+}
+
 #root .app-container.app-theme-pnt-dark .color-brand,
 #root .app-container.app-theme-pnt-dark .color-secondary,
 #root .app-container.app-theme-pnt-dark .color-success,
 #root .app-container.app-theme-pnt-dark .color-info,
 #root .app-container.app-theme-pnt-dark .color-warning,
-#root .app-container.app-theme-pnt-dark .color-danger {
-  font-weight: 700 !important;
+#root .app-container.app-theme-pnt-dark .color-danger,
+#root .app-container.app-theme-pnt-dark .txt-bold {
+  font-weight: 600 !important;
 }
 
 #root .app-container.app-theme-pnt-dark span[class*="sensor_img-"],
@@ -61,11 +66,11 @@
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-8 {
-  background-color: #505057 !important;
+  background-color: #4c4c52 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-9 {
-  background-color: #4c4c52 !important;
+  background-color: #626268 !important;
 }
 
 #root .app-container.app-theme-pnt-dark .bg-depth-10 {
@@ -108,8 +113,8 @@
 }
 
 #root .app-container.app-theme-pnt-dark .user-box .user-options {
-  background-color: #505057;
-  border: 1px solid #505057;
+  background-color: #4c4c52;
+  border: 1px solid #4c4c52;
 }
 
 #root .app-container.app-theme-pnt-dark .user-box .user-options .setting-item {
@@ -312,7 +317,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .widget-sensor-img {
-  background-color: #4c4c52;
+  background-color: #626268;
 }
 
 #root .app-container.app-theme-pnt-dark .widget-item-nums .col {
@@ -324,7 +329,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .widget-item-nums .col.selected {
-  background-color: #4c4c52;
+  background-color: #626268;
   border: 1px solid white;
 }
 
@@ -339,6 +344,43 @@
 #root .app-container.app-theme-pnt-dark .widget-item-nums .col.view {
   background-color: #313138;
   border: 1px solid #414147;
+}
+
+#root .app-container.app-theme-pnt-dark .vital-sign-table {
+  border-right: 1px solid #414147;
+  border-top: 1px solid #414147;
+  background-color: #2a2a32;
+}
+
+#root .app-container.app-theme-pnt-dark .vital-sign-table > div:nth-child(1) {
+  background-color: #45454c;
+}
+
+#root .app-container.app-theme-pnt-dark .vital-sign-table > div {
+  border-left: 1px solid #414147;
+  border-bottom: 1px solid #414147;
+}
+
+#root .app-container.app-theme-pnt-dark .vital-sign-table div {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#root .app-container.app-theme-pnt-dark .sap-table {
+  border-right: 1px solid #414147;
+  background-color: #2a2a32;
+}
+
+#root .app-container.app-theme-pnt-dark .sap-table .flx-row:first-child {
+  background-color: #45454c;
+}
+
+#root .app-container.app-theme-pnt-dark .sap-table .flx-row div {
+  border-left: 1px solid #414147;
+  border-bottom: 1px solid #414147;
+}
+
+#root .app-container.app-theme-pnt-dark .sap-table div {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-btn {
@@ -507,7 +549,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-file--group label {
-  background-color: #505057;
+  background-color: #4c4c52;
   border: 1px solid #414147;
   color: #9482ec;
 }
@@ -548,7 +590,8 @@
   color: white;
 }
 
-#root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__btn, #root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__options {
+#root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__btn,
+#root .app-container.app-theme-pnt-dark .pnt-select--group.on .select__options {
   border: 1px solid #86858a;
 }
 
@@ -569,7 +612,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-checkbox .checkbox-effect {
-  border: 1px solid #4c4c52;
+  border: 1px solid #626268;
   background-color: #414147;
 }
 
@@ -716,7 +759,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr.active {
-  background-color: #505057;
+  background-color: #4c4c52;
 }
 
 #root .app-container.app-theme-pnt-dark .pnt-table .border-box .tbody .tr.active .td {
@@ -751,7 +794,7 @@
 }
 
 #root .app-container.app-theme-pnt-dark .form-disable.pnt-file--group label {
-  background-color: #505057;
+  background-color: #4c4c52;
   border: 1px solid #414147;
   color: rgba(255, 255, 255, 0.25);
 }

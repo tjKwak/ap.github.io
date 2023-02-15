@@ -124,3 +124,153 @@
   font-size: 14px;
   color: white !important;
 }
+
+.vital-sign-table {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 4fr;
+      grid-template-columns: 2fr 1fr 4fr;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.vital-sign-table > div:nth-child(1) {
+  background-color: #d6d6d6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 28px;
+}
+
+.vital-sign-table > div:nth-child(2) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.vital-sign-table > div:nth-child(3) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
+}
+
+.vital-sign-table > div:nth-child(4) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-column: 3 / 7;
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.vital-sign-table > div:nth-child(5) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 3;
+  grid-row: 3 / 3;
+}
+
+.vital-sign-table > div:nth-child(6) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-column: 3 / 7;
+  -ms-grid-row: 3;
+  grid-row: 3 / 3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.vital-sign-table > div:nth-child(7) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 4;
+  grid-row: 4 / 4;
+}
+
+.vital-sign-table > div:nth-child(8) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-column: 3 / 7;
+  -ms-grid-row: 4;
+  grid-row: 4 / 4;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.vital-sign-table > div {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.3rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vital-sign-table b,
+.vital-sign-table p {
+  margin: 0;
+}
+
+.vital-sign-table div {
+  font-size: 0.8rem;
+}
+
+.sap-table {
+  border-right: 1px solid black;
+}
+
+.sap-table .flx-row:first-child {
+  background-color: gray;
+}
+
+.sap-table .flx-row div {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.3rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 28px;
+}
+
+.sap-table b,
+.sap-table p {
+  margin: 0;
+}
+
+.sap-table div {
+  font-size: 0.8rem;
+}
