@@ -27,15 +27,15 @@
 }
 
 .color-lightgray {
-  color: #dcd9e1 !important;
+  color: #b7b6c2 !important;
 }
 
 .color-gray {
-  color: #a8a7ac !important;
+  color: #87869a !important;
 }
 
 .color-darkgray {
-  color: #434245 !important;
+  color: #3e3d5d !important;
 }
 
 .color-white {
@@ -119,15 +119,15 @@
 }
 
 .bg-gray {
-  background-color: #a8a7ac;
+  background-color: #87869a;
 }
 
 .bg-gray.bg-light {
-  background-color: #8b8b8f !important;
+  background-color: #706f80 !important;
 }
 
 .bg-gray.bg-dark {
-  background-color: #b9b9bd !important;
+  background-color: #9f9eae !important;
 }
 
 .bg-white {

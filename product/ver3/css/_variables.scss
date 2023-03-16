@@ -22,17 +22,30 @@ $default-info-d: mix($default-info, black, 80%);
 /* 1. 기본 컬러 세팅 - form, layout, commons에 사용 */
 
 //---violet gray----
+// $white: #fff;
+// $gray-100: #f6f6f9;
+// $gray-200: #eceaf2;
+// $gray-300: #dcd9e1;
+// $gray-400: #cac8cf; //disable-bg
+// $gray-500: #a8a7ac; //form-border
+// $gray-600: #86858a;
+// $gray-700: #656467;
+// $gray-800: #434245;
+// $gray-900: #212122;
+// $black: #000;
+
+//---blue gray----
 $white: #fff;
-$gray-100: #f6f6f9;
-$gray-200: #eceaf2;
-$gray-300: #dcd9e1;
-$gray-400: #cac8cf; //disable-bg
-$gray-500: #a8a7ac; //form-border
-$gray-600: #86858a;
-$gray-700: #656467;
-$gray-800: #434245;
-$gray-900: #212122;
-$black: #000;
+$gray-100: #e7e7eb;
+$gray-200: #cfcfd7;
+$gray-300: #b7b6c2;
+$gray-400: #9f9eae; //disable-bg
+$gray-500: #87869a; //form-border
+$gray-600: #6e6e86;
+$gray-700: #565672;
+$gray-800: #3e3d5d;
+$gray-900: #262549;
+$black: #0e0d35;
 
 //---purple gray----
 // $white: #fff;

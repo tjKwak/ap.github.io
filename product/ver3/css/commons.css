@@ -157,7 +157,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #eceaf2;
+  border-bottom: 1px solid #cfcfd7;
   border-radius: 2px 2px 0 0;
   padding: 0;
   text-transform: inherit;
@@ -429,7 +429,7 @@
           order: 2;
   font-size: 14px;
   font-weight: 700;
-  color: #656467;
+  color: #565672;
 }
 
 .inner-item .item-header .item-header__title p {

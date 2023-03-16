@@ -1,4 +1,4 @@
-span[class*="sensor_img-"] {
+span[class*="s_"] {
   display: block;
   background-repeat: no-repeat;
   border: none;
@@ -9,453 +9,453 @@ span[class*="sensor_img-"] {
   background-image: url("../images/sensorIcon.svg");
 }
 
-span[class*="widget_img-"] {
+span[class*="w_"] {
   display: block;
   background-repeat: no-repeat;
   border: none;
   font-size: 0;
-  width: 30px;
-  height: 30px;
-  background-size: calc((30px * 10) + (30px * 9));
+  width: 40px;
+  height: 40px;
+  background-size: calc((40px * 10) + (20px * 9));
   background-image: url("../images/sh_widget_icon.svg");
 }
 
-.widget_img-1 {
+.w_chart_table {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-2 {
+.w_dashboard {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-3 {
+.w_monitor {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-4 {
+.w_filter_table_line {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-5 {
+.w_filter_line {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-6 {
+.w_filter_map {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-7 {
+.w_cardmonitor {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-8 {
+.w_chart {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-9 {
+.w_pie {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-10 {
+.w_table {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -0) - (20px * 0));
 }
 
-.widget_img-11 {
+.w_map {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-12 {
+.w_pie_table {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-13 {
+.w_battery_chart {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-14 {
+.w_pie_chart {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-15 {
+.w_line {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-16 {
+.w_line_chart {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-17 {
+.w_chart_search_table {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-18 {
+.w_search_table {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-19 {
+.w_filter_cardmonitor {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -1) - (20px * 1));
 }
 
-.widget_img-20 {
+.w_search_map_chart_table {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -1) - (20px * 1));
 }
 
-.sensor_img-1 {
-  background-position: calc((40px * -0) - (20px * 0)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-2 {
-  background-position: calc((40px * -1) - (20px * 1)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-3 {
-  background-position: calc((40px * -2) - (20px * 2)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-4 {
-  background-position: calc((40px * -3) - (20px * 3)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-5 {
-  background-position: calc((40px * -4) - (20px * 4)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-6 {
-  background-position: calc((40px * -5) - (20px * 5)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-7 {
-  background-position: calc((40px * -6) - (20px * 6)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-8 {
-  background-position: calc((40px * -7) - (20px * 7)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-9 {
-  background-position: calc((40px * -8) - (20px * 8)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-10 {
-  background-position: calc((40px * -9) - (20px * 9)) calc((40px * -0) - (20px * 0));
-}
-
-.sensor_img-11 {
-  background-position: calc((40px * -0) - (20px * 0)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-12 {
-  background-position: calc((40px * -1) - (20px * 1)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-13 {
-  background-position: calc((40px * -2) - (20px * 2)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-14 {
-  background-position: calc((40px * -3) - (20px * 3)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-15 {
-  background-position: calc((40px * -4) - (20px * 4)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-16 {
-  background-position: calc((40px * -5) - (20px * 5)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-17 {
-  background-position: calc((40px * -6) - (20px * 6)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-18 {
-  background-position: calc((40px * -7) - (20px * 7)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-19 {
-  background-position: calc((40px * -8) - (20px * 8)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-20 {
-  background-position: calc((40px * -9) - (20px * 9)) calc((40px * -1) - (20px * 1));
-}
-
-.sensor_img-21 {
+.w_search_line {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-22 {
+.w_search_map_line {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-23 {
+.s_temperature {
+  background-position: calc((40px * -0) - (20px * 0)) calc((40px * -0) - (20px * 0));
+}
+
+.s_temperature2 {
+  background-position: calc((40px * -1) - (20px * 1)) calc((40px * -0) - (20px * 0));
+}
+
+.s_humidity {
+  background-position: calc((40px * -2) - (20px * 2)) calc((40px * -0) - (20px * 0));
+}
+
+.s_relativeHumidity {
+  background-position: calc((40px * -3) - (20px * 3)) calc((40px * -0) - (20px * 0));
+}
+
+.s_ambientLight {
+  background-position: calc((40px * -4) - (20px * 4)) calc((40px * -0) - (20px * 0));
+}
+
+.s_barometricPressure {
+  background-position: calc((40px * -5) - (20px * 5)) calc((40px * -0) - (20px * 0));
+}
+
+.s_seismicIntensity {
+  background-position: calc((40px * -6) - (20px * 6)) calc((40px * -0) - (20px * 0));
+}
+
+.s_vibration {
+  background-position: calc((40px * -7) - (20px * 7)) calc((40px * -0) - (20px * 0));
+}
+
+.s_soundNoise {
+  background-position: calc((40px * -8) - (20px * 8)) calc((40px * -0) - (20px * 0));
+}
+
+.s_discomfortIndex {
+  background-position: calc((40px * -9) - (20px * 9)) calc((40px * -0) - (20px * 0));
+}
+
+.s_O2 {
+  background-position: calc((40px * -0) - (20px * 0)) calc((40px * -1) - (20px * 1));
+}
+
+.s_LEL {
+  background-position: calc((40px * -1) - (20px * 1)) calc((40px * -1) - (20px * 1));
+}
+
+.s_H2S {
+  background-position: calc((40px * -2) - (20px * 2)) calc((40px * -1) - (20px * 1));
+}
+
+.s_CO {
+  background-position: calc((40px * -3) - (20px * 3)) calc((40px * -1) - (20px * 1));
+}
+
+.s_CO2 {
+  background-position: calc((40px * -4) - (20px * 4)) calc((40px * -1) - (20px * 1));
+}
+
+.s_SO2 {
+  background-position: calc((40px * -5) - (20px * 5)) calc((40px * -1) - (20px * 1));
+}
+
+.s_eTVOC {
+  background-position: calc((40px * -6) - (20px * 6)) calc((40px * -1) - (20px * 1));
+}
+
+.s_eCO2 {
+  background-position: calc((40px * -7) - (20px * 7)) calc((40px * -1) - (20px * 1));
+}
+
+.s_etCO2 {
+  background-position: calc((40px * -8) - (20px * 8)) calc((40px * -1) - (20px * 1));
+}
+
+.s_inCO2 {
+  background-position: calc((40px * -9) - (20px * 9)) calc((40px * -1) - (20px * 1));
+}
+
+.s_heartbeat {
+  background-position: calc((40px * -0) - (20px * 0)) calc((40px * -2) - (20px * 2));
+}
+
+.s_highBloodPressure {
+  background-position: calc((40px * -1) - (20px * 1)) calc((40px * -2) - (20px * 2));
+}
+
+.s_lowBloodPressure {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-24 {
+.s_bloodPressure {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-25 {
+.s_highBloodPressure2 {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-26 {
+.s_lowBloodPressure2 {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-27 {
+.s_bloodPressure2 {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-28 {
+.s_pulseRate {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-29 {
+.s_heatStroke {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-20 {
+.s_accelerationXaxis {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -2) - (20px * 2));
 }
 
-.sensor_img-31 {
+.s_accelerationYaxis {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-32 {
+.s_accelerationZaxis {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-33 {
+.s_angularXaxis {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-34 {
+.s_angularYaxis {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-35 {
+.s_angularZaxis {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-36 {
+.s_pir {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-37 {
+.s_movement {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-38 {
+.s_battery {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-39 {
+.s_nappyBig {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-40 {
+.s_nappyGas {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -3) - (20px * 3));
 }
 
-.sensor_img-41 {
+.s_nappySmall {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-42 {
+.s_calories {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-43 {
+.s_step {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-44 {
+.s_distance {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-45 {
+.s_sleep {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-46 {
+.s_height {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-47 {
+.s_weight {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-48 {
+.s_weight2 {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-49 {
+.s_fire {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-50 {
+.s_stress {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -4) - (20px * 4));
 }
 
-.sensor_img-51 {
+.s_capacity {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-52 {
+.s_crack {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-53 {
+.s_dust {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-54 {
+.s_dosage {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-55 {
+.s_totalDosage {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-56 {
+.s_dropCount {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-57 {
+.s_dropRate {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-58 {
+.s_packetCounter {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-59 {
+.s_spO2 {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-60 {
+.s_respirationRate {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -5) - (20px * 5));
 }
 
-.sensor_img-61 {
+.s_ipi {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-62 {
+.s_iHighBloodPressure {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-63 {
+.s_iLowBloodPressure {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-64 {
+.s_iBloodPressure {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-65 {
+.s_iHighBloodPressure2 {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-66 {
+.s_iLowBloodPressure2 {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-67 {
+.s_iBloodPressure2 {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-68 {
+.s_afBurden {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-69 {
+.s_totalWearTimeSec {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-70 {
+.s_analyzableWearTimeSec {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -6) - (20px * 6));
 }
 
-.sensor_img-71 {
+.s_afEpisodeCnt {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-72 {
+.s_meanAfDurSec {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-73 {
+.s_minAfDurSec {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-74 {
+.s_medianAfDurSec {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-75 {
+.s_maxAfDurSec {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-76 {
+.s_totalAfDurSec {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-77 {
+.s_button1Count {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-78 {
+.s_button2Count {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-79 {
+.s_ecg {
   background-position: calc((40px * -8) - (20px * 8)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-80 {
+.s_rate {
   background-position: calc((40px * -9) - (20px * 9)) calc((40px * -7) - (20px * 7));
 }
 
-.sensor_img-81 {
+.s_vtbi {
   background-position: calc((40px * -0) - (20px * 0)) calc((40px * -8) - (20px * 8));
 }
 
-.sensor_img-82 {
+.s_infusedVol {
   background-position: calc((40px * -1) - (20px * 1)) calc((40px * -8) - (20px * 8));
 }
 
-.sensor_img-83 {
+.s_bi {
   background-position: calc((40px * -2) - (20px * 2)) calc((40px * -8) - (20px * 8));
 }
 
-.sensor_img-84 {
+.s_conc {
   background-position: calc((40px * -3) - (20px * 3)) calc((40px * -8) - (20px * 8));
 }
 
-.sensor_img-85 {
+.s_dose {
   background-position: calc((40px * -4) - (20px * 4)) calc((40px * -8) - (20px * 8));
 }
 
-.sensor_img-86 {
+.s_pcaBolus {
   background-position: calc((40px * -5) - (20px * 5)) calc((40px * -8) - (20px * 8));
 }
 
-.sensor_img-87 {
+.s_pi {
   background-position: calc((40px * -6) - (20px * 6)) calc((40px * -8) - (20px * 8));
 }
 
-.sensor_img-88 {
+.s_bloodGlucose {
   background-position: calc((40px * -7) - (20px * 7)) calc((40px * -8) - (20px * 8));
-}
-
-.sensor_img-89 {
-  background-position: calc((40px * -8) - (20px * 8)) calc((40px * -8) - (20px * 8));
-}
-
-.sensor_img-90 {
-  background-position: calc((40px * -9) - (20px * 9)) calc((40px * -8) - (20px * 8));
 }

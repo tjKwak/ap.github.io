@@ -471,7 +471,7 @@ body {
 }
 
 .app-header-right .user-box .user-options .dropdown-menu-header {
-  background-color: #553cbc;
+  background-color: #453e6f;
   padding: 1rem 1.4rem;
   margin: 0;
   display: -webkit-box;
@@ -562,7 +562,7 @@ body {
   padding: 0.5rem;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: #656467;
+  color: #565672;
 }
 
 .app-header-right .user-box .user-options .profile-setting .setting-item .setting-name {

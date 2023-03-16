@@ -28,15 +28,15 @@
 }
 
 .color-lightgray {
-  color: #dcd9e1 !important;
+  color: #b7b6c2 !important;
 }
 
 .color-gray {
-  color: #a8a7ac !important;
+  color: #87869a !important;
 }
 
 .color-darkgray {
-  color: #434245 !important;
+  color: #3e3d5d !important;
 }
 
 .color-white {
@@ -120,15 +120,15 @@
 }
 
 .bg-gray {
-  background-color: #a8a7ac;
+  background-color: #87869a;
 }
 
 .bg-gray.bg-light {
-  background-color: #8b8b8f !important;
+  background-color: #706f80 !important;
 }
 
 .bg-gray.bg-dark {
-  background-color: #b9b9bd !important;
+  background-color: #9f9eae !important;
 }
 
 .bg-white {
@@ -1405,7 +1405,7 @@
 .page-landering .pnt-btn.form-disable {
   -webkit-box-shadow: 0 0 0 1px #ebeaed inset;
           box-shadow: 0 0 0 1px #ebeaed inset;
-  background-color: #eceaf2;
+  background-color: #cfcfd7;
   color: rgba(0, 0, 0, 0.45);
 }
 
@@ -1485,7 +1485,7 @@
   -webkit-filter: none !important;
           filter: none !important;
   background-color: rgba(255, 255, 255, 0.35);
-  border: 1px solid #86858a;
+  border: 1px solid #6e6e86;
   outline: none;
   -webkit-box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
@@ -1556,7 +1556,7 @@
   outline: none !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
-  background-color: #a8a7ac !important;
+  background-color: #87869a !important;
   color: white;
 }
 
@@ -1631,7 +1631,7 @@
   -webkit-filter: none !important;
           filter: none !important;
   background-color: rgba(255, 255, 255, 0.35);
-  border: 1px solid #86858a;
+  border: 1px solid #6e6e86;
   outline: none;
   -webkit-box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
           box-shadow: 1.5px 1.5px 4.5px rgba(29, 12, 23, 0.18);
@@ -1696,7 +1696,7 @@
     opacity: 1;
   }
   .page-landering .page-landering__cont-wrap .lander-mobile-header .mobile-header__wrap .language-box .select__options {
-    background-color: #434245;
+    background-color: #3e3d5d;
     left: unset;
     right: 0;
     -webkit-transform: unset;
