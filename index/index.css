@@ -84,6 +84,10 @@
   background-image: url("designsystem.JPG");
 }
 
+.body-wrap .item .img-wrap.ver3 {
+  background-image: url("ver3.png");
+}
+
 .body-wrap .item .txt-wrap {
   padding: 2rem;
   text-align: center;
